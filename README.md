@@ -1,2 +1,6 @@
-AgoraStudentMarketplace
+Agora Student Marketplace
+
+Project Overview:
+
+
 ===============
