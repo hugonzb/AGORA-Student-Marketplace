@@ -3,7 +3,7 @@ import React from "react";
 function SignUp(props) {
   return (
     <div className="sign-up-container">
-      <a>Welcome to Agora! Please sign up using the form below.</a>
+      Welcome to Agora! Please sign up using the form below.
       <form className="sign-up-form">
         <label for="fname">First name:</label>
         <input type="text" id="fname" name="fname"></input>
