@@ -1,0 +1,26 @@
+# Files that are ignored when commiting to Git. 
+# Feel free to add any unnecessary file that keep getting pushed to the project.
+
+# Dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+/build
+
+# Other
+.vs
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
