@@ -3,5 +3,7 @@ INSTRUCTIONS FOR TEAMMEMBERS:
 RUNNING THE PROJECT:
 cd into 'front-end', then type: npm start
 
+Dependencies to download to run the project:
+npm install react-scripts
 npm install react-router-dom
 npm install react-dom
