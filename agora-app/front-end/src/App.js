@@ -8,14 +8,19 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
+        <div className="header">
+          <div className="links">
+            <Link to="/">Home </Link>
+            <Link to="/signup">Sign Up </Link>
+            <Link to="/signin">Sign In </Link>
+          </div>
+          HEADER
+        </div>
         <div className="main">
-          <Link to="/">Home</Link>
-          <Link to="/signup">Sign Up</Link>
-          <Link to="/signin">Sign In</Link>
           <div className="content-display">
-            <Route path="/signup" component={SignUp} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/" exact={true} component={Home} />
+            <Route path="/signup" component={SignUp}/>
+            <Route path="/signin" component={SignIn}/>
+            <Route path="/" exact={true} component={Home}/>
           </div>
         </div>
       </div>
