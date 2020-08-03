@@ -46,6 +46,20 @@ body {
   text-align: center;
 }
 
+.listings {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.listing-container {
+  height: 5rem;
+  width: 5rem;
+  border: 1px solid black;
+  margin: 1rem;
+}
+
 /* Sign up screen */
 
 .sign-up-container {
