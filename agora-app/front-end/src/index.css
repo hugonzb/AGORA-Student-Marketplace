@@ -15,3 +15,12 @@
   height: 50rem;
   text-align: center;
 }
+
+/* Sign in screen */
+
+.sign-in-container{
+  border: 1px solid black;
+  width: 50rem;
+  height: 50rem;
+  text-align: center;
+}

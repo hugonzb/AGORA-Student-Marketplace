@@ -1,9 +1,9 @@
 import React from 'react';
 
 function SignIn (props) {
-    return <div className="home-container">
-        This is the home page
+    return <div className="sign-in-container">
+        This is the sign in page
     </div>
 }
 
-export default Signin;
+export default SignIn;
