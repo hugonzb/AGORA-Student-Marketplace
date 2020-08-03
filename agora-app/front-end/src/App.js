@@ -23,6 +23,9 @@ function App() {
             <Route path="/" exact={true} component={Home}/>
           </div>
         </div>
+        <div className="footer">
+          FOOTER
+        </div>
       </div>
     </BrowserRouter>
   );

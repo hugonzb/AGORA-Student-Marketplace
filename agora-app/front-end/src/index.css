@@ -7,14 +7,21 @@ body{
 .header{
   height: 4rem;
   background-color: rgb(170, 170, 170);
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
 }
 
 .links{
-  width: 20rem;
+  width: 10em;
+  font-size: 20px;
 }
 
+.footer{
+  height: 4rem;
+  background-color: rgb(170, 170, 170);
+  font-size: 30px;
+  text-align: center;
+}
 
 /* Home screen */
 
