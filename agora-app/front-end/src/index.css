@@ -1,22 +1,36 @@
-body{
+body {
  background-color: rgb(243, 243, 243);
 }
 
 /* App */
 
-.header{
+.header {
   height: 4rem;
   background-color: rgb(170, 170, 170);
   font-size: 30px;
   text-align: center;
 }
 
-.links{
-  width: 10em;
+.links {
+  width: 15rem;
   font-size: 20px;
 }
 
-.footer{
+.links a {
+  border-radius: 4px;
+  padding: 5px;
+  background-color: rgb(37, 37, 37);
+  color: rgb(253, 253, 253);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.links a:hover{
+  color:rgb(250, 232, 232);
+  background-color: rgb(65, 63, 63);
+}
+
+.footer {
   height: 4rem;
   background-color: rgb(170, 170, 170);
   font-size: 30px;
@@ -25,7 +39,7 @@ body{
 
 /* Home screen */
 
-.home-container{
+.home-container {
   border: 1px solid rgb(24, 0, 245);
   width: 100%;
   height: 40rem;
@@ -34,7 +48,7 @@ body{
 
 /* Sign up screen */
 
-.sign-up-container{
+.sign-up-container {
   border: 1px solid black;
   width: 100%;
   height: 40rem;
@@ -43,7 +57,7 @@ body{
 
 /* Sign in screen */
 
-.sign-in-container{
+.sign-in-container {
   border: 1px solid rgb(30, 255, 1);
   width: 100%;
   height: 40rem;
