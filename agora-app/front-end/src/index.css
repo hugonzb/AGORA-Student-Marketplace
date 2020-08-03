@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Home screen */
+
+body{
+ background-color: rgb(243, 243, 243);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.home-container{
+  border: 1px solid rgb(24, 0, 245);
+  width: 100%;
+  height: 40rem;
+  text-align: center;
+}
+
+/* Sign up screen */
+
+.sign-up-container{
+  border: 1px solid black;
+  width: 100%;
+  height: 40rem;
+  text-align: center;
+}
+
+/* Sign in screen */
+
+.sign-in-container{
+  border: 1px solid rgb(30, 255, 1);
+  width: 100%;
+  height: 40rem;
+  text-align: center;
 }
