@@ -8,3 +8,6 @@ npm install react-scripts
 npm install react-router-dom
 npm install react-dom
 npm install express
+
+For the backend packages cd into back-end and run:
+npm install @babel/cli @babel/core @babel/node @babel/preset-env nodemon --save-dev
