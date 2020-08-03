@@ -23,6 +23,15 @@ function SignUp(props) {
         <label for="email">Email:</label>
         <input type="text" id="email" name="email"></input>
         <br></br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address"></input>
+        <br></br>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city"></input>
+        <br></br>
+        <label for="postcode">Postcode:</label>
+        <input type="text" id="postcode" name="postcode"></input>
+        <br></br>
       </form>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here
   );
