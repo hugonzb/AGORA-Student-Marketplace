@@ -1,0 +1,7 @@
+INSTRUCTIONS FOR TEAMMEMBERS:
+
+RUNNING THE PROJECT:
+cd into 'front-end', then type: npm start
+
+npm install react-router-dom
+npm install react-dom
