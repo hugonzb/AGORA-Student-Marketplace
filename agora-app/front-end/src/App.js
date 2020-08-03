@@ -8,6 +8,7 @@ function App() {
       <BrowserRouter>
         <div className="container">
           <div className="main">
+            <Link to="/">Home</Link>
               <Link to="/signup">Sign Up</Link>
               <div className="content-display">
                   <Route path="/signup" component={SignUp} />

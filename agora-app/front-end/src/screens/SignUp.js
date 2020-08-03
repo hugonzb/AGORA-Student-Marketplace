@@ -2,7 +2,10 @@ import React from 'react';
 
 function SignUp (props) {
     return <div className="sign-up-container">
-        Hello CeDriC! Is this displaying ?
+        This is the Sign Up page here:
+        <div className="form">
+            Hello CeDriC! Is this displaying ?
+        </div>
     </div>
 }
 
