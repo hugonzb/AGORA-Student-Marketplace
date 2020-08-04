@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { listListings } from '../actions/listingActions';
 
@@ -7,8 +7,8 @@ function Home (props) {
     const listingList = useSelector(state => state.listingList);
     const { listings, loading, error } = listingList;
     const dispatch = useDispatch();
-    useEffect(() => {
 
+    useEffect(() => {
         dispatch(listListings());
         return () => {
             //

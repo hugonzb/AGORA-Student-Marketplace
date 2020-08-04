@@ -1,12 +1,11 @@
 {
-  "name": "back-end",
+  "name": "agora-app",
   "version": "1.0.0",
   "description": "Leon's Node Server",
-  "main": "./src/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch back-end --exec babel-node back-end/server.js"
+    "start": "nodemon --watch back-end --exec babel-node back-end/server.js --no-warnings"
   },
   "keywords": [
     "Node",
@@ -24,5 +23,9 @@
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
     "nodemon": "^2.0.4"
+  },
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
   }
 }
