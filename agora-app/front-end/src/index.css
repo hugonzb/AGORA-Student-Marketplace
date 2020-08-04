@@ -48,14 +48,18 @@ body {
 
 .listings {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   align-items: center;
   justify-content: center;
 }
 
 .listing-container {
-  height: 5rem;
-  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
   border: 1px solid black;
   margin: 1rem;
 }

@@ -11,8 +11,8 @@ function Home (props) {
     useEffect(() => {
         dispatch(listListings());
         return () => {
-            //
         };
+        // eslint-disable-next-line
     }, [])
 
     return loading ? <div>Loading listings ...</div> : 
@@ -23,7 +23,10 @@ function Home (props) {
             {listings.map(listing =>
             <li>
                 <div className="listing-container">
-                    {listing.name}
+                    <div>Listing Image</div>
+                    <div>{listing.name}</div>
+                    <div>Category: {listing.category}</div>
+                    <div>${listing.price}</div>
                 </div>
             </li>)
             }
