@@ -1,18 +1,14 @@
 {
   "name": "agora-app",
   "version": "1.0.0",
-  "description": "Leon's Node Server",
+  "description": "Agora Student Marketplace",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "start": "nodemon --watch back-end --exec babel-node back-end/server.js --no-warnings"
   },
-  "keywords": [
-    "Node",
-    "Server",
-    "Leon"
-  ],
-  "author": "Leon",
+  "keywords": [],
+  "author": "Agora",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
