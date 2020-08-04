@@ -69,6 +69,20 @@ body {
   text-align: center;
 }
 
+.createAccountContainer {
+  border: 1px solid black; 
+  width:50%; 
+  clear: both; 
+  margin-left:25%; 
+}
+
+.createAccountContainer input {
+  width:25%; 
+  clear:both; 
+  margin: 10px; 
+}
+
+
 /* Sign in screen */
 
 .sign-in-container {
