@@ -11,3 +11,6 @@ npm install express
 
 For the backend packages cd into back-end and run:
 npm install @babel/cli @babel/core @babel/node @babel/preset-env nodemon --save-dev
+
+This makes it so we can run the latest version of javascript (ES6) with Node which
+runs on ES5 for some reason (I think)
