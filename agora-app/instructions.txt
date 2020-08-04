@@ -1,7 +1,11 @@
 INSTRUCTIONS FOR TEAMMEMBERS:
 
 RUNNING THE PROJECT:
+Front-End:
 cd into 'front-end', then type: npm start
+
+Back-End:
+npm start in the root ('agora-app') or cd into 'back-end' then run
 
 Dependencies to download to run the project:
 npm install react-scripts
@@ -9,8 +13,6 @@ npm install react-router-dom
 npm install react-dom
 npm install express
 
-For the backend packages cd into back-end and run:
 npm install @babel/cli @babel/core @babel/node @babel/preset-env nodemon --save-dev
-
-This makes it so we can run the latest version of javascript (ES6) with Node which
-runs on ES5 for some reason (I think)
+- (This makes it so we can run the latest version of javascript (ES6) with Node which
+runs on ES5)
