@@ -13,6 +13,10 @@ npm install react-router-dom
 npm install react-dom
 npm install express
 cd 'front-end' npm install axios
+npm install redux
+npm install redux-thunk
+
+MOST OF THESE MAY BE INSTALLED SIMPLY BY DOING: npm install dependencies
 
 npm install @babel/cli @babel/core @babel/node @babel/preset-env nodemon --save-dev
 - (This makes it so we can run the latest version of javascript (ES6) with Node which

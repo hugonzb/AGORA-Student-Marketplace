@@ -15,8 +15,8 @@ function Home (props) {
         };
     }, [])
 
-    return loading ? <div>Loading...</div> : 
-    error? <div> {error} </div> :
+    return loading ? <div>Loading listings ...</div> : 
+    error? <div> {error} - Make sure you are running the server to fetch data ;) </div> :
     <div className="home-container">
         This is the home page
         <div className="listings">
