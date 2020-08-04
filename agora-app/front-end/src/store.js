@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 
 const initialState = {};
 const reducer = combineReducers({
-    listings: listingReducer,
+    listingList: listingReducer,
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

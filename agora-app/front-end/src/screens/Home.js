@@ -1,22 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
+import { listListings } from '../actions/listingActions';
+
 
 function Home (props) {
-
-    const [listings, setListings] = useState([]);
-
+    const listingList = useSelector(state => state.listingList);
+    const { listings, loading, error } = listingList;
+    const dispatch = useDispatch();
     useEffect(() => {
-        const fetchData = async () => {
-            const {data} = await axios.get("/api/listings");
-            setListings(data);
-        }
-        fetchData();
+
+        dispatch(listListings());
         return () => {
             //
         };
     }, [])
 
-    return <div className="home-container">
+    return loading ? <div>Loading...</div> : 
+    error? <div> {error} </div> :
+    <div className="home-container">
         This is the home page
         <div className="listings">
             {listings.map(listing =>
