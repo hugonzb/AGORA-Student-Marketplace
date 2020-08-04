@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import data from '../data';
 
+
 function Home (props) {
 
     const [listings, setListings] = useState([]);
 
     useEffect(() => {
-        
+
         return () => {
             //
         };
