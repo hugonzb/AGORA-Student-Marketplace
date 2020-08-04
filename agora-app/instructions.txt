@@ -7,17 +7,16 @@ cd into 'front-end', then type: npm start
 Back-End:
 npm start in the root ('agora-app') or cd into 'back-end' then run
 
+MOST OF THESE MAY BE INSTALLED SIMPLY BY DOING: npm install
+
 Dependencies to download to run the project:
 npm install react-scripts
 npm install react-router-dom
 npm install react-dom
 npm install express
-cd 'front-end' npm install axios
+npm install axios
 npm install redux
 npm install redux-thunk
-
-MOST OF THESE MAY BE INSTALLED SIMPLY BY DOING: npm install dependencies
-
 npm install @babel/cli @babel/core @babel/node @babel/preset-env nodemon --save-dev
-- (This makes it so we can run the latest version of javascript (ES6) with Node which
+(This makes it so we can run the latest version of javascript (ES6) with Node which
 runs on ES5)
