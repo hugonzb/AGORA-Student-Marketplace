@@ -15,8 +15,12 @@
   "author": "Leon",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "dependencies": "0.0.1",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
