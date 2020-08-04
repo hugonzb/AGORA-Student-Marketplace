@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import data from '../data';
-
+import axios from 'axios';
 
 function Home (props) {
 
     const [listings, setListings] = useState([]);
 
     useEffect(() => {
-
+        const fetchData = async () => {
+            const {data} = await axios.get("/api/listings");
+            setListings(data);
+        }
+        fetchData();
         return () => {
             //
         };
@@ -16,7 +19,7 @@ function Home (props) {
     return <div className="home-container">
         This is the home page
         <div className="listings">
-            {data.listings.map(listing =>
+            {listings.map(listing =>
             <li>
                 <div className="listing-container">
                     {listing.name}
