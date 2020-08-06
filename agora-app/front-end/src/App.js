@@ -9,12 +9,13 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <div className="header">
+        
           <div className="links">
             <Link to="/">Home </Link>
             <Link to="/signup">Sign Up </Link>
             <Link to="/signin">Sign In </Link>
           </div>
-          HEADER
+          <Link to="/">Agora </Link>
         </div>
         <div className="main">
           <div className="content-display">
@@ -24,7 +25,7 @@ function App() {
           </div>
         </div>
         <div className="footer">
-          FOOTER
+          All Rights Reserved 
         </div>
       </div>
     </BrowserRouter>

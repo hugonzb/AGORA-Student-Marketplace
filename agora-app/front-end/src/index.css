@@ -4,30 +4,42 @@ body {
 
 /* App */
 
+
+
 .header {
   height: 4rem;
-  background-color: rgb(170, 170, 170);
+  background-color: rgb(180, 170, 170);
   font-size: 30px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: o.5rem;
 }
 
 .links {
   width: 15rem;
   font-size: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
 }
 
 .links a {
-  border-radius: 4px;
+  border-radius: 0px;
   padding: 5px;
   background-color: rgb(37, 37, 37);
   color: rgb(253, 253, 253);
   font-weight: bold;
   text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+  
 }
 
 .links a:hover{
-  color:rgb(250, 232, 232);
-  background-color: rgb(65, 63, 63);
+  color:rgb(30, 100, 180);
+  background-color: solid black;
 }
 
 .footer {
@@ -35,6 +47,10 @@ body {
   background-color: rgb(170, 170, 170);
   font-size: 30px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
 }
 
 /* Home screen */
