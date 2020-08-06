@@ -1,11 +1,6 @@
-import React from "react";
+#The following is my old form for singup. just leaving this here in a text file as im not sure I will need to come back to it or not. - Cedric 
 
-function SignUp(props) {
-  return (
-    <div className="sign-up-container">
-      Welcome to Agora! Please sign up using the form below.
-      <div className="createAccountContainer">
-        <form className="create-account-form">
+<form className="create-account-form">
           <label for="fname">First name:</label>
           <input type="text" id="fname" name="fname"></input>
           <br></br>
@@ -69,9 +64,3 @@ function SignUp(props) {
           <input type="submit" value="Submit"></input>
           <br></br>
         </form>
-      </div>
-    </div> //leave this in its a parent from App.js everything on the page will need to go in here
-  );
-}
-
-export default SignUp;
