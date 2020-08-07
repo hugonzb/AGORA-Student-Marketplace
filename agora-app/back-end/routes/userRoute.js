@@ -13,6 +13,6 @@ router.post('/signup', async (req, res) =>{
     }catch{
         res.send({msg:'Invalid User Data.'});
     }
-})
+});
 
 export default router;
