@@ -20,4 +20,4 @@ app.get("/api/listings", (req, res) => {
 });
 
 /* run server on port 5000 */
-app.listen(5000, () => {console.log("Server started at http://localhost:5000\nListing data is on: http://localhost:5000/api/listings")});
+app.listen(5000, () => {console.log("Server started at http://localhost:5000\nListing data is stored on: http://localhost:5000/api/listings")});

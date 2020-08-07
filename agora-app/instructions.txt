@@ -1,11 +1,10 @@
-INSTRUCTIONS FOR TEAMMEMBERS:
+RUNNING THE PROJECT
 
-RUNNING THE PROJECT:
 Front-End:
 cd into 'front-end', then type: npm start
 
 Back-End:
-npm start in the root ('agora-app') or cd into 'back-end' then run
+npm start in the root ('agora-app') to run the server
 
-Install dependencies:
+Install all dependencies:
 npm install

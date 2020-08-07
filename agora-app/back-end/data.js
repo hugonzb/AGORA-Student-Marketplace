@@ -31,5 +31,13 @@ export default {
         price: 70,
         brand: 'Warehouse',
       },
+      {
+        _id: '5',
+        name: 'FILA School Backpack',
+        category: 'Bags',
+        image: '/images/backpack.jpg',
+        price: 10,
+        brand: 'FILA',
+      }
     ]
   }
