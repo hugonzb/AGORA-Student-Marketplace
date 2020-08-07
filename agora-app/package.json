@@ -3,29 +3,33 @@
   "version": "1.0.0",
   "description": "Agora Student Marketplace",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "nodemon --watch back-end --exec babel-node back-end/server.js --no-warnings"
+    "start": "nodemon --watch back-end --exec babel-node back-end/server.js",
+    "build": "rm -rf dist && babel back-end -d dist"
   },
   "keywords": [],
   "author": "Agora",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "config": "^3.3.1",
     "dependencies": "0.0.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "react-redux": "^7.2.1",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
+    "mongoose": "^5.9.27",
+    "node": "^14.7.0",
     "react": "^16.13.1",
     "react-apps": "^0.2.1",
     "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^3.4.1"
+    "react-scripts": "^3.4.1",
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.11.0",
+    "@babel/core": "^7.11.1",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.0",
     "nodemon": "^2.0.4"
