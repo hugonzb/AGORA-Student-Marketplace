@@ -16,7 +16,8 @@ function SignUp(props) {
     if (userInfo) {
       props.history.push("/");
     }
-    return () => { };
+    return () => {};
+    // eslint-disable-next-line
   }, [userInfo]);
 
 
