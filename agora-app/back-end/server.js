@@ -1,5 +1,4 @@
 import express from 'express';
-import data from './data.js';
 import config from '../back-end/config.js';
 import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
