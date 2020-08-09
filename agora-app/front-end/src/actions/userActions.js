@@ -1,8 +1,10 @@
 const { default: Axios } = require("axios");
 const { SSL_OP_COOKIE_EXCHANGE } = require("constants");
 
-const signUp = (fname) => (dispatch) => {
+const signUp = (fname) => async (dispatch) => {
     dispatch({ type: USER_SIGNUP_REQUEST, payload: { fname } });
+    /* Debugging code here :-) */
+    console.log(fname);
     try {
         const {data} = await Axios.post("/api/users/signup", {fname});
         dispatch({type:USER_SIGNUP_SUCCESS, payload: data});
