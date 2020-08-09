@@ -4,8 +4,6 @@ import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
 import listingRoute from './routes/listingRoute';
 
-/*dotenv.config(); I think this is necessary but not sure*/
-
 const mongodbUrl = config.MONGODB_URL;
 
 mongoose.connect(mongodbUrl, {
