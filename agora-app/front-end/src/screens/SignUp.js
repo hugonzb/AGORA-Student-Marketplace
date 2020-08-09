@@ -7,7 +7,7 @@ function SignUp(props) {
       <div className="createAccountContainer">
         <form className="create-account-form">
           <label for="fname">First name:</label>
-          <input type="text" name="fname" placeholder="fname"></input>
+          <input type="text" name="fname" placeholder="first name"></input>
           <button type="button">Create Account</button>
         </form>
         {/* The full form can be found in old_signup_form.txt in front end. Im currently trying to simplify it before making
