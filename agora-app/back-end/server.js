@@ -3,6 +3,7 @@ import data from './data.js';
 import config from '../back-end/config.js';
 import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
+import listingRoute from './routes/listingRoute';
 
 /*dotenv.config(); I think this is necessary but not sure*/
 
@@ -17,9 +18,7 @@ mongoose.connect(mongodbUrl, {
 const app = express();
 
 app.use("/api/users", userRoute);
-app.get("/api/listings", (req, res) => {
-    res.send(data.listings);
-});
+app.use("/api/listings", listingRoute);
 
 /* run server on port 5000 */
 app.listen(5000, () => {console.log("Backend server started at http://localhost:5000\nListing data is stored on: http://localhost:5000/api/listings")});
