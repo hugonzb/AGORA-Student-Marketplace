@@ -6,7 +6,7 @@ import { userInfo } from "os";
 
 function SignUp(props) {
 
-
+  const [name, setName] = useState('');
 
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
@@ -28,7 +28,7 @@ function SignUp(props) {
       <div className="createAccountContainer">
         <form className="create-account-form" onSubmit={submitHandler}>
           <label for="fname">First name:</label>
-          <input type="text" name="fname" placeholder="first name"></input>
+          <input type="text" name="fname" placeholder="first name" onChange={(e)=>setName(e.target.value)}></input>
           <button type="button">Create Account</button>
         </form>
         {/* The full form can be found in old_signup_form.txt in front end. Im currently trying to simplify it before making
