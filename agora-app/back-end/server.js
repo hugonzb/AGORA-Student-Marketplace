@@ -4,7 +4,7 @@ import config from '../back-end/config.js';
 import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
 
-/*dotenv.config(); Don't need it, it is already in the config.js*/
+/*dotenv.config(); I think this is necessary but not sure*/
 
 const mongodbUrl = config.MONGODB_URL;
 
