@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import {link} from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+//import {link} from 'react-router-dom';
+import { /*useSelector,*/ useDispatch } from 'react-redux';
 import { signUp } from '../actions/userActions';
 import { userInfo } from "os";
 

@@ -2,7 +2,7 @@ import { USER_SIGNUP_FAIL, USER_SIGNUP_REQUEST, USER_SIGNUP_SUCCESS } from "../c
 /*import Cookie from 'js-cookie';*/
 
 const { default: Axios } = require("axios");
-const { SSL_OP_COOKIE_EXCHANGE } = require("constants");
+//const { SSL_OP_COOKIE_EXCHANGE } = require("constants");
 
 const signUp = (fname) => async (dispatch) => {
     dispatch({ type: USER_SIGNUP_REQUEST, payload: { fname } });
