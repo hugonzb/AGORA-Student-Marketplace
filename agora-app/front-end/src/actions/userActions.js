@@ -11,3 +11,5 @@ const signUp = (fname) => (dispatch) => {
         dispatch({type: USER_SIGNUP_FAIL, payload: error.message});
     }
 }
+
+export {signUp}
