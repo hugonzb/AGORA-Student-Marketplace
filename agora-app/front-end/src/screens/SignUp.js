@@ -1,11 +1,19 @@
 import React from "react";
 
+/*
+  This handler will run when the user clicks on the create account button
+*/ 
+const submitHandler = (e) => {
+  e.preventDefault();
+  dispatch(SignUp(fname));
+}
+
 function SignUp(props) {
   return (
     <div className="sign-up-container">
       Welcome to Agora! Please sign up using the form below.
       <div className="createAccountContainer">
-        <form className="create-account-form">
+        <form className="create-account-form" onSubmit={submitHandler}>
           <label for="fname">First name:</label>
           <input type="text" name="fname" placeholder="first name"></input>
           <button type="button">Create Account</button>
