@@ -10,18 +10,19 @@ function SignUp(props) {
 
   const [name, setName] = useState('');
 
-  /* This handler will run when the user clicks on the create account button */
-  const submitHandler = (e) => {
-    e.preventDefault();
-    dispatch(signUp(name));
-  }
-
   useEffect(() => {
     if (userInfo) {
       props.history.push("/");
     }
     return () => { };
   }, [userInfo]);
+
+
+  /* This handler will run when the user clicks on the create account button */
+  const submitHandler = (e) => {
+    e.preventDefault();
+    dispatch(signUp(name));
+  }
 
 
   return (
