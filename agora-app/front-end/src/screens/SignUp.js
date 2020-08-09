@@ -1,12 +1,19 @@
 import React from "react";
+import {signUp} from '../actions/userActions';
+import { userInfo } from "os";
 
-/*
-  This handler will run when the user clicks on the create account button
-*/ 
+/* This handler will run when the user clicks on the create account button */ 
 const submitHandler = (e) => {
   e.preventDefault();
-  dispatch(SignUp(fname));
+  dispatch(signUp(fname));
 }
+
+useEffect(()=>{
+  if(userInfo){
+    props.history.push("/");
+  }
+  return () => {};
+  },[userInfo]);
 
 function SignUp(props) {
   return (
