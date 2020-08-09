@@ -13,7 +13,7 @@ function SignUp(props) {
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(signUp(fname));
+    dispatch(signUp(name));
   }
 
   useEffect(() => {
