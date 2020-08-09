@@ -1,3 +1,5 @@
+import { USER_SIGNUP_FAIL, USER_SIGNUP_REQUEST, USER_SIGNUP_SUCCESS } from "../constants/userConstants";
+
 const { default: Axios } = require("axios");
 const { SSL_OP_COOKIE_EXCHANGE } = require("constants");
 
@@ -8,7 +10,7 @@ const signUp = (fname) => async (dispatch) => {
     try {
         const {data} = await Axios.post("/api/users/signup", {fname});
         dispatch({type:USER_SIGNUP_SUCCESS, payload: data});
-        Cookie.set('userInfo', JSON.stringify(data));
+        /*Cookie.set('userInfo', JSON.stringify(data)); Cookie is currently buggy :(*/
     }catch(error){
         dispatch({type: USER_SIGNUP_FAIL, payload: error.message});
     }
