@@ -9,6 +9,8 @@ import { userInfo } from "os";
 function SignUp(props) {
 
   const [name, setName] = useState('');
+  const dispatch = useDispatch();
+
 
   useEffect(() => {
     if (userInfo) {
