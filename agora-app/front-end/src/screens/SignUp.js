@@ -24,6 +24,7 @@ function SignUp(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(signUp(name));
+    console.log(name);
   }
 
 
