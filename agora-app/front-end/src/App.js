@@ -9,13 +9,19 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <div className="header">
-        
           <div className="links">
             <Link to="/">Home </Link>
             <Link to="/signup">Sign Up </Link>
             <Link to="/signin">Sign In </Link>
           </div>
           <Link to="/">Agora </Link>
+        </div>
+        <div className="search">
+          <div>
+            <form>
+              <input className = "search-input" name="searchWord" placeholder="What are you looking for? ..."/>
+            </form>
+          </div>
         </div>
         <div className="main">
           <div className="content-display">
