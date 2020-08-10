@@ -63,14 +63,12 @@ body {
 }
 
 .footer {
-  height: 2rem;
-  font-size: 30px;
-  text-align: center;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  height: 0.5rem;
+  font-size: 20px;
   padding: 0.5rem;
   background-color: #406f83;
+  color: white;
+  text-align: center;
 }
 
 /* Home screen */
@@ -80,7 +78,7 @@ body {
   width: 100%;
   text-align: center; 
   height: 100%;
-
+  min-height: 34rem;
 }
 
 .listings {
@@ -145,4 +143,10 @@ body {
   width: 100%;
   height: 40rem;
   text-align: center;
+}
+
+/* misc */
+
+.loading{
+  
 }
