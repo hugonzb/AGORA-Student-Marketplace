@@ -33,10 +33,11 @@ body {
   height: 2rem;
   border: 0px;
   border-radius: 0.3rem;
+  padding-left: 10px;
 }
 
 .links {
-  width: 15rem;
+  width: 30rem;
   font-size: 20px;
   justify-content: space-between;
   align-items: center;
@@ -45,13 +46,14 @@ body {
 
 .links a {
   border-radius: 0px;
-  padding: 5px;
-  background-color: rgb(37, 37, 37);
-  color: rgb(253, 253, 253);
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-weight: bold;
   text-decoration: none;
   justify-content: space-between;
   align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   
 }
 
@@ -68,7 +70,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  background-color: #246780;
+  background-color: #406f83;
 }
 
 /* Home screen */

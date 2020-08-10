@@ -9,12 +9,13 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <div className="header">
+          <Link to="/">Agora Student Marketplace </Link>
           <div className="links">
-            <Link to="/">Home </Link>
-            <Link to="/signup">Sign Up </Link>
-            <Link to="/signin">Sign In </Link>
+            <Link to="/">HOME </Link>
+            <Link to="/signup">REGISTER </Link>
+            <Link to="/signin">SIGN IN </Link>
+            <Link to="/">ABOUT US </Link>
           </div>
-          <Link to="/">Agora </Link>
         </div>
         <div className="search">
           <div>
