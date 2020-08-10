@@ -9,7 +9,7 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <div className="header">
-          <Link to="/">Agora Student Marketplace </Link>
+          <Link to="/">AGORA LOGO HERE </Link>
           <div className="links">
             <Link to="/">HOME </Link>
             <Link to="/signup">REGISTER </Link>

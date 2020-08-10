@@ -15,6 +15,10 @@ body {
   padding: 10px;
   text-align: center;
   background-color: #ffffff;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(202, 202, 202)
 }
 
 .search {
@@ -26,6 +30,7 @@ body {
   padding: 10px;
   text-align: center;
   background-color: #406f83;
+  border-radius: 0.3rem;
 }
 
 .search-input{
@@ -48,7 +53,7 @@ body {
   border-radius: 0px;
   padding: 10px;
   background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  color: #11485f;
   font-weight: bold;
   text-decoration: none;
   justify-content: space-between;
@@ -74,11 +79,9 @@ body {
 /* Home screen */
 
 .home-container {
-  border: 1px solid rgb(24, 0, 245);
-  width: 100%;
   text-align: center; 
   height: 100%;
-  min-height: 34rem;
+  min-height: 35rem;
 }
 
 .listings {
@@ -96,7 +99,6 @@ body {
   height: 8rem;
   border: 1px solid black;
   margin: 1rem;
-  box-shadow: 0 4px 8px 0 rgba(4, 4, 10, 0.2);
   max-width: 400px;
   text-align: center;
   font-family: arial;
@@ -148,5 +150,9 @@ body {
 /* misc */
 
 .loading{
-  
+  min-height: 35rem;
+}
+
+.error{
+  min-height: 35rem;
 }
