@@ -3,13 +3,15 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
+import agoralogo from "./images/agoralogo.png";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="container">
         <div className="header">
-          <Link to="/">AGORA LOGO HERE </Link>
+          <Link to="/"><img className="agore-logo" src={agoralogo} alt="listing"></img>
+          </Link>
           <div className="links">
             <Link to="/">HOME </Link>
             <Link to="/signup">REGISTER </Link>
