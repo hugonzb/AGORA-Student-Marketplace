@@ -3,6 +3,8 @@ import User from "../models/userModel";
 
 const router = express.Router();
 
+//need to update this so that it matches the schema on userModel.js
+//also need to update signIn.js so that the form is the same as userModel.js
 router.post("/signup", async (req, res) => {
   try {
     const user = new User({
