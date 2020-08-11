@@ -11,7 +11,7 @@ function SignUp(props) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [DOB, setDOB] = useState("");
+  const [dob, setDOB] = useState("");
   const [gender, setGender] = useState("Male");
   const [university, setUniversity] = useState("");
   const [street_address, setStreet] = useState("");
@@ -38,7 +38,7 @@ function SignUp(props) {
     dispatch(signUp(username));
     dispatch(signUp(password));
     dispatch(signUp(email));
-    dispatch(signUp(DOB));
+    dispatch(signUp(dob));
     dispatch(signUp(gender));
     dispatch(signUp(university));
     dispatch(signUp(street_address));
@@ -51,7 +51,7 @@ function SignUp(props) {
     console.log(username);
     console.log(password);
     console.log(email);
-    console.log(DOB);
+    console.log(dob);
     console.log(gender);
     console.log(university);
     console.log(street_address);
@@ -193,8 +193,6 @@ function SignUp(props) {
           ></input>
           <br></br>
           <input type="submit" value="Submit"></input>
-          <br></br>
-          <button type="button">Create Account</button>
         </form>
       </div>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here
