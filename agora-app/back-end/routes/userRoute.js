@@ -8,11 +8,12 @@ const router = express.Router();
 router.post("/signup", async (req, res) => {
   try {
     const user = new User({
-      name: req.body.name,
+      fname: req.body.fname,
+      mname: req.body.mname,
     });
     const newUser = await user.save();
     res.send(newUser);
-    console.log(newUser.name);
+    console.log(newUser.fname);
   } catch {
     res.send({ msg: "Invalid User Data." });
     console.log(
