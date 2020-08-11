@@ -106,8 +106,8 @@ body {
   max-width: 400px;
   text-align: center;
   font-family: arial;
-  border-radius: 0.5rem;
   cursor: pointer;
+  border-radius: 0.5rem;
 }
 
 .listing-image{
@@ -115,6 +115,7 @@ body {
   background-color: white;
   align-items: center;
   width: 180px;
+  border-radius: 0.5rem;
   border-right: 1px solid rgb(109, 109, 109);
 }
 
@@ -124,15 +125,20 @@ body {
 }
 
 .listing-content{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: rgb(202, 213, 226);
-  padding-top: 1rem;
-  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(240, 243, 247);
+  padding: 0.5rem;
+  width: 150px;
   font-size: 18x;
 }
 
 .listing-name{
   padding-bottom: 1rem;
+  font-weight: bold;
 }
 
 /* Sign up screen */
