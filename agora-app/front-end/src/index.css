@@ -1,49 +1,91 @@
+
 body {
- background-color: rgb(243, 243, 243);
+ background-color: rgb(250, 250, 250);
 }
 
 /* App */
 
 .header {
   height: 4rem;
-  background-color: rgb(170, 170, 170);
   font-size: 30px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  background-color: #ffffff;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgb(202, 202, 202)
+}
+
+.search {
+  display: flex;
+  height: 2rem;
+  font-size: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+  background-color: #406f83;
+  border-radius: 0.3rem;
+}
+
+.search-input{
+  width: 20rem;
+  height: 2rem;
+  border: 0px;
+  border-radius: 0.3rem;
+  padding-left: 10px;
 }
 
 .links {
-  width: 15rem;
+  width: 30rem;
   font-size: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
 }
 
 .links a {
-  border-radius: 4px;
-  padding: 5px;
-  background-color: rgb(37, 37, 37);
-  color: rgb(253, 253, 253);
+  border-radius: 0px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  color: #11485f;
   font-weight: bold;
   text-decoration: none;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
 }
 
 .links a:hover{
-  color:rgb(250, 232, 232);
-  background-color: rgb(65, 63, 63);
+  color:rgb(30, 100, 180);
+  background-color: solid black;
 }
 
 .footer {
-  height: 4rem;
-  background-color: rgb(170, 170, 170);
-  font-size: 30px;
+  height: 0.5rem;
+  font-size: 20px;
+  padding: 0.5rem;
+  background-color: #406f83;
+  color: white;
   text-align: center;
 }
 
 /* Home screen */
 
 .home-container {
-  border: 1px solid rgb(24, 0, 245);
-  width: 100%;
-  height: 40rem;
-  text-align: center;
+  text-align: center; 
+  height: 100%;
+  min-height: 35rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid rgb(185, 185, 185);
 }
 
 .listings {
@@ -56,21 +98,38 @@ body {
 
 .listing-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   height: 10rem;
-  width: 10rem;
-  border: 1px solid black;
+  border: 1px solid rgb(129, 129, 129);
   margin: 1rem;
+  max-width: 400px;
+  text-align: center;
+  font-family: arial;
+  border-radius: 0.5rem;
+}
+
+.listing-image{
+  width: 180px;
+  border-right: 1px solid rgb(109, 109, 109);
+}
+
+.listing-content{
+  width: 200px;
+  font-size: 15px;
 }
 
 /* Sign up screen */
 
 .sign-up-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border: 1px solid black;
-  width: 100%;
-  height: 40rem;
+  width: 98%;
+  min-height: 35rem;
   text-align: center;
+  padding: 1rem;
+  border: 1px solid rgb(185, 185, 185);
 }
 
 .createAccountContainer {
@@ -90,8 +149,22 @@ body {
 /* Sign in screen */
 
 .sign-in-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border: 1px solid rgb(30, 255, 1);
-  width: 100%;
-  height: 40rem;
+  width: 98%;
+  min-height: 35rem;
   text-align: center;
+  padding: 1rem;
+  border: 1px solid rgb(185, 185, 185);
+}
+
+/* misc */
+
+.loading{
+  min-height: 35rem;
+}
+
+.error{
+  min-height: 35rem;
 }

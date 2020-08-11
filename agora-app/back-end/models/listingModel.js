@@ -1,0 +1,17 @@
+import mongoose from 'mongoose';
+
+// Database schema for a listing
+const listingSchema = new mongoose.Schema({
+    name:{ type: String, required: true },
+    description:{ type: String, required: true },
+    category:{ type: String, required: true },
+    price:{ type: Number, required: true },
+    location:{ type: String, required: true },
+    university:{ type: String, required: true },
+    brand:{ type: String, required: false },
+    seller:{ type: String, required: true }
+});
+
+const listingModel = mongoose.model('Listing', listingSchema);
+
+export default listingModel;

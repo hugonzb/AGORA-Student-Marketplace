@@ -15,19 +15,22 @@ function Home (props) {
         // eslint-disable-next-line
     }, [])
 
-    return loading ? <div>Loading listings ...</div> : 
-    error? <div> {error} - Make sure you are running the server to fetch data ;) </div> :
+    return loading ? <div className="loading">Loading listings ...</div> : 
+    error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
     <div className="home-container">
-        This is the home page
+        This is the home page - UPDATE: NOW FETCHING FROM MONGODB
         <div className="listings">
             {listings.map(listing =>
             <li>
                 <div className="listing-container">
-                    <div>Listing Image</div>
-                    <div>{listing.name}</div>
-                    <div>Category: {listing.category}</div>
-                    <div>${listing.price}</div>
-                </div>
+                    <div className="listing-image">Listing Image</div>
+                    <div className="listing-content">
+                        <div>{listing.name}</div>
+                        <div>Category: {listing.category}</div>
+                        <div>Price: ${listing.price}</div>
+                        <div>Seller: {listing.seller}</div>
+                    </div>
+                </div> 
             </li>)
             }
         </div>
