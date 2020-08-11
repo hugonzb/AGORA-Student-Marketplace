@@ -12,29 +12,19 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
-<<<<<<< HEAD
-    "body-parser": "^1.19.0",
-    "dependencies": "0.0.1",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-=======
     "config": "^3.3.1",
     "dependencies": "0.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.28",
     "node": "^14.7.0",
->>>>>>> 1fa32b73359c027ca8ed650e40b6c033e0f5e5ae
     "react": "^16.13.1",
     "react-apps": "^0.2.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.1",
-<<<<<<< HEAD
-=======
     "react-thunk": "^1.0.0",
->>>>>>> 1fa32b73359c027ca8ed650e40b6c033e0f5e5ae
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   },
