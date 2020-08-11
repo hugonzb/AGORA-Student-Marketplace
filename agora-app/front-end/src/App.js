@@ -20,7 +20,7 @@ function App() {
         <div className="search">
           <div>
             <form>
-              <input className = "search-input" name="searchWord" placeholder="What are you looking for? ..."/>
+              <input className = "search-input" name="searchWord" placeholder="What are you looking for? .."/>
             </form>
           </div>
         </div>

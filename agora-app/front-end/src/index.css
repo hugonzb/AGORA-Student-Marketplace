@@ -24,7 +24,6 @@ body {
 .search {
   display: flex;
   height: 2rem;
-  font-size: 10px;
   align-items: center;
   justify-content: center;
   padding: 10px;
@@ -34,6 +33,7 @@ body {
 }
 
 .search-input{
+  font-size: 15px;
   width: 20rem;
   height: 2rem;
   border: 0px;
@@ -101,22 +101,38 @@ body {
   flex-direction: row;
   justify-content: center;
   height: 10rem;
-  border: 1px solid rgb(129, 129, 129);
+  border: 1px solid rgb(182, 182, 182);
   margin: 1rem;
   max-width: 400px;
   text-align: center;
   font-family: arial;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .listing-image{
+  display: flex;
+  background-color: white;
+  align-items: center;
   width: 180px;
   border-right: 1px solid rgb(109, 109, 109);
 }
 
+.listing-image img{
+  max-width: 180px;
+  max-height: 160px;
+}
+
 .listing-content{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(202, 213, 226);
+  padding-top: 1rem;
   width: 200px;
-  font-size: 15px;
+  font-size: 18x;
+}
+
+.listing-name{
+  padding-bottom: 1rem;
 }
 
 /* Sign up screen */
