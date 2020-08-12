@@ -17,7 +17,7 @@ function SignUp(props) {
   const [street_address, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
-  const [date_created, setDateCreated] = useState("01/01/0001"); // This  still needs to be updated to getting the current date
+  const [date_created/*, setDateCreated*/] = useState("01/01/0001"); // This  still needs to be updated to getting the current date
 
   const dispatch = useDispatch();
 
