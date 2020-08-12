@@ -32,7 +32,12 @@ function SignUp(props) {
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(signUp(fname));
+    dispatch(signUp(fname, mname, sname, username, password, email,
+      dob, gender, university, street_address, city, postcode, date_created));
+    /*
+    Pretty confident that this shouldn't exist, but am
+    keeping it here for now just in case
+    //
     dispatch(signUp(mname));
     dispatch(signUp(sname));
     dispatch(signUp(username));
@@ -45,7 +50,8 @@ function SignUp(props) {
     dispatch(signUp(city));
     dispatch(signUp(postcode));
     dispatch(signUp(date_created));
-
+    //
+    */
     console.log(fname);
     console.log(mname);
     console.log(username);
