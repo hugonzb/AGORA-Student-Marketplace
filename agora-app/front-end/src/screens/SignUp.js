@@ -17,6 +17,10 @@ function SignUp(props) {
   const [street_address, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
+  /* For some reason this gives the wrong date???*/
+  var currDate = new Date();
+  var currDateString = currDate.getDay() + "/" + currDate.getMonth() + "/" + currDate.getFullYear();
+  console.log(currDateString);
   const [date_created/*, setDateCreated*/] = useState("01/01/0001"); // This  still needs to be updated to getting the current date
 
   const dispatch = useDispatch();
