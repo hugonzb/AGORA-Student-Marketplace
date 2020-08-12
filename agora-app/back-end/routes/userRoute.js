@@ -28,7 +28,7 @@ router.post("/signup", async (req, res) => {
   } catch {
     res.send({ msg: "Invalid User Data." });
     console.log(
-      "Something went wrong with saving user sign up data to the database"
+      "Something went wrong with saving user sign up data to the database in userRoute.js"
     );
   }
 });
