@@ -25,7 +25,7 @@ function SignIn(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
-      SignIn(
+      signIn(
         email, password
       )
     );

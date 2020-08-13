@@ -28,4 +28,4 @@ const signIn = (email, password) => async (dispatch) => {
     }
 }
 
-export {signUp}
+export {signUp, signIn}
