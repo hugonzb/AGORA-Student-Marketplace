@@ -3,27 +3,28 @@ import User from "../models/userModel";
 
 const router = express.Router();
 
-//need to update this so that it matches the schema on userModel.js
-//also need to update signIn.js so that the form is the same as userModel.js
 router.post("/signup", async (req, res) => {
-  const user = new User({
-    studentid: req.body.studentid,
-    fname: req.body.fname,
-    sname: req.body.sname,
-    username: req.body.username,
-    password: req.body.password,
-    email: req.body.email,
-    dob: req.body.dob,
-    gender: req.body.gender,
-    university: req.body.university,
-    street_address: req.body.street_address,
-    city: req.body.city,
-    postcode: req.body.postcode,
-    date_created: req.body.date_created,
-  });
-  const newUser = await user.save();
-  res.send(newUser);
-  console.log(newUser.fname);
+  try{
+    const user = new User({
+      studentid: req.body.studentid,
+      fname: req.body.fname,
+      sname: req.body.sname,
+      username: req.body.username,
+      password: req.body.password,
+      email: req.body.email,
+      dob: req.body.dob,
+      gender: req.body.gender,
+      university: req.body.university,
+      street_address: req.body.street_address,
+      city: req.body.city,
+      postcode: req.body.postcode,
+      date_created: req.body.date_created,
+    });
+    const newUser = await user.save();
+    res.send(newUser);
+  }catch{
+    res.status(401).send({message:'The student ID or email address has been taken.'});
+  }
 });
 
 //Rough edit of the post method for the sign in with an account.

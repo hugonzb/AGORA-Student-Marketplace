@@ -2,14 +2,13 @@ import mongoose from "mongoose";
 import { strict } from "assert";
 
 // Database schema for a user
-// Needs more fields based on the db plan on the Taiga wiki.
 const userSchema = new mongoose.Schema({
-  studentid: { type: Number, required: true }, 
+  studentid: { type: Number, required: true, unique: true }, 
   fname: { type: String, required: true },
   sname: { type: String, required: true },
   username: { type: String, required: true },
   password: { type: String, required: true },
-  email: { type: String, required: true },
+  email: { type: String, required: true, unique: true }, 
   dob: { type: Date, required: true },
   gender: { type: String, required: true },
   university: { type: String, required: true },
@@ -18,7 +17,7 @@ const userSchema = new mongoose.Schema({
   postcode: { type: String, required: true }
 },{
   timestamps: true,
-});
+},{strict: true});
 
 const userModel = mongoose.model("User", userSchema);
 

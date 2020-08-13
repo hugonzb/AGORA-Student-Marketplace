@@ -54,6 +54,7 @@ function SignUp(props) {
     <div className="sign-up-container">
       Welcome to Agora! Please sign up using the form below.
       <div className="createAccountContainer">
+        {error && <div>Email or Student ID has been taken</div>}
         <form className="create-account-form" onSubmit={submitHandler}>
           <label for="student ID">Student ID:</label>
           <input
@@ -61,6 +62,7 @@ function SignUp(props) {
             id="studentid"
             name="studentid"
             placeholder="student id"
+            required
             onChange={(e) => setStudentid(e.target.value)}
           ></input>
           <br></br>
