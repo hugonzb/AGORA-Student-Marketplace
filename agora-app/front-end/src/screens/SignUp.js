@@ -12,12 +12,13 @@ function SignUp(props) {
   const [email, setEmail] = useState("");
   const [dob, setDOB] = useState("");
   const [gender, setGender] = useState("Male");
-  const [university, setUniversity] = useState("");
-  const [street_address, setStreet] = useState("");
-  const [city, setCity] = useState("");
-  const [postcode, setPostcode] = useState("");
-  const userSignup = useSelector((state) => state.userSignup);
-  const { loading, userInfo, error } = userSignup;
+  const [university, setUniversity] = useState("Otago");
+  const [street_address, setStreet] = useState('');
+  const [city, setCity] = useState('');
+  const [postcode, setPostcode] = useState('');
+  const userSignup = useSelector(state=>state.userSignup);
+  const {loading, userInfo, error} = userSignup;
+
   /* For some reason this gives the wrong date???*/
   var currDate = new Date();
   var currDateString =
@@ -165,7 +166,7 @@ function SignUp(props) {
             <option value="Auckland University of Technology (AUT)">
               Auckland University of Technology (AUT)
             </option>
-            <option value="University of  Waikato">
+            <option value="University of Waikato">
               University of Waikato
             </option>
             <option value="Massey University">Massey University</option>
