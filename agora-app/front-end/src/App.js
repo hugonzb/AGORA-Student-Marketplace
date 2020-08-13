@@ -20,7 +20,7 @@ function App() {
           </div>
         </div>
         <div className="search">
-          <div>
+          <div> 
             <form>
               <input className = "search-input" name="searchWord" placeholder="What are you looking for? .."/>
             </form>
@@ -34,7 +34,7 @@ function App() {
           </div>
         </div>
         <div className="footer">
-          All Rights Reserved 
+          All Rights Reserved.
         </div>
       </div>
     </BrowserRouter>
