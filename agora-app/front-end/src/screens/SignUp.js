@@ -1,34 +1,34 @@
 import React, { useEffect, useState } from "react";
 //import {link} from 'react-router-dom';
-import { /*useSelector,*/ useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
-import { userInfo } from "os";
 
 function SignUp(props) {
-  const [fname, setFname] = useState("");
-  const [mname, setMname] = useState("");
-  const [sname, setSname] = useState("");
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [dob, setDOB] = useState("");
+  const [fname, setFname] = useState("Hugo");
+  const [mname, setMname] = useState('');
+  const [sname, setSname] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  const [dob, setDOB] = useState('');
   const [gender, setGender] = useState("Male");
-  const [university, setUniversity] = useState("");
-  const [street_address, setStreet] = useState("");
-  const [city, setCity] = useState("");
-  const [postcode, setPostcode] = useState("");
+  const [university, setUniversity] = useState('');
+  const [street_address, setStreet] = useState('');
+  const [city, setCity] = useState('');
+  const [postcode, setPostcode] = useState('');
+  const userSignup = useSelector(state=>state.userSignup);
+  const {loading, userInfo, error} = userSignup;
   /* For some reason this gives the wrong date???*/
   var currDate = new Date();
-  var currDateString =
-    currDate.getDay() +
-    "/" +
-    currDate.getMonth() +
-    "/" +
-    currDate.getFullYear();
+  var currDateString = currDate.getDay() + "/" + currDate.getMonth() + "/" + currDate.getFullYear();
   console.log(currDateString);
+<<<<<<< HEAD
   /* Could edit this so it creates the the currDate var when the user hits the create account button, and
   not when they load the page? */
   const [date_created] = useState(currDateString); // This  still needs to be updated to getting the current date
+=======
+  const [date_created/*, setDateCreated*/] = useState("01/01/0001"); // This  still needs to be updated to getting the current date
+>>>>>>> d306633c07265ba7fe0505241d6a5d5fed7bc2f1
 
   const dispatch = useDispatch();
 
@@ -41,9 +41,9 @@ function SignUp(props) {
   }, [userInfo]);
 
   /* This handler will run when the user clicks on the create account button */
-  const submitHandler = (e) => {
+  const submitHandler = (e) => { 
     e.preventDefault();
-    console.log(fname);
+    console.log(fname + "fname here");
     console.log(mname);
     console.log(username);
     console.log(password);
@@ -55,26 +55,10 @@ function SignUp(props) {
     console.log(city);
     console.log(postcode);
     console.log(date_created);
-
-    dispatch(
-      signUp(
-        fname,
-        mname,
-        sname,
-        username,
-        password,
-        email,
-        dob,
-        gender,
-        university,
-        street_address,
-        city,
-        postcode,
-        date_created
-      )
-    );
-  };
-
+    dispatch(signUp(fname, mname, sname, username, password, email,
+      dob, gender, university, street_address, city, postcode, date_created));
+  }
+  
   return (
     <div className="sign-up-container">
       Welcome to Agora! Please sign up using the form below.
@@ -208,7 +192,7 @@ function SignUp(props) {
             onChange={(e) => setPostcode(e.target.value)}
           ></input>
           <br></br>
-          <button type="submit"> Submit</button>
+          <input type="submit" value="Submit"></input>
         </form>
       </div>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here
