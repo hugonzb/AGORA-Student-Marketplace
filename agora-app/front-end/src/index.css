@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap');
 
 body {
  background-color: rgb(250, 250, 250);
@@ -34,13 +35,14 @@ a:hover, a:visited, a:link, a:active{
   padding: 1.3rem;
   padding-right: 0.5rem;
   color: rgb(255, 123, 0);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Play', sans-serif;
 }
 
 .sm-text{
   padding-top: 1.3rem;
-  color: rgb(0, 0, 0);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(2, 3, 32);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 28px;
 }
 
 .agora-logo{
