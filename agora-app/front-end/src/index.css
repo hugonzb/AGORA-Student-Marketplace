@@ -92,7 +92,7 @@ a:hover, a:visited, a:link, a:active{
 }
 
 .links a:hover{
-  color:rgb(30, 100, 180);
+  color:#1d4c61;
   background-color: solid black;
 }
 
@@ -213,7 +213,12 @@ a:hover, a:visited, a:link, a:active{
 /* misc */
 
 .loading{
-  min-height: 35rem;
+  display: flex;
+  min-height: 34rem;
+  text-align: center;
+  justify-content: center;
+  padding: 10rem;
+  font-weight: bold;
 }
 
 .error{
