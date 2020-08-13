@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
 
 function SignUp(props) {
-  const [fname, setFname] = useState("Hugo");
+  const [fname, setFname] = useState("");
   const [mname, setMname] = useState("");
   const [sname, setSname] = useState("");
   const [username, setUsername] = useState("");
@@ -12,7 +12,7 @@ function SignUp(props) {
   const [email, setEmail] = useState("");
   const [dob, setDOB] = useState("");
   const [gender, setGender] = useState("Male");
-  const [university, setUniversity] = useState("");
+  const [university, setUniversity] = useState("University of Auckland");
   const [street_address, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
@@ -42,18 +42,6 @@ function SignUp(props) {
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(fname + "fname here");
-    console.log(mname);
-    console.log(username);
-    console.log(password);
-    console.log(email);
-    console.log(dob);
-    console.log(gender);
-    console.log(university);
-    console.log(street_address);
-    console.log(city);
-    console.log(postcode);
-    console.log(date_created);
     dispatch(
       signUp(
         fname,

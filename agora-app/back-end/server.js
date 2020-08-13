@@ -17,7 +17,7 @@ mongoose
 
 const app = express();
 app.use(bodyParser.json());
-app.use("api/customers", customerRoute);
+app.use("api/customers", userRoute);
 
 app.use(bodyParser.json());
 app.use("/api/users", userRoute);
