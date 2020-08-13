@@ -5,7 +5,7 @@ import { signUp } from "../actions/userActions";
 
 function SignUp(props) {
   const [fname, setFname] = useState("");
-  const [mname, setMname] = useState("");
+  const [studentid, setStudentid] = useState("");
   const [sname, setSname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -32,21 +32,10 @@ function SignUp(props) {
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(fname + "fname here");
-    console.log(mname);
-    console.log(username);
-    console.log(password);
-    console.log(email);
-    console.log(dob);
-    console.log(gender);
-    console.log(university);
-    console.log(street_address);
-    console.log(city);
-    console.log(postcode);
     dispatch(
       signUp(
+        studentid,
         fname,
-        mname,
         sname,
         username,
         password,
@@ -66,6 +55,15 @@ function SignUp(props) {
       Welcome to Agora! Please sign up using the form below.
       <div className="createAccountContainer">
         <form className="create-account-form" onSubmit={submitHandler}>
+          <label for="student ID">Student ID:</label>
+          <input
+            type="text"
+            id="studentid"
+            name="studentid"
+            placeholder="student id"
+            onChange={(e) => setStudentid(e.target.value)}
+          ></input>
+          <br></br>
           <label for="fname">First name:</label>
           <input
             type="text"
@@ -73,15 +71,6 @@ function SignUp(props) {
             name="fname"
             placeholder="first name"
             onChange={(e) => setFname(e.target.value)}
-          ></input>
-          <br></br>
-          <label for="mname">Middle name:</label>
-          <input
-            type="text"
-            id="mname"
-            name="mname"
-            placeholder="middle-name"
-            onChange={(e) => setMname(e.target.value)}
           ></input>
           <br></br>
           <label for="sname">Surname:</label>
@@ -136,7 +125,6 @@ function SignUp(props) {
             type="date"
             id="DOB"
             name="DOB"
-            placeholder="01/01/2001"
             onChange={(e) => setDOB(e.target.value)}
           ></input>
           <br></br>
