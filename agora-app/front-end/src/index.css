@@ -47,7 +47,7 @@ body {
 
 .links {
   width: 30rem;
-  font-size: 20px;
+  font-size: 14px;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
@@ -179,7 +179,7 @@ body {
   margin-bottom: 1rem;
   border: 1px solid rgb(30, 255, 1);
   width: 98%;
-  min-height: 35rem;
+  min-height: 30rem;
   text-align: center;
   padding: 1rem;
   border: 1px solid rgb(185, 185, 185);
@@ -193,4 +193,101 @@ body {
 
 .error{
   min-height: 35rem;
+}
+
+/* contact */
+
+input[type=submit]{
+  width:30%;
+  background-color: #196619;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* sign in page */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 16px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+
+fieldset{
+	 width:50%;
+	 margin:auto;
+	 padding: 20px;
+	  border: 0;
+	
+}
+
+button {
+  background-color: #264d00;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  float:left;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: 40%;
+  padding: 20px;
+  background-color: #b30000;
+  padding: 14px 20px;
+  margin: auto;
+  float:right;
+}
+
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/*About us*/
+
+.about-section{
+  width: 100%;
+  text-align: center;
+}
+.about-section h1,h2{
+color: #000000;
+text-align: center;
+
+}
+
+.about-section h2,p{
+ 
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  line-height: 1.5;
+  text-align: center;
+ 
+
 }
