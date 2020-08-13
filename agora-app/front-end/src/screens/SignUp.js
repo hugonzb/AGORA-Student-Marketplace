@@ -12,7 +12,7 @@ function SignUp(props) {
   const [email, setEmail] = useState('');
   const [dob, setDOB] = useState('');
   const [gender, setGender] = useState("Male");
-  const [university, setUniversity] = useState('');
+  const [university, setUniversity] = useState("Otago");
   const [street_address, setStreet] = useState('');
   const [city, setCity] = useState('');
   const [postcode, setPostcode] = useState('');
@@ -145,7 +145,7 @@ function SignUp(props) {
             <option value="Auckland University of Technology (AUT)">
               Auckland University of Technology (AUT)
             </option>
-            <option value="University of  Waikato">
+            <option value="University of Waikato">
               University of Waikato
             </option>
             <option value="Massey University">Massey University</option>
