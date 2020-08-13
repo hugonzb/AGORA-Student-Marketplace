@@ -6,7 +6,8 @@ import thunk from 'redux-thunk';
 const initialState = {};
 const reducer = combineReducers({
     listingList: listingReducer,
-    userSignup: userSignupReducer 
+    userSignup: userSignupReducer, 
+    userSignin: userSignInReducer
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
