@@ -21,7 +21,7 @@ function SignUp(props) {
   var currDate = new Date();
   var currDateString = currDate.getDay() + "/" + currDate.getMonth() + "/" + currDate.getFullYear();
   console.log(currDateString);
-  const [date_created/*, setDateCreated*/] = useState("01/01/0001"); // This  still needs to be updated to getting the current date
+  const [date_created] = useState(currDateString); // This  still needs to be updated to getting the current date
 
   const dispatch = useDispatch();
 
