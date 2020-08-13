@@ -13,7 +13,7 @@ function App() {
           <Link to="/">
             <div className="header-logo">
               <img className="agora-logo" src={agoralogo} alt="agoralogo"></img>
-              <div>Agora </div> <div> Student Marketplace</div>
+              <div className="agora-text">AGORA </div> <div className="sm-text"> Student Marketplace</div>
             </div>
           </Link>
           <div className="links">
