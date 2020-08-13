@@ -5,7 +5,7 @@ const router = express.Router();
 
 //need to update this so that it matches the schema on userModel.js
 //also need to update signIn.js so that the form is the same as userModel.js
-router.post("/api/users/signup", async (req, res) => {
+router.post("/signup", async (req, res) => {
   try {
     const user = new User({
       fname: req.body.fname,
