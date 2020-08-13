@@ -4,13 +4,13 @@ import Axios from "axios";
 //const { SSL_OP_COOKIE_EXCHANGE } = require("constants");
 
 const signUp = (fname, mname, sname, username, password, email,
-    dob, gender, university, street_address, city, postcode, date_created) => async (dispatch) => {
+    dob, gender, university, street_address, city, postcode ) => async (dispatch) => {
         dispatch({
             type: USER_SIGNUP_REQUEST, payload: {fname, mname, sname, username, password, email,
-                dob, gender, university, street_address, city, postcode, date_created } });
+                dob, gender, university, street_address, city, postcode } });
     try {
         const { data } = await Axios.post("/api/users/signup", {fname, mname, sname, username, password, email,
-            dob, gender, university, street_address, city, postcode, date_created});
+            dob, gender, university, street_address, city, postcode });
         dispatch({type:USER_SIGNUP_SUCCESS, payload: data});
         /*Cookie.set('userInfo', JSON.stringify(data)); Cookie is slightly buggy atm*/
     }catch(error){

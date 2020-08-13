@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
 
 function SignUp(props) {
-  const [fname, setFname] = useState("Hugo");
+  const [fname, setFname] = useState("");
   const [mname, setMname] = useState("");
   const [sname, setSname] = useState("");
   const [username, setUsername] = useState("");
@@ -12,30 +12,19 @@ function SignUp(props) {
   const [email, setEmail] = useState("");
   const [dob, setDOB] = useState("");
   const [gender, setGender] = useState("Male");
-  const [university, setUniversity] = useState("Otago");
+  const [university, setUniversity] = useState("University of Auckland");
   const [street_address, setStreet] = useState('');
   const [city, setCity] = useState('');
   const [postcode, setPostcode] = useState('');
   const userSignup = useSelector(state=>state.userSignup);
   const {loading, userInfo, error} = userSignup;
 
-  /* For some reason this gives the wrong date???*/
-  var currDate = new Date();
-  var currDateString =
-    currDate.getDay() +
-    "/" +
-    currDate.getMonth() +
-    "/" +
-    currDate.getFullYear();
-  console.log(currDateString);
-  const [date_created /*, setDateCreated*/] = useState("01/01/0001"); // This  still needs to be updated to getting the current date
-
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (userInfo) {
+    /*if (userInfo) {
       props.history.push("/");
-    }
+    }*/
     return () => {};
     // eslint-disable-next-line
   }, [userInfo]);
@@ -54,7 +43,6 @@ function SignUp(props) {
     console.log(street_address);
     console.log(city);
     console.log(postcode);
-    console.log(date_created);
     dispatch(
       signUp(
         fname,
@@ -68,8 +56,7 @@ function SignUp(props) {
         university,
         street_address,
         city,
-        postcode,
-        date_created
+        postcode
       )
     );
   };
