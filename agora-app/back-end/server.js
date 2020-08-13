@@ -3,6 +3,7 @@ import config from '../back-end/config.js';
 import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
 import listingRoute from './routes/listingRoute';
+import bodyParser from 'body-parser';
 
 const mongodbUrl = config.MONGODB_URL;
 
@@ -14,7 +15,8 @@ mongoose.connect(mongodbUrl, {
 
 const app = express();
 
-app.use("/api/users/", userRoute);
+app.use(bodyParser.json());
+app.use("/api/users", userRoute);
 app.use("/api/listings", listingRoute);
 
 /* run server on port 5000 */
