@@ -23,9 +23,11 @@ function Home (props) {
             {listings.map(listing =>
             <li>
                 <div className="listing-container">
-                    <div className="listing-image">Listing Image</div>
+                    <div className="listing-image">
+                    <img className="listing-image" src={listing.image} alt="listing"></img>
+                    </div>
                     <div className="listing-content">
-                        <div>{listing.name}</div>
+                        <div className="listing-name">{listing.name}</div>
                         <div>Category: {listing.category}</div>
                         <div>Price: ${listing.price}</div>
                         <div>Seller: {listing.seller}</div>

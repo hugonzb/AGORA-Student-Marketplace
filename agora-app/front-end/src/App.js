@@ -3,13 +3,15 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
+import agoralogo from "./images/agoralogo.png";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="container">
         <div className="header">
-          <Link to="/">AGORA LOGO HERE </Link>
+          <Link to="/"><img className="agora-logo" src={agoralogo} alt="listing"></img>
+          </Link>
           <div className="links">
             <Link to="/">HOME </Link>
             <Link to="/signup">REGISTER </Link>
@@ -18,9 +20,9 @@ function App() {
           </div>
         </div>
         <div className="search">
-          <div>
+          <div> 
             <form>
-              <input className = "search-input" name="searchWord" placeholder="What are you looking for? ..."/>
+              <input className = "search-input" name="searchWord" placeholder="What are you looking for? .."/>
             </form>
           </div>
         </div>
@@ -32,7 +34,7 @@ function App() {
           </div>
         </div>
         <div className="footer">
-          All Rights Reserved 
+          All Rights Reserved.
         </div>
       </div>
     </BrowserRouter>

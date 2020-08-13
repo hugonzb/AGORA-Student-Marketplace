@@ -15,16 +15,19 @@ body {
   padding: 10px;
   text-align: center;
   background-color: #ffffff;
-  padding-left: 5rem;
+  padding-left: 3rem;
   padding-right: 5rem;
   border-radius: 0.5rem;
   border: 1px solid rgb(202, 202, 202)
 }
 
+.agora-logo{
+  max-height: 4.5rem;
+}
+
 .search {
   display: flex;
   height: 2rem;
-  font-size: 10px;
   align-items: center;
   justify-content: center;
   padding: 10px;
@@ -34,6 +37,7 @@ body {
 }
 
 .search-input{
+  font-size: 15px;
   width: 20rem;
   height: 2rem;
   border: 0px;
@@ -53,7 +57,7 @@ body {
   border-radius: 0px;
   padding: 10px;
   background-color: rgb(255, 255, 255);
-  color: #11485f;
+  color: #000000;
   font-weight: bold;
   text-decoration: none;
   justify-content: space-between;
@@ -101,22 +105,44 @@ body {
   flex-direction: row;
   justify-content: center;
   height: 10rem;
-  border: 1px solid rgb(129, 129, 129);
+  border: 1px solid rgb(182, 182, 182);
   margin: 1rem;
   max-width: 400px;
   text-align: center;
   font-family: arial;
+  cursor: pointer;
   border-radius: 0.5rem;
 }
 
 .listing-image{
+  display: flex;
+  background-color: white;
+  align-items: center;
   width: 180px;
+  border-radius: 0.5rem;
   border-right: 1px solid rgb(109, 109, 109);
 }
 
+.listing-image img{
+  max-width: 180px;
+  max-height: 160px;
+}
+
 .listing-content{
-  width: 200px;
-  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(240, 243, 247);
+  padding: 0.5rem;
+  width: 150px;
+  font-size: 18x;
+}
+
+.listing-name{
+  padding-bottom: 1rem;
+  font-weight: bold;
 }
 
 /* Sign up screen */
