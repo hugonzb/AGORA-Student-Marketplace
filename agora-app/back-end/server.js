@@ -14,7 +14,7 @@ mongoose.connect(mongodbUrl, {
 
 const app = express();
 
-app.use("/api/users", userRoute);
+app.use("/api/users/", userRoute);
 app.use("/api/listings", listingRoute);
 
 /* run server on port 5000 */

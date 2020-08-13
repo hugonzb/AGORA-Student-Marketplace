@@ -26,7 +26,13 @@ function SignUp(props) {
     "/" +
     currDate.getFullYear();
   console.log(currDateString);
+<<<<<<< HEAD
   const [date_created /*, setDateCreated*/] = useState("01/01/0001"); // This  still needs to be updated to getting the current date
+=======
+  /* Could edit this so it creates the the currDate var when the user hits the create account button, and
+  not when they load the page? */
+  const [date_created] = useState(currDateString); // This  still needs to be updated to getting the current date
+>>>>>>> c35001fe7f165fa155dd90328a9c152dc3a4c536
 
   const dispatch = useDispatch();
 

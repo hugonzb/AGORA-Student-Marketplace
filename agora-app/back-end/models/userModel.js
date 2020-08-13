@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema({
   street_address: { type: String, required: true },
   city: { type: String, required: true },
   postcode: { type: String, required: true },
-  date_created: { type: Date, required: true },
+  date_created: { type: Date, required: true }
 });
 
 const userModel = mongoose.model("User", userSchema);
