@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-//import {link} from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
 
 function SignUp(props) {
   const [fname, setFname] = useState("");
-  const [mname, setMname] = useState("");
+  const [studentid, setStudentid] = useState("");
   const [sname, setSname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -13,9 +12,9 @@ function SignUp(props) {
   const [dob, setDOB] = useState("");
   const [gender, setGender] = useState("Male");
   const [university, setUniversity] = useState("University of Auckland");
-  const [street_address, setStreet] = useState('');
-  const [city, setCity] = useState('');
-  const [postcode, setPostcode] = useState('');
+  const [street_address, setStreet] = useState("");
+  const [city, setCity] = useState("");
+  const [postcode, setPostcode] = useState("");
   const userSignup = useSelector(state=>state.userSignup);
   const {loading, userInfo, error} = userSignup;
 
@@ -23,7 +22,8 @@ function SignUp(props) {
 
   useEffect(() => {
     /*if (userInfo) {
-      props.history.push("/");
+      props.history.push("/signin");
+      alert("You have successfully created an account");
     }*/
     return () => {};
     // eslint-disable-next-line
@@ -32,21 +32,10 @@ function SignUp(props) {
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(fname + "fname here");
-    console.log(mname);
-    console.log(username);
-    console.log(password);
-    console.log(email);
-    console.log(dob);
-    console.log(gender);
-    console.log(university);
-    console.log(street_address);
-    console.log(city);
-    console.log(postcode);
     dispatch(
       signUp(
+        studentid,
         fname,
-        mname,
         sname,
         username,
         password,
@@ -59,29 +48,34 @@ function SignUp(props) {
         postcode
       )
     );
+    error && props.history.push("/signin");
   };
 
   return (
     <div className="sign-up-container">
       Welcome to Agora! Please sign up using the form below.
       <div className="createAccountContainer">
+        {loading}
+        {error && <div>Email or Student ID has been taken</div>}
         <form className="create-account-form" onSubmit={submitHandler}>
+          <label for="student ID">Student ID:</label>
+          <input
+            type="text"
+            id="studentid"
+            name="studentid"
+            placeholder="student id"
+            required
+            onChange={(e) => setStudentid(e.target.value)}
+          ></input>
+          <br></br>
           <label for="fname">First name:</label>
           <input
             type="text"
             id="fname"
             name="fname"
             placeholder="first name"
+            required
             onChange={(e) => setFname(e.target.value)}
-          ></input>
-          <br></br>
-          <label for="mname">Middle name:</label>
-          <input
-            type="text"
-            id="mname"
-            name="mname"
-            placeholder="middle-name"
-            onChange={(e) => setMname(e.target.value)}
           ></input>
           <br></br>
           <label for="sname">Surname:</label>
@@ -90,6 +84,7 @@ function SignUp(props) {
             id="sname"
             name="sname"
             placeholder="surname"
+            required
             onChange={(e) => setSname(e.target.value)}
           ></input>
           <br></br>
@@ -110,6 +105,7 @@ function SignUp(props) {
             id="username"
             name="username"
             placeholder="username"
+            required
             onChange={(e) => setUsername(e.target.value)}
           ></input>
           <br></br>
@@ -119,6 +115,7 @@ function SignUp(props) {
             id="password"
             name="password"
             placeholder="password"
+            required
             onChange={(e) => setPassword(e.target.value)}
           ></input>
           <br></br>
@@ -128,6 +125,7 @@ function SignUp(props) {
             id="email"
             name="email"
             placeholder="email"
+            required
             onChange={(e) => setEmail(e.target.value)}
           ></input>
           <br></br>
@@ -136,7 +134,7 @@ function SignUp(props) {
             type="date"
             id="DOB"
             name="DOB"
-            placeholder="01/01/2001"
+            required
             onChange={(e) => setDOB(e.target.value)}
           ></input>
           <br></br>
@@ -173,6 +171,7 @@ function SignUp(props) {
             id="address"
             name="address"
             placeholder="street address"
+            required
             onChange={(e) => setStreet(e.target.value)}
           ></input>
           <br></br>
@@ -182,6 +181,7 @@ function SignUp(props) {
             id="city"
             name="city"
             placeholder="city"
+            required
             onChange={(e) => setCity(e.target.value)}
           ></input>
           <br></br>
@@ -191,10 +191,11 @@ function SignUp(props) {
             id="postcode"
             name="postcode"
             placeholder="postcode"
+            required
             onChange={(e) => setPostcode(e.target.value)}
           ></input>
           <br></br>
-          <input type="submit" value="Submit"></input>
+          <button type="submit" value="Submit">Register</button>
         </form>
       </div>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here
