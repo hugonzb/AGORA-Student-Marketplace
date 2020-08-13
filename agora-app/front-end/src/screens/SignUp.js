@@ -72,6 +72,7 @@ function SignUp(props) {
             id="fname"
             name="fname"
             placeholder="first name"
+            required
             onChange={(e) => setFname(e.target.value)}
           ></input>
           <br></br>
@@ -81,6 +82,7 @@ function SignUp(props) {
             id="sname"
             name="sname"
             placeholder="surname"
+            required
             onChange={(e) => setSname(e.target.value)}
           ></input>
           <br></br>
@@ -101,6 +103,7 @@ function SignUp(props) {
             id="username"
             name="username"
             placeholder="username"
+            required
             onChange={(e) => setUsername(e.target.value)}
           ></input>
           <br></br>
@@ -110,6 +113,7 @@ function SignUp(props) {
             id="password"
             name="password"
             placeholder="password"
+            required
             onChange={(e) => setPassword(e.target.value)}
           ></input>
           <br></br>
@@ -119,6 +123,7 @@ function SignUp(props) {
             id="email"
             name="email"
             placeholder="email"
+            required
             onChange={(e) => setEmail(e.target.value)}
           ></input>
           <br></br>
@@ -127,6 +132,7 @@ function SignUp(props) {
             type="date"
             id="DOB"
             name="DOB"
+            required
             onChange={(e) => setDOB(e.target.value)}
           ></input>
           <br></br>
@@ -163,6 +169,7 @@ function SignUp(props) {
             id="address"
             name="address"
             placeholder="street address"
+            required
             onChange={(e) => setStreet(e.target.value)}
           ></input>
           <br></br>
@@ -172,6 +179,7 @@ function SignUp(props) {
             id="city"
             name="city"
             placeholder="city"
+            required
             onChange={(e) => setCity(e.target.value)}
           ></input>
           <br></br>
@@ -181,6 +189,7 @@ function SignUp(props) {
             id="postcode"
             name="postcode"
             placeholder="postcode"
+            required
             onChange={(e) => setPostcode(e.target.value)}
           ></input>
           <br></br>
