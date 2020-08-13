@@ -22,9 +22,9 @@ function SignUp(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    /*if (userInfo) {
-      props.history.push("/");
-    }*/
+    if (userInfo) {
+      props.history.push("/signin");
+    }
     return () => {};
     // eslint-disable-next-line
   }, [userInfo]);
@@ -54,6 +54,7 @@ function SignUp(props) {
     <div className="sign-up-container">
       Welcome to Agora! Please sign up using the form below.
       <div className="createAccountContainer">
+        {loading}
         {error && <div>Email or Student ID has been taken</div>}
         <form className="create-account-form" onSubmit={submitHandler}>
           <label for="student ID">Student ID:</label>
@@ -193,7 +194,7 @@ function SignUp(props) {
             onChange={(e) => setPostcode(e.target.value)}
           ></input>
           <br></br>
-          <input type="submit" value="Submit"></input>
+          <button type="submit" value="Submit"></button>
         </form>
       </div>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here
