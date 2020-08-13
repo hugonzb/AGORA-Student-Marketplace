@@ -12,13 +12,13 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true },
   email: { type: String, required: true },
   dob: { type: Date, required: true },
-  //ID Photo needs to be inserted somehow too
   gender: { type: String, required: true },
-  university: { type: String, required: false },
+  university: { type: String, required: true },
   street_address: { type: String, required: true },
   city: { type: String, required: true },
-  postcode: { type: String, required: true },
-  date_created: { type: Date, required: true }
+  postcode: { type: String, required: true }
+},{
+  timestamps: true,
 });
 
 const userModel = mongoose.model("User", userSchema);
