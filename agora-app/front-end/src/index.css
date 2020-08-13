@@ -25,6 +25,13 @@ body {
   max-height: 4.5rem;
 }
 
+.profile-icon{
+  max-height: 4rem;
+  text-align:center;
+  justify-content: flex-start;
+  padding-left: 50rem;
+}
+
 .search {
   display: flex;
   height: 2rem;

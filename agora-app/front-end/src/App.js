@@ -3,7 +3,9 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
+import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
+import profileicon from "./images/profileicon.png";
 
 function App() {
   return (
@@ -12,11 +14,14 @@ function App() {
         <div className="header">
           <Link to="/"><img className="agora-logo" src={agoralogo} alt="listing"></img>
           </Link>
+           <Link to="/profile"><img className="profile-icon" src={profileicon} alt="listing"></img>
+            </Link>
           <div className="links">
             <Link to="/">HOME </Link>
             <Link to="/signup">REGISTER </Link>
             <Link to="/signin">SIGN IN </Link>
             <Link to="/">ABOUT US </Link>
+           
           </div>
         </div>
         <div className="search">
@@ -30,6 +35,7 @@ function App() {
           <div className="content-display">
             <Route path="/signup" component={SignUp}/>
             <Route path="/signin" component={SignIn}/>
+            <Route path="/profile" component={Profile}/>
             <Route path="/" exact={true} component={Home}/>
           </div>
         </div>
