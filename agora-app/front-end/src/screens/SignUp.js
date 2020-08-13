@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-//import {link} from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
 
@@ -13,18 +12,19 @@ function SignUp(props) {
   const [dob, setDOB] = useState("");
   const [gender, setGender] = useState("Male");
   const [university, setUniversity] = useState("University of Auckland");
-  const [street_address, setStreet] = useState('');
-  const [city, setCity] = useState('');
-  const [postcode, setPostcode] = useState('');
+  const [street_address, setStreet] = useState("");
+  const [city, setCity] = useState("");
+  const [postcode, setPostcode] = useState("");
   const userSignup = useSelector(state=>state.userSignup);
   const {loading, userInfo, error} = userSignup;
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (userInfo) {
+    /*if (userInfo) {
       props.history.push("/signin");
-    }
+      alert("You have successfully created an account");
+    }*/
     return () => {};
     // eslint-disable-next-line
   }, [userInfo]);
@@ -48,6 +48,7 @@ function SignUp(props) {
         postcode
       )
     );
+    error && props.history.push("/signin");
   };
 
   return (
@@ -194,7 +195,7 @@ function SignUp(props) {
             onChange={(e) => setPostcode(e.target.value)}
           ></input>
           <br></br>
-          <button type="submit" value="Submit"></button>
+          <button type="submit" value="Submit">Register</button>
         </form>
       </div>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here
