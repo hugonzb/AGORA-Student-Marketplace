@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
+import About from "./screens/About";
+import contact from "./screens/contact";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
 import profileicon from "./images/profileicon.png";
@@ -12,7 +14,11 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <div className="header">
-          <Link to="/"><img className="agora-logo" src={agoralogo} alt="listing"></img>
+          <Link to="/">
+            <div className="header-logo">
+              <img className="agora-logo" src={agoralogo} alt="agoralogo"></img>
+              <div className="agora-text">AGORA </div> <div className="sm-text"> Student Marketplace</div>
+            </div>
           </Link>
            <Link to="/profile"><img className="profile-icon" src={profileicon} alt="listing"></img>
             </Link>
@@ -20,8 +26,8 @@ function App() {
             <Link to="/">HOME </Link>
             <Link to="/signup">REGISTER </Link>
             <Link to="/signin">SIGN IN </Link>
-            <Link to="/">ABOUT US </Link>
-           
+            <Link to="/About">ABOUT </Link>
+            <Link to="/contact">CONTACT US </Link>
           </div>
         </div>
         <div className="search">
@@ -34,8 +40,9 @@ function App() {
         <div className="main">
           <div className="content-display">
             <Route path="/signup" component={SignUp}/>
-            <Route path="/signin" component={SignIn}/>
-            <Route path="/profile" component={Profile}/>
+            <Route path="/signin" component={SignIn}/>   
+            <Route path="/About" component={About}/>
+            <Route path="/contact" component={contact}/>          
             <Route path="/" exact={true} component={Home}/>
           </div>
         </div>

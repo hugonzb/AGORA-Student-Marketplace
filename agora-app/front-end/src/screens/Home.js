@@ -18,7 +18,6 @@ function Home (props) {
     return loading ? <div className="loading">Loading listings ...</div> : 
     error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
     <div className="home-container">
-        This is the home page - UPDATE: NOW FETCHING FROM MONGODB
         <div className="listings">
             {listings.map(listing =>
             <li>

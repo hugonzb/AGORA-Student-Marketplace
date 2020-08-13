@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import {signIn} from '../actions/userActions';
 
+
 function SignIn(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -32,7 +33,8 @@ function SignIn(props) {
   };
 
   return (
-    <div className="sign-in-container">
+
+         <div className="sign-in-container">
       This is the sign in page
       <div className="createAccountContainer">
         <form className="create-account-form" onSubmit={submitHandler}>
@@ -62,6 +64,7 @@ function SignIn(props) {
           <Link to="/SignUp">Create an Account</Link>
         </form>
       </div>
+
     </div>
   );
 }
