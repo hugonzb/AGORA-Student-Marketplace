@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 function SignIn(props) {
   const [email, setEmail] = useState("");
@@ -46,6 +47,9 @@ function SignIn(props) {
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           ></input>
+          <br></br>
+          <h4>New to Agora?</h4>
+          <Link to="/SignUp">Create an Account</Link>
         </form>
       </div>
     </div>

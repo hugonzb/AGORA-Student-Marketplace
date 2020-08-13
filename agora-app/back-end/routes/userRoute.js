@@ -37,6 +37,7 @@ router.post("/signin", async (req, res) => {
       _id: signinUser.id,
       fname: signinUser.fname,
       email: signinUser.email,
+      token: getToken(user)
     });
   } else {
     res
