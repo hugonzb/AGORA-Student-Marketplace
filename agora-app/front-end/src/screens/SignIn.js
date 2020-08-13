@@ -8,13 +8,16 @@ function SignIn(props) {
   const [password, setPassword] = useState("");
   //const {loading, userInfo, error} = userSignin;
 
-  const userSignin = useSelector(state=>state.userSignin);
+  const userSignin = useSelector(state => state.userSignin);
   const {loading, userInfo, error} = userSignin;
   const dispatch = useDispatch();
 
   /* This might need to be updated to match
   the useEffect() from the video */
   useEffect(() => {
+    if(userInfo){
+      props.history.push("/");
+    }
     return () => { };
   }, [userInfo])
 
