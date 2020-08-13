@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
 
 function SignUp(props) {
-  const [fname, setFname] = useState("Hugo");
+  const [fname, setFname] = useState("");
   const [mname, setMname] = useState("");
   const [sname, setSname] = useState("");
   const [username, setUsername] = useState("");
@@ -12,7 +12,7 @@ function SignUp(props) {
   const [email, setEmail] = useState("");
   const [dob, setDOB] = useState("");
   const [gender, setGender] = useState("Male");
-  const [university, setUniversity] = useState("Otago");
+  const [university, setUniversity] = useState("University of Auckland");
   const [street_address, setStreet] = useState('');
   const [city, setCity] = useState('');
   const [postcode, setPostcode] = useState('');
@@ -33,9 +33,9 @@ function SignUp(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (userInfo) {
+    /*if (userInfo) {
       props.history.push("/");
-    }
+    }*/
     return () => {};
     // eslint-disable-next-line
   }, [userInfo]);
