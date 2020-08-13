@@ -23,7 +23,7 @@ router.post("/signup", async (req, res) => {
     const newUser = await user.save();
     res.send(newUser);
   }catch{
-    res.status(401).send({message:'The student ID or email address has been taken.'});
+    res.status(401).send('Sign up failed');
   }
 });
 
