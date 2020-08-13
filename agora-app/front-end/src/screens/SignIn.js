@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 
 function SignIn(props) {
-  const [uname, setUname] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   //const {loading, userInfo, error} = userSignin;
 
@@ -19,7 +19,7 @@ function SignIn(props) {
     e.preventDefault();
     dispatch(
       SignIn(
-        uname, password
+        email, password
       )
     );
   };
@@ -29,13 +29,13 @@ function SignIn(props) {
       This is the sign in page
       <div className="createAccountContainer">
         <form className="create-account-form" onSubmit={submitHandler}>
-          <label for="uname">Username:</label>
+          <label for="email">Email:</label>
           <input
             type="text"
-            id="uname"
-            name="uname"
-            placeholder="Username"
-            onChange={(e) => setUname(e.target.value)}
+            id="email"
+            name="email"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
           <br></br>
           <label for="password">Password:</label>
