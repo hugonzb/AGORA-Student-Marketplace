@@ -43,7 +43,6 @@ function SignUp(props) {
     console.log(street_address);
     console.log(city);
     console.log(postcode);
-    console.log(date_created);
     dispatch(
       signUp(
         fname,
@@ -57,8 +56,7 @@ function SignUp(props) {
         university,
         street_address,
         city,
-        postcode,
-        date_created
+        postcode
       )
     );
   };
