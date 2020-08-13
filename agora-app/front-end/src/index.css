@@ -21,6 +21,9 @@ body {
   border: 1px solid rgb(202, 202, 202)
 }
 
+.header-logo{
+  display: flex;
+}
 .agora-logo{
   max-height: 4.5rem;
 }
@@ -32,7 +35,7 @@ body {
   justify-content: center;
   padding: 10px;
   text-align: center;
-  background-color: #406f83;
+  background-color: #1d4c61;
   border-radius: 0.3rem;
 }
 
@@ -75,7 +78,7 @@ body {
   height: 0.5rem;
   font-size: 20px;
   padding: 0.5rem;
-  background-color: #406f83;
+  background-color: #1d4c61;
   color: white;
   text-align: center;
 }

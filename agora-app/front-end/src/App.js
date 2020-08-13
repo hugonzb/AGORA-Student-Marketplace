@@ -12,7 +12,11 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <div className="header">
-          <Link to="/"><img className="agora-logo" src={agoralogo} alt="listing"></img>
+          <Link to="/">
+            <div className="header-logo">
+              <img className="agora-logo" src={agoralogo} alt="agoralogo"></img>
+              <div>Agora </div> <div> Student Marketplace</div>
+            </div>
           </Link>
           <div className="links">
             <Link to="/">HOME </Link>
@@ -23,7 +27,7 @@ function App() {
           </div>
         </div>
         <div className="search">
-          <div>
+          <div> 
             <form>
               <input className = "search-input" name="searchWord" placeholder="What are you looking for? .."/>
             </form>
@@ -39,7 +43,7 @@ function App() {
           </div>
         </div>
         <div className="footer">
-          All Rights Reserved 
+          All Rights Reserved.
         </div>
       </div>
     </BrowserRouter>
