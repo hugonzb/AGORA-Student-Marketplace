@@ -9,7 +9,7 @@ function SignIn(props) {
   //const {loading, userInfo, error} = userSignin;
 
   const userSignin = useSelector(state=>state.userSignin);
-  const {loasding, userInfo, error} = userSignin;
+  const {loading, userInfo, error} = userSignin;
   const dispatch = useDispatch();
 
   /* This might need to be updated to match
@@ -33,6 +33,9 @@ function SignIn(props) {
       This is the sign in page
       <div className="createAccountContainer">
         <form className="create-account-form" onSubmit={submitHandler}>
+          <h2>Sign In</h2>
+          {loading && <div>Loading...</div>}
+          {error && <div>{error}</div>}
           <label for="email">Email:</label>
           <input
             type="text"
