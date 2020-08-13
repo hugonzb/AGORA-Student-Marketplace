@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
   email: { type: String, required: true },
-  DOB: { type: Date, required: true },
+  dob: { type: Date, required: true },
   //ID Photo needs to be inserted somehow too
   gender: { type: String, required: true },
   university: { type: String, required: true },

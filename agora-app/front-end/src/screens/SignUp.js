@@ -19,9 +19,14 @@ function SignUp(props) {
   const [postcode, setPostcode] = useState("");
   /* For some reason this gives the wrong date???*/
   var currDate = new Date();
-  var currDateString = currDate.getDay() + "/" + currDate.getMonth() + "/" + currDate.getFullYear();
+  var currDateString =
+    currDate.getDay() +
+    "/" +
+    currDate.getMonth() +
+    "/" +
+    currDate.getFullYear();
   console.log(currDateString);
-  const [date_created/*, setDateCreated*/] = useState("01/01/0001"); // This  still needs to be updated to getting the current date
+  const [date_created /*, setDateCreated*/] = useState("01/01/0001"); // This  still needs to be updated to getting the current date
 
   const dispatch = useDispatch();
 
@@ -36,26 +41,6 @@ function SignUp(props) {
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(signUp(fname, mname, sname, username, password, email,
-      dob, gender, university, street_address, city, postcode, date_created));
-    /*
-    Pretty confident that this shouldn't exist, but am
-    keeping it here for now just in case
-    //
-    dispatch(signUp(mname));
-    dispatch(signUp(sname));
-    dispatch(signUp(username));
-    dispatch(signUp(password));
-    dispatch(signUp(email));
-    dispatch(signUp(dob));
-    dispatch(signUp(gender));
-    dispatch(signUp(university));
-    dispatch(signUp(street_address));
-    dispatch(signUp(city));
-    dispatch(signUp(postcode));
-    dispatch(signUp(date_created));
-    //
-    */
     console.log(fname);
     console.log(mname);
     console.log(username);
@@ -68,6 +53,24 @@ function SignUp(props) {
     console.log(city);
     console.log(postcode);
     console.log(date_created);
+
+    dispatch(
+      signUp(
+        fname,
+        mname,
+        sname,
+        username,
+        password,
+        email,
+        dob,
+        gender,
+        university,
+        street_address,
+        city,
+        postcode,
+        date_created
+      )
+    );
   };
 
   return (
@@ -78,6 +81,7 @@ function SignUp(props) {
           <label for="fname">First name:</label>
           <input
             type="text"
+            id="fname"
             name="fname"
             placeholder="first name"
             onChange={(e) => setFname(e.target.value)}
@@ -202,7 +206,7 @@ function SignUp(props) {
             onChange={(e) => setPostcode(e.target.value)}
           ></input>
           <br></br>
-          <input type="submit" value="Submit"></input>
+          <button type="submit"> Submit</button>
         </form>
       </div>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here
