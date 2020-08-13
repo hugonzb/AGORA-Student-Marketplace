@@ -10,7 +10,11 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <div className="header">
-          <Link to="/"><img className="agora-logo" src={agoralogo} alt="listing"></img>
+          <Link to="/">
+            <div className="header-logo">
+              <img className="agora-logo" src={agoralogo} alt="agoralogo"></img>
+              <div>Agora </div> <div> Student Marketplace</div>
+            </div>
           </Link>
           <div className="links">
             <Link to="/">HOME </Link>
