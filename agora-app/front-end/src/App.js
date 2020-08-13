@@ -22,7 +22,7 @@ function App() {
             <Link to="/">HOME </Link>
             <Link to="/signup">REGISTER </Link>
             <Link to="/signin">SIGN IN </Link>
-            <Link to="/About">ABOUT US </Link>
+            <Link to="/About">ABOUT </Link>
             <Link to="/contact">CONTACT US </Link>
           </div>
         </div>
