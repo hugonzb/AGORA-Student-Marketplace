@@ -20,14 +20,14 @@ function App() {
               <div className="agora-text">AGORA </div> <div className="sm-text"> Student Marketplace</div>
             </div>
           </Link>
-           <Link to="/profile"><img className="profile-icon" src={profileicon} alt="listing"></img>
-            </Link>
           <div className="links">
             <Link to="/">HOME </Link>
             <Link to="/signup">REGISTER </Link>
             <Link to="/signin">SIGN IN </Link>
             <Link to="/About">ABOUT </Link>
             <Link to="/contact">CONTACT US </Link>
+            <Link to="/profile"><img className="profile-icon" src={profileicon} alt="profile"></img>
+            </Link>
           </div>
         </div>
         <div className="search">
@@ -43,6 +43,7 @@ function App() {
             <Route path="/signin" component={SignIn}/>   
             <Route path="/About" component={About}/>
             <Route path="/contact" component={contact}/>          
+            <Route path="/profile" component={Profile}/>          
             <Route path="/" exact={true} component={Home}/>
           </div>
         </div>
