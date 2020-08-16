@@ -220,21 +220,6 @@ a:hover, a:visited, a:link, a:active{
   border: 1px solid rgb(185, 185, 185);
 }
 
-/* misc */
-
-.loading{
-  display: flex;
-  min-height: 34rem;
-  text-align: center;
-  justify-content: center;
-  padding: 10rem;
-  font-weight: bold;
-}
-
-.error{
-  min-height: 35rem;
-}
-
 /* contact */
 
 input[type=submit]{
@@ -337,4 +322,32 @@ span.psw {
   text-align: center;
 }
 
+/* view listing */
 
+.listing-container{
+  display: flex;
+  min-width: 95%;
+  background-color: rgb(252, 252, 252);
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-height: 30rem;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid rgb(185, 185, 185);
+}
+
+/* misc */
+
+.loading{
+  display: flex;
+  min-height: 34rem;
+  text-align: center;
+  justify-content: center;
+  padding: 10rem;
+  font-weight: bold;
+}
+
+.error{
+  min-height: 35rem;
+}
