@@ -6,6 +6,7 @@ import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import About from "./screens/About";
 import contact from "./screens/contact";
+import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
 import profileicon from "./images/profileicon.png";
@@ -53,6 +54,7 @@ function App() {
             <Route path="/contact" component={contact}/>          
             <Route path="/profile" component={Profile}/>          
             <Route path="/" exact={true} component={Home}/>
+            <Route path="/listing/:id" component={ViewListing} />
           </div>
         </div>
         <div className="footer">

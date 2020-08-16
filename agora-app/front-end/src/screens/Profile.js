@@ -19,9 +19,6 @@ function Profile(props) {
 	
 	</div>
 	);
-
-
-
 }
 
 export default Profile;
