@@ -18,7 +18,7 @@ function SignUp(props) {
   const userSignup = useSelector(state=>state.userSignup);
   const {loading, userInfo, error} = userSignup;
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
 
   useEffect(() => {
     /*if (userInfo) {

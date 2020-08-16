@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector, useDispatch } from 'react-redux';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
@@ -9,7 +10,12 @@ import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
 import profileicon from "./images/profileicon.png";
 
+
 function App() {
+  const dispatch = useDispatch();
+  const userSignin = useSelector(state=>state.userSignin);
+  const {userInfo} = userSignin;
+
   return (
     <BrowserRouter>
       <div className="container">
@@ -20,7 +26,9 @@ function App() {
               <div className="agora-text">AGORA </div> <div className="sm-text"> Student Marketplace</div>
             </div>
           </Link>
-          <div className="links">
+          
+            
+          <nav className="links">
             <Link to="/">HOME </Link>
             <Link to="/signup">REGISTER </Link>
             <Link to="/signin">SIGN IN </Link>
@@ -28,7 +36,7 @@ function App() {
             <Link to="/contact">CONTACT US </Link>
             <Link to="/profile"><img className="profile-icon" src={profileicon} alt="profile"></img>
             </Link>
-          </div>
+          </nav>
         </div>
         <div className="search">
           <div> 
