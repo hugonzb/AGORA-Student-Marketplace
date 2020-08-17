@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
-import {useDispatch, useSelector } from 'react-redux';
-import {logout} from '../actions/userActions';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../actions/userActions';
+import { BrowserRouter, Link } from "react-router-dom";
 
 function Profile(props) {
 
 	const [name, setName] = useState('');
-	const [email, setEmail] = useState('');
+	//const [email, setEmail] = useState('');
 	const [id, setID] = useState('');
 
 	const userSignin = useSelector(state => state.userSignin);
@@ -26,7 +27,7 @@ function Profile(props) {
 		if (userInfo) {
 			// Log the name field just to make sure it's correct
 			console.log(userInfo.name);
-			setEmail(userInfo.email);
+			//setEmail(userInfo.email);
 			setName(userInfo.name);
 			setID(userInfo.id);
 		}
@@ -34,22 +35,28 @@ function Profile(props) {
 	}, [userInfo])
 
 	return (
-		<div className="sign-in-container">
-			Your Profile
-			<div className="createAccountContainer">
-				<form className="profile-container">
-					<h2> Profile </h2>
-					<label for="username">Student ID: {{ id }}</label>
-					<br></br>
-					<label for="name">Name:{{ name }}</label>
-					<br></br>
-				</form>
+		<BrowserRouter>
+		{userInfo ? (
+		<div className = "sign-in-container" >
+					Your Profile
+			<div className = "createAccountContainer" >
+					<form className="profile-container">
+						<h2> Profile </h2>
+						<label for="username">Student ID: {id}</label>
+						<br></br>
+						<label for="name">Name: {name}</label>
+						<br></br>
+					</form>
 			</div>
 
+		<button type="button" onClick={handleLogout}>Logout</button>
+	
 
-
-
-		</div>
+		</div >)
+	: (<div><Link to="/signin">Sign in</Link>
+			<Link to="/signup">Sign Up</Link></div>)
+	}
+		</BrowserRouter>
 	);
 }
 

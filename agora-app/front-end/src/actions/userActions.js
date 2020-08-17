@@ -28,7 +28,7 @@ const signIn = (email, password) => async (dispatch) => {
     }
 }
 
-const logout = (dispatch) => {
+const logout = () => (dispatch) => {
     Cookie.remove("userInfo");
     dispatch({type:USER_LOGOUT})
 }
