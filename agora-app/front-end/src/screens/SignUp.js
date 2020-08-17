@@ -196,6 +196,8 @@ function SignUp(props) {
           ></input>
           <br></br>
           <button type="submit" value="Submit">Register</button>
+          <h4>Already have an account?</h4>
+          <Link to="/SignIn">Sign in</Link>
         </form>
       </div>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here
