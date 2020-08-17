@@ -11,8 +11,7 @@ function SignIn(props) {
   const {loading, userInfo, error} = userSignin;
   const dispatch = useDispatch();
 
-  /* This might need to be updated to match
-  the useEffect() from the video */
+  /* If user is logged in, go to the home screen. */
   useEffect(() => {
     if(userInfo){
       props.history.push("/");
@@ -42,7 +41,7 @@ function SignIn(props) {
           {error && <div>Invalid Email or Password</div>}
           <label for="email">Email:</label>
           <input
-            type="text"
+            type="email"
             id="email"
             name="email"
             placeholder="Email"
