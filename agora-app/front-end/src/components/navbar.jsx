@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Nav = styled.nav 
-width: 100%
+const Nav = styled.nav`
+width: 100%;
 height: 65px;
 border-bottom: 2px solid #f1f1f1;
 padding: 0 20px 
@@ -22,6 +22,7 @@ li{
 	padding: 18px 10px;
   }
 }
+`
 
 const Navbar = () =>{
 	return(
