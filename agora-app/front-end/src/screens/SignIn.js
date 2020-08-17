@@ -43,7 +43,7 @@ function SignIn(props) {
           {error && <div>{error}</div>}
           <label for="email">Email:</label>
           <input
-            type="text"
+            type="email"
             id="email"
             name="email"
             placeholder="Email"
