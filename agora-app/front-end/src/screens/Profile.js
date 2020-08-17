@@ -20,7 +20,7 @@ function Profile(props) {
 		props.history.push("/signin");
 	}
 
-	useEffect(( => {
+	useEffect(()=> {
 		// If userInfo exists, set the email and name fields
 		if(userInfo) {
 			// Log the name field just to make sure it's correct
@@ -28,7 +28,10 @@ function Profile(props) {
 			setEmail(userInfo.email);
 			setName(userInfo.name);
 		}
-	})
+		return() => {
+
+		};
+	}, [userInfo])
 
 	return (
 	<div className="sign-in-container">
