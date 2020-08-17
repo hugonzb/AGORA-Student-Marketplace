@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from "react-router-dom";
 import { listListings } from '../actions/listingActions';
 
 
@@ -20,6 +21,7 @@ function Home (props) {
     <div className="home-container">
         <div className="listings">
             {listings.map(listing =>
+            <Link to={'/listing/' + listing._id}>
             <li>
                 <div className="listing-container">
                     <div className="listing-image">
@@ -32,7 +34,8 @@ function Home (props) {
                         <div>Seller: {listing.seller}</div>
                     </div>
                 </div> 
-            </li>)
+            </li>
+            </Link>)
             }
         </div>
     </div>

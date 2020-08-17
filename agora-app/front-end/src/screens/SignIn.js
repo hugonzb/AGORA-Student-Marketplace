@@ -7,19 +7,17 @@ import {signIn} from '../actions/userActions';
 function SignIn(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  //const {loading, userInfo, error} = userSignin;
-
   const userSignin = useSelector(state => state.userSignin);
   const {loading, userInfo, error} = userSignin;
   const dispatch = useDispatch();
 
-  /* This might need to be updated to match
-  the useEffect() from the video */
+  /* If user is logged in, go to the home screen. */
   useEffect(() => {
     if(userInfo){
       props.history.push("/");
     }
     return () => { };
+    // eslint-disable-next-line
   }, [userInfo])
 
 
@@ -40,10 +38,10 @@ function SignIn(props) {
         <form className="create-account-form" onSubmit={submitHandler}>
           <h2>Sign In</h2>
           {loading && <div>Loading...</div>}
-          {error && <div>{error}</div>}
+          {error && <div>Invalid Email or Password</div>}
           <label for="email">Email:</label>
           <input
-            type="text"
+            type="email"
             id="email"
             name="email"
             placeholder="Email"

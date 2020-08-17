@@ -138,7 +138,7 @@ a:hover, a:visited, a:link, a:active{
   flex-direction: row;
   justify-content: center;
   height: 10rem;
-  border: 1px solid rgb(182, 182, 182);
+  border: 1px solid rgb(165, 164, 164);
   margin: 1rem;
   max-width: 400px;
   text-align: center;
@@ -165,9 +165,11 @@ a:hover, a:visited, a:link, a:active{
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: black;
   justify-content: center;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: rgb(240, 243, 247);
+  background-color: rgb(227, 230, 235);
   padding: 0.5rem;
   width: 150px;
   font-size: 18x;
@@ -216,21 +218,6 @@ a:hover, a:visited, a:link, a:active{
   text-align: center;
   padding: 1rem;
   border: 1px solid rgb(185, 185, 185);
-}
-
-/* misc */
-
-.loading{
-  display: flex;
-  min-height: 34rem;
-  text-align: center;
-  justify-content: center;
-  padding: 10rem;
-  font-weight: bold;
-}
-
-.error{
-  min-height: 35rem;
 }
 
 /* contact */
@@ -310,22 +297,57 @@ span.psw {
 
 /*About us*/
 
-.about-section{
-  width: 100%;
-  text-align: center;
+.about-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  min-height: 33rem;
 }
-.about-section h1,h2{
-color: #000000;
-text-align: center;
 
+.about-section{
+  max-width: 50rem;
+}
+
+.about-section h1,h2{
+  color: #000000;
+  text-align: center;
 }
 
 .about-section h2,p{
- 
   font-size: 17px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   line-height: 1.5;
   text-align: center;
- 
+}
 
+/* view listing */
+
+.listing-container{
+  display: flex;
+  min-width: 95%;
+  background-color: rgb(252, 252, 252);
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-height: 30rem;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid rgb(185, 185, 185);
+}
+
+/* misc */
+
+.loading{
+  display: flex;
+  min-height: 34rem;
+  text-align: center;
+  justify-content: center;
+  padding: 10rem;
+  font-weight: bold;
+}
+
+.error{
+  min-height: 35rem;
 }

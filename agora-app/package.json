@@ -12,10 +12,13 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "components": "^0.1.0",
     "config": "^3.3.1",
     "dependencies": "0.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "js-cookie": "^2.2.1",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.28",
     "node": "^14.7.0",
     "react": "^16.13.1",
@@ -26,7 +29,9 @@
     "react-scripts": "^3.4.3",
     "react-thunk": "^1.0.0",
     "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "styled": "^1.0.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.5",

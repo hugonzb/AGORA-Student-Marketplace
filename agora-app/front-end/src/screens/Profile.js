@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
-import {signIn} from '../actions/userActions';
+import React from "react";
 
 function Profile(props) {
 	return (
@@ -22,9 +19,6 @@ function Profile(props) {
 	
 	</div>
 	);
-
-
-
 }
 
 export default Profile;
