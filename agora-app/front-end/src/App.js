@@ -13,9 +13,9 @@ import profileicon from "./images/profileicon.png";
 
 
 function App() {
-  //const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const userSignin = useSelector(state=>state.userSignin);
-  //const {userInfo} = userSignin;
+  const {userInfo} = userSignin;
 
   return (
     <BrowserRouter>
@@ -26,13 +26,14 @@ function App() {
               <img className="agora-logo" src={agoralogo} alt="agoralogo"></img>
               <div className="agora-text">AGORA </div> <div className="sm-text"> Student Marketplace</div>
             </div>
-          </Link>
-          
-            
+          </Link>  
           <nav className="links">
             <Link to="/">HOME </Link>
-            <Link to="/signup">REGISTER </Link>
-            <Link to="/signin">SIGN IN </Link>
+            { userInfo ? ( <Link to="/profile" >Welcome {userInfo.fname}</Link> ) :
+                                (   <div>
+                                    <Link to="/signup">REGISTER </Link>
+                                    <Link to="/signin">SIGN IN </Link></div> )
+            }
             <Link to="/About">ABOUT </Link>
             <Link to="/contact">CONTACT US </Link>
             <Link to="/profile"><img className="profile-icon" src={profileicon} alt="profile"></img>
