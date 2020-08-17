@@ -28,9 +28,7 @@ function Profile(props) {
 			setEmail(userInfo.email);
 			setName(userInfo.name);
 		}
-		return() => {
-
-		};
+		return() => {};
 	}, [userInfo])
 
 	return (
