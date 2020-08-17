@@ -20,7 +20,7 @@ const signUp = (studentid, fname, sname, username, password, email,
 const signIn = (email, password) => async (dispatch) => {
     dispatch({type: USER_SIGNIN_REQUEST, payload: {email, password}});
     try{
-        const {data} = await Axios.post("api/users/signin", {email, password});
+        const { data } = await Axios.post("/api/users/signin", {email, password});
         dispatch({type:USER_SIGNIN_SUCCESS, payload: data});
         Cookie.set('userInfo', JSON.stringify(data));
     }catch(error){

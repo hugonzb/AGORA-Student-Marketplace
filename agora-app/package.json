@@ -16,11 +16,8 @@
     "dependencies": "0.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-<<<<<<< HEAD
     "js-cookie": "^2.2.1",
-=======
     "jsonwebtoken": "^8.5.1",
->>>>>>> 48186fd69e06f1dcd130626c916bdbcc171e403a
     "mongoose": "^5.9.28",
     "node": "^14.7.0",
     "react": "^16.13.1",
