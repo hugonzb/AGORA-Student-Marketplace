@@ -28,7 +28,7 @@ function Profile(props) {
 			console.log(userInfo.name);
 			setEmail(userInfo.email);
 			setName(userInfo.name);
-			setName(userInfo.id);
+			setID(userInfo.id);
 		}
 		return () => { };
 	}, [userInfo])
