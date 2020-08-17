@@ -1,16 +1,28 @@
-import React, { useState } from "react";
-import useDispatch from 'react-redux';
+import React, { useState, useEffect } from "react";
+import useDispatch, { useSelector } from 'react-redux';
 import logout from '../actions/userActions';
 
 function Profile(props) {
 
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
+
+	const userSignin = useSelector(state => state.userSignin);
+	const {userInfo} = userSignin;
+	
 	const dispatch = useDispatch();
+
 
 	const handleLogout = () => {
 		dispatch(logout());
+		// This lign redirects the user to the sign in screen
+		// when they press logout
+		props.history.push("/signin");
 	}
+
+	useEffect(( => {
+		if(userInfo)
+	})
 
 	return (
 	<div className="sign-in-container">
