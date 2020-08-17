@@ -36,14 +36,12 @@ router.post("/signin", async (req, res) => {
   if (signinUser) {
     res.send({
       _id: signinUser.id,
-      fname: signinUser.fname,
+      fname: signinUser.fname, 
       email: signinUser.email,
-      token: getToken(user)
-    });
+      token: getToken(signinUser) 
+    })
   } else {
-    res
-      .status(401)
-      .send({ message: "Invalid email or password. Please try again." });
+    res.status(401).send({msg:'Invalid Email or Password.'});
   }
 });
 
