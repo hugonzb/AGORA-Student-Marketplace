@@ -10,6 +10,7 @@ import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
 import profileicon from "./images/profileicon.png";
+import Navbar from './components/Navbar';
 
 
 function App() {
