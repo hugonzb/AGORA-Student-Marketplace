@@ -7,8 +7,8 @@ import {signIn} from '../actions/userActions';
 function SignIn(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  //const {loading, userInfo, error} = userSignin;
 
+  
   const userSignin = useSelector(state => state.userSignin);
   const {loading, userInfo, error} = userSignin;
   const dispatch = useDispatch();
