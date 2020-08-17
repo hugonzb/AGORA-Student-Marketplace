@@ -14,10 +14,10 @@ function Profile(props) {
 
 	const dispatch = useDispatch();
 
-
+	// This runs when the logout button is pressed
 	const handleLogout = () => {
 		dispatch(logout());
-		// This lign redirects the user to the sign in screen
+		// This line redirects the user to the sign in screen
 		// when they press logout
 		props.history.push("/signin");
 	}
