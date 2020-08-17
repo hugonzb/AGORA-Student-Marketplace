@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const UI = styled.ul
 	list-style: none;
@@ -17,7 +18,8 @@ const UI = styled.ul
 		right: 0;
 		height: 100vh;
 		width: 300px;
-	}}
+	}
+
 
 const RightNav = () => {
 	return(
