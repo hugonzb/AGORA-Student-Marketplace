@@ -21,7 +21,13 @@ function Profile(props) {
 	}
 
 	useEffect(( => {
-		if(userInfo)
+		// If userInfo exists, set the email and name fields
+		if(userInfo) {
+			// Log the name field just to make sure it's correct
+			console.log(userInfo.name);
+			setEmail(userInfo.email);
+			setName(userInfo.name);
+		}
 	})
 
 	return (
