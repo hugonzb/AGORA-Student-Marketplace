@@ -20,6 +20,7 @@ router.post("/signup", async (req, res) => {
       city: req.body.city,
       postcode: req.body.postcode,
       date_created: req.body.date_created,
+      token: getToken(user)
     });
     const newUser = await user.save();
     res.send(newUser);
