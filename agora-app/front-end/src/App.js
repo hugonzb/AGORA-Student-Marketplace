@@ -37,7 +37,8 @@ function App() {
           </Link>  
           <nav className="links">
             <Link to="/">HOME </Link>
-            { userInfo ? ( <Link to="/profile" >Welcome {userInfo.fname}</Link> ) :
+            { userInfo ? ( <Link to="/profile" >Welcome {userInfo.fname}</Link>)
+                             :
                                 (   <div>
                                     <Link to="/signup">REGISTER </Link>
                                     <Link to="/signin">SIGN IN </Link></div> )

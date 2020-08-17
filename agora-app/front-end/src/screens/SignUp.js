@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
+import {Link} from "react-router-dom";
 
 function SignUp(props) {
   const [fname, setFname] = useState("");
