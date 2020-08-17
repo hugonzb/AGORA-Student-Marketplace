@@ -16,7 +16,15 @@ function App() {
   const dispatch = useDispatch();
   const userSignin = useSelector(state=>state.userSignin);
   const {userInfo} = userSignin;
-
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  
   return (
     <BrowserRouter>
       <div className="container">
