@@ -26,7 +26,9 @@ function Profile(props) {
 		// If userInfo exists, set the email and name fields
 		if (userInfo) {
 			// Log the name field just to make sure it's correct
-			console.log(userInfo.name);
+			console.log("user name: " + userInfo.fname);
+			console.log("email: " + userInfo.email);
+			console.log("user id: " + userInfo.id);
 			//setEmail(userInfo.email);
 			setName(userInfo.name);
 			setID(userInfo.id);
@@ -36,26 +38,26 @@ function Profile(props) {
 
 	return (
 		<BrowserRouter>
-		{userInfo ? (
-		<div className = "sign-in-container" >
+			{userInfo ? (
+				<div className="sign-in-container" >
 					Your Profile
-			<div className = "createAccountContainer" >
-					<form className="profile-container">
-						<h2> Profile </h2>
-						<label for="username">Student ID: {id}</label>
-						<br></br>
-						<label for="name">Name: {name}</label>
-						<br></br>
-					</form>
-			</div>
+					<div className="createAccountContainer" >
+						<form className="profile-container">
+							<h2> Profile </h2>
+							<label for="username" value={id}>Student ID: {id}</label>
+							<br></br>
+							<label for="name" value={name}>Name: {name}</label>
+							<br></br>
+						</form>
+					</div>
 
-		<button type="button" onClick={handleLogout}>Logout</button>
-	
+					<button type="button" onClick={handleLogout}>Logout</button>
 
-		</div >)
-	: (<div><Link to="/signin">Sign in</Link>
-			<Link to="/signup">Sign Up</Link></div>)
-	}
+
+				</div >)
+				: (<div><Link to="/signin">Sign in</Link>
+					<Link to="/signp">Sign Up</Link></div>)
+			}
 		</BrowserRouter>
 	);
 }
