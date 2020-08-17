@@ -4,7 +4,7 @@ import User from "../models/userModel";
 const router = express.Router();
 
 router.post("/signup", async (req, res) => {
-  try{
+  try {
     const user = new User({
       studentid: req.body.studentid,
       fname: req.body.fname,
@@ -22,8 +22,8 @@ router.post("/signup", async (req, res) => {
     });
     const newUser = await user.save();
     res.send(newUser);
-  }catch{
-    res.status(401).send('Sign up failed');
+  } catch {
+    res.status(401).send("Sign up failed");
   }
 });
 
@@ -38,7 +38,7 @@ router.post("/signin", async (req, res) => {
       _id: signinUser.id,
       fname: signinUser.fname,
       email: signinUser.email,
-      token: getToken(user)
+      token: getToken(user),
     });
   } else {
     res
