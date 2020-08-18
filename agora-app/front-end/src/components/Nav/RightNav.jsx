@@ -19,7 +19,7 @@ const Ul = styled.ul`
 		height: 100vh;
 		width: 300px;
 	}
-';
+`
 
 
 const RightNav = () => {

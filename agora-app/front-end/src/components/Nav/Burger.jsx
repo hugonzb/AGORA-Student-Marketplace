@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledBurger = styled.div'
+const StyledBurger = styled.div`
 width:2rem;
 height:2rem;
 position: fixed;
@@ -19,15 +19,14 @@ div {
 	border-radius:10px;
 
 }
-;
-
-const Burger = () =>
+`
+const Burger = () => {
 return (
 	<StyledBurger>
 	<div/>
 	<div/>
 	<div/>
-	<StyledBurger>
+	</StyledBurger>
 )
 }
 
