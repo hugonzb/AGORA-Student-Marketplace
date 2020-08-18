@@ -1,4 +1,12 @@
-import {USER_SIGNUP_REQUEST, USER_SIGNUP_SUCCESS, USER_SIGNUP_FAIL, USER_LOGOUT} from '../constants/userConstants';
+import { 
+    USER_SIGNUP_FAIL, 
+    USER_SIGNUP_REQUEST, 
+    USER_SIGNUP_SUCCESS, 
+    USER_SIGNIN_FAIL, 
+    USER_SIGNIN_REQUEST, 
+    USER_SIGNIN_SUCCESS, 
+    USER_LOGOUT 
+} from "../constants/userConstants";
 
 function userSignupReducer(state={}, action){
     switch(action.type){
