@@ -10,7 +10,7 @@ import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
 import profileicon from "./images/profileicon.png";
-import Navbar from "./components/Nav/navbar.jsx";
+import Navbar from "./components/Nav/Navbar.jsx";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
