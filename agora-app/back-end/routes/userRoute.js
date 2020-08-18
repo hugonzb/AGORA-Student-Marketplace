@@ -20,7 +20,7 @@ router.post("/signup", async (req, res) => {
       city: req.body.city,
       postcode: req.body.postcode,
       date_created: req.body.date_created,
-      token: getToken(user)
+      token: getToken(user),
     });
     const newUser = await user.save();
     res.send(newUser);
@@ -32,22 +32,17 @@ router.post("/signup", async (req, res) => {
 router.post("/signin", async (req, res) => {
   const signinUser = await User.findOne({
     email: req.body.email,
-    password: req.body.password
+    password: req.body.password,
   });
   if (signinUser) {
     res.send({
-      fname: signinUser.fname, 
+      fname: signinUser.fname,
       email: signinUser.email,
-<<<<<<< HEAD
-      token: getToken(user),
+      token: getToken(signinUser),
     });
-=======
-      token: getToken(signinUser) 
-    })
->>>>>>> e144ef45affe2fa3a821354b89c03b3ae5d45167
   } else {
-    res.status(401).send({msg:'Invalid Email or Password.'});
+    res.status(401).send({ msg: "Invalid Email or Password." });
   }
-}); 
+});
 
 export default router;

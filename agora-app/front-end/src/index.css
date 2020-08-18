@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap");
 
 body {
- background-color: rgb(250, 250, 250);
+  background-color: rgb(250, 250, 250);
 }
 
-a:hover, a:visited, a:link, a:active{
+a:hover,
+a:visited,
+a:link,
+a:active {
   text-decoration: none;
 }
 
@@ -27,37 +30,37 @@ a:hover, a:visited, a:link, a:active{
   border: 1px solid rgb(202, 202, 202);
 }
 
-.header-logo{
+.header-logo {
   display: flex;
   text-decoration: none;
 }
 
-.agora-text{
+.agora-text {
   padding-top: 1.7rem;
   padding-left: 1rem;
   padding-right: 0.5rem;
   color: rgb(255, 123, 0);
-  font-family: 'Play', sans-serif;
+  font-family: "Play", sans-serif;
 }
 
-.sm-text{
+.sm-text {
   padding-top: 1.7rem;
   color: rgb(2, 3, 32);
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 28px;
 }
 
-.agora-logo{
+.agora-logo {
   margin-top: 2px;
   max-height: 4.5rem;
 }
 
-.profile-icon{
+.profile-icon {
   max-height: 3rem;
   max-width: 3rem;
-  text-align:center;
+  text-align: center;
 }
- 
+
 .search {
   display: flex;
   height: 2rem;
@@ -69,7 +72,7 @@ a:hover, a:visited, a:link, a:active{
   border-radius: 0.3rem;
 }
 
-.search-input{
+.search-input {
   font-size: 15px;
   width: 20rem;
   height: 2rem;
@@ -96,11 +99,11 @@ a:hover, a:visited, a:link, a:active{
   font-weight: bold;
   text-decoration: none;
   align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.links a:hover{
-  color:#1d4c61;
+.links a:hover {
+  color: #1d4c61;
   background-color: solid black;
 }
 
@@ -116,7 +119,7 @@ a:hover, a:visited, a:link, a:active{
 /* Home screen */
 
 .home-container {
-  text-align: center; 
+  text-align: center;
   height: 100%;
   min-height: 35rem;
   margin-top: 1rem;
@@ -147,7 +150,7 @@ a:hover, a:visited, a:link, a:active{
   border-radius: 0.5rem;
 }
 
-.listing-image{
+.listing-image {
   display: flex;
   background-color: white;
   align-items: center;
@@ -156,26 +159,27 @@ a:hover, a:visited, a:link, a:active{
   border-right: 1px solid rgb(109, 109, 109);
 }
 
-.listing-image img{
+.listing-image img {
   max-width: 180px;
   max-height: 160px;
 }
 
-.listing-content{
+.listing-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
   color: black;
   justify-content: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   background-color: rgb(227, 230, 235);
   padding: 0.5rem;
   width: 150px;
   font-size: 18x;
 }
 
-.listing-name{
+.listing-name {
   padding-bottom: 1rem;
   font-weight: bold;
 }
@@ -194,18 +198,17 @@ a:hover, a:visited, a:link, a:active{
 }
 
 .createAccountContainer {
-  border: 1px solid black; 
-  width:50%; 
-  clear: both; 
-  margin-left:25%; 
+  border: 1px solid black;
+  width: 50%;
+  clear: both;
+  margin-left: 25%;
 }
 
 .createAccountContainer input {
-  width:25%; 
-  clear:both; 
-  margin: 10px; 
+  width: 25%;
+  clear: both;
+  margin: 10px;
 }
-
 
 /* Sign in screen */
 
@@ -222,8 +225,8 @@ a:hover, a:visited, a:link, a:active{
 
 /* contact */
 
-input[type=submit]{
-  width:30%;
+input[type="submit"] {
+  width: 30%;
   background-color: #196619;
   border: none;
   color: white;
@@ -235,7 +238,9 @@ input[type=submit]{
   margin: 5px;
 }
 
-input[type=text], select, textarea {
+input[type="text"],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -247,7 +252,9 @@ input[type=text], select, textarea {
 }
 
 /* sign in page */
-input[type=text], input[type=password], input[type=email] {
+input[type="text"],
+input[type="password"],
+input[type="email"] {
   width: 100%;
   padding: 16px 10px;
   margin: 8px 0;
@@ -256,13 +263,11 @@ input[type=text], input[type=password], input[type=email] {
   box-sizing: border-box;
 }
 
-
-fieldset{
-	 width:50%;
-	 margin:auto;
-	 padding: 20px;
-	  border: 0;
-	
+fieldset {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  border: 0;
 }
 
 button {
@@ -273,7 +278,7 @@ button {
   border: none;
   cursor: pointer;
   width: 40%;
-  float:left;
+  float: left;
 }
 
 button:hover {
@@ -286,9 +291,8 @@ button:hover {
   background-color: #b30000;
   padding: 14px 20px;
   margin: auto;
-  float:right;
+  float: right;
 }
-
 
 span.psw {
   float: right;
@@ -297,7 +301,7 @@ span.psw {
 
 /*About us*/
 
-.about-container{
+.about-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -306,25 +310,27 @@ span.psw {
   min-height: 33rem;
 }
 
-.about-section{
+.about-section {
   max-width: 50rem;
 }
 
-.about-section h1,h2{
+.about-section h1,
+h2 {
   color: #000000;
   text-align: center;
 }
 
-.about-section h2,p{
+.about-section h2,
+p {
   font-size: 17px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   line-height: 1.5;
   text-align: center;
 }
 
 /* view listing */
 
-.listing-container{
+.listing-container {
   display: flex;
   min-width: 95%;
   background-color: rgb(252, 252, 252);
@@ -337,9 +343,15 @@ span.psw {
   border: 1px solid rgb(185, 185, 185);
 }
 
+/* Profile */
+.logout {
+  margin-left: 30%;
+  margin-top: 10px;
+}
+
 /* misc */
 
-.loading{
+.loading {
   display: flex;
   min-height: 34rem;
   text-align: center;
@@ -348,6 +360,6 @@ span.psw {
   font-weight: bold;
 }
 
-.error{
+.error {
   min-height: 35rem;
 }
