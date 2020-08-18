@@ -223,7 +223,7 @@ a:active {
   border: 1px solid rgb(185, 185, 185);
 }
 
-/* contact */
+/* contact page */
 
 input[type="submit"] {
   width: 30%;
@@ -347,6 +347,16 @@ p {
 .logout {
   margin-left: 30%;
   margin-top: 10px;
+}
+
+.profile-container {
+  width: 100%;
+  display: flex;
+}
+
+.profile-contents {
+  width: 50%;
+  border: 1px dashed black;
 }
 
 /* misc */
