@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 
 const Nav = styled.nav`
@@ -28,20 +28,14 @@ ul {
 
 const Navbar = () =>{
     return(
-     <div>
-        <div className= "logo">
-          Nav Bar
-        </div> 
-        <ul>
-         <li>Home</li>
-         <li>Register</li>
-         <li>Sign In</li>
-         <li>About</li>
-         <li>Contact Us</li>
-        </ul>
-     </div>
-
-    )
+    <Nav>
+        <div className="logo">
+            Nav Bar
+        </div>
+    
+    </Nav>
+     )
 }
 
 export default Navbar
+
