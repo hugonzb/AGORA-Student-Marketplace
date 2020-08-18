@@ -5,7 +5,7 @@ import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import About from "./screens/About";
-import contact from "./screens/contact";
+import contact from "./screens/Contact";
 import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
@@ -17,14 +17,6 @@ function App() {
   const dispatch = useDispatch();
   const userSignin = useSelector(state=>state.userSignin);
   const {userInfo} = userSignin;
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
   
 
 

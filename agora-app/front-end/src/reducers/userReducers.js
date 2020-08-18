@@ -1,7 +1,4 @@
-import {USER_SIGNUP_REQUEST, USER_SIGNUP_SUCCESS, USER_SIGNUP_FAIL} from '../constants/userConstants';
-import {USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCESS, USER_SIGNIN_FAIL} from '../constants/userConstants';
-
-
+import {USER_SIGNUP_REQUEST, USER_SIGNUP_SUCCESS, USER_SIGNUP_FAIL, USER_LOGOUT} from '../constants/userConstants';
 
 function userSignupReducer(state={}, action){
     switch(action.type){
@@ -24,9 +21,11 @@ function userSignInReducer(state={}, action){
             return {loading: false, userInfo: action.payload};
         case USER_SIGNIN_FAIL:
             return {loading: false, error: action.payload};
+        case USER_LOGOUT:
+            return {};
         default:
             return state;
     }
-}
+} 
 
 export {userSignupReducer, userSignInReducer};
