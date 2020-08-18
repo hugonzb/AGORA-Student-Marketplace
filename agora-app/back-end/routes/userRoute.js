@@ -5,7 +5,7 @@ import { getToken } from "../util";
 const router = express.Router();
 
 router.post("/signup", async (req, res) => {
-  try{
+  try {
     const user = new User({
       studentid: req.body.studentid,
       fname: req.body.fname,
@@ -20,12 +20,12 @@ router.post("/signup", async (req, res) => {
       city: req.body.city,
       postcode: req.body.postcode,
       date_created: req.body.date_created,
-      token: getToken(user)
+      token: getToken(user),
     });
     const newUser = await user.save();
     res.send(newUser);
-  }catch{
-    res.status(401).send('Sign up failed');
+  } catch {
+    res.status(401).send("Sign up failed");
   }
 });
 
@@ -36,13 +36,15 @@ router.post("/signin", async (req, res) => {
   });
   if (signinUser) {
     res.send({
-      fname: signinUser.fname, 
+      studentid: signinUser.studentid,
+      fname: signinUser.fname,
+      lname: signinUser.lname,
       email: signinUser.email,
-      token: getToken(signinUser) 
-    })
+      token: getToken(signinUser)
+    });
   } else {
-    res.status(401).send({msg:'Invalid Email or Password.'});
+    res.status(401).send({ msg: "Invalid Email or Password." });
   }
-}); 
+});
 
 export default router;

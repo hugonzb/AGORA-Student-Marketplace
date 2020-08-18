@@ -1,7 +1,14 @@
-import { USER_SIGNUP_FAIL, USER_SIGNUP_REQUEST, USER_SIGNUP_SUCCESS } from "../constants/userConstants";
-import { USER_SIGNIN_FAIL, USER_SIGNIN_REQUEST, USER_SIGNIN_SUCCESS, USER_LOGOUT} from "../constants/userConstants";
 import Axios from "axios";
 import Cookie from 'js-cookie';
+import { 
+    USER_SIGNUP_FAIL, 
+    USER_SIGNUP_REQUEST, 
+    USER_SIGNUP_SUCCESS, 
+    USER_SIGNIN_FAIL, 
+    USER_SIGNIN_REQUEST, 
+    USER_SIGNIN_SUCCESS, 
+    USER_LOGOUT 
+} from "../constants/userConstants";
 
 const signUp = (studentid, fname, sname, username, password, email,
     dob, gender, university, street_address, city, postcode ) => async (dispatch) => {
@@ -26,7 +33,7 @@ const signIn = (email, password) => async (dispatch) => {
     }catch(error){
         dispatch({type:USER_SIGNIN_FAIL, payload: error.message});
     }
-}
+} 
 
 const logout = () => (dispatch) => {
     alert("Successfully logged out");
@@ -34,4 +41,4 @@ const logout = () => (dispatch) => {
     dispatch({type:USER_LOGOUT});
 }
 
-export {signUp, signIn, logout} 
+export { signUp, signIn, logout } 
