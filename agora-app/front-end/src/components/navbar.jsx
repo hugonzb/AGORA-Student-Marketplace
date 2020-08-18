@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 
 const Nav = styled.nav`
 width: 100%;
@@ -29,18 +29,33 @@ const Navbar = () =>{
     return(
      <div>
         <div className= "logo">
-          Nav Bar
-        </div> 
-        <ul>
-         <li>Home</li>
-         <li>Register</li>
-         <li>Sign In</li>
-         <li>About</li>
-         <li>Contact Us</li>
-        </ul>
+        <Link to="/">HOME </Link>
+            { userInfo ? ( <Link to="/profile" >Welcome {userInfo.fname}</Link>)
+                             :
+                                (   <div>
+                                    <Link to="/signup">REGISTER </Link>
+                                    <Link to="/signin">SIGN IN </Link></div> )
+            }
+            <Link to="/About">ABOUT </Link>
+            <Link to="/contact">CONTACT US </Link>
+            <Link to="/profile"><img className="profile-icon" src={profileicon} alt="profile"></img>
+            </Link>
+         
      </div>
 
     )
 }
 
 export default Navbar
+
+ <Link to="/">HOME </Link>
+            { userInfo ? ( <Link to="/profile" >Welcome {userInfo.fname}</Link>)
+                             :
+                                (   <div>
+                                    <Link to="/signup">REGISTER </Link>
+                                    <Link to="/signin">SIGN IN </Link></div> )
+            }
+            <Link to="/About">ABOUT </Link>
+            <Link to="/contact">CONTACT US </Link>
+            <Link to="/profile"><img className="profile-icon" src={profileicon} alt="profile"></img>
+            </Link>

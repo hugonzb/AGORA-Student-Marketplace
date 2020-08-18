@@ -10,7 +10,7 @@ import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
 import profileicon from "./images/profileicon.png";
-import Navbar from './components/Navbar';
+import Navbar from "./components/Navbar";
 
 
 function App() {
@@ -26,6 +26,8 @@ function App() {
     }
   }
   
+
+
   return (
     <BrowserRouter>
       <div className="container">
@@ -37,6 +39,7 @@ function App() {
             </div>
           </Link>  
           <nav className="links">
+         
             <Link to="/">HOME </Link>
             { userInfo ? ( <Link to="/profile" >Welcome {userInfo.fname}</Link>)
                              :
