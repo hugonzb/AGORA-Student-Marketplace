@@ -4,7 +4,7 @@ import { logout } from "../actions/userActions";
 import { BrowserRouter, Link } from "react-router-dom";
 
 function Profile(props) {
-  const [name, setName] = useState("");
+  const [fname, setName] = useState("");
   const [email, setEmail] = useState("");
   const [id, setID] = useState("");
   const [username, setUsername] = useState("");
@@ -30,7 +30,7 @@ function Profile(props) {
       //console.log("user name: " + userInfo.fname);
       //console.log("email: " + userInfo.email);
       //console.log("user id: " + userInfo.id);
-      setName(userInfo.name);
+      setName(userInfo.fname);
       setID(userInfo.id);
       setEmail(userInfo.email);
       setUsername(userInfo.username);
@@ -43,16 +43,16 @@ function Profile(props) {
     <BrowserRouter>
       {userInfo ? (
         <div className="sign-in-container">
-          Your Profile
+          <h3> Welcome to your profile page {userInfo.fname} </h3>
           <div className="profile-container">
             <div className="profile-contents">
-              <h2> Profile </h2>
+              <h2> Profile Settings: </h2>
               <form className="profile-form">
                 <label for="username" value={id}>
                   Student ID: {userInfo.studentid}
                 </label>
                 <br></br>
-                <label for="name" value={name}>
+                <label for="name" value={fname}>
                   Name: {userInfo.fname}
                 </label>
                 <br></br>
@@ -71,7 +71,8 @@ function Profile(props) {
               </form>
             </div>
             <div className="profile-contents">
-              <h2> Your Listings: </h2>{" "}
+              <h2> Your Listings: </h2>
+              <p> please note this feature is currently not working</p>
             </div>
           </div>
           <button type="button" className="logout" onClick={handleLogout}>
