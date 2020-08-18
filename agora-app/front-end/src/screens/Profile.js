@@ -41,27 +41,31 @@ function Profile(props) {
       {userInfo ? (
         <div className="sign-in-container">
           Your Profile
-          <div className="createAccountContainer">
-            <form className="profile-container">
+          <div className="profile-container">
+            <div className="profile-contents">
               <h2> Profile </h2>
-              <label for="username" value={id}>
-                Student ID: {userInfo.studentid}
-              </label>
-              <br></br>
-              <label for="name" value={name}>
-                Name: {userInfo.fname}
-              </label>
-              <br></br>
-              <label for="email" value={email}>
-                Email: {userInfo.email}
-              </label>
-              <br></br>
-            </form>
-
-            <button type="button" className="logout" onClick={handleLogout}>
-              Logout
-            </button>
+              <form className="profile-container">
+                <label for="username" value={id}>
+                  Student ID: {userInfo.studentid}
+                </label>
+                <br></br>
+                <label for="name" value={name}>
+                  Name: {userInfo.fname}
+                </label>
+                <br></br>
+                <label for="email" value={email}>
+                  Email: {userInfo.email}
+                </label>
+                <br></br>
+              </form>
+            </div>
+            <div className="profile-contents">
+              <h2> Your Listings: </h2>{" "}
+            </div>
           </div>
+          <button type="button" className="logout" onClick={handleLogout}>
+            Logout
+          </button>
         </div>
       ) : (
         <div>
