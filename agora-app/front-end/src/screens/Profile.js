@@ -7,6 +7,8 @@ function Profile(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [id, setID] = useState("");
+  const [username, setUsername] = useState("");
+  const [university, setUniversity] = useState("University of Auckland");
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -25,13 +27,14 @@ function Profile(props) {
     // If userInfo exists, set the email and name fields
     if (userInfo) {
       // Log the name field just to make sure it's correct
-      console.log("user name: " + userInfo.fname);
-      console.log("email: " + userInfo.email);
-      console.log("user id: " + userInfo.id);
-      //setEmail(userInfo.email);
+      //console.log("user name: " + userInfo.fname);
+      //console.log("email: " + userInfo.email);
+      //console.log("user id: " + userInfo.id);
       setName(userInfo.name);
       setID(userInfo.id);
       setEmail(userInfo.email);
+      setUsername(userInfo.username);
+      setUniversity(userInfo.university);
     }
     return () => {};
   }, [userInfo]);
@@ -44,7 +47,7 @@ function Profile(props) {
           <div className="profile-container">
             <div className="profile-contents">
               <h2> Profile </h2>
-              <form className="profile-container">
+              <form className="profile-form">
                 <label for="username" value={id}>
                   Student ID: {userInfo.studentid}
                 </label>
@@ -55,6 +58,14 @@ function Profile(props) {
                 <br></br>
                 <label for="email" value={email}>
                   Email: {userInfo.email}
+                </label>
+                <br></br>
+                <label for="username" value={username}>
+                  Username: {userInfo.username}
+                </label>
+                <br></br>
+                <label for="email" value={university}>
+                  University: {userInfo.university}
                 </label>
                 <br></br>
               </form>
