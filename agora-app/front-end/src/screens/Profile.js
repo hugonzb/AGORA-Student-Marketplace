@@ -45,7 +45,7 @@ function Profile(props) {
             <form className="profile-container">
               <h2> Profile </h2>
               <label for="username" value={id}>
-                Student ID: {id}
+                Student ID: {userInfo.studentid}
               </label>
               <br></br>
               <label for="name" value={name}>

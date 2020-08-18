@@ -34,6 +34,6 @@ function userSignInReducer(state={}, action){
         default:
             return state;
     }
-} 
+}  
 
 export {userSignupReducer, userSignInReducer};

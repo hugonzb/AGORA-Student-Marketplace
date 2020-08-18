@@ -32,13 +32,15 @@ router.post("/signup", async (req, res) => {
 router.post("/signin", async (req, res) => {
   const signinUser = await User.findOne({
     email: req.body.email,
-    password: req.body.password,
+    password: req.body.password
   });
   if (signinUser) {
     res.send({
+      studentid: signinUser.studentid,
       fname: signinUser.fname,
+      lname: signinUser.lname,
       email: signinUser.email,
-      token: getToken(signinUser),
+      token: getToken(signinUser)
     });
   } else {
     res.status(401).send({ msg: "Invalid Email or Password." });
