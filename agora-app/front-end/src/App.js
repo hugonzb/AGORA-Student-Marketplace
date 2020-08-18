@@ -5,7 +5,7 @@ import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import About from "./screens/About";
-import contact from "./screens/contact";
+import contact from "./screens/Contact";
 import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
