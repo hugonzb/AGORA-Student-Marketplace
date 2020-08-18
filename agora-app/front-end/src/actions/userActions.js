@@ -29,8 +29,9 @@ const signIn = (email, password) => async (dispatch) => {
 }
 
 const logout = () => (dispatch) => {
+    alert("Successfully logged out");
     Cookie.remove("userInfo");
-    dispatch({type:USER_LOGOUT})
+    dispatch({type:USER_LOGOUT});
 }
 
-export {signUp, signIn, logout}
+export {signUp, signIn, logout} 
