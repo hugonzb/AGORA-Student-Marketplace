@@ -33,7 +33,7 @@ const signIn = (email, password) => async (dispatch) => {
     }catch(error){
         dispatch({type:USER_SIGNIN_FAIL, payload: error.message});
     }
-}
+} 
 
 const logout = () => (dispatch) => {
     alert("Successfully logged out");
