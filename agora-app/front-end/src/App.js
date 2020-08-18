@@ -10,7 +10,7 @@ import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
 import profileicon from "./images/profileicon.png";
-import Navbar from "./components/Nav/Navbar.jsx";
+import Navbar from "./components/Nav/navbar.jsx";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -28,12 +28,11 @@ function App() {
             </div>
           </Link>
           <nav className="links">
-         <Navbar/>
+            <Navbar />
             <Link to="/">HOME </Link>
             {userInfo ? (
               <div>
-                <Link to="/profile">Welcome {userInfo.fname}
-                </Link>
+                <Link to="/profile">Welcome {userInfo.fname}</Link>
                 <Link to="/profile">
                   <img
                     className="profile-icon"
