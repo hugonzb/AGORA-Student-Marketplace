@@ -5,7 +5,7 @@ import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import About from "./screens/About";
-import contact from "./screens/contact";
+import Contact from "./screens/Contact";
 import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
@@ -65,7 +65,7 @@ function App() {
             <Route path="/signup" component={SignUp} />
             <Route path="/signin" component={SignIn} />
             <Route path="/About" component={About} />
-            <Route path="/contact" component={contact} />
+            <Route path="/contact" component={Contact} />
             <Route path="/profile" component={Profile} />
             <Route path="/" exact={true} component={Home} />
             <Route path="/listing/:id" component={ViewListing} />
