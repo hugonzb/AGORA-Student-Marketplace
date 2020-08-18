@@ -147,8 +147,8 @@ a:active {
   font-family: arial;
   cursor: pointer;
   border-radius: 0.5rem;
-  border-bottom: 2px rgb(0, 0, 0) solid;
-  border-top: 2px black solid;
+  border-bottom: 2px rgb(59, 59, 59) solid;
+  border-top: 2px rgb(59, 59, 59) solid;
   background-color: rgb(255, 255, 255);
 }
 
@@ -178,6 +178,8 @@ a:active {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   background-color: rgb(255, 255, 255);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   padding: 0.5rem;
   width: 150px;
   font-size: 18x;
