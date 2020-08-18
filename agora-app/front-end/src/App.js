@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
@@ -13,7 +13,6 @@ import profileicon from "./images/profileicon.png";
 import Navbar from "./components/navbar.jsx";
 
 function App() {
-  const dispatch = useDispatch();
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
@@ -31,7 +30,17 @@ function App() {
           <nav className="links">
             <Link to="/">HOME </Link>
             {userInfo ? (
-              <Link to="/profile">Welcome {userInfo.fname}</Link>
+              <div>
+                <Link to="/profile">Welcome {userInfo.fname}
+                </Link>
+                <Link to="/profile">
+                  <img
+                    className="profile-icon"
+                    src={profileicon}
+                    alt="profile"
+                  ></img>
+                </Link>
+              </div>
             ) : (
               <div>
                 <Link to="/signup">REGISTER </Link>
@@ -40,13 +49,6 @@ function App() {
             )}
             <Link to="/About">ABOUT </Link>
             <Link to="/contact">CONTACT US </Link>
-            <Link to="/profile">
-              <img
-                className="profile-icon"
-                src={profileicon}
-                alt="profile"
-              ></img>
-            </Link>
           </nav>
         </div>
         <div className="search">
@@ -55,7 +57,7 @@ function App() {
               <input
                 className="search-input"
                 name="searchWord"
-                placeholder="What are you looking for? .."
+                placeholder="Search"
               />
             </form>
           </div>
