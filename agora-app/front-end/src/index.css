@@ -140,14 +140,16 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 10rem;
   border: 1px solid rgb(165, 164, 164);
   margin: 1rem;
-  max-width: 400px;
-  text-align: center;
+  width: 330px;
+  min-height: 10rem;
   font-family: arial;
   cursor: pointer;
   border-radius: 0.5rem;
+  border-bottom: 2px rgb(0, 0, 0) solid;
+  border-top: 2px black solid;
+  background-color: rgb(255, 255, 255);
 }
 
 .listing-image {
@@ -155,7 +157,9 @@ a:active {
   background-color: white;
   align-items: center;
   width: 180px;
-  border-radius: 0.5rem;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
   border-right: 1px solid rgb(109, 109, 109);
 }
 
@@ -173,10 +177,11 @@ a:active {
   justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: rgb(227, 230, 235);
+  background-color: rgb(255, 255, 255);
   padding: 0.5rem;
   width: 150px;
   font-size: 18x;
+  max-height: 10rem;
 }
 
 .listing-name {
@@ -328,20 +333,6 @@ p {
   text-align: center;
 }
 
-/* view listing */
-
-.listing-container {
-  display: flex;
-  min-width: 95%;
-  background-color: rgb(252, 252, 252);
-  justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  min-height: 30rem;
-  text-align: center;
-  padding: 1rem;
-  border: 1px solid rgb(185, 185, 185);
-}
 
 /* Profile */
 .logout {
