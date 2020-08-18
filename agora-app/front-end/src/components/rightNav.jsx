@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const UI = styled.ul `
+const UI = styled.ul`
 	list-style: none;
 	display; flex;
 	flex-flow: row nowrap;
