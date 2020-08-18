@@ -1,5 +1,9 @@
 import axios from 'axios';
-import { LISTING_LIST_REQUEST, LISTING_LIST_SUCCESS, LISTING_LIST_FAIL } from '../constants/listingConstants';
+import { 
+    LISTING_LIST_REQUEST, 
+    LISTING_LIST_SUCCESS, 
+    LISTING_LIST_FAIL 
+} from '../constants/listingConstants';
 
 const listListings = () => async (dispatch) => {
     try {

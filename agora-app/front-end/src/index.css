@@ -1,28 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap");
 
 body {
- background-color: rgb(250, 250, 250);
+  background-color: rgb(250, 250, 250);
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
 }
 
 /* App */
 
 .header {
   height: 4rem;
+  max-width: 100rem;
   font-size: 30px;
   text-align: center;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   text-align: center;
   background-color: #ffffff;
   padding-left: 3rem;
   padding-right: 5rem;
   border-radius: 0.5rem;
-  border: 1px solid rgb(202, 202, 202)
+  border: 1px solid rgb(202, 202, 202);
 }
 
-.agora-logo{
+.header-logo {
+  display: flex;
+  text-decoration: none;
+}
+
+.agora-text {
+  padding-top: 1.7rem;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  color: rgb(255, 123, 0);
+  font-family: "Play", sans-serif;
+}
+
+.sm-text {
+  padding-top: 1.7rem;
+  color: rgb(2, 3, 32);
+  font-family: "Quicksand", sans-serif;
+  font-size: 28px;
+}
+
+.agora-logo {
+  margin-top: 2px;
   max-height: 4.5rem;
+}
+
+.profile-icon {
+  max-height: 3rem;
+  max-width: 3rem;
+  text-align: center;
 }
 
 .search {
@@ -32,11 +68,11 @@ body {
   justify-content: center;
   padding: 10px;
   text-align: center;
-  background-color: #406f83;
+  background-color: #1d4c61;
   border-radius: 0.3rem;
 }
 
-.search-input{
+.search-input {
   font-size: 15px;
   width: 20rem;
   height: 2rem;
@@ -46,28 +82,28 @@ body {
 }
 
 .links {
-  width: 30rem;
-  font-size: 20px;
-  justify-content: space-between;
+  display: flex;
+  width: 40rem;
+  font-size: 17px;
   align-items: center;
-  padding: 0.5rem;
 }
 
 .links a {
+  margin-top: 0.5rem;
   border-radius: 0px;
-  padding: 10px;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-left: 1rem;
   background-color: rgb(255, 255, 255);
   color: #000000;
   font-weight: bold;
   text-decoration: none;
-  justify-content: space-between;
   align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.links a:hover{
-  color:rgb(30, 100, 180);
+.links a:hover {
+  color: #1d4c61;
   background-color: solid black;
 }
 
@@ -75,7 +111,7 @@ body {
   height: 0.5rem;
   font-size: 20px;
   padding: 0.5rem;
-  background-color: #406f83;
+  background-color: #1d4c61;
   color: white;
   text-align: center;
 }
@@ -83,7 +119,7 @@ body {
 /* Home screen */
 
 .home-container {
-  text-align: center; 
+  text-align: center;
   height: 100%;
   min-height: 35rem;
   margin-top: 1rem;
@@ -105,7 +141,7 @@ body {
   flex-direction: row;
   justify-content: center;
   height: 10rem;
-  border: 1px solid rgb(182, 182, 182);
+  border: 1px solid rgb(165, 164, 164);
   margin: 1rem;
   max-width: 400px;
   text-align: center;
@@ -114,7 +150,7 @@ body {
   border-radius: 0.5rem;
 }
 
-.listing-image{
+.listing-image {
   display: flex;
   background-color: white;
   align-items: center;
@@ -123,24 +159,27 @@ body {
   border-right: 1px solid rgb(109, 109, 109);
 }
 
-.listing-image img{
+.listing-image img {
   max-width: 180px;
   max-height: 160px;
 }
 
-.listing-content{
+.listing-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none;
+  color: black;
   justify-content: center;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  background-color: rgb(240, 243, 247);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: rgb(227, 230, 235);
   padding: 0.5rem;
   width: 150px;
   font-size: 18x;
 }
 
-.listing-name{
+.listing-name {
   padding-bottom: 1rem;
   font-weight: bold;
 }
@@ -159,18 +198,17 @@ body {
 }
 
 .createAccountContainer {
-  border: 1px solid black; 
-  width:50%; 
-  clear: both; 
-  margin-left:25%; 
+  border: 1px solid black;
+  width: 50%;
+  clear: both;
+  margin-left: 25%;
 }
 
 .createAccountContainer input {
-  width:25%; 
-  clear:both; 
-  margin: 10px; 
+  width: 25%;
+  clear: both;
+  margin: 10px;
 }
-
 
 /* Sign in screen */
 
@@ -179,18 +217,149 @@ body {
   margin-bottom: 1rem;
   border: 1px solid rgb(30, 255, 1);
   width: 98%;
-  min-height: 35rem;
+  min-height: 30rem;
   text-align: center;
   padding: 1rem;
   border: 1px solid rgb(185, 185, 185);
 }
 
-/* misc */
+/* contact */
 
-.loading{
-  min-height: 35rem;
+input[type="submit"] {
+  width: 30%;
+  background-color: #196619;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
 }
 
-.error{
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+/* sign in page */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 100%;
+  padding: 16px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+fieldset {
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+  border: 0;
+}
+
+button {
+  background-color: #264d00;
+  color: white;
+  padding: 14px 20px;
+  margin: auto;
+  border: none;
+  cursor: pointer;
+  width: 40%;
+  float: left;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: 40%;
+  padding: 20px;
+  background-color: #b30000;
+  padding: 14px 20px;
+  margin: auto;
+  float: right;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/*About us*/
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  min-height: 33rem;
+}
+
+.about-section {
+  max-width: 50rem;
+}
+
+.about-section h1,
+h2 {
+  color: #000000;
+  text-align: center;
+}
+
+.about-section h2,
+p {
+  font-size: 17px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* view listing */
+
+.listing-container {
+  display: flex;
+  min-width: 95%;
+  background-color: rgb(252, 252, 252);
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-height: 30rem;
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid rgb(185, 185, 185);
+}
+
+/* Profile */
+.logout {
+  margin-left: 30%;
+  margin-top: 10px;
+}
+
+/* misc */
+
+.loading {
+  display: flex;
+  min-height: 34rem;
+  text-align: center;
+  justify-content: center;
+  padding: 10rem;
+  font-weight: bold;
+}
+
+.error {
   min-height: 35rem;
 }

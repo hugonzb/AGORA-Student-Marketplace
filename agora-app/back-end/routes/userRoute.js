@@ -1,14 +1,14 @@
 import express from "express";
 import User from "../models/userModel";
+import { getToken } from "../util";
 
 const router = express.Router();
 
-//need to update this so that it matches the schema on userModel.js
-//also need to update signIn.js so that the form is the same as userModel.js
 router.post("/signup", async (req, res) => {
+  try {
     const user = new User({
+      studentid: req.body.studentid,
       fname: req.body.fname,
-      mname: req.body.mname,
       sname: req.body.sname,
       username: req.body.username,
       password: req.body.password,
@@ -19,11 +19,32 @@ router.post("/signup", async (req, res) => {
       street_address: req.body.street_address,
       city: req.body.city,
       postcode: req.body.postcode,
-      date_created: req.body.date_created
+      date_created: req.body.date_created,
+      token: getToken(user),
     });
     const newUser = await user.save();
     res.send(newUser);
-    console.log(newUser.fname);
+  } catch {
+    res.status(401).send("Sign up failed");
+  }
+});
+
+router.post("/signin", async (req, res) => {
+  const signinUser = await User.findOne({
+    email: req.body.email,
+    password: req.body.password
+  });
+  if (signinUser) {
+    res.send({
+      studentid: signinUser.studentid,
+      fname: signinUser.fname,
+      lname: signinUser.lname,
+      email: signinUser.email,
+      token: getToken(signinUser)
+    });
+  } else {
+    res.status(401).send({ msg: "Invalid Email or Password." });
+  }
 });
 
 export default router;

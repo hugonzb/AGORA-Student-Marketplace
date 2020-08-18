@@ -1,4 +1,8 @@
-import { LISTING_LIST_REQUEST, LISTING_LIST_SUCCESS, LISTING_LIST_FAIL } from "../constants/listingConstants";
+import { 
+  LISTING_LIST_REQUEST, 
+  LISTING_LIST_SUCCESS, 
+  LISTING_LIST_FAIL 
+} from "../constants/listingConstants";
 
 function listingReducer(state = { listings: [] }, action) {
     switch (action.type) {
