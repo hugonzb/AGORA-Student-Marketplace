@@ -57,7 +57,7 @@ function App() {
               <input
                 className="search-input"
                 name="searchWord"
-                placeholder="Search"
+                placeholder="I'm looking for..."
               />
             </form>
           </div>
