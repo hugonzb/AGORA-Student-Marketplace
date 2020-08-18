@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function SignUp(props) {
   const [fname, setFname] = useState("");
-<<<<<<< HEAD
-  const [mname, setMname] = useState("");
-=======
   const [studentid, setStudentid] = useState("");
->>>>>>> 586ed9fcc544df390d0e685b97b3d152eb59a0b2
   const [sname, setSname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -20,10 +16,10 @@ function SignUp(props) {
   const [street_address, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
-  const userSignup = useSelector(state=>state.userSignup);
-  const {loading, userInfo, error} = userSignup;
+  const userSignup = useSelector((state) => state.userSignup);
+  const { loading, userInfo, error } = userSignup;
 
-  const dispatch = useDispatch(); 
+  const dispatch = useDispatch();
 
   useEffect(() => {
     /*if (userInfo) {
@@ -156,9 +152,7 @@ function SignUp(props) {
             <option value="Auckland University of Technology (AUT)">
               Auckland University of Technology (AUT)
             </option>
-            <option value="University of Waikato">
-              University of Waikato
-            </option>
+            <option value="University of Waikato">University of Waikato</option>
             <option value="Massey University">Massey University</option>
             <option value="Victoria University of Wellington">
               Victoria University of Wellington
@@ -200,7 +194,9 @@ function SignUp(props) {
             onChange={(e) => setPostcode(e.target.value)}
           ></input>
           <br></br>
-          <button type="submit" value="Submit">Register</button>
+          <button type="submit" value="Submit">
+            Register
+          </button>
           <h4>Already have an account?</h4>
           <Link to="/SignIn">Sign in</Link>
         </form>
