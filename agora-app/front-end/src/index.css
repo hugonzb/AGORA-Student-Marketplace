@@ -203,6 +203,7 @@ a:active {
   margin-top: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  background: rgb(255, 255, 255);  
 }
 
 .view-listing-image{
@@ -210,7 +211,7 @@ a:active {
   flex: 1, 1, 30rem;
   min-width: 20rem;
   width: 30rem;
-  background-color: yellow;
+  background-color: rgb(185, 186, 214);
   height: 20rem;
 }
 
@@ -221,6 +222,7 @@ a:active {
   width: 30rem;
   height: 20rem;
   border: 1px solid black;
+  background: rgb(253, 253, 253);  
 }
 
 .view-listing-details{
@@ -230,6 +232,7 @@ a:active {
   width: 60rem;
   height: 15rem;
   border: 1px solid black;
+  background: rgb(253, 253, 253);  
 }
 
 .view-listing-qa-container{
@@ -239,6 +242,7 @@ a:active {
   width: 60rem;
   height: 20rem;
   border: 1px solid black;
+  background: rgb(253, 253, 253);   
 }
 
 /* Sign up screen */
