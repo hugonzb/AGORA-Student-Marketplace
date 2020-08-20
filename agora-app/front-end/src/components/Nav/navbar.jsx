@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
-
 const Nav = styled.nav`
 width: 100%;
 height: 65px;
@@ -33,7 +31,7 @@ const Navbar = () => {
         <div className="logo">
             Nav Bar
         </div>
-        <RightNav/>
+        <Right/>
         
     
     </Nav>
