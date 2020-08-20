@@ -55,7 +55,7 @@ function SignUp(props) {
   return (
     <div className="sign-up-container">
       Welcome to Agora! Please sign up using the form below.
-      <div className="createAccountContainer">
+      <div className="createnewAccountContainer">
         {loading}
         {error && <div>Email or Student ID has been taken</div>}
         <form className="create-account-form" onSubmit={submitHandler}>
