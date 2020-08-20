@@ -86,6 +86,7 @@ a:active {
   width: 40rem;
   font-size: 17px;
   align-items: center;
+
 }
 
 .links a {
@@ -256,112 +257,191 @@ a:active {
 .sign-up-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border: 1px solid black;
-  width: 98%;
+  width: 70%;
+  margin: auto;
   min-height: 35rem;
   text-align: center;
   padding: 1rem;
-  border: 1px solid rgb(185, 185, 185);
+  border: hidden;
+  background: #77767691;
+   overflow: scroll;
+   
+  
+  
 }
+.sign-up-container h2{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  font-style: italic;
 
-.createAccountContainer {
-  border: 1px solid black;
-  width: 50%;
-  clear: both;
-  margin-left: 25%;
 }
-
-.createAccountContainer input {
-  width: 25%;
-  clear: both;
-  margin: 10px;
-}
-
-/* Sign in screen */
-
-.sign-in-container {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid rgb(30, 255, 1);
-  width: 98%;
-  min-height: 30rem;
-  text-align: center;
-  padding: 1rem;
-  border: 1px solid rgb(185, 185, 185);
-}
-
-/* contact page */
-
-input[type="submit"] {
-  width: 30%;
-  background-color: #196619;
-  border: none;
-  color: white;
-  padding: 10px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-size: 20px;
-  margin: 5px;
-}
-
-input[type="text"],
-select,
-textarea {
+.createnewAccountContainer {
+  
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+  clear: both;
+  margin: auto;
+  border: hidden;
+  
 
-/* sign in page */
+}
+.createnewAccountContainer form{
+ 
+  height: 400px;
+  width: 70%;
+  margin: auto;
+  margin-top: 5px;
+ 
+}
+.createnewAccountContainer form input, select,
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-  width: 100%;
-  padding: 16px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-fieldset {
-  width: 50%;
+  display:block;
+  width: 60%;
+  height: 44px;
+  text-align: center;
+  padding: 5px 16px;
   margin: auto;
-  padding: 20px;
-  border: 0;
+  margin-top: 5px;
+  border: none;
+  box-sizing: border-box;  
+} 
+
+  .createnewAccountContainer  select {
+    width: 60%;
+ }
+ .createnewAccountContainer button{
+  width: 25%;
+  height: 40px;
+  margin-bottom: 20px;
+  background: #48b096;
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: 0.8s;
+  font-weight: bold; 
+  font-size: 18px;
+  margin-top: auto;
+ }
+ .createnewAccountContainer h4{
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(27, 37, 44);
+  font-size: 18px;
+  font-weight: bold; 
+  }
+  .link-new-acc{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;  
+  color: white;
+  margin-bottom: 10px;
+  }
+  .createnewAccountContainer label {
+color: #1f1712;
+font-style: italic;
+font-weight: bold;
+display: block;
+width: 150px;
+float: left;
+margin: 10px;
+}
+label:after { content: "" }
+
+
+
+
+
+
+/* sign in page */
+.sign-in-container{
+background-color: rgba(41, 47, 66, 0.37);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10.9);
+width: 45%;
+margin: auto; 
+border-radius: 44px;
+margin-top: 15px;
+margin-bottom: 15px;
+background-image: url(images/agoralogo.png);
+background-size: 740px ;
+margin-top: 1rem;
+margin-bottom: 1rem;
+min-height: 30rem;
+text-align: center;
+padding: 1rem;
+
+}
+.createAccountContainer{
+  border-style: none;
 }
 
-button {
-  background-color: #264d00;
-  color: white;
-  padding: 14px 20px;
+.create-account-form form{
+ width: 500px;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+  border-style: none;
+  }
+.create-account-form h2{
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(29, 27, 46);
+  font-size: 40px;
+  
+}
+.create-account-form h4{
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(27, 37, 44);
+  font-size: 22px;
+  font-weight: bold; 
+  }
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  display:block;
+  width: 60%;
+  height: 44px;
+  text-align: center;
+  padding: 5px 16px;
   margin: auto;
   border: none;
+  box-sizing: border-box;  
+}
+
+.create-account-form button {
+  width: 25%;
+  height: 40px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  background: #48b096;
+  color: #fff;
+  border-radius: 44px;
   cursor: pointer;
-  width: 40%;
-  float: left;
+  transition: 0.8s;
 }
 
-button:hover {
+ .create-account-form button:hover {
   opacity: 0.8;
+  transform: scale(0.96);
 }
-
-.cancelbtn {
-  width: 40%;
-  padding: 20px;
-  background-color: #b30000;
-  padding: 14px 20px;
-  margin: auto;
-  float: right;
+.create-account-link{
+  font-family: 'Permanent Marker', cursive;
+  background-color: ivory;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;  
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 44px;
+  display: inline-block;
 }
-
-span.psw {
+ span.psw {
   float: right;
   padding-top: 16px;
 }
@@ -425,4 +505,32 @@ p {
 
 .error {
   min-height: 35rem;
+}
+
+/* contact page */
+
+input[type="submit"] {
+  width: 30%;
+  background-color: #196619;
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 5px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
