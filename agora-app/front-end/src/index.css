@@ -86,6 +86,7 @@ a:active {
   width: 40rem;
   font-size: 17px;
   align-items: center;
+
 }
 
 .links a {
@@ -255,27 +256,99 @@ a:active {
 .sign-up-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border: 1px solid black;
-  width: 98%;
-  height: 100%;
+  width: 70%;
+  margin: auto;
   min-height: 35rem;
   text-align: center;
   padding: 1rem;
-  border: 1px solid rgb(185, 185, 185);
+  border: hidden;
+  background: #77767691;
+   overflow: scroll;
+   
+  
+  
 }
+.sign-up-container h2{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  font-style: italic;
 
+}
 .createnewAccountContainer {
-  border: 1px solid black;
-  width: 50%;
+  
+  width: 100%;
   clear: both;
-  margin-left: 25%;
-}
+  margin: auto;
+  border: hidden;
+  
 
-.createnewAccountContainer input {
-  width: 25%;
-  clear: both;
-  margin: 10px;
 }
+.createnewAccountContainer form{
+ 
+  height: 400px;
+  width: 70%;
+  margin: auto;
+  margin-top: 5px;
+ 
+}
+.createnewAccountContainer form input, select,
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  display:block;
+  width: 60%;
+  height: 44px;
+  text-align: center;
+  padding: 5px 16px;
+  margin: auto;
+  margin-top: 5px;
+  border: none;
+  box-sizing: border-box;  
+} 
+
+  .createnewAccountContainer  select {
+    width: 60%;
+ }
+ .createnewAccountContainer button{
+  width: 25%;
+  height: 40px;
+  margin-bottom: 20px;
+  background: #48b096;
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: 0.8s;
+  font-weight: bold; 
+  font-size: 18px;
+  margin-top: auto;
+ }
+ .createnewAccountContainer h4{
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(27, 37, 44);
+  font-size: 18px;
+  font-weight: bold; 
+  }
+  .link-new-acc{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;  
+  color: white;
+  margin-bottom: 10px;
+  }
+  .createnewAccountContainer label {
+color: #1f1712;
+font-style: italic;
+font-weight: bold;
+display: block;
+width: 150px;
+float: left;
+margin: 10px;
+}
+label:after { content: "" }
+
+
+
 
 
 
@@ -289,7 +362,7 @@ border-radius: 44px;
 margin-top: 15px;
 margin-bottom: 15px;
 background-image: url(images/agoralogo.png);
-background-size: cover;
+background-size: 740px ;
 margin-top: 1rem;
 margin-bottom: 1rem;
 min-height: 30rem;
@@ -301,7 +374,7 @@ padding: 1rem;
   border-style: none;
 }
 
-.create-account-form{
+.create-account-form form{
  width: 500px;
   padding: 20px;
   text-align: center;
@@ -343,7 +416,7 @@ input[type="email"] {
   height: 40px;
   margin-top: 60px;
   margin-bottom: 20px;
-  background: #487eb0;
+  background: #48b096;
   color: #fff;
   border-radius: 44px;
   cursor: pointer;
