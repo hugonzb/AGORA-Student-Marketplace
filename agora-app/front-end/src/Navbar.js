@@ -1,8 +1,8 @@
-import React from "react";
+import React,{Component} from "react";
 import agoralogo from "./images/agoralogo.png";
 
 
-
+class Navbar extends Component{
 
 render(){
 	return(
@@ -32,6 +32,7 @@ render(){
                </nav>
 	)
 }
+
 }
 
 export default Navbar;
