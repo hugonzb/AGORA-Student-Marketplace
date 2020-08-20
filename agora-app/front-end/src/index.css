@@ -37,10 +37,14 @@ a:active {
 
 .agora-text {
   padding-top: 1.7rem;
-  padding-left: 1rem;
-  padding-right: 0.5rem;
+  padding-left: 0rem;
+  padding-right: 0;
+  font-size: 28px;
   color: rgb(255, 123, 0);
   font-family: "Play", sans-serif;
+  text-align: center; 
+  margin-left: 0px;
+
 }
 
 .sm-text {
@@ -48,6 +52,7 @@ a:active {
   color: rgb(2, 3, 32);
   font-family: "Quicksand", sans-serif;
   font-size: 28px;
+  margin-left: 0px;
 }
 
 .agora-logo {
@@ -432,12 +437,16 @@ p {
     padding:0px;
 }
 
-.logoNav{
+.logo img{
    width: 50px;
 
 }
 
-.barNav{
+.agoraText{
+
+}
+
+.bar{
     width:30px;
     margin: 2px;
     height: 3px;
@@ -445,14 +454,18 @@ p {
     background: grey; 
 }
 
-.btnNav{
-    border:1px solid black;
+.btn{
+    border:1px solid #1d4c61;;
     display: inline-block;
 }
 
 .logoBtn{
-    background: #424242;
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center; 
+}
+
+.navText{
+
 }
