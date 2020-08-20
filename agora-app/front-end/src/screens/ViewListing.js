@@ -14,10 +14,11 @@ function ViewListing(props) {
         };
     // eslint-disable-next-line
     }, []);
-	return (
+	return loading ? <div className="loading">Loading listings ...</div> : 
+    error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
 		<div className="view-listing-container">
 				<div className="view-listing-image">
-					Listing image is here.	
+					<img className="listing-image" src={listing.image} alt="listing"></img>
 				</div>	 
 				<div className="view-listing-actions">
 					Listing actions are here.	
@@ -29,7 +30,6 @@ function ViewListing(props) {
 				Listing questions and answers.	
 			</div>
 		</div>
-	); 
 }
 
 export default ViewListing;

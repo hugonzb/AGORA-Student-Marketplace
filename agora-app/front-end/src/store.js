@@ -10,7 +10,7 @@ const reducer = combineReducers({
     listingList: listingReducer,
     listingDetails: listingDetailsReducer,
     userSignup: userSignupReducer, 
-    userSignin: userSignInReducer
+    userSignin: userSignInReducer 
 })
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
