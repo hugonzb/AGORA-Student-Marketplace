@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { detailListing } from '../actions/listingActions';
+
 
 function ViewListing(props) {
 	return (
@@ -16,7 +19,7 @@ function ViewListing(props) {
 				Listing questions and answers.	
 			</div>
 		</div>
-	);
+	); 
 }
 
 export default ViewListing;
