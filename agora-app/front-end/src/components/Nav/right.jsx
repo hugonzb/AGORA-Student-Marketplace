@@ -30,16 +30,14 @@ const Ul = styled.ul`
 const Right = () => {
 	return(
 	 <div>
-		<div className= "logo">
-		  Nav Bar
-		</div> 
-		<ul>
+		
+		<Ul>
 		 <li>Home</li>
 		 <li>Register</li>
 		 <li>Sign In</li>
 		 <li>About Us</li>
 		 <li>Contact Us</li>
-		</ul>
+		</Ul>
 	 </div>
 
 	)
