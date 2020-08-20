@@ -2,19 +2,17 @@ import React from "react";
 
 function ViewListing(props) {
 	return (
-		<div className="listing-container">
-			<div classname="listing-top">
-				<div classname="listing-image">
+		<div className="view-listing-container">
+				<div className="view-listing-image">
 					Listing image is here.	
-				</div>	
-				<div classname="listing-actions">
+				</div>	 
+				<div className="view-listing-actions">
 					Listing actions are here.	
 				</div>	
-			</div>
-			<div classname="listing-details">
+			<div className="view-listing-details">
 				Listing information is here.	
 			</div>
-			<div classname="listing-qa-container">
+			<div className="view-listing-qa-container">
 				Listing questions and answers.	
 			</div>
 		</div>

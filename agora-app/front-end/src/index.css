@@ -124,8 +124,10 @@ a:active {
   min-height: 35rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  padding: 1rem;
+  padding-top: 1rem;
   border: 1px solid rgb(185, 185, 185);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
 }
 
 .listings {
@@ -140,28 +142,34 @@ a:active {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 10rem;
   border: 1px solid rgb(165, 164, 164);
   margin: 1rem;
-  max-width: 400px;
-  text-align: center;
+  width: 330px;
+  min-height: 10rem;
   font-family: arial;
   cursor: pointer;
   border-radius: 0.5rem;
+  border-top: 2px rgb(102, 102, 102) solid;
+  border-bottom: 2px rgb(59, 59, 59) solid;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 0px rgba(54, 54, 54, 0.61);
 }
 
 .listing-image {
   display: flex;
   background-color: white;
   align-items: center;
-  width: 180px;
-  border-radius: 0.5rem;
+  width: 190px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
   border-right: 1px solid rgb(109, 109, 109);
 }
 
 .listing-image img {
-  max-width: 180px;
-  max-height: 160px;
+  padding: 0.2rem;
+  max-width: 165px;
+  max-height: 150px;
 }
 
 .listing-content {
@@ -173,15 +181,73 @@ a:active {
   justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background-color: rgb(227, 230, 235);
+  background: rgb(253, 253, 253);  
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
   padding: 0.5rem;
   width: 150px;
   font-size: 18x;
+  max-height: 10rem;
 }
 
 .listing-name {
   padding-bottom: 1rem;
   font-weight: bold;
+}
+
+/* View Listing */
+
+.view-listing-container{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgb(255, 255, 255); 
+  padding-top: 1rem;
+  border: 1px solid rgb(185, 185, 185); 
+  border-radius: 0.5rem;
+}
+
+.view-listing-image{
+  display: flex;
+  flex: 1, 1, 30rem;
+  min-width: 20rem;
+  width: 30rem;
+  background-color: rgb(185, 186, 214);
+  height: 20rem;
+}
+
+.view-listing-actions{
+  display: flex;
+  flex: 1, 1, 30rem;
+  min-width: 20rem;
+  width: 30rem;
+  height: 20rem;
+  border: 1px solid black;
+  background: rgb(253, 253, 253);  
+}
+
+.view-listing-details{
+  display: flex;
+  flex: 1, 1, 30rem;
+  min-width: 20rem;
+  width: 60rem;
+  height: 15rem;
+  border: 1px solid black;
+  background: rgb(253, 253, 253);  
+}
+
+.view-listing-qa-container{
+  display: flex;
+  flex: 1, 1, 30rem;
+  min-width: 20rem;
+  width: 60rem;
+  height: 20rem;
+  border: 1px solid black;
+  background: rgb(253, 253, 253);   
 }
 
 /* Sign up screen */
@@ -328,20 +394,6 @@ p {
   text-align: center;
 }
 
-/* view listing */
-
-.listing-container {
-  display: flex;
-  min-width: 95%;
-  background-color: rgb(252, 252, 252);
-  justify-content: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  min-height: 30rem;
-  text-align: center;
-  padding: 1rem;
-  border: 1px solid rgb(185, 185, 185);
-}
 
 /* Profile */
 .logout {

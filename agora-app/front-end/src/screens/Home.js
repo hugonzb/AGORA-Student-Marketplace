@@ -22,10 +22,9 @@ function Home (props) {
         <div className="listings">
             {listings.map(listing =>
             <Link to={'/listing/' + listing._id}>
-            <li>
                 <div className="listing-container">
                     <div className="listing-image">
-                    <img className="listing-image" src={listing.image} alt="listing"></img>
+                        <img className="listing-image" src={listing.image} alt="listing"></img>
                     </div>
                     <div className="listing-content">
                         <div className="listing-name">{listing.name}</div>
@@ -34,7 +33,6 @@ function Home (props) {
                         <div>Seller: {listing.seller}</div>
                     </div>
                 </div> 
-            </li>
             </Link>)
             }
         </div>
