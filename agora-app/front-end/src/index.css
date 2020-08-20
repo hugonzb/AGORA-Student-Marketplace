@@ -217,6 +217,7 @@ a:active {
   min-width: 20rem;
   width: 30rem;
   background-color: rgb(185, 186, 214);
+  border: 1px solid black;
   height: 20rem;
 }
 
