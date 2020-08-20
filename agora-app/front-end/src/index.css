@@ -53,6 +53,7 @@ a:active {
 .agora-logo {
   margin-top: 2px;
   max-height: 4.5rem;
+  width: 50px;
 }
 
 .profile-icon {
@@ -424,4 +425,34 @@ p {
 
 .error {
   min-height: 35rem;
+}
+
+.navStart{
+    margin:0px;
+    padding:0px;
+}
+
+.logoNav{
+   width: 50px;
+
+}
+
+.barNav{
+    width:30px;
+    margin: 2px;
+    height: 3px;
+    color:rgb(139,139,137);
+    background: grey; 
+}
+
+.btnNav{
+    border:1px solid black;
+    display: inline-block;
+}
+
+.logoBtn{
+    background: #424242;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
 }
