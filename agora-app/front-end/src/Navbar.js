@@ -7,6 +7,7 @@ class Navbar extends Component{
 render(){
 	return(
 		<nav> 
+    <div className="header">
       <div className="logoBtn">
       <img className="agora-logo" src={agoralogo} alt="agoralogo"></img>
               <div className="agora-text">AGORA </div>{" "}
@@ -19,8 +20,9 @@ render(){
                     
                     </div>
                 </div>
+                </div>
               
-
+              
               <ul>
               <li><a href="#">Home</a></li>
               <li><a href="#">Register</a></li>
@@ -29,8 +31,9 @@ render(){
               <li><a href="#">Contact Us</a></li>
 
               </ul>
-              
+            
                </nav>
+               
 	)
 }
 

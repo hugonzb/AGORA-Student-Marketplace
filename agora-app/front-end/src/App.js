@@ -18,11 +18,11 @@ function App() {
 
   return (
     <BrowserRouter>
-   
+   <div className= "header"
    <div className="maindisplay"> 
    <Navbar />
    </div> 
-        
+        </div> 
         <div className="search">
           <div>
             <form>

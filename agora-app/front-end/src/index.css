@@ -42,8 +42,7 @@ a:active {
   font-size: 28px;
   color: rgb(255, 123, 0);
   font-family: "Play", sans-serif;
-  text-align: center; 
-  margin-left: 0px;
+  
 
 }
 
@@ -52,7 +51,7 @@ a:active {
   color: rgb(2, 3, 32);
   font-family: "Quicksand", sans-serif;
   font-size: 28px;
-  margin-left: 0px;
+  
 }
 
 .agora-logo {
@@ -457,6 +456,8 @@ p {
 .btn{
     border:1px solid #1d4c61;;
     display: inline-block;
+    justify-content: space-between;
+
 }
 
 .logoBtn{
@@ -464,8 +465,22 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    border-bottom: black; 
 }
 
 .navText{
 
+}
+
+.ul{
+    list-style: none;
+
+}
+
+ul li a{
+
+background: #4d4c4c;
+display: block;
+align-items: center;
+border-bottom: 1px solid orange; 
 }
