@@ -2,8 +2,10 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { listingReducer } from './reducers/listingReducer';
 import {userSignupReducer, userSignInReducer} from './reducers/userReducers';
 import thunk from 'redux-thunk';
+import Cookie from 'js-cookie';
 
-const initialState = {};
+const userInfo = Cookie.getJSON("userInfo") || null;
+const initialState = {userSignin: {userInfo},};
 const reducer = combineReducers({
     listingList: listingReducer,
     userSignup: userSignupReducer, 
