@@ -4,6 +4,16 @@ import { detailListing } from '../actions/listingActions';
 
 
 function ViewListing(props) {
+	const listingDetails = useSelector(state => state.listingDetails);
+	const { listing, loading, error } = listingDetails;
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+        dispatch(detailListing(props.match.params.id));
+        return () => {
+        };
+    // eslint-disable-next-line
+    }, []);
 	return (
 		<div className="view-listing-container">
 				<div className="view-listing-image">
