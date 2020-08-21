@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailListing } from '../actions/listingActions';
 
@@ -13,7 +13,8 @@ function ViewListing(props) {
         return () => {
         };
     // eslint-disable-next-line
-    }, []);
+	}, []);
+	
 	return loading ? <div className="loading">Loading listings ...</div> : 
     error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
 		<div className="view-listing-container">
@@ -24,6 +25,7 @@ function ViewListing(props) {
 					${listing.price}	
 				</div>	
 			<div className="view-listing-details">
+				Listing Information: .	
 				{listing.name}	
 				{listing.category}	
 				{listing.description}	
