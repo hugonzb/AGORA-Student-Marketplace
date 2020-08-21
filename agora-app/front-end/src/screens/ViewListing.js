@@ -21,10 +21,13 @@ function ViewListing(props) {
 					<img className="listing-image" src={listing.image} alt="listing"></img>
 				</div>	 
 				<div className="view-listing-actions">
-					Listing actions are here.	
+					${listing.price}	
 				</div>	
 			<div className="view-listing-details">
-				Listing information is here.	
+				{listing.name}	
+				{listing.category}	
+				{listing.description}	
+				{listing.seller}	
 			</div>
 			<div className="view-listing-qa-container">
 				Listing questions and answers.	

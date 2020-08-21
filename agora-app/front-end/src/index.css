@@ -237,6 +237,8 @@ a:active {
   height: 20rem;
   border: 1px solid black;
   background: rgb(253, 253, 253);  
+  align-items: center;
+  justify-content: center;
 }
 
 .view-listing-details{
@@ -247,6 +249,8 @@ a:active {
   height: 15rem;
   border: 1px solid black;
   background: rgb(253, 253, 253);  
+  align-items: center;
+  justify-content: center;
 }
 
 .view-listing-qa-container{
@@ -257,6 +261,8 @@ a:active {
   height: 20rem;
   border: 1px solid black;
   background: rgb(253, 253, 253);   
+  align-items: center;
+  justify-content: center;
 }
 
 /* Sign up screen */
