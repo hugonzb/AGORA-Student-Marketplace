@@ -217,9 +217,16 @@ a:active {
   flex: 1, 1, 30rem;
   min-width: 20rem;
   width: 30rem;
-  background-color: rgb(185, 186, 214);
   border: 1px solid black;
   height: 20rem;
+  justify-content: center;
+}
+
+.view-listing-image img{
+  min-width: 25rem;
+  width: 90%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .view-listing-actions{
