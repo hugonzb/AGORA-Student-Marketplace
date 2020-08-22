@@ -502,7 +502,7 @@ input[type="email"] {
 .team .team_member p.role{
   color: rgb(97, 97, 97);
   margin: 12px 0;
-  font-size: 12px;
+  font-size: 12px; 
   text-transform: uppercase;
 }
 
