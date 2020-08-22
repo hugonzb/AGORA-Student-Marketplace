@@ -482,7 +482,7 @@ input[type="email"] {
 }
 
 .team .team_member{
-  background: #fff;
+  background-color: rgba(21, 75, 136, 0.247);
   margin: 5px;
   margin-bottom: 50px;
   width: 300px;
@@ -521,7 +521,7 @@ input[type="email"] {
 .team .team_member .team_img img{
   width: 100px;
   height: 100px;
-  padding: 5px;
+    
 }
 
 
