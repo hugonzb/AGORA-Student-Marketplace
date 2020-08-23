@@ -278,14 +278,24 @@ a:active {
   border: hidden;
   background:  rgba(21, 75, 136, 0.24);
   overflow: scroll;
+  margin-bottom: 20px;
+  margin-top: 20px;
    
   
   
 }
 .sign-up-container h2{
   font-family: 'Permanent Marker', cursive;
+  background-color: rgb(255, 255, 255);
   font-size: 18px;
   font-style: italic;
+  font-weight: bold;  
+  color: rgb(9, 8, 17);
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 44px;
+  display: inline-block;
 
 }
 .createnewAccountContainer {
@@ -341,6 +351,7 @@ input[type="email"] {
   color: rgb(27, 37, 44);
   font-size: 18px;
   font-weight: bold; 
+  text-shadow: 2px 2px #ffffff
   }
   .link-new-acc{
   font-family: 'Permanent Marker', cursive;
@@ -349,6 +360,7 @@ input[type="email"] {
   font-weight: bold;  
   color: white;
   margin-bottom: 10px;
+  text-shadow: 2px 2px #ffffff
   }
   .createnewAccountContainer label {
 color: #1f1712;
@@ -375,8 +387,8 @@ margin: auto;
 border-radius: 44px;
 margin-top: 15px;
 margin-bottom: 15px;
-background-image: url(images/agoralogo.png);
-background-size: 740px ;
+/*background-image: url(images/agoralogo.png);
+background-size: 740px ;*/
 margin-top: 1rem;
 margin-bottom: 1rem;
 min-height: 30rem;
@@ -469,7 +481,9 @@ input[type="email"] {
   font-size: 48px;
   margin-bottom: 70px;
   margin-top: -50px;
-  text-align: center;
+  text-align: center; 
+  padding: 14px 25px;
+   
 }
 
 .team{
@@ -559,83 +573,85 @@ input[type="email"] {
 }
 
 /* contact page */
-
-.c-container{
-  background: rgba(96, 129, 167, 0.247);
-  
-  margin: auto;
-  width: 50%;
-  height: 75vh;
-  color: rgb(0, 0, 0);
-}
-
-.c-container .c-contactus{
- 
-  max-width: 600px;
-  width: 100%;
-  padding: 5px 25px;
-  margin: 0px auto;
- 
-}
-
-.c-container .c-contactus h1{
-  padding-top: 50px;
+.c-wrapper{
+  background-color: rgba(35, 85, 143, 0.452);
+  max-width: 900px;
+	width: 100%;
+	height: 80vh;
+	margin: auto;
+  padding: 10px;
   margin-bottom: 30px;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 5px;
-  
-}
-
-.c-item{
-  margin-bottom: 15px;
-}
-
-.c-item input[type="text"],
-.c-item textarea{
-  width: 100%;
-  background: none;
-  border: 0;
-  border-bottom: 2px solid rgb(0, 0, 0);
-  color: rgb(0, 0, 0);
-  padding: 0 0 15px 0
-}
-
-.c-item.name_email{
-  display: flex;
-  justify-content: space-between;
-}
-
-.c-item.name_email input[type="text"]{
-  width: 48%;
-}
-
-.c-item textarea{
-  height: 100px;
-  resize: none;
-}
-
-.c-btn{
   margin-top: 30px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10.9);
 }
 
-.c-btn a{
-  display: block;
-  border: 2px solid rgb(0, 0, 0);
-  width: 200px;
-  text-align: center;
-  height: 45px;
-  line-height: 45px;
+.c-wrapper h1{
+  color: rgb(27, 27, 44);
+  text-shadow: #ffffff;
+	font-size: 48px;
+	letter-spacing: 5px;
+	text-align: center;
   text-transform: uppercase;
-  color: rgb(0, 0, 0);
-  letter-spacing: 5px;
-  transition: all 0.5s linear;
+   font-family: 'Allura', cursive;
 }
 
-.c-btn a:hover{
-  background: rgb(206, 126, 126);
-  color: #000;
+.c-wrapper p{
+	text-align: center;
 }
 
+.c-wrapper .c-contactus{
+	margin: 50px 0 0;
+}
 
+.c-wrapper .c-contactus .c-input_wrapper{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.c-wrapper .c-contactus .c-input_wrapper .c-input_item{
+	width: 48%;
+	position: relative;
+}
+
+.c-wrapper .c-contactus .c-input_item input[type="text"],
+.c-wrapper .c-contactus textarea{
+	width: 100%;
+	border: 0;
+	padding: 18px;
+	padding-left: 40px;
+	border-radius: 3px;
+}
+
+.c-wrapper .c-contactus .c-message_wrapper{
+	position: relative;
+}
+
+.c-wrapper .c-contactus .c-message_wrapper textarea{
+  height: 180px;
+  width: 93.5%;
+	resize: none;
+}
+
+.c-wrapper .c-contactus .c-btn{
+	width: 38%;
+	background: #368f96;
+	margin: 20px auto 0;
+	text-align: center;
+	padding: 18px;
+	border-radius: 10px;
+}
+
+.c-wrapper .c-contactus .c-btn a{
+	color: #fff;
+	display: block;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.c-btn:hover{
+  opacity: 0.8;
+  transform: scale(0.96);
+}
 

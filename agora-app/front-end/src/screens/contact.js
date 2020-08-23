@@ -3,25 +3,36 @@ import React from "react";
 function Contact(props) {
   return (
     <div className="c-wrapper">
-      <div className="c-container">
-        <div className="c-contactus">
-          <h1>contact us</h1>
-          <div className="c-item name_email">
-            <input type="text" placeholder="Your name"/>
-              <input type="text" placeholder="Email"/>		
-      </div>
-              <div className="c-item">
-                <input type="text" placeholder="Subject"/>		
-      </div>
-                <div className="c-item">
-                  <textarea placeholder="Message"></textarea>
+      <h1>Contact Us Form</h1>
+     
+      <div className="c-contactus">
+        <div className="c-input_wrapper input_wrapper_top">
+          <div className="c-input_item">
+            <input type="text" placeholder="Your Name"/>
+              <i className="c-fas fa-user"></i>
+			</div>
+            <div className="c-input_item">
+              <input type="text" placeholder="Your Email"/>
+                <i className="c-fas fa-at"></i>
+			</div>
+            </div>
+            <div className="c-input_wrapper input_wrapper_bottom">
+              <div className="c-input_item">
+                <input type="text" placeholder="Your Subject"/>
+                  <i className="c-fas fa-sticky-note"></i>
+			</div>
+                <div className="c-input_item">
+                  <input type="text" placeholder="Your Phone"/>
+                    <i className="c-fas fa-phone"></i>
+			</div>
                 </div>
-                <div className="c-btn">
-                  <a href="#">send</a>
+                <div className="c-message_wrapper">
+                  <textarea placeholder="Your Message"></textarea>
+                  <i className="c-fas fa-envelope-open"></i>
                 </div>
+                <div className="c-btn"><a href="#">send</a></div>
               </div>
-  </div>
-          </div>	
+            </div>
   );
 }
 
