@@ -25,6 +25,7 @@ function ViewListing(props) {
 					${listing.price}	
 				</div>	
 			<div className="view-listing-details">
+				<div> Listing Information </div>
 				Listing Information: .	
 				{listing.name}	
 				{listing.category}	
