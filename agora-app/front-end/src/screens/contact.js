@@ -30,7 +30,7 @@ function Contact(props) {
                   <textarea placeholder="Your Message"></textarea>
                   <i className="c-fas fa-envelope-open"></i>
                 </div>
-                <div className="c-btn"><a href="#">send</a></div>
+                <div className="c-btn">Send</div>
               </div>
             </div>
   );
