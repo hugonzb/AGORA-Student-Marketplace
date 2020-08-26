@@ -264,17 +264,19 @@ a:active {
   justify-content: center;
   align-items: center;
   width: 100%;
-  border: 1px solid rgb(160, 160, 160);
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 10px 0px rgba(185, 185, 185, 0.61);
 }
 
 .view-listing-description{
-  height: 7rem;
+  height: 6.5rem;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   width: 100%;
-  border: 1px solid grey;
+  border-bottom: 1px solid grey;
 }
 
 .view-listing-qa-container{
@@ -284,7 +286,6 @@ a:active {
   justify-content: center;
   align-items: center;
   width: 100%;
-  border: 1px solid grey;
 }
 
 /* Sign up screen */
