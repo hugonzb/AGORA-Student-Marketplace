@@ -25,12 +25,14 @@ function ViewListing(props) {
 					${listing.price}	
 				</div>	
 			<div className="view-listing-details">
-				<div> Listing Information </div>
-				Listing Information: .	
-				{listing.name}	
-				{listing.category}	
-				{listing.description}	
-				{listing.seller}	
+				<div className="view-listing-details-title"> Listing Information </div>
+				<div className="view-listing-description"> Description</div>	
+				<div>
+					{listing.name}	
+					{listing.category}	
+					{listing.description}	
+					{listing.seller}	
+				</div>
 			</div>
 			<div className="view-listing-qa-container">
 				Listing questions and answers.	
