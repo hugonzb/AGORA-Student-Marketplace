@@ -16,27 +16,30 @@ function ViewListing(props) {
 	}, []);
 	
 	return loading ? <div className="loading">Loading listings ...</div> : 
-    error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
-		<div className="view-listing-container">
-				<div className="view-listing-image">
-					<img className="listing-image" src={listing.image} alt="listing"></img>
-				</div>	 
-				<div className="view-listing-actions">
-					${listing.price}	
-				</div>	
-			<div className="view-listing-details">
-				<div className="view-listing-details-title"> Listing Information </div>
-				<div className="view-listing-description"> {listing.description} This item has no description. </div>	
-				<div>
-					{listing.name}	
-					{listing.category}		
-					{listing.seller}	
+	error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
+			<div className="view-listing-container">
+					<div className="view-listing-image">
+						<img className="listing-image" src={listing.image} alt="listing"></img>
+					</div>	 
+					<div className="view-listing-actions">
+						${listing.price}	
+					</div>	
+				<div className="view-listing-details">
+					<div className="view-listing-details-title"> Listing Information </div>
+					<div className="view-listing-description"> {listing.description} This item has no description. </div>	
+					<div>
+						{listing.name}	
+						{listing.category}		
+						{listing.seller}	
+					</div>
+				</div>
+				<div className="view-listing-details">
+					<div className="view-listing-details-title"> Questions & Answers </div>
+					<div className="view-listing-qa-container">
+						There are no questions posted yet.	
+					</div>
 				</div>
 			</div>
-			<div className="view-listing-qa-container">
-				Listing questions and answers.	
-			</div>
-		</div>
 }
 
 export default ViewListing;
