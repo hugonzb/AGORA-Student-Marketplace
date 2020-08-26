@@ -48,7 +48,7 @@ function App() {
               </div>
             )}
             <Link to="/About">ABOUT </Link>
-            <Link to="/contact">CONTACT US </Link>
+            <Link to="/Contact">CONTACT US </Link>
           </nav>
         </div>
         <div className="search">
