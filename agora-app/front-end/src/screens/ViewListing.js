@@ -26,6 +26,7 @@ function ViewListing(props) {
 						<div className="view-listing-price">
 							${listing.price}
 							<button className="buynow-button">Buy Now</button>
+							<button className="addtowatchlist-button">Add to Watchlist</button>
 						</div>
 						<div className="view-listing-user">
 							<img src={profileicon} alt="profile"/> {listing.seller}
