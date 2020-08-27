@@ -247,6 +247,7 @@ th, td {
 
 .view-listing-actions{
   display: flex;
+  flex-direction: column;
   flex: 1, 1, 30rem;
   min-width: 20rem;
   width: 30rem;
@@ -257,6 +258,27 @@ th, td {
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 10px 0px rgba(54, 54, 54, 0.61);
+}
+
+.view-listing-price{
+  display: flex;
+  width: 100%;
+  height: 12rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-listing-user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 5rem;
+  border-top: 1px solid rgb(134, 134, 134);
+}
+
+.view-listing-user img{
+  max-width: 4rem;
 }
 
 .view-listing-details{

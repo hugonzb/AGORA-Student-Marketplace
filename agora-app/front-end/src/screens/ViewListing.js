@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailListing } from '../actions/listingActions';
+import profileicon from "../images/profileicon.png";
 
 
 function ViewListing(props) {
@@ -22,7 +23,12 @@ function ViewListing(props) {
 						<img className="listing-image" src={listing.image} alt="listing"></img>
 					</div>	 
 					<div className="view-listing-actions">
-						${listing.price}	
+						<div className="view-listing-price">
+							${listing.price}
+						</div>
+						<div className="view-listing-user">
+							<img src={profileicon} alt="profile"/> {listing.seller}
+						</div>	
 					</div>	
 				<div className="view-listing-details">
 					<div className="view-listing-details-title"> Listing Information </div>
