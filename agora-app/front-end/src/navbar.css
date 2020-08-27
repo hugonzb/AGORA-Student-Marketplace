@@ -1,0 +1,106 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.logo img{
+   width: 50px;
+
+}
+
+.agoraText{
+
+}
+
+.bar{
+    width:30px;
+    margin: 2px;
+    height: 5px;
+    color:rgb(139,139,137);
+    background: grey; 
+}
+
+.btn{
+    border:1px solid #1d4c61;;
+    display: inline-block;
+    justify-content: space-between;
+
+}
+
+.logoBtn{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-bottom:1px #ff7b00;
+    cursor: pointer;
+}
+
+.navText{
+
+}
+
+.ul{
+    list-style-type: none;               
+    margin: 0px;
+    padding: 0px; 
+}
+
+ul li a{
+
+background: #737373;
+display: block;
+color: white; 
+align-items: center;
+border-bottom: 1px ff7b00; 
+padding: 7px; 
+text-decoration: none; 
+font-family: "Play", sans-serif;
+list-style-type: none;               
+    
+}
+
+ul li a:hover{
+background: #ff7b00; 
+color: white; 
+list-style-type: none; 
+transition: all 0.5s ease;
+    
+}
+
+/* responsive mode */
+
+@media screen and (min-width: 640px){
+
+    nav{
+    background:#424242;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+	}
+    
+
+
+
+    
+.btn{
+display: none;
+}
+
+
+
+
+ul{
+display: flex; 
+
+}
+
+nav ul a{
+    background: 
+}
+.logoBtn{
+    border: none;
+}
+
+}

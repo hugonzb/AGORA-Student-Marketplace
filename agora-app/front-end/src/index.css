@@ -19,7 +19,7 @@ a:active {
   font-size: 30px;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
   padding: 15px;
   text-align: center;
@@ -431,6 +431,8 @@ p {
   min-height: 35rem;
 }
 
+/* navbar */
+
 .navStart{
     margin:0px;
     padding:0px;
@@ -448,7 +450,7 @@ p {
 .bar{
     width:30px;
     margin: 2px;
-    height: 3px;
+    height: 5px;
     color:rgb(139,139,137);
     background: grey; 
 }
@@ -465,7 +467,7 @@ p {
     display: flex;
     justify-content: space-between;
     align-items: center; 
-    border-bottom: black; 
+    border-bottom:1px #ff7b00; 
 }
 
 .navText{
@@ -473,14 +475,28 @@ p {
 }
 
 .ul{
-    list-style: none;
-
+    list-style-type: none;               
+    margin: 0px;
+    padding: 0px; 
 }
 
 ul li a{
 
-background: #4d4c4c;
+background: #737373;
 display: block;
+color: white; 
 align-items: center;
-border-bottom: 1px solid orange; 
+border-bottom: 1px ff7b00; 
+padding: 7px; 
+text-decoration: none; 
+font-family: "Play", sans-serif;
+list-style-type: none;               
+    
+}
+
+ul li a:hover{
+background: #ff7b00; 
+color: white; 
+list-style-type: none;               
+    
 }

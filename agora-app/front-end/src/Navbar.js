@@ -1,13 +1,13 @@
 import React,{Component} from "react";
 import agoralogo from "./images/agoralogo.png";
-import "./index.css";
+import "./navbar.css";
 
 class Navbar extends Component{
 
 render(){
 	return(
 		<nav> 
-    <div className="header">
+  
       <div className="logoBtn">
       <img className="agora-logo" src={agoralogo} alt="agoralogo"></img>
               <div className="agora-text">AGORA </div>{" "}
@@ -18,8 +18,9 @@ render(){
                         <div className="bar"></div>
                         <div className="bar"></div>
                     
+                  
                     </div>
-                </div>
+                
                 </div>
               
               
@@ -29,7 +30,6 @@ render(){
               <li><a href="#">Sign In</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Contact Us</a></li>
-
               </ul>
             
                </nav>
