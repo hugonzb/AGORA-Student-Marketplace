@@ -11,6 +11,22 @@ a:active {
   text-decoration: none;
 }
 
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 /* App */
 
 .header {

@@ -28,9 +28,22 @@ function ViewListing(props) {
 					<div className="view-listing-details-title"> Listing Information </div>
 					<div className="view-listing-description"> {listing.description} This item has no description. </div>	
 					<div>
-						{listing.name}	
-						{listing.category}		
-						{listing.seller}	
+					<table>
+						<tr>
+							<th>Seller</th>
+							<th>Brand</th>
+							<th>Category</th>
+							<th>Condition</th>
+							<th>Location</th>
+						</tr>
+						<tr>
+							<td>{listing.seller}</td>
+							<td>None</td>
+							<td>{listing.category}</td>
+							<td>Null</td>
+							<td>Null</td>
+						</tr>
+						</table>				
 					</div>
 				</div>
 				<div className="view-listing-details">
