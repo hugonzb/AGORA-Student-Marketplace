@@ -5,40 +5,37 @@
 
 .logo img{
    width: 50px;
+   padding-left: 10px;
+   padding-top: 5px;
+   padding-bottom: 5px; 
+   padding-right: 5px;
    
-
-}
-
-.agoraText{
 
 }
 
 .bar{
     width:30px;
-    margin: 2px;
-    height: 5px;
+    margin: 5px;
+    height: 6px;
     color:rgb(139,139,137);
     background: grey; 
+    padding-right: 5px;
 }
 
 .btn{
-    border:1px solid #1d4c61;;
+    border:1px solid #1d4c61;
     display: inline-block;
     justify-content: space-between;
+    cursor: pointer; 
 
 }
 
 .logoBtn{
-   
-    display: flex;
+    background: #FFFFFF;
+    display: flex; 
     justify-content: space-between;
     align-items: center; 
-    border-bottom:1px #ff7b00;
-    cursor: pointer;
-}
-
-.navText{
-
+    padding-right: 8px;
 }
 
 .ul{
@@ -49,9 +46,9 @@
 
 ul li a{
 
-background: #737373;
+background: white;
 display: block;
-color: white; 
+color: black; 
 align-items: center;
 border-bottom: 1px ff7b00; 
 padding: 7px; 
@@ -62,8 +59,8 @@ list-style-type: none;
 }
 
 ul li a:hover{
-background: #ff7b00; 
-color: white; 
+background: #ff7b00; /*same colour as agoralogos orange*/ 
+color: black; 
 list-style-type: none; 
 transition: all 0.5s ease;
     
@@ -71,37 +68,28 @@ transition: all 0.5s ease;
 
 /* responsive mode */
 
-@media screen and (min-width: 640px){
-
+@media screen and (min-width:640px){
     nav{
-    background:#424242;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+     background: #FFFFFF;
+     display: flex; 
+     justify-content: space-between; 
+     align-items: center; 
 	}
-    
 
+    .btn{
+     display: none;
+	}
 
+    ul{
+    list-style-type: none; 
+    display: flex; 
+	}
 
-    
-.btn{
-display: none;
+    nav ul a{
+     background: transparent; 
+	}
 }
 
 
 
 
-ul{
-display: flex; 
-
-}
-
-nav ul a{
-    background: 
-}
-.logoBtn{
-    border: none;
-}
-
-}
