@@ -34,7 +34,7 @@ function ViewListing(props) {
 					</div>	
 				<div className="view-listing-details">
 					<div className="view-listing-details-title"> Listing Information </div>
-					<div className="view-listing-description"> {listing.description} This item has no description. </div>	
+					<div className="view-listing-description"> {listing.description} </div>	
 					<div>
 					<table>
 						<tr>

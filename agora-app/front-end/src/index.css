@@ -297,13 +297,14 @@ th, td {
   text-shadow:0px 0px 0px #2f6627;
   width: 18rem;
   margin-bottom: 0.5rem;
+  outline: none;
 }
 .buynow-button:hover {
 	background-color:#29cc31;
 }
 .buynow-button:active {
 	position:relative;
-	top:1px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 252, 13, 0.61)
 }
 
 .addtowatchlist-button {
@@ -320,13 +321,13 @@ th, td {
 	text-decoration:none;
   text-shadow:0px 0px 0px #2f6627;
   width: 18rem;
+  outline: none;
 }
 .addtowatchlist-button:hover {
 	background-color:#e4c229;
 }
 .addtowatchlist-button:active {
-	position:relative;
-	top:1px;
+  box-shadow: 0px 0px 10px 0px rgba(255, 217, 0, 0.61)
 }
 
 .view-listing-user{
