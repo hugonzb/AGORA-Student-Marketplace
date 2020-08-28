@@ -9,9 +9,10 @@ render(){
 		<nav> 
   
       <div className="logoBtn">
-      <img className="agora-logo" src={agoralogo} alt="agoralogo"></img>
-              <div className="agora-text">AGORA </div>{" "}
-              <div className="sm-text"> Student Marketplace</div>
+      <div className="logo">
+      <a href="#"><img src={agoralogo} 
+      className="logo" alt=""/></a> 
+              
 
                     <div className="btn">
                         <div className="bar"></div>
@@ -20,7 +21,7 @@ render(){
                     
                   
                     </div>
-                
+                </div>
                 </div>
               
               
