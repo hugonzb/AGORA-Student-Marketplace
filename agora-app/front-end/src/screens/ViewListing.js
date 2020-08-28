@@ -28,29 +28,30 @@ function ViewListing(props) {
 							<button className="buynow-button">Buy Now</button>
 							<button className="addtowatchlist-button">Add to Watchlist</button>
 						</div>
-						<div className="view-listing-user">
-							<img src={profileicon} alt="profile"/> {listing.seller}
-						</div>	
 					</div>	
 				<div className="view-listing-details">
 					<div className="view-listing-details-title"> Listing Information </div>
 					<div className="view-listing-description"> {listing.description} </div>	
 					<div>
-					<table>
-						<tr>
-							<th>Seller</th>
-							<th>Brand</th>
-							<th>Category</th>
-							<th>Condition</th>
-							<th>Location</th>
-						</tr>
-						<tr>
-							<td>{listing.seller}</td>
-							<td>None</td>
-							<td>{listing.category}</td>
-							<td>Null</td>
-							<td>Null</td>
-						</tr>
+						<table>
+							<tr>
+								<th>Seller</th>
+								<th>Brand</th>
+								<th>Category</th>
+								<th>Condition</th>
+								<th>Location</th>
+							</tr>
+							<tr>
+								<td>						
+									<div className="view-listing-user">
+										<img src={profileicon} alt="profile"/> {listing.seller}
+									</div>	
+								</td>
+								<td>None</td>
+								<td>{listing.category}</td>
+								<td>Null</td>
+								<td>Null</td>
+							</tr>
 						</table>				
 					</div>
 				</div>
