@@ -23,6 +23,9 @@ function ViewListing(props) {
 						<img className="listing-image" src={listing.image} alt="listing"></img>
 					</div>	 
 					<div className="view-listing-actions">
+						<div className="view-listing-title">
+							{listing.name}
+						</div>
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
 							<button className="buynow-button">Buy Now</button>
