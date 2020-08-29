@@ -293,7 +293,7 @@ th, td {
 }
 
 .buynow-button {
-	background-color:#32ac52;
+	background-color:#2cbd33;
   border-radius: 8px;
 	border:0;
 	display:inline-block;
@@ -310,7 +310,7 @@ th, td {
   outline: none;
 }
 .buynow-button:hover {
-	background-color:#29cc31;
+	background-color:#42eb4b;
 }
 .buynow-button:active {
 	position:relative;

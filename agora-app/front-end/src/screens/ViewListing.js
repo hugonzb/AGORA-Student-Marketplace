@@ -39,9 +39,9 @@ function ViewListing(props) {
 						<table>
 							<tr>
 								<th>Seller</th>
+								<th>Condition</th>
 								<th>Brand</th>
 								<th>Category</th>
-								<th>Condition</th>
 								<th>Location</th>
 							</tr>
 							<tr>
@@ -50,9 +50,9 @@ function ViewListing(props) {
 										<img src={profileicon} alt="profile"/> {listing.seller}
 									</div>	
 								</td>
+								<td>Null</td>
 								<td>None</td>
 								<td>{listing.category}</td>
-								<td>Null</td>
 								<td>Null</td>
 							</tr>
 						</table>				
