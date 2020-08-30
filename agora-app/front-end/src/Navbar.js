@@ -4,22 +4,36 @@ import "./navbar.css";
 
 class Navbar extends Component{
 
+state={
+    isOpen:false
+}
+
+handleClick=()=>{
+    this.setState({
+     isOpen:!this.state.isOpen,
+	})
+}
+
 render(){
 	return(
-		<nav> 
-  
+	
+    <nav>
       <div className="logoBtn">
             <div className="logo">
             <a href="#"><img src={agoralogo} 
             className="logo" alt=""/></a> 
             </div>
-                    <div className="btn">
+
+                    <div className="btn" onClick=
+                    {this.handleClick}>
                         <div className="bar"></div>
                         <div className="bar"></div>
                         <div className="bar"></div>
                     </div>          
-      </div>
-              <ul>
+             </div>
+
+              <ul className={this.state.isOpen ? 
+              "showNav":"undefined"}>
               <li><a href="#">Home</a></li>
               <li><a href="#">Register</a></li>
               <li><a href="#">Sign In</a></li>

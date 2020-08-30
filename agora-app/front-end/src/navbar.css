@@ -1,6 +1,7 @@
 *{
     margin:0px;
     padding:0px;
+
 }
 
 .logo img{
@@ -9,8 +10,8 @@
    padding-top: 5px;
    padding-bottom: 5px; 
    padding-right: 5px;
-   
-
+   margin-top: 4px;
+   border-bottom: rgb(122,11,23);
 }
 
 .bar{
@@ -36,33 +37,40 @@
     justify-content: space-between;
     align-items: center; 
     padding-right: 8px;
+    border-bottom: 1px solid black; /* need to change this to something nicer*/ 
 }
 
-.ul{
+ul{
     list-style-type: none;               
-    margin: 0px;
-    padding: 0px; 
+    height: 0px;
+    overflow:hidden;
+    transition: all 0.5s ease;
+}
+
+.showNav{
+    height: 160px;
 }
 
 ul li a{
 
 background: white;
-display: block;
 color: black; 
 align-items: center;
 border-bottom: 1px ff7b00; 
-padding: 7px; 
+padding: 5px;
 text-decoration: none; 
 font-family: "Play", sans-serif;
-list-style-type: none;               
-    
+list-style-type: none;    
+font-size: 18px;
+
 }
 
 ul li a:hover{
 background: #ff7b00; /*same colour as agoralogos orange*/ 
 color: black; 
 list-style-type: none; 
-transition: all 0.5s ease;
+transition:all 0.5s ease;
+padding-left: 17px;
     
 }
 
@@ -74,6 +82,7 @@ transition: all 0.5s ease;
      display: flex; 
      justify-content: space-between; 
      align-items: center; 
+     border-bottom:22px #ff7b00;
 	}
 
     .btn{
@@ -83,10 +92,29 @@ transition: all 0.5s ease;
     ul{
     list-style-type: none; 
     display: flex; 
+    height: auto;
+	}
+
+    .showNav{
+     height: auto; 
 	}
 
     nav ul a{
      background: transparent; 
+	}
+
+    .logoBtn{
+     border: none; 
+	}
+
+    ul li a:hover{
+    background: none; /*same colour as agoralogos orange*/ 
+    color: #ff7b00; 
+    list-style-type: none; 
+    transition: all 0.3s ease;
+    padding-left: 10px;
+    
+
 	}
 }
 
