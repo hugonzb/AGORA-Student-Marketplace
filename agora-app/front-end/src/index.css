@@ -396,7 +396,7 @@ th, td {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.view-listing-description{
+.view-listing-description-container{
   height: 7rem;
   display: flex;
   text-align: center;
@@ -406,6 +406,10 @@ th, td {
   border-bottom: 2px solid rgb(196, 196, 196);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 12px;
+}
+
+.view-listing-description{
+  padding: 1rem;
 }
 
 .view-listing-qa-container{
@@ -432,10 +436,8 @@ th, td {
   overflow: scroll;
   margin-bottom: 20px;
   margin-top: 20px;
-   
-  
-  
 }
+
 .sign-up-container h2{
   font-family: 'Permanent Marker', cursive;
   background-color: rgb(255, 255, 255);
@@ -524,11 +526,6 @@ float: left;
 margin: 10px;
 }
 label:after { content: "" }
-
-
-
-
-
 
 /* sign in page */
 .sign-in-container{
@@ -813,4 +810,16 @@ input[type="email"] {
 	top:  20px;
 	left: 15px;
 	color: #30333A;
+}
+
+@media screen and (max-width: 700px) {
+  th, td {
+    padding: 5px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+  }
 }

@@ -34,7 +34,11 @@ function ViewListing(props) {
 					</div>	
 				<div className="view-listing-details">
 					<div className="view-listing-details-title"> Listing Information </div>
-					<div className="view-listing-description"> {listing.description} </div>	
+					<div className="view-listing-description-container"> 
+						<div className="view-listing-description">
+							{listing.description} 
+						</div>
+					</div>	
 					<div>
 						<table>
 							<tr>
