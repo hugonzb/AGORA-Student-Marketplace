@@ -296,6 +296,7 @@ th, td {
   width: 18rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: 1px solid rgb(194, 194, 194);
+  background-color: rgb(255, 255, 255);
   border-radius: 0.9rem;
   margin-bottom: 1rem;
   box-shadow: 0px 0px 6px 0px rgba(170, 170, 170, 0.61);
@@ -390,6 +391,7 @@ th, td {
   width: 100%;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px 0px rgba(185, 185, 185, 0.61);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -402,6 +404,8 @@ th, td {
   align-items: center;
   width: 100%;
   border-bottom: 2px solid rgb(196, 196, 196);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
 }
 
 .view-listing-qa-container{
