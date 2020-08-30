@@ -5,12 +5,12 @@ import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import About from "./screens/About";
-import Contact from "./screens/Contact";
+import Contact from "./screens/contact";
 import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
 import profileicon from "./images/profileicon.png";
-import Navbar from "./components/Nav/navbar.jsx"
+
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -28,7 +28,7 @@ function App() {
             </div>
           </Link>
           <nav className="links">
-            <Navbar />
+         
             <Link to="/">HOME </Link>
             {userInfo ? (
               <div>
