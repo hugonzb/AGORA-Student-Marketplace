@@ -212,6 +212,10 @@ th, td {
   font-weight: bold;
 }
 
+.listing-price {
+  padding-bottom: 1rem;
+}
+
 /* View Listing */
 
 .view-listing-container{
@@ -344,12 +348,16 @@ th, td {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 70%;
   height: 2rem;
 }
 
 .view-listing-user img{
-  max-width: 3rem;
+  max-width: 2.5rem;
+}
+
+.view-listing-sellername{
+  padding: 0.2rem;
 }
 
 .view-listing-details{

@@ -47,7 +47,8 @@ function ViewListing(props) {
 							<tr>
 								<td>						
 									<div className="view-listing-user">
-										<img src={profileicon} alt="profile"/> {listing.seller}
+										<img src={profileicon} alt="profile"/>
+										<div className="view-listing-sellername">{listing.seller}</div>
 									</div>	
 								</td>
 								<td>Null</td>
