@@ -1,7 +1,9 @@
 import React,{Component} from "react";
 import agoralogo from "./images/agoralogo.png";
 import "./navbar.css";
-
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import Home from "./screens/Home";
+import SignIn from "./screens/SignIn";
 class Navbar extends Component{
 
 state={
@@ -34,11 +36,11 @@ render(){
 
               <ul className={this.state.isOpen ? 
               "showNav":"undefined"}>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Register</a></li>
-              <li><a href="#">Sign In</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/signup">Register</Link></li>
+              <li><Link to="/signin">Sign In</Link></li>
+              <li><Link to="/About">About</Link></li>
+              <li><Link to="/Contact">Contact Us</Link></li> 
               </ul>
          </nav>
                

@@ -37,7 +37,7 @@
     justify-content: space-between;
     align-items: center; 
     padding-right: 8px;
-    border-bottom: 1px solid black; /* need to change this to something nicer*/ 
+    border-bottom: 0px solid black; /* need to change this to something nicer*/ 
 }
 
 ul{
