@@ -63,6 +63,7 @@ font-family: "Play", sans-serif;
 list-style-type: none;    
 font-size: 18px;
 
+
 }
 
 ul li a:hover{
@@ -70,8 +71,7 @@ background: #ff7b00; /*same colour as agoralogos orange*/
 color: black; 
 list-style-type: none; 
 transition:all 0.5s ease;
-padding-left: 17px;
-    
+padding-left: 18px;
 }
 
 /* responsive mode */
@@ -112,7 +112,9 @@ padding-left: 17px;
     color: #ff7b00; 
     list-style-type: none; 
     transition: all 0.3s ease;
-    padding-left: 10px;
+    padding-left: 5px;
+    
+    
     
 
 	}
