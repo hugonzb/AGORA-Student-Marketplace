@@ -246,7 +246,7 @@ th, td {
   justify-content: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  box-shadow: 0px 0px 10px 0px rgba(54, 54, 54, 0.61);
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
 
 .view-listing-image img{
@@ -276,7 +276,7 @@ th, td {
   background: rgb(253, 253, 253);  
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 10px 0px rgba(54, 54, 54, 0.61);
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
 
 .view-listing-buttons{
@@ -298,7 +298,7 @@ th, td {
   border: 1px solid rgb(194, 194, 194);
   border-radius: 0.9rem;
   margin-bottom: 1rem;
-  box-shadow: 0px 0px 10px 0px rgba(170, 170, 170, 0.61);
+  box-shadow: 0px 0px 6px 0px rgba(170, 170, 170, 0.61);
 }
 
 .buynow-button {
@@ -378,7 +378,7 @@ th, td {
   border-radius: 0.5rem;
   background: rgb(253, 253, 253);  
   align-items: center;
-  box-shadow: 0px 0px 10px 0px rgba(54, 54, 54, 0.61);
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
 
 .view-listing-details-title{
