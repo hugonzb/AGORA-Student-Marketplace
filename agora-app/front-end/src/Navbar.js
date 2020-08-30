@@ -22,7 +22,7 @@ render(){
     <nav>
       <div className="logoBtn">
             <div className="logo">
-            <a href="#"><img src={agoralogo} 
+            <a href="/"><img src={agoralogo} 
             className="logo" alt=""/></a> 
             </div>
 
