@@ -13,4 +13,13 @@ router.get('/', async (req, res) =>{
     }
 });
 
+router.get('/:id', async (req, res) => {
+    const listing = await Listing.findOne({ _id: req.params.id });
+    if (listing) {
+      res.send(listing);
+    } else {
+      res.status(404).send({ message: 'Listing Not Found.' });
+    }
+});
+
 export default router;

@@ -5,7 +5,7 @@ import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import About from "./screens/About";
-import Contact from "./screens/contact";
+import Contact from "./screens/Contact";
 import ViewListing from "./screens/ViewListing";
 import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
@@ -48,7 +48,7 @@ function App() {
               </div>
             )}
             <Link to="/About">ABOUT </Link>
-            <Link to="/contact">CONTACT US </Link>
+            <Link to="/Contact">CONTACT US </Link>
           </nav>
         </div>
         <div className="search">

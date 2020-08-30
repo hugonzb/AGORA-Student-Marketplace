@@ -2,49 +2,37 @@ import React from "react";
 
 function Contact(props) {
   return (
-    <div className="container-contact">
-      <form className="form-contact">
-        <fieldset className="contact-field">
-          <label for="fname">Full Name</label>
-          <input
-            type="text"
-            id="fname"
-            name="firstname"
-            placeholder="Your first name"
-            required
-          />
-
-          <label for="email">Email</label>
-          <input type="text" placeholder="Enter Email" name="email" required />
-
-          <label for="country">Region</label>
-          <input
-            type="text"
-            id="Rname"
-            name="Region"
-            placeholder="Your Region"
-            required
-          />
-
-          <label for="country">University</label>
-          <input
-            type="text"
-            id="Uname"
-            name="University"
-            placeholder="Your University"
-          />
-
-          <label for="subject">Subject</label>
-          <textarea
-            id="subject"
-            name="subject"
-            placeholder="write massege here"
-          ></textarea>
-
-          <input type="submit" value="Submit" />
-        </fieldset>
-      </form>
-    </div>
+    <div className="c-wrapper">
+      <h1>Contact Us Form</h1>
+     
+      <div className="c-contactus">
+        <div className="c-input_wrapper input_wrapper_top">
+          <div className="c-input_item">
+            <input type="text" placeholder="Your Name"/>
+              <i className="c-fas fa-user"></i>
+			</div>
+            <div className="c-input_item">
+              <input type="text" placeholder="Your Email"/>
+                <i className="c-fas fa-at"></i>
+			</div>
+            </div>
+            <div className="c-input_wrapper input_wrapper_bottom">
+              <div className="c-input_item">
+                <input type="text" placeholder="Your Subject"/>
+                  <i className="c-fas fa-sticky-note"></i>
+			</div>
+                <div className="c-input_item">
+                  <input type="text" placeholder="Your Phone"/>
+                    <i className="c-fas fa-phone"></i>
+			</div>
+                </div>
+                <div className="c-message_wrapper">
+                  <textarea placeholder="Your Message"></textarea>
+                  <i className="c-fas fa-envelope-open"></i>
+                </div>
+                <div className="c-btn">Send</div>
+              </div>
+            </div>
   );
 }
 
