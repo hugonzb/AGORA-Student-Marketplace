@@ -19,7 +19,7 @@ class Navbar extends Component{
             <nav>
                 <div className="logoBtn">
                     <div className="logo">
-                        <img src={agoralogo} className="logo" alt=""/>
+                        <Link to="/"><img src={agoralogo} className="logo" alt=""/></Link>
                         <div className="agora-text">AGORA</div>
                         <div className="sm-text">Student Marketplace</div>
                     </div>
@@ -30,7 +30,7 @@ class Navbar extends Component{
                         <div className="bar"></div>
                     </div>          
                 </div>
-                <ul className={this.state.isOpen ? "showNav":"undefined"}>
+                <ul className={this.state.isOpen ? "showNav":"headerNav"}>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/signup">Register</Link></li>
                     <li><Link to="/signin">Sign In</Link></li>

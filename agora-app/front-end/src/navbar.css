@@ -11,6 +11,7 @@
     padding-right: 1rem;
     display: flex;
     text-decoration: none;
+    width: 100%;
 }
 
 .logo img{
@@ -48,11 +49,11 @@
     padding-right: 5px;
 }
 
-.btn{
+.btn {
+    margin-top: 1rem;
     display: inline-block;
     justify-content: space-between;
     cursor: pointer; 
-
 }
 
 .logoBtn{
@@ -73,21 +74,24 @@ ul{
 
 .showNav{
     height: 160px;
+    margin-top: 0rem;
+}
+
+.headerNav{
+    margin-top: 1rem;
+    margin-right: 1rem;
 }
 
 ul li a{
-
-background: white;
-color: black; 
-align-items: center;
-border-bottom: 1px ff7b00; 
-padding: 5px;
-text-decoration: none; 
-font-family: "Play", sans-serif;
-list-style-type: none;    
-font-size: 18px;
-
-
+    background: white;
+    color: black; 
+    align-items: center;
+    border-bottom: 1px ff7b00; 
+    padding: 5px;
+    text-decoration: none; 
+    font-family: "Play", sans-serif;
+    list-style-type: none;    
+    font-size: 18px;
 }
 
 ul li a:hover{
@@ -100,7 +104,7 @@ padding-left: 18px;
 
 /* responsive mode */
 
-@media screen and (min-width:640px){
+@media screen and (min-width:830px){
     nav{
      background: #FFFFFF;
      display: flex; 
@@ -137,10 +141,6 @@ padding-left: 18px;
     list-style-type: none; 
     transition: all 0.3s ease;
     padding-left: 5px;
-    
-    
-    
-
 	}
 }
 
