@@ -19,9 +19,9 @@ class Navbar extends Component{
             <nav>
                 <div className="logoBtn">
                     <div className="logo">
-                        <Link to="/">
-                            <img src={agoralogo} className="logo" alt=""/>
-                        </Link> 
+                        <img src={agoralogo} className="logo" alt=""/>
+                        <div className="agora-text">AGORA</div>
+                        <div className="sm-text">Student Marketplace</div>
                     </div>
                     <div className="btn" onClick=
                         {this.handleClick}>

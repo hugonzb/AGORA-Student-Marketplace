@@ -1,7 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap");
+
 *{
     margin:0px;
     padding:0px;
 
+}
+
+.logo {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    text-decoration: none;
 }
 
 .logo img{
@@ -12,6 +21,22 @@
    padding-right: 5px;
    margin-top: 4px;
    border-bottom: rgb(122,11,23);
+}
+
+.agora-text {
+    padding-top: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 28px;
+    color: rgb(255, 123, 0);
+    font-family: "Play", sans-serif;
+}
+  
+.sm-text {
+    padding-top: 2.1rem;
+    color: rgb(2, 3, 32);
+    font-family: "Quicksand", sans-serif;
+    font-size: 25px;
 }
 
 .bar{
@@ -33,7 +58,7 @@
 .logoBtn{
     background: #FFFFFF;
     display: flex; 
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center; 
     padding-right: 8px;
     border-bottom: 0px solid black; /* need to change this to something nicer*/ 
