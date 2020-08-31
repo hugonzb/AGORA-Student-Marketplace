@@ -11,6 +11,7 @@ import Profile from "./screens/Profile";
 import agoralogo from "./images/agoralogo.png";
 import profileicon from "./images/profileicon.png";
 import Navbar from "./Navbar.js";
+import NavbarSignedin from "./NavbarSignedin";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -19,8 +20,12 @@ function App() {
   return (
     <BrowserRouter>
    <div className= "maindisplay">
-   
-   <Navbar />
+   {userInfo ? (
+      <NavbarSignedin />
+            ) : (
+      <Navbar />
+    )}
+
         </div> 
         <div className="search">
           <div>
