@@ -40,7 +40,7 @@ th, td {
   font-size: 30px;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
   padding: 15px;
   text-align: center;
@@ -58,10 +58,13 @@ th, td {
 
 .agora-text {
   padding-top: 1.7rem;
-  padding-left: 1rem;
-  padding-right: 0.5rem;
+  padding-left: 0rem;
+  padding-right: 0;
+  font-size: 28px;
   color: rgb(255, 123, 0);
   font-family: "Play", sans-serif;
+  
+
 }
 
 .sm-text {
@@ -69,11 +72,13 @@ th, td {
   color: rgb(2, 3, 32);
   font-family: "Quicksand", sans-serif;
   font-size: 28px;
+  
 }
 
 .agora-logo {
   margin-top: 2px;
   max-height: 4.5rem;
+  width: 50px;
 }
 
 .profile-icon {
@@ -687,9 +692,6 @@ input[type="email"] {
     
 }
 
-
-
-
 /* Profile */
 .logout {
   margin-left: 30%;
@@ -721,105 +723,62 @@ input[type="email"] {
   min-height: 35rem;
 }
 
-/* contact page */
-.c-wrapper{
-  background-color: rgba(35, 85, 143, 0.452);
-  max-width: 900px;
-	width: 100%;
-	height: auto;
-	margin: auto;
-  padding: 10px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10.9);
+/* navbar */
+
+.navStart{
+    margin:0px;
+    padding:0px;
 }
 
-.c-wrapper h1{
-  color: rgb(27, 27, 44);
-  text-shadow: #ffffff;
-	font-size: 48px;
-	letter-spacing: 5px;
-	text-align: center;
-  text-transform: uppercase;
-   font-family: 'Allura', cursive;
+.logo img{
+   width: 50px;
+
 }
 
-.c-wrapper p{
-	text-align: center;
+.bar{
+    width:30px;
+    margin: 2px;
+    height: 5px;
+    color:rgb(139,139,137);
+    background: grey; 
 }
 
-.c-wrapper .c-contactus{
-	margin: 50px 0 0;
+.btn{
+    border:1px solid #1d4c61;;
+    display: inline-block;
+    justify-content: space-between;
+
 }
 
-.c-wrapper .c-contactus .c-input_wrapper{
-	display: flex;
-	justify-content: space-between;
-	margin-bottom: 20px;
+.logoBtn{
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    border-bottom:1px #ff7b00; 
 }
 
-.c-wrapper .c-contactus .c-input_wrapper .c-input_item{
-	width: 48%;
-	position: relative;
+.ul{
+    list-style-type: none;               
+    margin: 0px;
+    padding: 0px; 
 }
 
-.c-wrapper .c-contactus .c-input_item input[type="text"],
-.c-wrapper .c-contactus textarea{
-	width: 100%;
-	border: 0;
-	padding: 18px;
-	padding-left: 40px;
-	border-radius: 3px;
+ul li a{
+  background: #737373;
+  display: block;
+  color: white; 
+  align-items: center;
+  border-bottom: 1px ff7b00; 
+  padding: 7px; 
+  text-decoration: none; 
+  font-family: "Play", sans-serif;
+  list-style-type: none;                
 }
 
-.c-wrapper .c-contactus .c-message_wrapper{
- position: relative;
- width: 94%;
-}
-
- .c-message_wrapper textarea{
-    height: 180px;
-	  resize: none;
-  
- }
-
-.c-wrapper .c-contactus .c-btn{
-	width: 30%;
-	background: #368f96;
-	margin: 20px auto 20px;
-	text-align: center;
-	padding: 18px;
-	border-radius: 10px;
-}
-
-.c-wrapper .c-contactus .c-btn a{
-	color: #fff;
-	display: block;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-}
-
-.c-btn:hover{
-  opacity: 0.8;
-  transform: scale(0.96);
-}
-
-.c-wrapper .c-contactus .c-fas{
-	position: absolute;
-	top:  20px;
-	left: 15px;
-	color: #30333A;
-}
-
-@media screen and (max-width: 700px) {
-  th, td {
-    padding: 5px;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-  }
+ul li a:hover{
+background: #ff7b00; 
+color: white; 
+list-style-type: none;               
+    
 }
