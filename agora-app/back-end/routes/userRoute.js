@@ -1,10 +1,11 @@
 import express from "express";
 import User from "../models/userModel";
+import { getToken } from "../util";
 
 const router = express.Router();
 
 router.post("/signup", async (req, res) => {
-  try{
+  try {
     const user = new User({
       studentid: req.body.studentid,
       fname: req.body.fname,
@@ -19,15 +20,15 @@ router.post("/signup", async (req, res) => {
       city: req.body.city,
       postcode: req.body.postcode,
       date_created: req.body.date_created,
+      token: getToken(user),
     });
     const newUser = await user.save();
     res.send(newUser);
-  }catch{
-    res.status(401).send('Sign up failed');
+  } catch {
+    res.status(401).send("Sign up failed");
   }
 });
 
-//Rough edit of the post method for the sign in with an account.
 router.post("/signin", async (req, res) => {
   const signinUser = await User.findOne({
     email: req.body.email,
@@ -35,14 +36,16 @@ router.post("/signin", async (req, res) => {
   });
   if (signinUser) {
     res.send({
-      _id: signinUser.id,
+      studentid: signinUser.studentid,
       fname: signinUser.fname,
+      lname: signinUser.lname,
       email: signinUser.email,
+      username: signinUser.username,
+      university: signinUser.university,
+      token: getToken(signinUser),
     });
   } else {
-    res
-      .status(401)
-      .send({ message: "Invalid email or password. Please try again." });
+    res.status(401).send({ msg: "Invalid Email or Password." });
   }
 });
 

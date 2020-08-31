@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Link } from "react-router-dom";
 import { listListings } from '../actions/listingActions';
 
 
@@ -18,13 +19,12 @@ function Home (props) {
     return loading ? <div className="loading">Loading listings ...</div> : 
     error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
     <div className="home-container">
-        This is the home page - UPDATE: NOW FETCHING FROM MONGODB
         <div className="listings">
             {listings.map(listing =>
-            <li>
+            <Link to={'/listing/' + listing._id}>
                 <div className="listing-container">
                     <div className="listing-image">
-                    <img className="listing-image" src={listing.image} alt="listing"></img>
+                        <img className="listing-image" src={listing.image} alt="listing"></img>
                     </div>
                     <div className="listing-content">
                         <div className="listing-name">{listing.name}</div>
@@ -33,7 +33,7 @@ function Home (props) {
                         <div>Seller: {listing.seller}</div>
                     </div>
                 </div> 
-            </li>)
+            </Link>)
             }
         </div>
     </div>
