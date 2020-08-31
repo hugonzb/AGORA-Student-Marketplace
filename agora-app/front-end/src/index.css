@@ -11,6 +11,27 @@ a:active {
   text-decoration: none;
 }
 
+table, td, th {  
+  border: 1px solid rgb(218, 218, 218);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px 0px rgba(221, 221, 221, 0.61)
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 5px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
 /* App */
 
 .header {
@@ -91,6 +112,7 @@ a:active {
   width: 40rem;
   font-size: 17px;
   align-items: center;
+
 }
 
 .links a {
@@ -130,7 +152,6 @@ a:active {
   margin-top: 1rem;
   margin-bottom: 1rem;
   padding-top: 1rem;
-  border: 1px solid rgb(185, 185, 185);
   background-color: rgb(255, 255, 255);
   border-radius: 0.5rem;
 }
@@ -157,7 +178,7 @@ a:active {
   border-top: 2px rgb(102, 102, 102) solid;
   border-bottom: 2px rgb(59, 59, 59) solid;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 10px 0px rgba(54, 54, 54, 0.61);
+  box-shadow: 0px 0px 6px 0px rgba(3, 3, 3, 0.61)
 }
 
 .listing-image {
@@ -175,6 +196,7 @@ a:active {
   padding: 0.2rem;
   max-width: 165px;
   max-height: 150px;
+  border: 0px;
 }
 
 .listing-content {
@@ -200,6 +222,10 @@ a:active {
   font-weight: bold;
 }
 
+.listing-price {
+  padding-bottom: 1rem;
+}
+
 /* View Listing */
 
 .view-listing-container{
@@ -211,48 +237,193 @@ a:active {
   flex-wrap: wrap;
   justify-content: center;
   background: rgb(255, 255, 255); 
-  padding-top: 1rem;
-  border: 1px solid rgb(185, 185, 185); 
+  padding-top: 1rem; 
   border-radius: 0.5rem;
 }
 
 .view-listing-image{
   display: flex;
-  flex: 1, 1, 30rem;
-  min-width: 20rem;
+  flex: 1, 1, 20rem;
   width: 30rem;
-  background-color: rgb(185, 186, 214);
-  height: 20rem;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 0.5rem;
+  max-height: 17rem;
+  justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
+}
+
+.view-listing-image img{
+  width: 22rem;
+  border: 0px;
+}
+
+.view-listing-title{
+  display: flex;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  height: 3rem;
+  padding-top: 0.5rem;
 }
 
 .view-listing-actions{
   display: flex;
+  flex-direction: column;
   flex: 1, 1, 30rem;
   min-width: 20rem;
   width: 30rem;
-  height: 20rem;
-  border: 1px solid black;
+  height: 18rem;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 0.5rem;
   background: rgb(253, 253, 253);  
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
+}
+
+.view-listing-buttons{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 12rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.view-listing-price{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  width: 18rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid rgb(194, 194, 194);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.9rem;
+  margin-bottom: 1rem;
+  box-shadow: 0px 0px 6px 0px rgba(170, 170, 170, 0.61);
+}
+
+.buynow-button {
+	background-color:#2cbd33;
+  border-radius: 8px;
+	border:0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:13px;
+	font-weight:bold;
+	padding: 15px;
+	text-decoration:none;
+  text-shadow:0px 0px 0px #2f6627;
+  width: 18rem;
+  margin-bottom: 0.5rem;
+  outline: none;
+}
+.buynow-button:hover {
+	background-color:#42eb4b;
+}
+.buynow-button:active {
+	position:relative;
+  box-shadow: 0px 0px 10px 0px rgba(0, 252, 13, 0.61)
+}
+
+.addtowatchlist-button {
+	background-color:#ff9900;
+	border-radius: 8px;
+	border:0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:13px;
+	font-weight:bold;
+	padding: 15px;
+	text-decoration:none;
+  text-shadow:0px 0px 0px #2f6627;
+  width: 18rem;
+  outline: none;
+}
+.addtowatchlist-button:hover {
+	background-color:#e4c229;
+}
+.addtowatchlist-button:active {
+  box-shadow: 0px 0px 10px 0px rgba(255, 217, 0, 0.61)
+}
+
+.view-listing-user{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2rem;
+}
+
+.view-listing-user img{
+  max-width: 2.5rem;
+}
+
+.view-listing-sellername{
+  display: flex;
+  padding: 0.2rem;
+  width: 5rem;
 }
 
 .view-listing-details{
   display: flex;
   flex: 1, 1, 30rem;
+  flex-direction: column;
   min-width: 20rem;
   width: 60rem;
   height: 15rem;
-  border: 1px solid black;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 0.5rem;
   background: rgb(253, 253, 253);  
+  align-items: center;
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
+}
+
+.view-listing-details-title{
+  height: 2rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 1px solid rgb(134, 134, 134);
+  border-radius: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px 0px rgba(185, 185, 185, 0.61);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.view-listing-description-container{
+  height: 7rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border-bottom: 2px solid rgb(196, 196, 196);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+}
+
+.view-listing-description{
+  padding: 1rem;
 }
 
 .view-listing-qa-container{
+  height: 100%;
   display: flex;
-  flex: 1, 1, 30rem;
-  min-width: 20rem;
-  width: 60rem;
-  height: 20rem;
-  border: 1px solid black;
-  background: rgb(253, 253, 253);   
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 /* Sign up screen */
@@ -260,145 +431,266 @@ a:active {
 .sign-up-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
-  border: 1px solid black;
-  width: 98%;
+  width: 65%;
+  margin: auto;
   min-height: 35rem;
   text-align: center;
   padding: 1rem;
-  border: 1px solid rgb(185, 185, 185);
+  border: hidden;
+  background:  rgba(21, 75, 136, 0.24);
+  overflow: scroll;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.createAccountContainer {
-  border: 1px solid black;
-  width: 50%;
-  clear: both;
-  margin-left: 25%;
-}
-
-.createAccountContainer input {
-  width: 25%;
-  clear: both;
-  margin: 10px;
-}
-
-/* Sign in screen */
-
-.sign-in-container {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid rgb(30, 255, 1);
-  width: 98%;
-  min-height: 30rem;
+.sign-up-container h2{
+  font-family: 'Permanent Marker', cursive;
+  background-color: rgb(255, 255, 255);
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;  
+  color: rgb(9, 8, 17);
+  padding: 14px 25px;
   text-align: center;
-  padding: 1rem;
-  border: 1px solid rgb(185, 185, 185);
-}
-
-/* contact page */
-
-input[type="submit"] {
-  width: 30%;
-  background-color: #196619;
-  border: none;
-  color: white;
-  padding: 10px 32px;
   text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-size: 20px;
-  margin: 5px;
-}
+  border-radius: 44px;
+  display: inline-block;
 
-input[type="text"],
-select,
-textarea {
+}
+.createnewAccountContainer {
+  
   width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+  clear: both;
+  margin: auto;
+  border: hidden;
+  
 
-/* sign in page */
+}
+.createnewAccountContainer form{
+ 
+  height: 400px;
+  width: 70%;
+  margin: auto;
+  margin-top: 5px;
+ 
+}
+.createnewAccountContainer form input, select,
 input[type="text"],
 input[type="password"],
 input[type="email"] {
-  width: 100%;
-  padding: 16px 10px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-fieldset {
-  width: 50%;
+  display:block;
+  width: 60%;
+  height: 44px;
+  text-align: center;
+  padding: 5px 16px;
   margin: auto;
-  padding: 20px;
-  border: 0;
+  margin-top: 5px;
+  border: none;
+  box-sizing: border-box;  
+} 
+
+  .createnewAccountContainer  select {
+    width: 60%;
+ }
+ .createnewAccountContainer button{
+  width: 25%;
+  height: 40px;
+  margin-bottom: 20px;
+  background: #48b096;
+  color: #fff;
+  border-radius: 44px;
+  cursor: pointer;
+  transition: 0.8s;
+  font-weight: bold; 
+  font-size: 18px;
+  margin-top: auto;
+ }
+ .createnewAccountContainer h4{
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(27, 37, 44);
+  font-size: 18px;
+  font-weight: bold; 
+  text-shadow: 2px 2px #ffffff
+  }
+  .link-new-acc{
+  font-family: 'Permanent Marker', cursive;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;  
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px #ffffff
+  }
+  .createnewAccountContainer label {
+color: #1f1712;
+font-style: italic;
+font-weight: bold;
+display: block;
+width: 150px;
+float: left;
+margin: 10px;
+}
+label:after { content: "" }
+
+/* sign in page */
+.sign-in-container{
+background-color: rgba(21, 75, 136, 0.247);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10.9);
+width: 45%;
+margin: auto; 
+border-radius: 44px;
+margin-top: 15px;
+margin-bottom: 15px;
+/*background-image: url(images/agoralogo.png);
+background-size: 740px ;*/
+margin-top: 1rem;
+margin-bottom: 1rem;
+min-height: 30rem;
+text-align: center;
+padding: 1rem;
+
+}
+.createAccountContainer{
+  border-style: none;
 }
 
-button {
-  background-color: #264d00;
-  color: white;
-  padding: 14px 20px;
+.create-account-form form{
+ width: 500px;
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+  border-style: none;
+  }
+.create-account-form h2{
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(29, 27, 46);
+  font-size: 40px;
+  
+}
+.create-account-form h4{
+  font-family: 'Permanent Marker', cursive;
+  color: rgb(27, 37, 44);
+  font-size: 22px;
+  font-weight: bold; 
+  }
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  display:block;
+  width: 60%;
+  height: 44px;
+  text-align: center;
+  padding: 5px 16px;
   margin: auto;
   border: none;
+  box-sizing: border-box;  
+}
+
+.create-account-form button {
+  width: 25%;
+  height: 40px;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  background: #48b096;
+  color: #fff;
+  border-radius: 44px;
   cursor: pointer;
-  width: 40%;
-  float: left;
+  transition: 0.8s;
 }
 
-button:hover {
+ .create-account-form button:hover {
   opacity: 0.8;
+  transform: scale(0.96);
 }
-
-.cancelbtn {
-  width: 40%;
-  padding: 20px;
-  background-color: #b30000;
-  padding: 14px 20px;
-  margin: auto;
-  float: right;
+.create-account-link{
+  font-family: 'Permanent Marker', cursive;
+  background-color: ivory;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: bold;  
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 44px;
+  display: inline-block;
 }
-
-span.psw {
+ span.psw {
   float: right;
   padding-top: 16px;
 }
 
 /*About us*/
+.wrapperabout{
+  margin-top: 50px;
+}
 
-.about-container {
+.wrapperabout h1{
+  font-family: 'Allura', cursive;
+  font-size: 48px;
+  margin-bottom: 70px;
+  margin-top: -50px;
+  text-align: center; 
+  padding: 14px 25px;
+   
+}
+
+.team{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  align-content: center;
-  min-height: 33rem;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+  
 }
 
-.about-section {
-  max-width: 50rem;
+.team .team_member{
+  background-color: rgba(21, 75, 136, 0.247);
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;  
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10.9);
 }
 
-.about-section h1,
-h2 {
+.team .team_member h3{
   color: #000000;
-  text-align: center;
+  font-size: 26px;
+  margin-top: 50px;
 }
 
-.about-section h2,
-p {
-  font-size: 17px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  line-height: 1.5;
-  text-align: center;
+.team .team_member p.role{
+  color: rgb(97, 97, 97);
+  margin: 12px 0;
+  font-size: 12px; 
+  text-transform: uppercase;
 }
 
+.team .team_member .team_img{
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #fff;
+  
+}
+
+.team .team_member .team_img img{
+  width: 100px;
+  height: 100px;
+    
+}
 
 /* Profile */
 .logout {
@@ -443,10 +735,6 @@ p {
 
 }
 
-.agoraText{
-
-}
-
 .bar{
     width:30px;
     margin: 2px;
@@ -468,10 +756,6 @@ p {
     justify-content: space-between;
     align-items: center; 
     border-bottom:1px #ff7b00; 
-}
-
-.navText{
-
 }
 
 .ul{
