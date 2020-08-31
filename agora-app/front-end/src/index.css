@@ -812,3 +812,21 @@ input[type="email"] {
     font-size: 11px;
   }
 }
+
+@media screen and (max-width: 350px) {
+  th, td {
+    padding: 5px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+  }
+
+  .view-listing-image img{
+    width: 20rem;
+    border: 0px;
+  }
+
+}
