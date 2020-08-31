@@ -34,6 +34,7 @@ class NavbarSignedin extends Component{
                     <ul className={this.state.isOpen ? "showNav":"headerNav"}>
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/Profile">Profile</Link></li>
+                        <li><Link to="/CreateListing">List an Item</Link></li>
                         <li><Link to="/About">About</Link></li>
                         <li><Link to="/Contact">Contact Us</Link></li> 
                     </ul>

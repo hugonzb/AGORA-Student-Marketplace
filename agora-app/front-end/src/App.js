@@ -7,9 +7,8 @@ import SignIn from "./screens/SignIn";
 import About from "./screens/About";
 import Contact from "./screens/contact";
 import ViewListing from "./screens/ViewListing";
+import CreateListing from "./screens/CreateListing";
 import Profile from "./screens/Profile";
-import agoralogo from "./images/agoralogo.png";
-import profileicon from "./images/profileicon.png";
 import Navbar from "./Navbar.js";
 import NavbarSignedin from "./NavbarSignedin";
 
@@ -47,6 +46,7 @@ function App() {
             <Route path="/profile" component={Profile} />
             <Route path="/" exact={true} component={Home} />
             <Route path="/listing/:id" component={ViewListing} />
+            <Route path="/CreateListing" component={CreateListing} />
           </div>
         </div>
         <div className="footer">All Rights Reserved.</div>
