@@ -32,6 +32,10 @@ th, td {
   font-size: 14px;
 }
 
+ul li a{
+  display: block;           
+}
+
 /* App */
 
 .header {
@@ -723,62 +727,5 @@ input[type="email"] {
   min-height: 35rem;
 }
 
-/* navbar */
 
-.navStart{
-    margin:0px;
-    padding:0px;
-}
 
-.logo img{
-   width: 50px;
-
-}
-
-.bar{
-    width:30px;
-    margin: 2px;
-    height: 5px;
-    color:rgb(139,139,137);
-    background: grey; 
-}
-
-.btn{
-    border:1px solid #1d4c61;;
-    display: inline-block;
-    justify-content: space-between;
-
-}
-
-.logoBtn{
-    background: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    border-bottom:1px #ff7b00; 
-}
-
-.ul{
-    list-style-type: none;               
-    margin: 0px;
-    padding: 0px; 
-}
-
-ul li a{
-  background: #737373;
-  display: block;
-  color: white; 
-  align-items: center;
-  border-bottom: 1px ff7b00; 
-  padding: 7px; 
-  text-decoration: none; 
-  font-family: "Play", sans-serif;
-  list-style-type: none;                
-}
-
-ul li a:hover{
-background: #ff7b00; 
-color: white; 
-list-style-type: none;               
-    
-}
