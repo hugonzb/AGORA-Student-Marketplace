@@ -21,8 +21,6 @@ function App() {
    <div className= "maindisplay">
    
    <Navbar />
-  
-        
         </div> 
         <div className="search">
           <div>

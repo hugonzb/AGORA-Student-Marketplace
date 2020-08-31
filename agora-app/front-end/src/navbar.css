@@ -25,7 +25,7 @@
 }
 
 .agora-text {
-    padding-top: 2rem;
+    padding-top: 2.1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     font-size: 28px;
@@ -34,7 +34,7 @@
 }
   
 .sm-text {
-    padding-top: 2.1rem;
+    padding-top: 2.2rem;
     color: rgb(2, 3, 32);
     font-family: "Quicksand", sans-serif;
     font-size: 25px;
@@ -73,16 +73,19 @@ ul{
 }
 
 .showNav{
-    height: 160px;
-    margin-top: 0rem;
+    height: 170px;
+    padding-top: 1rem;
+    background-color: white;
 }
 
 .headerNav{
-    margin-top: 1rem;
+    padding-top: 0rem;
     margin-right: 1rem;
 }
 
 ul li a{
+    background-color: white;
+    display: flex;
     background: white;
     color: black; 
     align-items: center;
@@ -104,7 +107,9 @@ padding-left: 18px;
 
 /* responsive mode */
 
-@media screen and (min-width:830px){
+@media screen and (min-width:845px){
+
+
     nav{
      background: #FFFFFF;
      display: flex; 
@@ -113,6 +118,7 @@ padding-left: 18px;
      border-bottom:22px #ff7b00;
 	}
 
+    
     .btn{
      display: none;
 	}
@@ -125,7 +131,11 @@ padding-left: 18px;
 
     .showNav{
      height: auto; 
-	}
+    }
+    
+    .headerNav{
+        padding-top: 1rem;
+    }
 
     nav ul a{
      background: transparent; 
@@ -141,7 +151,8 @@ padding-left: 18px;
     list-style-type: none; 
     transition: all 0.3s ease;
     padding-left: 5px;
-	}
+    }
+
 }
 
 

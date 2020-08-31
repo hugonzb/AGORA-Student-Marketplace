@@ -30,13 +30,15 @@ class Navbar extends Component{
                         <div className="bar"></div>
                     </div>          
                 </div>
-                <ul className={this.state.isOpen ? "showNav":"headerNav"}>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/signup">Register</Link></li>
-                    <li><Link to="/signin">Sign In</Link></li>
-                    <li><Link to="/About">About</Link></li>
-                    <li><Link to="/Contact">Contact Us</Link></li> 
-                </ul>
+                <div className="nav-buttons">
+                    <ul className={this.state.isOpen ? "showNav":"headerNav"}>
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/signup">Register</Link></li>
+                        <li><Link to="/signin">Sign In</Link></li>
+                        <li><Link to="/About">About</Link></li>
+                        <li><Link to="/Contact">Contact Us</Link></li> 
+                    </ul>
+                </div>
             </nav>          
         )
     }
