@@ -1,5 +1,5 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
-import { listingReducer, listingDetailsReducer } from './reducers/listingReducer';
+import { listingReducer, listingDetailsReducer } from './reducers/listingReducers';
 import {userSignupReducer, userSignInReducer} from './reducers/userReducers';
 import thunk from 'redux-thunk';
 import Cookie from 'js-cookie';

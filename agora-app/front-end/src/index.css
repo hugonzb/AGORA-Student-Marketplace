@@ -12,8 +12,9 @@ a:active {
 }
 
 table, td, th {  
-  border: 1px solid #ddd;
-  text-align: left;
+  border: 1px solid rgb(218, 218, 218);
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px 0px rgba(221, 221, 221, 0.61)
 }
 
 table {
@@ -22,9 +23,17 @@ table {
 }
 
 th, td {
-  padding: 8px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 5px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+ul li a{
+  display: block;           
 }
 
 /* App */
@@ -35,7 +44,7 @@ th, td {
   font-size: 30px;
   text-align: center;
   display: flex;
-  justify-content: space-between;
+
   align-items: center;
   padding: 15px;
   text-align: center;
@@ -51,24 +60,10 @@ th, td {
   text-decoration: none;
 }
 
-.agora-text {
-  padding-top: 1.7rem;
-  padding-left: 1rem;
-  padding-right: 0.5rem;
-  color: rgb(255, 123, 0);
-  font-family: "Play", sans-serif;
-}
-
-.sm-text {
-  padding-top: 1.7rem;
-  color: rgb(2, 3, 32);
-  font-family: "Quicksand", sans-serif;
-  font-size: 28px;
-}
-
 .agora-logo {
   margin-top: 2px;
   max-height: 4.5rem;
+  width: 50px;
 }
 
 .profile-icon {
@@ -212,6 +207,10 @@ th, td {
   font-weight: bold;
 }
 
+.listing-price {
+  padding-bottom: 1rem;
+}
+
 /* View Listing */
 
 .view-listing-container{
@@ -237,12 +236,22 @@ th, td {
   justify-content: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  box-shadow: 0px 0px 10px 0px rgba(54, 54, 54, 0.61);
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
 
 .view-listing-image img{
   width: 22rem;
   border: 0px;
+}
+
+.view-listing-title{
+  display: flex;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  height: 3rem;
+  padding-top: 0.5rem;
 }
 
 .view-listing-actions{
@@ -257,7 +266,7 @@ th, td {
   background: rgb(253, 253, 253);  
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 10px 0px rgba(54, 54, 54, 0.61);
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
 
 .view-listing-buttons{
@@ -277,13 +286,14 @@ th, td {
   width: 18rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: 1px solid rgb(194, 194, 194);
+  background-color: rgb(255, 255, 255);
   border-radius: 0.9rem;
   margin-bottom: 1rem;
-  box-shadow: 0px 0px 10px 0px rgba(170, 170, 170, 0.61);
+  box-shadow: 0px 0px 6px 0px rgba(170, 170, 170, 0.61);
 }
 
 .buynow-button {
-	background-color:#32ac52;
+	background-color:#2cbd33;
   border-radius: 8px;
 	border:0;
 	display:inline-block;
@@ -300,7 +310,7 @@ th, td {
   outline: none;
 }
 .buynow-button:hover {
-	background-color:#29cc31;
+	background-color:#42eb4b;
 }
 .buynow-button:active {
 	position:relative;
@@ -339,7 +349,13 @@ th, td {
 }
 
 .view-listing-user img{
-  max-width: 3rem;
+  max-width: 2.5rem;
+}
+
+.view-listing-sellername{
+  display: flex;
+  padding: 0.2rem;
+  width: 5rem;
 }
 
 .view-listing-details{
@@ -353,7 +369,7 @@ th, td {
   border-radius: 0.5rem;
   background: rgb(253, 253, 253);  
   align-items: center;
-  box-shadow: 0px 0px 10px 0px rgba(54, 54, 54, 0.61);
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
 
 .view-listing-details-title{
@@ -365,17 +381,25 @@ th, td {
   width: 100%;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 0px 10px 0px rgba(185, 185, 185, 0.61);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.view-listing-description{
-  height: 6.5rem;
+.view-listing-description-container{
+  height: 7rem;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   width: 100%;
   border-bottom: 2px solid rgb(196, 196, 196);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+}
+
+.view-listing-description{
+  padding: 1rem;
 }
 
 .view-listing-qa-container{
@@ -385,6 +409,8 @@ th, td {
   justify-content: center;
   align-items: center;
   width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
 }
 
 /* Sign up screen */
@@ -402,10 +428,8 @@ th, td {
   overflow: scroll;
   margin-bottom: 20px;
   margin-top: 20px;
-   
-  
-  
 }
+
 .sign-up-container h2{
   font-family: 'Permanent Marker', cursive;
   background-color: rgb(255, 255, 255);
@@ -494,11 +518,6 @@ float: left;
 margin: 10px;
 }
 label:after { content: "" }
-
-
-
-
-
 
 /* sign in page */
 .sign-in-container{
@@ -660,9 +679,6 @@ input[type="email"] {
     
 }
 
-
-
-
 /* Profile */
 .logout {
   margin-left: 30%;
@@ -699,7 +715,7 @@ input[type="email"] {
   background-color: rgba(35, 85, 143, 0.452);
   max-width: 900px;
 	width: 100%;
-	height: auto;
+	height: 80vh;
 	margin: auto;
   padding: 10px;
   margin-bottom: 30px;
@@ -707,7 +723,7 @@ input[type="email"] {
   border-radius: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10.9);
 }
-
+ 
 .c-wrapper h1{
   color: rgb(27, 27, 44);
   text-shadow: #ffffff;
@@ -717,26 +733,26 @@ input[type="email"] {
   text-transform: uppercase;
    font-family: 'Allura', cursive;
 }
-
+ 
 .c-wrapper p{
 	text-align: center;
 }
-
+ 
 .c-wrapper .c-contactus{
 	margin: 50px 0 0;
 }
-
+ 
 .c-wrapper .c-contactus .c-input_wrapper{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
 }
-
+ 
 .c-wrapper .c-contactus .c-input_wrapper .c-input_item{
 	width: 48%;
 	position: relative;
 }
-
+ 
 .c-wrapper .c-contactus .c-input_item input[type="text"],
 .c-wrapper .c-contactus textarea{
 	width: 100%;
@@ -745,42 +761,36 @@ input[type="email"] {
 	padding-left: 40px;
 	border-radius: 3px;
 }
-
+ 
 .c-wrapper .c-contactus .c-message_wrapper{
- position: relative;
- width: 94%;
+	position: relative;
 }
-
- .c-message_wrapper textarea{
-    height: 180px;
-	  resize: none;
-  
- }
-
+ 
+.c-wrapper .c-contactus .c-message_wrapper textarea{
+  height: 180px;
+  width: 93.5%;
+	resize: none;
+}
+ 
 .c-wrapper .c-contactus .c-btn{
-	width: 30%;
+	width: 38%;
 	background: #368f96;
-	margin: 20px auto 20px;
+	margin: 20px auto 0;
 	text-align: center;
 	padding: 18px;
 	border-radius: 10px;
 }
-
+ 
 .c-wrapper .c-contactus .c-btn a{
 	color: #fff;
 	display: block;
 	text-transform: uppercase;
 	letter-spacing: 5px;
 }
-
+ 
 .c-btn:hover{
   opacity: 0.8; 
   transform: scale(0.96);
 }
+ 
 
-.c-wrapper .c-contactus .c-fas{
-	position: absolute;
-	top:  20px;
-	left: 15px;
-	color: #30333A;
-}

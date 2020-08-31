@@ -7,10 +7,10 @@ import SignIn from "./screens/SignIn";
 import About from "./screens/About";
 import Contact from "./screens/Contact";
 import ViewListing from "./screens/ViewListing";
+import CreateListing from "./screens/CreateListing";
 import Profile from "./screens/Profile";
-import agoralogo from "./images/agoralogo.png";
-import profileicon from "./images/profileicon.png";
-import Navbar from "./components/Nav/navbar.jsx"
+import Navbar from "./Navbar.js";
+import NavbarSignedin from "./NavbarSignedin";
 
 function App() {
   const userSignin = useSelector((state) => state.userSignin);
@@ -18,39 +18,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="container">
-        <div className="header">
-          <Link to="/">
-            <div className="header-logo">
-              <img className="agora-logo" src={agoralogo} alt="agoralogo"></img>
-              <div className="agora-text">AGORA </div>{" "}
-              <div className="sm-text"> Student Marketplace</div>
-            </div>
-          </Link>
-          <nav className="links">
-            <Navbar />
-            <Link to="/">HOME </Link>
-            {userInfo ? (
-              <div>
-                <Link to="/profile">Welcome {userInfo.fname}</Link>
-                <Link to="/profile">
-                  <img
-                    className="profile-icon"
-                    src={profileicon}
-                    alt="profile"
-                  ></img>
-                </Link>
-              </div>
+   <div className= "maindisplay">
+   {userInfo ? (
+      <NavbarSignedin />
             ) : (
-              <div>
-                <Link to="/signup">REGISTER </Link>
-                <Link to="/signin">SIGN IN </Link>
-              </div>
-            )}
-            <Link to="/About">ABOUT </Link>
-            <Link to="/Contact">CONTACT US </Link>
-          </nav>
-        </div>
+      <Navbar />
+    )}
+
+        </div> 
         <div className="search">
           <div>
             <form>
@@ -71,10 +46,11 @@ function App() {
             <Route path="/profile" component={Profile} />
             <Route path="/" exact={true} component={Home} />
             <Route path="/listing/:id" component={ViewListing} />
+            <Route path="/CreateListing" component={CreateListing} />
           </div>
         </div>
         <div className="footer">All Rights Reserved.</div>
-      </div>
+      
     </BrowserRouter>
   );
 }

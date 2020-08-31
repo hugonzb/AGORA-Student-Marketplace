@@ -23,6 +23,9 @@ function ViewListing(props) {
 						<img className="listing-image" src={listing.image} alt="listing"></img>
 					</div>	 
 					<div className="view-listing-actions">
+						<div className="view-listing-title">
+							{listing.name}
+						</div>
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
 							<button className="buynow-button">Buy Now</button>
@@ -31,25 +34,30 @@ function ViewListing(props) {
 					</div>	
 				<div className="view-listing-details">
 					<div className="view-listing-details-title"> Listing Information </div>
-					<div className="view-listing-description"> {listing.description} </div>	
+					<div className="view-listing-description-container"> 
+						<div className="view-listing-description">
+							{listing.description} 
+						</div>
+					</div>	
 					<div>
 						<table>
 							<tr>
 								<th>Seller</th>
+								<th>Condition</th>
 								<th>Brand</th>
 								<th>Category</th>
-								<th>Condition</th>
 								<th>Location</th>
 							</tr>
 							<tr>
 								<td>						
 									<div className="view-listing-user">
-										<img src={profileicon} alt="profile"/> {listing.seller}
+										<img src={profileicon} alt="profile"/>
+										<div className="view-listing-sellername">{listing.seller}</div>
 									</div>	
 								</td>
+								<td>Null</td>
 								<td>None</td>
 								<td>{listing.category}</td>
-								<td>Null</td>
 								<td>Null</td>
 							</tr>
 						</table>				

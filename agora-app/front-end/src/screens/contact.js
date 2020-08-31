@@ -13,12 +13,8 @@ function Contact(props) {
 			</div>
             <div className="c-input_item">
               <input type="text" placeholder="Your Email"/>
-                <i className="c-fas fa-at"></i>
-			</div>
-            </div>
-            <div className="c-input_wrapper input_wrapper_bottom">
-              <div className="c-input_item">
-                <input type="text" placeholder="Your Subject"/>
+
+<input type="text" placeholder="Your Subject"/>
                   <i className="c-fas fa-sticky-note"></i>
 			</div>
                 <div className="c-input_item">
