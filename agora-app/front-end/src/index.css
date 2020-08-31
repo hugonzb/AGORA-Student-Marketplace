@@ -765,17 +765,15 @@ input[type="email"] {
 }
 
 ul li a{
-
-background: #737373;
-display: block;
-color: white; 
-align-items: center;
-border-bottom: 1px ff7b00; 
-padding: 7px; 
-text-decoration: none; 
-font-family: "Play", sans-serif;
-list-style-type: none;               
-    
+  background: #737373;
+  display: block;
+  color: white; 
+  align-items: center;
+  border-bottom: 1px ff7b00; 
+  padding: 7px; 
+  text-decoration: none; 
+  font-family: "Play", sans-serif;
+  list-style-type: none;                
 }
 
 ul li a:hover{
