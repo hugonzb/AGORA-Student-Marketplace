@@ -51,7 +51,7 @@ function SignUp(props) {
     );
     error && props.history.push("/signin");
   };
-
+  
   return (
     <div className="sign-up-container">
       <h2>Welcome to Agora! Please enter your details to sign up using the form below.</h2>
