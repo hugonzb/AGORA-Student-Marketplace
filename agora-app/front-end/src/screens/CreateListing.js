@@ -7,14 +7,3 @@ function CreateListing(props) {
 }
 
 export default CreateListing;
-
-   
-  
-    
-      
-   
-
-
-
-
-
