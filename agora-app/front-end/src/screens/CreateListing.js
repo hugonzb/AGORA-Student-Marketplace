@@ -10,12 +10,12 @@ function CreateListing(props) {
         into the form into js variables that we can send to the backend
         which will then send it to the database.
     */
-    const [,] = useState("");
-    const [,] = useState("");
-    const [,] = useState("");
-    const [,] = useState("");
-    const [,] = useState("");
-    const [,] = useState("");
+    const [name, setName] = useState("");
+    const [description, setDescription] = useState("");
+    const [deliveryoption, setDeliveryoption] = useState("");
+    const userSignup = useSelector((state) => state.userSignup);
+    const { loading, userInfo, error } = userSignup;
+
 
 
     return (
@@ -30,8 +30,42 @@ function CreateListing(props) {
                         name="listingName"
                         placeholder="Listing Name"
                         required
-                    >
-                    </input>
+                        onChange={(e) => setName(e.target.value)}
+                    ></input>
+                    <br></br>
+                    <label>Listing Description</label>
+                    <textarea
+                        type="text"
+                        id="listingDescription"
+                        name="listingDescription"
+                        placeholder="Your Description Here."
+                        rows="5"
+                        cols="40"
+                        required
+                        onChange={(e) => setDescription(e.target.value)}
+                    ></textarea>
+                    <br></br>
+                    <input
+                        type="radio"
+                        id="pickup"
+                        name="deliveryoptions"
+                        value="pickup"
+                        required
+                        onChange={(e) => setDeliveryoption(e.target.value)}
+                    ></input>
+                    <label>Pick-Up</label>
+                    <input
+                        type="radio"
+                        id="delivery"
+                        name="deliveryoptions"
+                        value="delivery"
+                        required
+                        onChange={(e) => setDeliveryoption(e.target.value)}
+                    ></input>
+                    <label>Delivery</label>
+                    <button type="submit" value="Submit">
+                        Create Listing
+                    </button>
                 </form>
             </div>
         </div>
