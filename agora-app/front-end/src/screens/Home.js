@@ -21,6 +21,7 @@ function Home (props) {
 
     const submitHandler = (e) =>{
         e.preventDefault();
+        dispatch(listListings(categorySortOrder, locationSortOrder)); 
     }
 
     return loading ? <div className="loading">Loading listings ...</div> : 
@@ -33,16 +34,13 @@ function Home (props) {
                     <option value="books"> Books </option>
                     <option value="other"> Other </option>
                 </select>
-                <button className = "filter-button" type = "submit"></button>
-            </form>
-            <form onSubmit={submitHandler}>
                 <select name="locationSortOrder" className="select-style" onChange={(e) => {setLocationSortOrder(e.target.value)}}>
                     <option value=" "> All Locations </option>
                     <option value="Auckland"> Auckland </option>
                     <option value="Dunedin"> Dunedin </option>
                     <option value="Christchurch"> Christchurch </option>
                 </select>
-                <button className = "filter-button" type = "submit"></button>
+                <button className = "filter-button" type = "submit">Submit</button>
             </form>
         <div className="listings">
             {listings.map(listing =>
