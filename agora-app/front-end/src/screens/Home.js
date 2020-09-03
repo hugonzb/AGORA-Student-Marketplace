@@ -25,7 +25,7 @@ function Home (props) {
     }
 
     const setLocation = (location) =>{
-        setCategorySortOrder(location);
+        setLocationSortOrder(location);
         dispatch(listListings(categorySortOrder, location)); 
     }
 
