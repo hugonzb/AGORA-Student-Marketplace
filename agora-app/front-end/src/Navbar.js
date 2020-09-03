@@ -14,12 +14,20 @@ class Navbar extends Component{
         })
     }
 
+    closeNavbar = ()=>{
+     this.setState({
+     isOpen:false
+	   })
+    }
+
     render(){
         return(  
             <nav>
                 <div className="logoBtn">
                     <div className="logo">
-                        <Link to="/"><img src={agoralogo} className="logo" alt=""/></Link>
+                        <Link to="/" onClick=
+                        {this.closeNavbar}><img src={agoralogo} 
+                        className="logo" alt=""/></Link>
                         <div className="agora-text">AGORA</div>
                         <div className="sm-text">Student Marketplace</div>
                     </div>
@@ -32,11 +40,16 @@ class Navbar extends Component{
                 </div>
                 <div className="nav-buttons">
                     <ul className={this.state.isOpen ? "showNav":"headerNav"}>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/signup">Register</Link></li>
-                        <li><Link to="/signin">Sign In</Link></li>
-                        <li><Link to="/About">About</Link></li>
-                        <li><Link to="/Contact">Contact Us</Link></li> 
+                        <li><Link to="/" onClick=
+                        {this.closeNavbar} >Home</Link></li>
+                        <li><Link to="/signup" onClick=
+                        {this.closeNavbar} >Register</Link></li>
+                        <li><Link to="/signin" onClick=
+                        {this.closeNavbar} >Sign In</Link></li>
+                        <li><Link to="/About" onClick=
+                        {this.closeNavbar} >About</Link></li>
+                        <li><Link to="/Contact" onClick=
+                        {this.closeNavbar} >Contact Us</Link></li> 
                     </ul>
                 </div>
                 
