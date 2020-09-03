@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
@@ -12,7 +12,8 @@ import Profile from "./screens/Profile";
 import Navbar from "./Navbar.js";
 import NavbarSignedin from "./NavbarSignedin";
 
-function App() {
+function App(props) {
+  const [search, setSearch] = useState('');
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
@@ -33,8 +34,14 @@ function App() {
                 className="search-input"
                 name="searchWord"
                 placeholder="I'm looking for..."
+                onChange={e => setSearch(e.target.value)}
               />
-            </form>
+              <Link to={`/search/${search}`}>
+                <button type="submit" value="submit">
+                  Search
+                </button>
+              </Link>
+            </form> 
           </div>
         </div>
         <div className="main">
@@ -45,6 +52,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/profile" component={Profile} />
             <Route path="/" exact={true} component={Home} />
+            <Route path="/search/:id" exact={true} component={Home} />
             <Route path="/listing/:id" component={ViewListing} />
             <Route path="/CreateListing" component={CreateListing} />
           </div>
