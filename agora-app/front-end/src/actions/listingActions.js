@@ -6,7 +6,7 @@ import {
     LISTING_DETAILS_FAIL,
     LISTING_DETAILS_SUCCESS,
     LISTING_DETAILS_REQUEST
-} from '../constants/listingConstants';
+} from '../constants/listingConstants'; 
 
 const listListings = (category='', location='') => async (dispatch) => { 
     try {
