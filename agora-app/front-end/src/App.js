@@ -36,7 +36,7 @@ function App(props) {
                 placeholder="I'm looking for..."
                 onChange={e => setSearch(e.target.value)}
               />
-              <Link to={`/search/${search}`}>
+              <Link to={`/${search}`}>
                 <button type="submit" value="submit">
                   Search
                 </button>
@@ -52,7 +52,7 @@ function App(props) {
             <Route path="/contact" component={Contact} />
             <Route path="/profile" component={Profile} />
             <Route path="/" exact={true} component={Home} />
-            <Route path="/search/:id" exact={true} component={Home} />
+            <Route path="/:id" exact={true} component={Home} />
             <Route path="/listing/:id" component={ViewListing} />
             <Route path="/CreateListing" component={CreateListing} />
           </div>

@@ -8,12 +8,14 @@ import profileicon from "../images/profileicon.png";
 function Home (props) {
     const [categorySortOrder, setCategorySortOrder] = useState('');
     const [locationSortOrder, setLocationSortOrder] = useState('');
+    const searchWord = props.match.params.id ? props.match.params.id : '';
     const listingList = useSelector(state => state.listingList);
     const { listings, loading, error } = listingList;
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(listListings());
+        dispatch(listListings()); 
+        console.log(searchWord);
         return () => {
         }; 
         // eslint-disable-next-line
@@ -48,7 +50,8 @@ function Home (props) {
     { loading ? <div className="loading">Loading listings ...</div> : 
     error? <div className="error"> {error} - Make sure you are running the server to fetch data ;)</div> :
         <div className="listings">
-            {listings.map(listing =>
+            {listings.map(listing => 
+            <li key = {listing._id}>
             <Link to={'/listing/' + listing._id}>
                 <div className="listing-container">
                     <div className="listing-image">
@@ -63,7 +66,8 @@ function Home (props) {
 						</div>	
                     </div>
                 </div> 
-            </Link>)
+            </Link>
+            </li>)
             }
         </div>
     }
