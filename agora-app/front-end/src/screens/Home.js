@@ -25,6 +25,7 @@ function Home (props) {
     } 
 
     return <> 
+    <div className="home-container">
     <form onSubmit={submitHandler}>
             <select name="categorySortOrder" className="select-style" onChange={(e) => {setCategorySortOrder(e.target.value)}}>
                 <option value=""> All Categories </option>
@@ -42,7 +43,6 @@ function Home (props) {
     </form> 
     { loading ? <div className="loading">Loading listings ...</div> : 
     error? <div className="error"> {error} - Make sure you are running the server to fetch data ;)</div> :
-    <div className="home-container">
         <div className="listings">
             {listings.map(listing =>
             <Link to={'/listing/' + listing._id}>
@@ -62,8 +62,8 @@ function Home (props) {
             </Link>)
             }
         </div>
-    </div>
     }
+    </div>
     </>
 }
 
