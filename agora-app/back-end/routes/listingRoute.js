@@ -11,7 +11,13 @@ router.get('/', async (req, res) =>{
         $options: 'i',
       },
     } : {};
-    const listings = await Listing.find({...categorySortOrder});
+    const locationSortOrder = req.query.locationSortOrder ? { 
+      location: { 
+        $regex: req.query.locationSortOrder,
+        $options: 'i',
+      },
+    } : {};
+    const listings = await Listing.find({...categorySortOrder, ...locationSortOrder});
     res.send(listings); 
 }); 
 
