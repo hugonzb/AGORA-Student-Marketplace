@@ -82,7 +82,7 @@ function Profile(props) {
                   </div>
             
                 <div className="avatar_head">
-                    hello
+                    
                 </div>
                 <button type="button" className="logout" onClick={handleLogout}>
                      Logout

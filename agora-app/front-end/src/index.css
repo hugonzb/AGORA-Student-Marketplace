@@ -520,6 +520,7 @@ margin: 10px;
 label:after { content: "" }
 
 /* sign in page */
+
 .sign-in-container{
 background-color: rgba(21, 75, 136, 0.247);
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10.9);
@@ -708,14 +709,21 @@ input[type="email"] {
   padding-top: 10px;
 }
 
-.profile-contents:{
+.profile-contents{
   width: 100%;
-  border: 2px dashed black;
+  margin-top: 10px;
   padding: 5px;
   text-align: left;
+  color: black;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: space-between; 
 }
 
-.profile-contents:label{
+
+.profile-form: label{
+color: red;
 
 }
 
