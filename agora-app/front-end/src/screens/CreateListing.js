@@ -16,6 +16,8 @@ function CreateListing(props) {
   const [location, setLocation] = useState("");
   const [brand, setBrand] = useState("");
   const [seller, setSeller] = useState("update this with seller name"); //need to update this var
+  const [category, setCategory] = useState("Default Category");
+  const [price, setPrice] = useState("");
 
   const userSignup = useSelector((state) => state.userSignup);
   const { loading, userInfo, error } = userSignup;
@@ -53,6 +55,8 @@ function CreateListing(props) {
             id="price"
             name="price"
             placeholder="$0.00"
+            required
+            onChange={(e) => setPrice(e.target.value)}
           ></input>
           <br></br>
 
@@ -72,6 +76,7 @@ function CreateListing(props) {
             id="school"
             name="school"
             placeholder="Select University"
+            required
             onChange={(e) => setUniversity(e.target.value)}
           >
             <option value="University of Auckland">
