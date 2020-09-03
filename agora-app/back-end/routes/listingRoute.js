@@ -34,6 +34,13 @@ router.post("/", async (req, res) => {
     seller: res.body.seller,
     deliveryoption: res.body.deliveryoption,
   });
+  const newListing = await listing.save();
+  if (newListing) {
+    return res
+      .status(201)
+      .send({ message: "new listing created", data: newListing });
+  }
+  return res.status(401).send({ message: "could not create new listing" });
 });
 
 export default router;
