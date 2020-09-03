@@ -19,27 +19,31 @@ function Home (props) {
         // eslint-disable-next-line
     }, [])
 
-    const submitHandler = (e) =>{
-        e.preventDefault();
-        dispatch(listListings(categorySortOrder, locationSortOrder)); 
-    } 
+    const setCategory = (category) =>{
+        setCategorySortOrder(category);
+        dispatch(listListings(category, locationSortOrder)); 
+    }
+
+    const setLocation = (location) =>{
+        setCategorySortOrder(location);
+        dispatch(listListings(categorySortOrder, location)); 
+    }
 
     return <> 
     <div className="home-container">
-    <form onSubmit={submitHandler}>
-            <select name="categorySortOrder" className="select-style" onChange={(e) => {setCategorySortOrder(e.target.value)}}>
+    <form>
+            <select name="categorySortOrder" className="select-style" onChange={(e) => {setCategory(e.target.value)}}>
                 <option value=""> All Categories </option>
                 <option value="Health & Fitness"> Health & Fitness </option>
                 <option value="Books"> Books </option>
                 <option value="Other"> Other </option>
             </select> 
-            <select name="locationSortOrder" className="select-style" onChange={(e) => {setLocationSortOrder(e.target.value)}}>
+            <select name="locationSortOrder" className="select-style" onChange={(e) => {setLocation(e.target.value)}}>
                 <option value=""> All Locations </option>
                 <option value="Christchurch"> Christchurch </option>
                 <option value="Dunedin"> Dunedin </option>
                 <option value="Wellington"> Wellington </option>
             </select> 
-            <button className = "filter-button" type = "submit">Submit</button>
     </form> 
     { loading ? <div className="loading">Loading listings ...</div> : 
     error? <div className="error"> {error} - Make sure you are running the server to fetch data ;)</div> :
