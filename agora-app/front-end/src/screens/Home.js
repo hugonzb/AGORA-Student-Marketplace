@@ -32,22 +32,25 @@ function Home (props) {
 
     return <> 
     <div className="home-container">
-    <form>
-            <select name="categorySortOrder" className="select-style" onChange={(e) => {setCategory(e.target.value)}}>
-                <option value=""> All Categories </option>
-                <option value="Health & Fitness"> Health & Fitness </option>
-                <option value="Books"> Books </option>
-                <option value="Other"> Other </option>
-            </select> 
-            <select name="locationSortOrder" className="select-style" onChange={(e) => {setLocation(e.target.value)}}>
-                <option value=""> All Locations </option>
-                <option value="Christchurch"> Christchurch </option>
-                <option value="Dunedin"> Dunedin </option>
-                <option value="Wellington"> Wellington </option>
-            </select> 
-    </form> 
+        <div className="home-filter">
+            <form>
+                <select name="categorySortOrder" className="select-style" onChange={(e) => {setCategory(e.target.value)}}>
+                    <option value=""> All Categories </option>
+                    <option value="Health & Fitness"> Health & Fitness </option>
+                    <option value="Books"> Books </option>
+                    <option value="Other"> Other </option>
+                </select> 
+                <select name="locationSortOrder" className="select-style" onChange={(e) => {setLocation(e.target.value)}}>
+                    <option value=""> All Locations </option>
+                    <option value="Christchurch"> Christchurch </option>
+                    <option value="Dunedin"> Dunedin </option>
+                    <option value="Wellington"> Wellington </option>
+                </select> 
+            </form> 
+        </div>
     { loading ? <div className="loading">Loading listings ...</div> : 
     error? <div className="error"> {error} - Make sure you are running the server to fetch data ;)</div> :
+    listings.length > 0 ?
         <div className="listings">
             {listings.map(listing => 
             <li key = {listing._id}>
@@ -64,11 +67,11 @@ function Home (props) {
                             <div className="view-listing-sellername">{listing.seller}</div>
 						</div>	
                     </div>
-                </div> 
+                </div>  
             </Link>
             </li>)
             }
-        </div>
+        </div>: <div> There are no listings available that match your request. Please check again later. </div>
     }
     </div>
     </>
