@@ -141,6 +141,24 @@ ul li a{
   border-radius: 0.5rem;
 }
 
+.home-filter {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-filter form {
+  display: flex;
+}
+
+.home-filter select {
+  margin: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
 .listings {
   display: flex;
   flex-wrap: wrap;
