@@ -29,18 +29,18 @@ function Home (props) {
             <form onSubmit={submitHandler}>
                 <select name="categorySortOrder" className="select-style" onChange={(e) => {setCategorySortOrder(e.target.value)}}>
                     <option value=" "> All Categories </option>
-                    <option value="healthandfitness"> Health & Fitness </option>
-                    <option value="option2"> option 2 </option>
-                    <option value="option3"> option 3 </option>
+                    <option value="health&fitness"> Health & Fitness </option>
+                    <option value="books"> Books </option>
+                    <option value="other"> Other </option>
                 </select>
                 <button className = "filter-button" type = "submit"></button>
             </form>
             <form onSubmit={submitHandler}>
                 <select name="locationSortOrder" className="select-style" onChange={(e) => {setLocationSortOrder(e.target.value)}}>
                     <option value=" "> All Locations </option>
-                    <option value="option1"> option1 </option>
-                    <option value="option2"> option2 </option>
-                    <option value="option3"> option3 </option>
+                    <option value="Auckland"> Auckland </option>
+                    <option value="Dunedin"> Dunedin </option>
+                    <option value="Christchurch"> Christchurch </option>
                 </select>
                 <button className = "filter-button" type = "submit"></button>
             </form>
