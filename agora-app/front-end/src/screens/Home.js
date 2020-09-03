@@ -22,7 +22,7 @@ function Home (props) {
     const submitHandler = (e) =>{
         e.preventDefault();
         dispatch(listListings(categorySortOrder, locationSortOrder)); 
-    }
+    } 
 
     return <> 
     <form onSubmit={submitHandler}>
@@ -40,7 +40,6 @@ function Home (props) {
             </select> 
             <button className = "filter-button" type = "submit">Submit</button>
     </form> 
-
     { loading ? <div className="loading">Loading listings ...</div> : 
     error? <div className="error"> {error} - Make sure you are running the server to fetch data ;)</div> :
     <div className="home-container">
