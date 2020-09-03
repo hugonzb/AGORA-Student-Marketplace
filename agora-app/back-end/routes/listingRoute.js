@@ -5,15 +5,21 @@ const router = express.Router();
 
 // Fetches listings from the database and posts to '/' (home page).
 router.get('/', async (req, res) =>{
-    const categorySortOrder = req.query.categorySortOrder ? { 
-      category: { 
-        $regex: req.query.categorySortOrder,
-        $options: 'i',
-      },
-    } : {};
-    const locationSortOrder = req.query.locationSortOrder ? { location: req.query.locationSortOrder } : {};
-    const listings = await Listing.find({...categorySortOrder, ...locationSortOrder});
-    res.send(listings); 
+  const searchWord = req.query.searchWord ? { 
+    name: {
+      $regex: req.query.searchWord, 
+      $options: 'i',
+    },
+  } : {}; 
+  const categorySortOrder = req.query.categorySortOrder ? { 
+    category: { 
+      $regex: req.query.categorySortOrder,
+      $options: 'i',
+    },
+  } : {};
+  const locationSortOrder = req.query.locationSortOrder ? { location: req.query.locationSortOrder } : {};
+  const listings = await Listing.find({...searchWord, ...categorySortOrder, ...locationSortOrder});
+  res.send(listings); 
 }); 
 
 router.get('/:id', async (req, res) => {

@@ -8,10 +8,10 @@ import {
     LISTING_DETAILS_REQUEST
 } from '../constants/listingConstants'; 
 
-const listListings = (category='', location='') => async (dispatch) => { 
+const listListings = (searchWord='', category='', location='') => async (dispatch) => { 
     try {
         dispatch({ type: LISTING_LIST_REQUEST });
-        const { data } = await axios.get("/api/listings?categorySortOrder=" + category + "&locationSortOrder=" + location);
+        const { data } = await axios.get("/api/listings?searchWord=" + searchWord + "&categorySortOrder=" + category + "&locationSortOrder=" + location);
         dispatch({ type: LISTING_LIST_SUCCESS, payload: data });
     } 
     catch (error) { 
