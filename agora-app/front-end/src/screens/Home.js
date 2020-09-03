@@ -14,21 +14,20 @@ function Home (props) {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(listListings()); 
-        console.log(searchWord);
+        dispatch(listListings(searchWord)); 
         return () => {
         }; 
         // eslint-disable-next-line
-    }, [])
+    }, [searchWord])
 
     const setCategory = (category) =>{
         setCategorySortOrder(category);
-        dispatch(listListings(category, locationSortOrder)); 
+        dispatch(listListings(searchWord, category, locationSortOrder)); 
     }
 
     const setLocation = (location) =>{
         setLocationSortOrder(location);
-        dispatch(listListings(categorySortOrder, location)); 
+        dispatch(listListings(searchWord, categorySortOrder, location)); 
     }
 
     return <> 
