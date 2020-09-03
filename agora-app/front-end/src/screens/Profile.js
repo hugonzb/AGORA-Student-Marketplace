@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
 import { BrowserRouter, Link } from "react-router-dom";
 import "../index.css";
+import profileicon from "../images/profileicon.png";
 
 
 function Profile(props) {
@@ -45,21 +46,60 @@ function Profile(props) {
     <BrowserRouter>
       {userInfo ? (
         <div className="mainContainer">
-        <div className ="profileContainer"> 
-        <div className="avatar_head">
-        hello
-        </div>
-        hello
-          <button type="button" className="logout" onClick={handleLogout}>
-            Logout
-          </button>
-        </div>
-         <div className ="listingsContainer">
-        hello
-        </div>
+            <div className ="profileContainer"> 
+                   
+                   <h2> Profile </h2>
+
+                <img src={profileicon} alt="profile"/> 
+                    <h2> <label for="name" value={name}> 
+                    {userInfo.fname}
+                    </label></h2>
+
+                  <div className="profile-contents">
+                      
+                      <form className="profile-form">
+                        <label for="username" value={id}>
+                          Student ID: {userInfo.studentid}
+                        </label>
+                        <br></br>
+                        <label for="name" value={name}>
+                          Name: {userInfo.fname}
+                        </label>
+                        <br></br>
+                        <label for="email" value={email}>
+                          Email: {userInfo.email}
+                        </label>
+                        <br></br>
+                        <label for="username" value={username}>
+                          Username: {userInfo.username}
+                        </label>
+                        <br></br>
+                        <label for="email" value={university}>
+                          University: {userInfo.university}
+                        </label>
+                        <br></br>
+                       </form>
+                  </div>
+            
+                <div className="avatar_head">
+                    
+                </div>
+                <button type="button" className="logout" onClick={handleLogout}>
+                     LOGOUT 
+                 </button>
+             </div>
+        
+            <div className ="listingsContainer">
+                LISTINGS
+            </div>
+
+            <div className = "watchlistContainer">
+                WATCHLIST
+            </div>
         </div>
        
       ) : (
+
         <div>
           <Link to="/signin">Sign in</Link>
           <Link to="/signup">Sign Up</Link>

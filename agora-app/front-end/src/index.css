@@ -520,6 +520,7 @@ margin: 10px;
 label:after { content: "" }
 
 /* sign in page */
+
 .sign-in-container{
 background-color: rgba(21, 75, 136, 0.247);
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10.9);
@@ -681,9 +682,18 @@ input[type="email"] {
 }
 
 /* Profile */
+
+.mainContainer{
+	background: white;
+	justify-content: space-between; 
+	display: flex; 
+}
+
 .logout { 
-  margin-left: 30%;
-  margin-top: 1px;
+  margin-left: 70%;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .profile img{
@@ -691,22 +701,54 @@ input[type="email"] {
 }
 
 .profile-container {
-  width: 100%;
+  width: auto;
   display: flex;
   height: 30px;
-  padding: 5px;
+  padding: 2px;
+  padding-top: 10px;
 }
 
-.profile-contents {
-  width: 50%;
-  border: 2px dashed black;
+.profile-contents{
+  width: 100%;
+  margin-top: 10px;
   padding: 5px;
+  text-align: left;
+  color: black;
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: space-between; 
+}
+
+
+.profile-form: label{
+color: red;
+
 }
 
 .profileContainer { 
 	background-color: white;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 10.9);
-	width: 50%;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
+	width: 30%;
+	margin-left: 5px; 
+	margin-right: 5px;
+	border-radius: 44px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	min-height: 30rem;
+	text-align: center;
+	padding: 2rem;
+	-moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.watchlistContainer { 
+	background-color: white;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
+	width: 30%;
 	margin-left: 5px; 
 	margin-right: 5px;
 	border-radius: 44px;
@@ -723,6 +765,29 @@ input[type="email"] {
     border-radius: 0px;
 }
 
+
+
+.listingsContainer{
+	background-color: white;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
+	width: 30%;
+	margin-left: 5px; 
+	margin-right: 5px; 
+	border-radius: 44px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	min-height: 30rem;
+	text-align: center;
+	padding: 1rem;
+	-moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+
+
 .avatar_head {
 width: 30px;
 height: 30px;
@@ -731,30 +796,6 @@ height: 30px;
 border-radius: 15px;
 color: black; 
 }
-
-.listingsContainer{
-	background-color: white;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 10.9);
-	width: 50%;
-	margin-left: 5px; 
-	margin-right: 5px; 
-	border-radius: 44px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	min-height: 30rem;
-	text-align: center;
-	padding: 1rem;
-}
-
-.mainContainer{
-	background: white;
-	justify-content: space-between; 
-	display: flex; 
-}
-
 /* misc */
 
 .loading {

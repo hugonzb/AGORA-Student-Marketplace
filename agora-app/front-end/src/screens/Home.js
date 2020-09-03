@@ -7,7 +7,7 @@ import profileicon from "../images/profileicon.png";
 
 function Home (props) {
     const [categorySortOrder, setCategorySortOrder] = useState('');
-    //const [locationSortOrder, setLocationSortOrder] = useState('');
+    const [locationSortOrder, setLocationSortOrder] = useState('');
     const listingList = useSelector(state => state.listingList);
     const { listings, loading, error } = listingList;
     const dispatch = useDispatch();
@@ -21,16 +21,22 @@ function Home (props) {
 
     const submitHandler = (e) =>{
         e.preventDefault();
-        dispatch(listListings(categorySortOrder)); 
-    }
+        dispatch(listListings(categorySortOrder, locationSortOrder)); 
+    } 
 
-    return <>
+    return <> 
     <form onSubmit={submitHandler}>
             <select name="categorySortOrder" className="select-style" onChange={(e) => {setCategorySortOrder(e.target.value)}}>
-                <option value=" "> All Categories </option>
-                <option value="health&fitness"> Health & Fitness </option>
-                <option value="books"> Books </option>
-                <option value="other"> Other </option>
+                <option value=""> All Categories </option>
+                <option value="Health & Fitness"> Health & Fitness </option>
+                <option value="Books"> Books </option>
+                <option value="Other"> Other </option>
+            </select> 
+            <select name="locationSortOrder" className="select-style" onChange={(e) => {setLocationSortOrder(e.target.value)}}>
+                <option value=""> All Locations </option>
+                <option value="Christchurch"> Christchurch </option>
+                <option value="Dunedin"> Dunedin </option>
+                <option value="Wellington"> Wellington </option>
             </select> 
             <button className = "filter-button" type = "submit">Submit</button>
     </form> 
