@@ -42,7 +42,7 @@ function App() {
             <Route path="/signup" component={SignUp} />
             <Route path="/signin" component={SignIn} />
             <Route path="/About" component={About} />
-            <Route path="/contact" component={Contact} />
+            <Route path="/Contact" component={Contact} />
             <Route path="/profile" component={Profile} />
             <Route path="/" exact={true} component={Home} />
             <Route path="/listing/:id" component={ViewListing} />
