@@ -15,12 +15,26 @@ function CreateListing(props) {
   const [university, setUniversity] = useState("University of Auckland");
   const [location, setLocation] = useState("");
   const [brand, setBrand] = useState("");
-  const [seller, setSeller] = useState("update this with seller name"); //need to update this var
-  const [category, setCategory] = useState("Default Category");
-  const [price, setPrice] = useState("");
+  const [seller, setSeller] = useState("this needs to be updated"); //need to update this var to be the account ID logged in.
+  const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
+  const [price, setPrice] = useState(""); //unsure about this for now
 
-  const userSignup = useSelector((state) => state.userSignup);
-  const { loading, userInfo, error } = userSignup;
+  // currently just need to figure out how to dispatch the information when submit button is clicked to the post
+  // in listingRoute. I believe I have done everything already needed there.
+  /* 
+  const listingSave = useSelector((state) => state.listingSave);
+  const {
+    loading: loadingSave,
+    success: successSave,
+    error: errorSave,
+  } = listingSave;
+
+
+  const submitHandler = (e) => {
+      e.preventDefault(); 
+      dispatch(saveListing({}))
+  }
+   */
 
   return (
     <div className="createListingContainer">
