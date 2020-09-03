@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
 import { BrowserRouter, Link } from "react-router-dom";
+import "../index.css";
+
 
 function Profile(props) {
   const [name, setName] = useState("");
@@ -42,46 +44,25 @@ function Profile(props) {
   return (
     <BrowserRouter>
       {userInfo ? (
-        <div className="sign-in-container">
-          Your Profile
-          <div className="profile-container">
-            <div className="profile-contents">
-              <h2> Profile </h2>
-              <form className="profile-form">
-                <label for="username" value={id}>
-                  Student ID: {userInfo.studentid}
-                </label>
-                <br></br>
-                <label for="name" value={name}>
-                  Name: {userInfo.fname}
-                </label>
-                <br></br>
-                <label for="email" value={email}>
-                  Email: {userInfo.email}
-                </label>
-                <br></br>
-                <label for="username" value={username}>
-                  Username: {userInfo.username}
-                </label>
-                <br></br>
-                <label for="email" value={university}>
-                  University: {userInfo.university}
-                </label>
-                <br></br>
-              </form>
-            </div>
-            <div className="profile-contents">
-              <h2> Your Listings: </h2>{" "}
-            </div>
-          </div>
+        <div className="mainContainer">
+        <div className ="profileContainer"> 
+        <div className="avatar_head">
+        hello
+        </div>
+        hello
           <button type="button" className="logout" onClick={handleLogout}>
             Logout
           </button>
         </div>
+         <div className ="listingsContainer">
+        hello
+        </div>
+        </div>
+       
       ) : (
         <div>
           <Link to="/signin">Sign in</Link>
-          <Link to="/signp">Sign Up</Link>
+          <Link to="/signup">Sign Up</Link>
         </div>
       )}
     </BrowserRouter>
