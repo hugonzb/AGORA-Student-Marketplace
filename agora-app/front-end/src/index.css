@@ -536,6 +536,7 @@ min-height: 30rem;
 text-align: center;
 padding: 1rem;
 
+
 }
 .createAccountContainer{
   border-style: none;
@@ -680,19 +681,78 @@ input[type="email"] {
 }
 
 /* Profile */
-.logout {
+.logout { 
   margin-left: 30%;
-  margin-top: 10px;
+  margin-top: 1px;
+}
+
+.profile img{
+
 }
 
 .profile-container {
   width: 100%;
   display: flex;
+  height: 30px;
+  padding: 5px;
 }
 
 .profile-contents {
   width: 50%;
-  border: 1px dashed black;
+  border: 2px dashed black;
+  padding: 5px;
+}
+
+.profileContainer { 
+	background-color: white;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 10.9);
+	width: 50%;
+	margin-left: 5px; 
+	margin-right: 5px;
+	border-radius: 44px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	min-height: 30rem;
+	text-align: center;
+	padding: 1rem;
+	-moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.avatar_head {
+width: 30px;
+height: 30px;
+-moz-border-radius: 15px;
+-webkit-border-radius: 15px;
+border-radius: 15px;
+color: black; 
+}
+
+.listingsContainer{
+	background-color: white;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 10.9);
+	width: 50%;
+	margin-left: 5px; 
+	margin-right: 5px; 
+	border-radius: 44px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	min-height: 30rem;
+	text-align: center;
+	padding: 1rem;
+}
+
+.mainContainer{
+	background: white;
+	justify-content: space-between; 
+	display: flex; 
 }
 
 /* misc */
