@@ -5,9 +5,14 @@ const router = express.Router();
 
 // Fetches listings from the database and posts to '/' (home page).
 router.get('/', async (req, res) =>{
-      const category = req.query.category ? { category: req.query.category } : {};
-      const listings = await Listing.find({...category});
-      res.send(listings);
+    const categorySortOrder = req.query.categorySortOrder ? { 
+      category: { 
+        $regex: req.query.categorySortOrder,
+        $options: 'i',
+      },
+    } : {};
+    const listings = await Listing.find({...categorySortOrder});
+    res.send(listings); 
 }); 
 
 router.get('/:id', async (req, res) => {

@@ -24,16 +24,17 @@ function Home (props) {
         dispatch(listListings(categorySortOrder)); 
     }
 
-    return <>
+    return <> 
     <form onSubmit={submitHandler}>
             <select name="categorySortOrder" className="select-style" onChange={(e) => {setCategorySortOrder(e.target.value)}}>
                 <option value=" "> All Categories </option>
-                <option value="health&fitness"> Health & Fitness </option>
-                <option value="books"> Books </option>
-                <option value="other"> Other </option>
+                <option value="Health & Fitness"> Health & Fitness </option>
+                <option value="Books"> Books </option>
+                <option value="Other"> Other </option>
             </select> 
             <button className = "filter-button" type = "submit">Submit</button>
     </form> 
+
     { loading ? <div className="loading">Loading listings ...</div> : 
     error? <div className="error"> {error} - Make sure you are running the server to fetch data ;)</div> :
     <div className="home-container">

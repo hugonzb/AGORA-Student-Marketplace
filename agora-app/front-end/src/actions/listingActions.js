@@ -8,16 +8,16 @@ import {
     LISTING_DETAILS_REQUEST
 } from '../constants/listingConstants'; 
 
-const listListings = (category='', location='') => async (dispatch) => { 
+const listListings = (categorySortOrder='') => async (dispatch) => { 
     try {
         dispatch({ type: LISTING_LIST_REQUEST });
-        const { data } = await axios.get("/api/listings?category=" + category + "&location=" + location);
+        const { data } = await axios.get("/api/listings?categorySortOrder=" + categorySortOrder);
         dispatch({ type: LISTING_LIST_SUCCESS, payload: data });
     } 
-    catch (error) {
+    catch (error) { 
         dispatch({ type: LISTING_LIST_FAIL, payload: error.message });
     }
-}
+} 
 
 const detailListing = (listingId) => async (dispatch) => {
     try{
