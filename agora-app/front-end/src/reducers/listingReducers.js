@@ -17,7 +17,7 @@ function listingReducer(state = { listings: [] }, action) {
       return { loading: false, error: action.payload };
     default:
       return state;
-  }
+  } 
 }
 
 function listingDetailsReducer(state={ listing: {} }, action){

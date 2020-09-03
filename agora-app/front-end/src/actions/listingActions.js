@@ -6,14 +6,14 @@ import {
     LISTING_DETAILS_FAIL,
     LISTING_DETAILS_SUCCESS,
     LISTING_DETAILS_REQUEST
-} from '../constants/listingConstants';
+} from '../constants/listingConstants'; 
 
-const listListings = () => async (dispatch) => {
+const listListings = (category='', location='') => async (dispatch) => { 
     try {
         dispatch({ type: LISTING_LIST_REQUEST });
-        const { data } = await axios.get("/api/listings");
+        const { data } = await axios.get("/api/listings?category=" + category + "&location=" + location);
         dispatch({ type: LISTING_LIST_SUCCESS, payload: data });
-    }
+    } 
     catch (error) {
         dispatch({ type: LISTING_LIST_FAIL, payload: error.message });
     }
