@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailListing } from '../actions/listingActions';
 import profileicon from "../images/profileicon.png";
-
+import { Link } from "react-router-dom";
 
 function ViewListing(props) {
 	const listingDetails = useSelector(state => state.listingDetails);
@@ -28,7 +28,9 @@ function ViewListing(props) {
 						</div>
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
-							<button className="buynow-button">Buy Now</button>
+						<Link to="/Checkout">
+						 <button className="buynow-button">Buy Now</button>
+						 </Link>
 							<button className="addtowatchlist-button">Add to Watchlist</button>
 						</div>
 					</div>	

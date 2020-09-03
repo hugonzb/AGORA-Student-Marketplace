@@ -7,6 +7,7 @@ import SignIn from "./screens/SignIn";
 import About from "./screens/About";
 import Contact from "./screens/Contact";
 import ViewListing from "./screens/ViewListing";
+import Checkout from "./screens/Checkout";
 import CreateListing from "./screens/CreateListing";
 import Profile from "./screens/Profile";
 import Navbar from "./Navbar.js";
@@ -46,6 +47,7 @@ function App() {
             <Route path="/profile" component={Profile} />
             <Route path="/" exact={true} component={Home} />
             <Route path="/listing/:id" component={ViewListing} />
+            <Route path= "/Checkout" component={Checkout}/>
             <Route path="/CreateListing" component={CreateListing} />
           </div>
         </div>

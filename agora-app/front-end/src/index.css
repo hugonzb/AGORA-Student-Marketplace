@@ -772,7 +772,7 @@ color: black;
 
 /* contact page */
 .c-wrapper{
-  background-color: rgba(35, 85, 143, 0.452);
+  background-color: rgba(35, 85, 143, 0.295);
   max-width: 900px;
 	width: 100%;
 	height: auto;
@@ -819,7 +819,8 @@ color: black;
 	border: 0;
 	padding: 18px;
 	padding-left: 40px;
-	border-radius: 3px;
+  border-radius: 3px;
+  
 }
  
 .c-wrapper .c-contactus .c-message_wrapper{
@@ -890,3 +891,6 @@ color: black;
   }
 
 }
+
+/*Checkout*/
+
