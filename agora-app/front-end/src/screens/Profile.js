@@ -85,7 +85,7 @@ function Profile(props) {
                     
                 </div>
                 <button type="button" className="logout" onClick={handleLogout}>
-                     Logout
+                     LOGOUT 
                  </button>
              </div>
         

@@ -690,9 +690,8 @@ input[type="email"] {
 }
 
 .logout { 
-  margin-left: 30%;
-  
-  margin-top: 200px;
+  margin-left: 70%;
+  margin-bottom: 50px;
   display: flex;
   justify-content: flex-end;
 }
