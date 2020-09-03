@@ -54,42 +54,45 @@ function SignUp(props) {
 
   return (
     <div className="sign-up-container">
-      Welcome to Agora! Please sign up using the form below.
-      <div className="createAccountContainer">
+      <h2>Welcome to Agora! Please enter your details to sign up using the form below.</h2>
+      <div className="createnewAccountContainer">
         {loading}
         {error && <div>Email or Student ID has been taken</div>}
-        <form className="create-account-form" onSubmit={submitHandler}>
-          <label for="student ID">Student ID:</label>
+        <form className="create-new-account-form" onSubmit={submitHandler}>
+
+          <label>Student ID:</label>
           <input
             type="text"
             id="studentid"
             name="studentid"
-            placeholder="student id"
+            placeholder="Enter Student-ID"
             required
             onChange={(e) => setStudentid(e.target.value)}
           ></input>
           <br></br>
-          <label for="fname">First name:</label>
+
+          <label>First Name:</label>
           <input
             type="text"
             id="fname"
             name="fname"
-            placeholder="first name"
+            placeholder="Enter First Name"
             required
             onChange={(e) => setFname(e.target.value)}
           ></input>
           <br></br>
-          <label for="sname">Surname:</label>
+
+          <label>Last Name:</label>
           <input
             type="text"
             id="sname"
             name="sname"
-            placeholder="surname"
+            placeholder="Enter Surname"
             required
             onChange={(e) => setSname(e.target.value)}
           ></input>
           <br></br>
-          <label for="gender">Choose a gender: </label>
+          <label for="gender">Choose a Gender: </label>
           <select
             id="gender"
             name="gender"
@@ -100,32 +103,34 @@ function SignUp(props) {
             <option value="Other">Other</option>
           </select>
           <br></br>
-          <label for="username">Username:</label>
+
+          <label>User Name:</label>
           <input
             type="text"
             id="username"
             name="username"
-            placeholder="username"
+            placeholder="Enter a Username"
             required
             onChange={(e) => setUsername(e.target.value)}
           ></input>
           <br></br>
-          <label for="password">Password:</label>
+
+          <label>Password:</label>
           <input
             type="password"
             id="password"
             name="password"
-            placeholder="password"
+            placeholder="Enter Password"
             required
             onChange={(e) => setPassword(e.target.value)}
           ></input>
           <br></br>
-          <label for="email">Email:</label>
+          <label>Email:</label>
           <input
             type="text"
             id="email"
             name="email"
-            placeholder="email"
+            placeholder="Enter Email"
             required
             onChange={(e) => setEmail(e.target.value)}
           ></input>
@@ -143,7 +148,7 @@ function SignUp(props) {
           <select
             id="school"
             name="school"
-            placeholder="select university"
+            placeholder="Select University"
             onChange={(e) => setUniversity(e.target.value)}
           >
             <option value="University of Auckland">
@@ -164,32 +169,32 @@ function SignUp(props) {
             <option value="University of Otago">University of Otago</option>
           </select>
           <br></br>
-          <label for="address">Address:</label>
+          <label>Address:</label>
           <input
             type="text"
             id="address"
             name="address"
-            placeholder="street address"
+            placeholder="Enter Address"
             required
             onChange={(e) => setStreet(e.target.value)}
           ></input>
           <br></br>
-          <label for="city">City:</label>
+          <label>City:</label>
           <input
             type="text"
             id="city"
             name="city"
-            placeholder="city"
+            placeholder="Enter city"
             required
             onChange={(e) => setCity(e.target.value)}
           ></input>
           <br></br>
-          <label for="postcode">Postcode:</label>
+          <label>Post Code:</label>
           <input
             type="text"
             id="postcode"
             name="postcode"
-            placeholder="postcode"
+            placeholder="Enter Postcode"
             required
             onChange={(e) => setPostcode(e.target.value)}
           ></input>
@@ -198,7 +203,9 @@ function SignUp(props) {
             Register
           </button>
           <h4>Already have an account?</h4>
-          <Link to="/SignIn">Sign in</Link>
+          <div className="link-new-acc">
+            <Link to="/SignIn">Sign in</Link>
+            </div>
         </form>
       </div>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here

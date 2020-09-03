@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from "react-router-dom";
 import { listListings } from '../actions/listingActions';
+import profileicon from "../images/profileicon.png";
 
 
 function Home (props) {
@@ -28,9 +29,11 @@ function Home (props) {
                     </div>
                     <div className="listing-content">
                         <div className="listing-name">{listing.name}</div>
-                        <div>Category: {listing.category}</div>
-                        <div>Price: ${listing.price}</div>
-                        <div>Seller: {listing.seller}</div>
+                        <div className="listing-price">Asking Price: ${listing.price}</div>
+                        <div className="view-listing-user">
+							<img src={profileicon} alt="profile"/> 
+                            <div className="view-listing-sellername">{listing.seller}</div>
+						</div>	
                     </div>
                 </div> 
             </Link>)
