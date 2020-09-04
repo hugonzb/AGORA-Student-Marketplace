@@ -5,7 +5,9 @@ import {
     LISTING_LIST_FAIL, 
     LISTING_DETAILS_FAIL,
     LISTING_DETAILS_SUCCESS,
-    LISTING_DETAILS_REQUEST
+    LISTING_DETAILS_REQUEST,
+    CREATELISTING_REQUEST,
+    CREATELISTING_FAIL
 } from '../constants/listingConstants'; 
 
 const listListings = (searchWord='', category='', location='') => async (dispatch) => { 
@@ -29,4 +31,16 @@ const detailListing = (listingId) => async (dispatch) => {
     }
 }
 
-export { listListings, detailListing };
+const createListing = (name, description, image, category, price, location,
+    university, brand, seller) => {
+            dispatch({type: CREATELISTING_REQUEST, payload: {
+                name, description, image, category, price, location,
+                university, brand, seller}});
+    try{
+        
+    }catch(error){
+        dispatch({type: CREATELISTING_FAIL, payload: error.message});
+    }
+
+
+export { listListings, detailListing, createListing};
