@@ -16,6 +16,7 @@ function SignUp(props) {
   const [street_address, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
+
   const userSignup = useSelector((state) => state.userSignup);
   const { loading, userInfo, error } = userSignup;
 
@@ -51,15 +52,17 @@ function SignUp(props) {
     );
     error && props.history.push("/signin");
   };
-  
+
   return (
     <div className="sign-up-container">
-      <h2>Welcome to Agora! Please enter your details to sign up using the form below.</h2>
+      <h2>
+        Welcome to Agora! Please enter your details to sign up using the form
+        below.
+      </h2>
       <div className="createnewAccountContainer">
         {loading}
         {error && <div>Email or Student ID has been taken</div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
-
           <label>Student ID:</label>
           <input
             type="text"
@@ -205,7 +208,7 @@ function SignUp(props) {
           <h4>Already have an account?</h4>
           <div className="link-new-acc">
             <Link to="/SignIn">Sign in</Link>
-            </div>
+          </div>
         </form>
       </div>
     </div> //leave this in its a parent from App.js everything on the page will need to go in here

@@ -32,7 +32,7 @@ const detailListing = (listingId) => async (dispatch) => {
 }
 
 const createListing = (name, description, image, category, price, location,
-    university, brand, seller) => {
+    university, brand, seller) => async (dispatch) => {
             dispatch({type: CREATELISTING_REQUEST, payload: {
                 name, description, image, category, price, location,
                 university, brand, seller}});
@@ -40,6 +40,7 @@ const createListing = (name, description, image, category, price, location,
         
     }catch(error){
         dispatch({type: CREATELISTING_FAIL, payload: error.message});
+    }
     }
 
 
