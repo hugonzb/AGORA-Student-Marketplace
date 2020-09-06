@@ -11,6 +11,8 @@ import CreateListing from "./screens/CreateListing";
 import Profile from "./screens/Profile";
 import Navbar from "./Navbar.js";
 import NavbarSignedin from "./NavbarSignedin";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 function App(props) {
   const [search, setSearch] = useState('');
@@ -36,8 +38,8 @@ function App(props) {
                 onChange={e => setSearch(e.target.value)}
               />
               <Link to={`/${search}`}>
-                <button type="submit" value="submit">
-                  Search
+                <button className="search-button" type="submit" value="submit">
+                  <FontAwesomeIcon size="lg" icon={faSearch}/>
                 </button>
               </Link>
             </form> 
