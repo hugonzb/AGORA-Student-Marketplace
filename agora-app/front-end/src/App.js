@@ -46,19 +46,18 @@ function App(props) {
         </div>
         <div className="main">
           <div className="content-display">
+            <Route path="/" exact={true} component={Home} />
+            <Route path="/:id" component={Home} />
+            <Route path="/listing/:id" component={ViewListing} />
             <Route path="/signup" component={SignUp} />
             <Route path="/signin" component={SignIn} />
-            <Route path="/About" component={About} />
+            <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
             <Route path="/profile" component={Profile} />
-            <Route path="/" exact={true} component={Home} />
-            <Route path="/:id" exact={true} component={Home} />
-            <Route path="/listing/:id" component={ViewListing} />
-            <Route path="/CreateListing" component={CreateListing} />
+            <Route path="/createlisting" component={CreateListing} />
           </div>
         </div>
         <div className="footer">All Rights Reserved.</div>
-      
     </BrowserRouter>
   );
 }
