@@ -41,6 +41,7 @@ const createListing = (name, description, image, category, price, location,
     }catch(error){
         dispatch({type: CREATELISTING_FAIL, payload: error.message});
     }
+    }
 
 
 export { listListings, detailListing, createListing};
