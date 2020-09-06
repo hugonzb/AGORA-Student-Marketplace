@@ -182,7 +182,7 @@ ul li a {
   border-radius: 0.5rem;
   border-top: 2px rgb(102, 102, 102) solid;
   border-bottom: 2px rgb(59, 59, 59) solid;
-  box-shadow: 0px 0px 6px 0px rgba(3, 3, 3, 0.61)
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61)
 }
 
 .listing-image {
@@ -193,7 +193,7 @@ ul li a {
   border-top-right-radius: 0;
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
-  border-right: 1px solid rgb(109, 109, 109);
+  border-right: 1px solid rgb(212, 212, 212);
 }
 
 .listing-image img {
@@ -435,23 +435,26 @@ ul li a {
 /* Create listing */
 
 .createListingContainer {
+  display: flex;
   font-family: "Permanent Marker", cursive;
   font-size: 18px;
   font-style: italic;
   font-weight: bold;
   color: rgb(9, 8, 17);
-  padding: 14px 25px;
-  text-align: center;
   text-decoration: none;
-  border-radius: 44px;
-  display: inline-block;
+  min-height: 45rem;
+  justify-content: center;
 }
 
 .innerCreateListingContainer {
-  width: 100%;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  background-color: white;
+  width: 50%;
   clear: both;
-  margin: auto;
   border: hidden;
+  height: 100%;
+  text-align: center;
 }
 
 .innerCreateListingContainer form {
@@ -734,10 +737,6 @@ span.psw {
   margin-bottom: 50px;
   display: flex;
   justify-content: flex-end;
-}
-
-.profile img{
-
 }
 
 .profile-container {

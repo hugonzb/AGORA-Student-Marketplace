@@ -38,8 +38,8 @@ function CreateListing(props) {
 
   return (
     <div className="createListingContainer">
-      <h2>Create a Listing</h2>
       <div className="innerCreateListingContainer">
+        <h2>Create a Listing</h2>
         <form className="createListingForm">
           <label>Listing Name: </label>
           <input

@@ -5,17 +5,14 @@ import { BrowserRouter, Link } from "react-router-dom";
 import "../index.css";
 import profileicon from "../images/profileicon.png";
 
-
 function Profile(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [id, setID] = useState("");
   const [username, setUsername] = useState("");
   const [university, setUniversity] = useState("University of Auckland");
-
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-
   const dispatch = useDispatch();
 
   // This runs when the logout button is pressed
@@ -23,7 +20,7 @@ function Profile(props) {
     dispatch(logout());
     // This line redirects the user to the sign in screen
     // when they press logout
-    props.history.push("/signin");
+    props.history.push("/account/signin");
   };
 
   useEffect(() => {
@@ -101,8 +98,8 @@ function Profile(props) {
       ) : (
 
         <div>
-          <Link to="/signin">Sign in</Link>
-          <Link to="/signup">Sign Up</Link>
+          <Link to="account/signin">Sign in</Link>
+          <Link to="account/signup">Sign Up</Link>
         </div>
       )}
     </BrowserRouter>
