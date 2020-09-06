@@ -25,7 +25,6 @@ function App(props) {
             ) : (
       <Navbar />
     )}
-
         </div> 
         <div className="search">
           <div>
@@ -47,14 +46,14 @@ function App(props) {
         <div className="main">
           <div className="content-display">
             <Route path="/" exact={true} component={Home} />
-            <Route path="/:id" component={Home} />
+            <Route path="/:id" exact={true} component={Home} />
             <Route path="/listing/:id" component={ViewListing} />
-            <Route path="/signup" component={SignUp} />
-            <Route path="/signin" component={SignIn} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/createlisting" component={CreateListing} />
+            <Route path="/account/signup" component={SignUp} />
+            <Route path="/account/signin" component={SignIn} />
+            <Route path="/info/about" component={About} />
+            <Route path="/info/contact" component={Contact} />
+            <Route path="/account/profile" component={Profile} />
+            <Route path="/account/createlisting" component={CreateListing} />
           </div>
         </div>
         <div className="footer">All Rights Reserved.</div>
