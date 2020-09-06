@@ -450,7 +450,7 @@ ul li a {
   margin-top: 3rem;
   padding-top: 2rem;
   background-color: white;
-  width: 50%;
+  width: 40rem;
   clear: both;
   border: hidden;
   height: 100%;
@@ -458,8 +458,8 @@ ul li a {
 }
 
 .innerCreateListingContainer form {
-  height: 400px;
-  width: 70%;
+  height: 100%;
+  width: 100%;
   margin: auto;
   margin-top: 5px;
 }
