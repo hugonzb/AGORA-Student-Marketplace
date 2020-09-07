@@ -7,9 +7,9 @@ import {
     USER_SIGNIN_FAIL, 
     USER_SIGNIN_REQUEST, 
     USER_SIGNIN_SUCCESS, 
-    USER_LOGOUT, 
-    USER_CREATELISTING_REQUEST
+    USER_LOGOUT
 } from "../constants/userConstants";
+import { CREATELISTING_REQUEST, CREATELISTING_SUCCESS, CREATELISTING_FAIL } from "../constants/listingConstants";
 
 const signUp = (studentid, fname, sname, username, password, email,
     dob, gender, university, street_address, city, postcode ) => async (dispatch) => {
@@ -42,8 +42,17 @@ const logout = () => (dispatch) => {
     dispatch({type:USER_LOGOUT});
 }
 
-/*const createListing = () => (dispatch) => {
-    dispatch({type: USER_CREATELISTING_REQUEST, payload: {}})
-}*/
+const createListing = (name, description, image, category, price,
+    location, university, brand, seller, deliveryoption) => async (dispatch) => {
+    dispatch({type: CREATELISTING_REQUEST, payload: {name, description, image, category, price,
+        location, university, brand, seller, deliveryoption}});
+        try{
+            const {data} = await Axios.post("/listing/create", {name, description, image, category, price,
+                location, university, brand, seller, deliveryoption});
+                dispatch({type:CREATELISTING_SUCCESS, payload: data});
+        }catch(error){
+            dispatch({type: CREATELISTING_FAIL, payload: error.message});
+        }
+}
 
 export { signUp, signIn, logout } 

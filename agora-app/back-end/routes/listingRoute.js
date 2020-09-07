@@ -31,7 +31,8 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
+// Hope it's ok to make the post uri to /listing/create
+router.post("/create", async (req, res) => {
   const listing = new Listing({
     name: res.body.name,
     description: res.body.description,
