@@ -20,6 +20,11 @@ function CreateListing(props) {
   const [seller, setSeller] = useState("this needs to be updated"); //need to update this var to be the account ID logged in.
   const [deliveryoption, setDeliveryoption] = useState("");
 
+  const userCreateListing = useSelector(state => state.userCreateListing);
+  const {loading, userInfo, error} = userCreateListing;
+
+  const dispatch = useDispatch();
+
   // currently just need to figure out how to dispatch the information when submit button is clicked to the post
   // in listingRoute. I believe I have done everything already needed there.
   /* 
