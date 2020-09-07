@@ -55,4 +55,4 @@ const createListing = (name, description, image, category, price,
         }
 }
 
-export { signUp, signIn, logout } 
+export { signUp, signIn, logout, createListing } 

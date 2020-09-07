@@ -7,6 +7,7 @@ import {
     USER_SIGNIN_SUCCESS, 
     USER_LOGOUT 
 } from "../constants/userConstants";
+import { CREATELISTING_SUCCESS, CREATELISTING_REQUEST, CREATELISTING_FAIL } from "../constants/listingConstants";
 
 function userSignupReducer(state={}, action){
     switch(action.type){
@@ -36,4 +37,17 @@ function userSignInReducer(state={}, action){
     }
 }  
 
-export {userSignupReducer, userSignInReducer};
+function userCreateListingReducer(state = {}, action){
+    switch(action.type){
+        case CREATELISTING_REQUEST:
+            return {loading: true};
+        case CREATELISTING_SUCCESS:
+            return {loading: false, userInfo: action.payload};
+        case CREATELISTING_FAIL:
+            return {loading: false, error: action.payload};
+        default:
+            return state;
+    }
+}
+
+export {userSignupReducer, userSignInReducer, userCreateListingReducer};
