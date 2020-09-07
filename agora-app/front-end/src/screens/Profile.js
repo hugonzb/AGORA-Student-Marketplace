@@ -31,7 +31,7 @@ function Profile(props) {
       //console.log("email: " + userInfo.email);
       //console.log("user id: " + userInfo.id);
       setName(userInfo.name);
-      setID(userInfo.id);
+      setID(userInfo.id); 
       setEmail(userInfo.email);
       setUsername(userInfo.username);
       setUniversity(userInfo.university);

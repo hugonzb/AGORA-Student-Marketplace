@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { createListing } from "../actions/listingActions";
 
 function CreateListing(props) {
@@ -14,14 +14,13 @@ function CreateListing(props) {
   const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
   const [price, setPrice] = useState(""); //unsure about this for now
   const [location, setLocation] = useState("");
-  const [university, setUniversity] = useState("University of Auckland");
+  const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
-  const [seller, setSeller] = useState("this needs to be updated"); //need to update this var to be the account ID logged in.
+  const [seller, setSeller] = useState("");
   const [deliveryoption, setDeliveryoption] = useState("");
 
-  //const userCreateListing = useSelector((state) => state.userCreateListing);
-  //const {loading, userInfo, error} = userCreateListing;
-
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
   // currently just need to figure out how to dispatch the information when submit button is clicked to the post
@@ -34,6 +33,15 @@ function CreateListing(props) {
     error: errorSave,
   } = listingSave;
   */
+
+  useEffect(() => {
+    if (userInfo) {
+      console.log(userInfo.fname, userInfo.university);
+      setSeller(userInfo.fname);
+      setUniversity(userInfo.university);
+    }
+    return () => {};
+  }, [userInfo]);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -94,34 +102,6 @@ function CreateListing(props) {
             onChange={(e) => setLocation(e.target.value)}
           ></input>
           <br></br>
-
-          <label for="school">University: </label>
-          <select
-            id="school"
-            name="school"
-            placeholder="Select University"
-            required
-            onChange={(e) => setUniversity(e.target.value)}
-          >
-            <option value="University of Auckland">
-              University of Auckland
-            </option>
-            <option value="Auckland University of Technology (AUT)">
-              Auckland University of Technology (AUT)
-            </option>
-            <option value="University of Waikato">University of Waikato</option>
-            <option value="Massey University">Massey University</option>
-            <option value="Victoria University of Wellington">
-              Victoria University of Wellington
-            </option>
-            <option value="University of Canterbury">
-              University of Canterbury
-            </option>
-            <option value="Lincoln University">Lincoln University</option>
-            <option value="University of Otago">University of Otago</option>
-          </select>
-          <br></br>
-
           <label>Product brand: </label>
           <input
             type="text"
