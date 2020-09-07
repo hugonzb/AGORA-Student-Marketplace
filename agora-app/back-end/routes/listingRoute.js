@@ -35,7 +35,7 @@ router.post("/", async (req, res) => {
   const listing = new Listing({
     name: res.body.name,
     description: res.body.description,
-    //image: res.body.image,
+    image: res.body.image,
     category: res.body.category,
     price: res.body.price,
     location: res.body.location,
