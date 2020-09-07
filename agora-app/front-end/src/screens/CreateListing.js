@@ -11,12 +11,13 @@ function CreateListing(props) {
     */
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [university, setUniversity] = useState("University of Auckland");
-  const [location, setLocation] = useState("");
-  const [brand, setBrand] = useState("");
-  const [seller, setSeller] = useState("this needs to be updated"); //need to update this var to be the account ID logged in.
+  const [image, setImage] = useState("");
   const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
   const [price, setPrice] = useState(""); //unsure about this for now
+  const [location, setLocation] = useState("");
+  const [university, setUniversity] = useState("University of Auckland");
+  const [brand, setBrand] = useState("");
+  const [seller, setSeller] = useState("this needs to be updated"); //need to update this var to be the account ID logged in.
   const [deliveryoption, setDeliveryoption] = useState("");
 
   // currently just need to figure out how to dispatch the information when submit button is clicked to the post
