@@ -36,7 +36,6 @@ function CreateListing(props) {
 
   useEffect(() => {
     if (userInfo) {
-      console.log(userInfo.fname, userInfo.university);
       setSeller(userInfo.fname + " " + userInfo.sname);
       setUniversity(userInfo.university);
     }
