@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { signUp } from "../actions/userActions";
+import {createListing} from "../actions/userActions";
 import { Link } from "react-router-dom";
 
 function CreateListing(props) {
@@ -11,13 +11,19 @@ function CreateListing(props) {
     */
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [deliveryoption, setDeliveryoption] = useState("");
-  const [university, setUniversity] = useState("University of Auckland");
-  const [location, setLocation] = useState("");
-  const [brand, setBrand] = useState("");
-  const [seller, setSeller] = useState("this needs to be updated"); //need to update this var to be the account ID logged in.
+  const [image, setImage] = useState("");
   const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
   const [price, setPrice] = useState(""); //unsure about this for now
+  const [location, setLocation] = useState("");
+  const [university, setUniversity] = useState("University of Auckland");
+  const [brand, setBrand] = useState("");
+  const [seller, setSeller] = useState("this needs to be updated"); //need to update this var to be the account ID logged in.
+  const [deliveryoption, setDeliveryoption] = useState("");
+
+  const userCreateListing = useSelector(state => state.userCreateListing);
+  const {loading, userInfo, error} = userCreateListing;
+
+  const dispatch = useDispatch();
 
   // currently just need to figure out how to dispatch the information when submit button is clicked to the post
   // in listingRoute. I believe I have done everything already needed there.
