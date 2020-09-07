@@ -34,13 +34,14 @@ function CreateListing(props) {
     success: successSave,
     error: errorSave,
   } = listingSave;
-
+  */
 
   const submitHandler = (e) => {
       e.preventDefault(); 
-      dispatch(saveListing({}))
+      dispatch(createListing(name, description, image, category, price,
+        location, university, brand, seller, deliveryoption));
   }
-   */
+   
 
   return (
     <div className="createListingContainer">
