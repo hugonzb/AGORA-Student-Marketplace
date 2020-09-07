@@ -34,16 +34,16 @@ router.get("/:id", async (req, res) => {
 // Hope it's ok to make the post uri to /listing/create
 router.post("/create", async (req, res) => {
   const listing = new Listing({
-    name: res.body.name,
-    description: res.body.description,
-    image: res.body.image,
-    category: res.body.category,
-    price: res.body.price,
-    location: res.body.location,
-    university: res.body.university,
-    brand: res.body.brand,
-    seller: res.body.seller,
-    deliveryoption: res.body.deliveryoption,
+    name: req.body.name,
+    description: req.body.description,
+    image: req.body.image,
+    category: req.body.category,
+    price: req.body.price,
+    location: req.body.location,
+    university: req.body.university,
+    brand: req.body.brand,
+    seller: req.body.seller,
+    deliveryoption: req.body.deliveryoption,
   });
   const newListing = await listing.save();
   if (newListing) {
