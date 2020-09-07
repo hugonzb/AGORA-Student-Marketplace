@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { signIn } from '../actions/userActions';
-
+import agoralogo from "../images/agoralogo.png";
 
 function SignIn(props) {
   const [email, setEmail] = useState("");
@@ -35,10 +35,15 @@ function SignIn(props) {
     <div className="sign-in-container">
 
       <div className="createAccountContainer">
+      <div className = "sign-in-logo"> <img src={agoralogo} 
+                        className="sign-in-logo" alt=""/> </div>
         <form className="create-account-form" onSubmit={submitHandler}>
-          <h2>Sign In</h2>
+          <h2>Log into Agora</h2>
           {loading && <div>Loading...</div>}
           {error && <div>Invalid Email or Password</div>}
+          <div className="create-account-link">
+            <Link to="/SignUp">or Create an Account</Link>
+          </div>
 
           <input
             type="email"
@@ -58,10 +63,8 @@ function SignIn(props) {
           ></input>
           <button type="submit" value="Submit">Sign In</button>
           <br></br>
-          <h4>New to Agora?</h4>
-          <div className="create-account-link">
-            <Link to="/SignUp">Create an Account</Link>
-          </div>
+          
+          
         </form>
       </div>
 
