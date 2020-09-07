@@ -42,13 +42,13 @@ class NavbarSignedin extends Component{
                     <ul className={this.state.isOpen ? "showNav":"headerNav"}>
                         <li><Link to="/"onClick=
                         {this.closeNavbar}> Home</Link></li>
-                        <li><Link to="/Profile"onClick=
+                        <li><Link to="/account/profile"onClick=
                         {this.closeNavbar}> Profile</Link></li>
-                        <li><Link to="/CreateListing"onClick=
+                        <li><Link to="/account/createlisting"onClick=
                         {this.closeNavbar}> List an Item</Link></li>
-                        <li><Link to="/About"onClick=
+                        <li><Link to="/info/about"onClick=
                         {this.closeNavbar}> About</Link></li>
-                        <li><Link to="/Contact"onClick=
+                        <li><Link to="/info/contact"onClick=
                         {this.closeNavbar}> Contact Us</Link></li> 
                     </ul>
                 </div>
