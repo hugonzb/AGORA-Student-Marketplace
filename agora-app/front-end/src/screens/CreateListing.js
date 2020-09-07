@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import {createListing} from "../actions/userActions";
+import { createListing } from "../actions/listingActions";
 import { Link } from "react-router-dom";
 
 function CreateListing(props) {
@@ -20,8 +20,8 @@ function CreateListing(props) {
   const [seller, setSeller] = useState("this needs to be updated"); //need to update this var to be the account ID logged in.
   const [deliveryoption, setDeliveryoption] = useState("");
 
-  const userCreateListing = useSelector(state => state.userCreateListing);
-  const {loading, userInfo, error} = userCreateListing;
+  //const userCreateListing = useSelector((state) => state.userCreateListing);
+  //const {loading, userInfo, error} = userCreateListing;
 
   const dispatch = useDispatch();
 
@@ -37,17 +37,21 @@ function CreateListing(props) {
   */
 
   const submitHandler = (e) => {
-      e.preventDefault(); 
-      dispatch(createListing(name, description, image, category, price,
-        location, university, brand, seller, deliveryoption));
+    e.preventDefault();
+    dispatch(createListing(name, description, image, category, price,
+      location, university, brand, seller, deliveryoption));
+    props.history.push("/");
   }
-   
+
+  useEffect(() => {
+    return () => {};
+  })
 
   return (
     <div className="createListingContainer">
       <div className="innerCreateListingContainer">
         <h2>Create a Listing</h2>
-        <form className="createListingForm">
+        <form className="createListingForm" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
             type="text"
