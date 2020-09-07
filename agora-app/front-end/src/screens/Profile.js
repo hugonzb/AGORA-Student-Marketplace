@@ -49,7 +49,7 @@ function Profile(props) {
 
                 <img src={profileicon} alt="profile"/> 
                     <h2> <label for="name" value={name}> 
-                    {userInfo.fname}
+                    {userInfo.fname} {userInfo.sname}
                     </label></h2>
 
                   <div className="profile-contents">
@@ -57,11 +57,7 @@ function Profile(props) {
                       <form className="profile-form">
                         <label for="username" value={id}>
                           Student ID: {userInfo.studentid}
-                        </label>
-                        <br></br>
-                        <label for="name" value={name}>
-                          Name: {userInfo.fname}
-                        </label>
+                        </label>    
                         <br></br>
                         <label for="email" value={email}>
                           Email: {userInfo.email}

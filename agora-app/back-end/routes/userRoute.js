@@ -38,7 +38,7 @@ router.post("/signin", async (req, res) => {
     res.send({
       studentid: signinUser.studentid,
       fname: signinUser.fname,
-      lname: signinUser.lname,
+      sname: signinUser.sname,
       email: signinUser.email,
       username: signinUser.username,
       university: signinUser.university,
