@@ -92,6 +92,30 @@ function CreateListing(props) {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <br></br>
+
+          <label>Category: </label>
+          <select id="myList">
+            <option value="Antiques">Antiques</option>
+            <option value="University Textbooks">University Textbooks</option>
+            <option value="Books">Books</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Sports Clothing">Sports Clothing</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Jewellery and Watches">Jewellery and Watches</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Computers">Computers</option>
+            <option value="Mobile Phones">Mobile Phones</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Gaming consoles">Gaming consoles</option>
+            <option value="Console and PC games">Console and PC games</option>
+            <option value="Health and Beauty">Health and Beauty</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Lamps and Lighting">Lamps and Lighting</option>
+            <option value="Toys">Toys</option>
+            <option value="Sports Equipments">Sports Equipments</option>
+          </select>
+
+          <br></br>
           <label>Price: </label>
           <input
             type="number"
@@ -121,7 +145,6 @@ function CreateListing(props) {
             placeholder="brand"
             onChange={(e) => setBrand(e.target.value)}
           ></input>
-          <br></br>
 
           <input
             type="radio"
