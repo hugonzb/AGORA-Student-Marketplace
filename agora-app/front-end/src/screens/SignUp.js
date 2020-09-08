@@ -69,19 +69,7 @@ return(
 				<div class="input_grp">
 
 				    <div class="input_wrap">
-						<label for="fname">Student ID:</label>
-					<input 
-						type="text" 
-						id="studentid"
-						name="studentid"
-						placeholder="Enter Student-ID"
-						required
-						onChange={(e) => setFname(e.target.value)}
-					></input>
-					</div>
-				
-				    <div class="input_wrap">
-						<label for="fname">First Name:</label>
+						<label for="studentid">First Name:</label>
 					<input 
 						type="text" 
 						id="fname"
@@ -89,6 +77,18 @@ return(
 						placeholder="Enter First Name"
 						required
 						onChange={(e) => setFname(e.target.value)}
+					></input>
+					</div>
+
+				    <div class="input_wrap">
+						<label for="fname">Student ID:</label>
+					<input 
+						type="text" 
+						id="studentid"
+						name="studentid"
+						placeholder="Enter Student-ID"
+						required
+						onChange={(e) => setStudentid(e.target.value)}
 					></input>
 					</div>
 					
