@@ -582,6 +582,7 @@ label:after {
     display: flex;
     text-decoration: none;
     width: 50%;
+	
 
 
 }
@@ -616,9 +617,10 @@ padding-bottom: 1px;
 
 .create-account-form h2{ /* "Sign In" text*/ 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(29, 27, 46);
+  color: rgb(66, 66, 66);
   font-size: 20px;
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 input[type="text"],
