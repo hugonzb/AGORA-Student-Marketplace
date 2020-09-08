@@ -38,13 +38,12 @@ function SignIn(props) {
       <div className = "sign-in-logo"> <img src={agoralogo} 
                         className="sign-in-logo" alt=""/> </div>
         <form className="create-account-form" onSubmit={submitHandler}>
-          <h2>Log into Agora</h2>
+          <h2>Sign In</h2>
           {loading && <div>Loading...</div>}
           {error && <div>Invalid Email or Password</div>}
           <div className="create-account-link">
             <Link to="/SignUp">or Create an Account</Link>
           </div>
-
           <input
             type="email"
             id="email"
@@ -63,8 +62,6 @@ function SignIn(props) {
           ></input>
           <button type="submit" value="Submit">Sign In</button>
           <br></br>
-          
-          
         </form>
       </div>
 

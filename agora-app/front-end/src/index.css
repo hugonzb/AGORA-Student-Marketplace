@@ -544,16 +544,20 @@ label:after {
 }
 
 /* sign in page */
-.sign-in-logo {
-  margin: 0px auto;
-  display: flex;
-  text-decoration: none;
-  width: 50%;
+.sign-in-logo{
+
+    margin: 0px auto; 
+    display: flex;
+    text-decoration: none;
+    width: 50%;
+	
+
+
 }
 .sign-in-container {
   background-color: white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 10.9);
-  width: 45%;
+  width: 100%;
   margin: 0 auto;
   border-radius: 44px;
   margin-top: 15px;
@@ -566,7 +570,7 @@ background-size: 740px ;*/
   min-height: 20rem;
   text-align: center;
   padding: 60px 0;
-  height: 10px;
+  height: 100%;
   padding-bottom: 1px;
 }
 .createAccountContainer {
@@ -578,9 +582,10 @@ background-size: 740px ;*/
 .create-account-form h2 {
   /* "Sign In" text*/
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: rgb(29, 27, 46);
+  color: rgb(66, 66, 66);
   font-size: 20px;
   margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 input[type="text"],
@@ -594,13 +599,15 @@ input[type="email"] {
   margin: auto;
   border-radius: 10px;
   box-sizing: border-box;
+  border: 1px solid rgb(187, 187, 187);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
 
 .create-account-form button {
   /*sign in button*/
   width: 25%;
   height: 20px;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 20px;
   background: #48b096;
   color: #fff;
