@@ -4,16 +4,6 @@ import { Link } from "react-router-dom";
 import { listListings } from "../actions/listingActions";
 import profileicon from "../images/profileicon.png";
 
-<<<<<<< HEAD
-
-function Home (props) {
-    const [categorySortOrder, setCategorySortOrder] = useState('');
-    const [locationSortOrder, setLocationSortOrder] = useState('');
-    const searchWord = props.match.params.id ? props.match.params.id : '';
-    const listingList = useSelector(state => state.listingList);
-    const { listings, loading, error } = listingList;
-    const dispatch = useDispatch();
-=======
 function Home(props) {
   const [categorySortOrder, setCategorySortOrder] = useState("");
   const [locationSortOrder, setLocationSortOrder] = useState("");
@@ -21,7 +11,6 @@ function Home(props) {
   const listingList = useSelector((state) => state.listingList);
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
->>>>>>> 248c441cce9b26609e88ccaf6657ac8c635a70de
 
   useEffect(() => {
     dispatch(listListings(searchWord));
@@ -119,18 +108,6 @@ function Home(props) {
                         </div>
                       </div>
                     </div>
-<<<<<<< HEAD
-                </div>  
-            </Link>
-            </li>)
-            }
-        </div>: 
-        
-        <div> There are no listings available that match your request. Please check again later. </div>
-}
-        
-    </div>
-=======
                   </div>
                 </Link>
               </li>
@@ -144,7 +121,6 @@ function Home(props) {
           </div>
         )}
       </div>
->>>>>>> 248c441cce9b26609e88ccaf6657ac8c635a70de
     </>
   );
 }

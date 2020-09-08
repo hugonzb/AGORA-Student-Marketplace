@@ -2,13 +2,9 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailListing } from '../actions/listingActions';
 import profileicon from "../images/profileicon.png";
-<<<<<<< HEAD
-import { Link } from "react-router-dom";
-=======
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
->>>>>>> 248c441cce9b26609e88ccaf6657ac8c635a70de
 
 function ViewListing(props) {
 	const listingDetails = useSelector(state => state.listingDetails);
@@ -34,20 +30,12 @@ function ViewListing(props) {
 						</div>
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
-<<<<<<< HEAD
-						<Link to={'/Checkout'}>
-							<button className="buynow-button">Buy Now</button>
-						</Link>
-						
-							<button className="addtowatchlist-button">Add to Watchlist</button>
-=======
 							<button className="buynow-button">
 								<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
 							</button>
 							<button className="addtowatchlist-button">
 								<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
 							</button>
->>>>>>> 248c441cce9b26609e88ccaf6657ac8c635a70de
 						</div>
 					</div>	
 				<div className="view-listing-details">
