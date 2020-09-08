@@ -6,7 +6,7 @@ const getToken = (user) => {
     {
       studentid: user.studentid,
       fname: user.fname,
-      lname: user.lname,
+      sname: user.sname,
       email: user.email,
       username: user.username,
       university: user.university,

@@ -43,60 +43,49 @@ function Profile(props) {
     <BrowserRouter>
       {userInfo ? (
         <div className="mainContainer">
-            <div className ="profileContainer"> 
-                   
-                   <h2> Profile </h2>
+          <div className="profileContainer">
+            <h2> Profile </h2>
 
-                <img src={profileicon} alt="profile"/> 
-                    <h2> <label for="name" value={name}> 
-                    {userInfo.fname}
-                    </label></h2>
+            <img src={profileicon} alt="profile" />
+            <h2>
+              {" "}
+              <label for="name" value={name}>
+                {userInfo.fname} {userInfo.sname}
+              </label>
+            </h2>
 
-                  <div className="profile-contents">
-                      
-                      <form className="profile-form">
-                        <label for="username" value={id}>
-                          Student ID: {userInfo.studentid}
-                        </label>
-                        <br></br>
-                        <label for="name" value={name}>
-                          Name: {userInfo.fname}
-                        </label>
-                        <br></br>
-                        <label for="email" value={email}>
-                          Email: {userInfo.email}
-                        </label>
-                        <br></br>
-                        <label for="username" value={username}>
-                          Username: {userInfo.username}
-                        </label>
-                        <br></br>
-                        <label for="email" value={university}>
-                          University: {userInfo.university}
-                        </label>
-                        <br></br>
-                       </form>
-                  </div>
-            
-                <div className="avatar_head">
-                    
-                </div>
-                <button type="button" className="logout" onClick={handleLogout}>
-                     LOGOUT 
-                 </button>
-             </div>
-        
-            <div className ="listingsContainer">
-                LISTINGS
+            <div className="profile-contents">
+              <form className="profile-form">
+                <label for="username" value={id}>
+                  Student ID: {userInfo.studentid}
+                </label>
+                <br></br>
+                <label for="email" value={email}>
+                  Email: {userInfo.email}
+                </label>
+                <br></br>
+                <label for="username" value={username}>
+                  Username: {userInfo.username}
+                </label>
+                <br></br>
+                <label for="email" value={university}>
+                  University: {userInfo.university}
+                </label>
+                <br></br>
+              </form>
             </div>
 
-            <div className = "watchlistContainer">
-                WATCHLIST
-            </div>
+            <div className="avatar_head"></div>
+            <button type="button" className="logout" onClick={handleLogout}>
+              LOGOUT
+            </button>
+          </div>
+
+          <div className="listingsContainer">LISTINGS</div>
+
+          <div className="watchlistContainer">WATCHLIST</div>
         </div>
-       
       ) : (
-
         <div>
           <Link to="account/signin">Sign in</Link>
           <Link to="account/signup">Sign Up</Link>
