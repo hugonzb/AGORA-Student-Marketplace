@@ -109,13 +109,13 @@ return(
 					<ul>
 						<li>
 							<label class="radio_wrap">
-								<input type="radio" name="gender" value="male" class="input_radio" checked>
+								<input type="radio" name="gender" value="male" class="input_radio" checked></input>
 								<span>Male</span>
 							</label>
 						</li>
 						<li>
 							<label class="radio_wrap">
-								<input type="radio" name="gender" value="female" class="input_radio">
+								<input type="radio" name="gender" value="female" class="input_radio"></input>
 								<span>Female</span>
 							</label>
 						</li>
