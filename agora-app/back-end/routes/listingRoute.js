@@ -48,11 +48,9 @@ router.post("/create", async (req, res) => {
   const newListing = await listing.save();
   if (newListing) {
     res.send(newListing);
-    return res
-      .status(201)
-      .send({ message: "new listing created", data: newListing });
+  } else {
+    return res.status(401).send({ message: "could not create new listing" });
   }
-  return res.status(401).send({ message: "could not create new listing" });
 });
 
 export default router;

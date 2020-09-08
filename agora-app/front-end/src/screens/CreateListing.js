@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createListing } from "../actions/listingActions";
-import { Link } from "react-router-dom";
 
 function CreateListing(props) {
   /* 
@@ -11,18 +10,17 @@ function CreateListing(props) {
     */
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("An image");
   const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
   const [price, setPrice] = useState(""); //unsure about this for now
   const [location, setLocation] = useState("");
-  const [university, setUniversity] = useState("University of Auckland");
+  const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
-  const [seller, setSeller] = useState("this needs to be updated"); //need to update this var to be the account ID logged in.
+  const [seller, setSeller] = useState("");
   const [deliveryoption, setDeliveryoption] = useState("");
 
-  //const userCreateListing = useSelector((state) => state.userCreateListing);
-  //const {loading, userInfo, error} = userCreateListing;
-
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
   // currently just need to figure out how to dispatch the information when submit button is clicked to the post
@@ -36,22 +34,42 @@ function CreateListing(props) {
   } = listingSave;
   */
 
+  useEffect(() => {
+    if (userInfo) {
+      setSeller(userInfo.fname + " " + userInfo.sname);
+      setUniversity(userInfo.university);
+    }
+    return () => {};
+  }, [userInfo]);
+
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(createListing(name, description, image, category, price,
-      location, university, brand, seller, deliveryoption));
+    dispatch(
+      createListing(
+        name,
+        description,
+        image,
+        category,
+        price,
+        location,
+        university,
+        brand,
+        seller,
+        deliveryoption
+      )
+    );
     props.history.push("/");
-  }
+  };
 
   useEffect(() => {
     return () => {};
-  })
+  });
 
   return (
-    <div className="createListingContainer">
-      <div className="innerCreateListingContainer">
-        <h2>Create a Listing</h2>
-        <form className="createListingForm" onSubmit={submitHandler}>
+    <div className="sign-up-container">
+      <div className="createnewAccountContainer">
+        <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
+        <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
             type="text"
@@ -74,6 +92,30 @@ function CreateListing(props) {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <br></br>
+
+          <label>Category: </label>
+          <select id="categories" onChange={(e) => setCategory(e.target.value)}>
+            <option value="Antiques">Antiques</option>
+            <option value="University Textbooks">University Textbooks</option>
+            <option value="Books">Books</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Sports Clothing">Sports Clothing</option>
+            <option value="Shoes">Shoes</option>
+            <option value="Jewellery and Watches">Jewellery and Watches</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Computers">Computers</option>
+            <option value="Mobile Phones">Mobile Phones</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Gaming consoles">Gaming consoles</option>
+            <option value="Console and PC games">Console and PC games</option>
+            <option value="Health and Beauty">Health and Beauty</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Lamps and Lighting">Lamps and Lighting</option>
+            <option value="Toys">Toys</option>
+            <option value="Sports Equipments">Sports Equipments</option>
+          </select>
+
+          <br></br>
           <label>Price: </label>
           <input
             type="number"
@@ -95,34 +137,6 @@ function CreateListing(props) {
             onChange={(e) => setLocation(e.target.value)}
           ></input>
           <br></br>
-
-          <label for="school">University: </label>
-          <select
-            id="school"
-            name="school"
-            placeholder="Select University"
-            required
-            onChange={(e) => setUniversity(e.target.value)}
-          >
-            <option value="University of Auckland">
-              University of Auckland
-            </option>
-            <option value="Auckland University of Technology (AUT)">
-              Auckland University of Technology (AUT)
-            </option>
-            <option value="University of Waikato">University of Waikato</option>
-            <option value="Massey University">Massey University</option>
-            <option value="Victoria University of Wellington">
-              Victoria University of Wellington
-            </option>
-            <option value="University of Canterbury">
-              University of Canterbury
-            </option>
-            <option value="Lincoln University">Lincoln University</option>
-            <option value="University of Otago">University of Otago</option>
-          </select>
-          <br></br>
-
           <label>Product brand: </label>
           <input
             type="text"
@@ -131,7 +145,6 @@ function CreateListing(props) {
             placeholder="brand"
             onChange={(e) => setBrand(e.target.value)}
           ></input>
-          <br></br>
 
           <input
             type="radio"
