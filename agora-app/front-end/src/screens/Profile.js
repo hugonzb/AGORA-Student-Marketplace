@@ -2,17 +2,17 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
 import { BrowserRouter, Link } from "react-router-dom";
+import "../index.css";
+import profileicon from "../images/profileicon.png";
 
 function Profile(props) {
-  const [fname, setName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [id, setID] = useState("");
   const [username, setUsername] = useState("");
   const [university, setUniversity] = useState("University of Auckland");
-
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-
   const dispatch = useDispatch();
 
   // This runs when the logout button is pressed
@@ -20,7 +20,7 @@ function Profile(props) {
     dispatch(logout());
     // This line redirects the user to the sign in screen
     // when they press logout
-    props.history.push("/signin");
+    props.history.push("/account/signin");
   };
 
   useEffect(() => {
@@ -30,7 +30,7 @@ function Profile(props) {
       //console.log("user name: " + userInfo.fname);
       //console.log("email: " + userInfo.email);
       //console.log("user id: " + userInfo.id);
-      setName(userInfo.fname);
+      setName(userInfo.name);
       setID(userInfo.id);
       setEmail(userInfo.email);
       setUsername(userInfo.username);
@@ -42,18 +42,22 @@ function Profile(props) {
   return (
     <BrowserRouter>
       {userInfo ? (
-        <div className="sign-in-container">
-          <h3> Welcome to your profile page {userInfo.fname} </h3>
-          <div className="profile-container">
+        <div className="mainContainer">
+          <div className="profileContainer">
+            <h2> Profile </h2>
+
+            <img src={profileicon} alt="profile" />
+            <h2>
+              {" "}
+              <label for="name" value={name}>
+                {userInfo.fname} {userInfo.sname}
+              </label>
+            </h2>
+
             <div className="profile-contents">
-              <h2> Profile Settings: </h2>
               <form className="profile-form">
                 <label for="username" value={id}>
                   Student ID: {userInfo.studentid}
-                </label>
-                <br></br>
-                <label for="name" value={fname}>
-                  Name: {userInfo.fname}
                 </label>
                 <br></br>
                 <label for="email" value={email}>
@@ -70,19 +74,21 @@ function Profile(props) {
                 <br></br>
               </form>
             </div>
-            <div className="profile-contents">
-              <h2> Your Listings: </h2>
-              <p> please note this feature is currently not working</p>
-            </div>
+
+            <div className="avatar_head"></div>
+            <button type="button" className="logout" onClick={handleLogout}>
+              LOGOUT
+            </button>
           </div>
-          <button type="button" className="logout" onClick={handleLogout}>
-            Logout
-          </button>
+
+          <div className="listingsContainer">LISTINGS</div>
+
+          <div className="watchlistContainer">WATCHLIST</div>
         </div>
       ) : (
         <div>
-          <Link to="/signin">Sign in</Link>
-          <Link to="/signp">Sign Up</Link>
+          <Link to="account/signin">Sign in</Link>
+          <Link to="account/signup">Sign Up</Link>
         </div>
       )}
     </BrowserRouter>

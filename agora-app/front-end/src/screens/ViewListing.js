@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailListing } from '../actions/listingActions';
 import profileicon from "../images/profileicon.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
 function ViewListing(props) {
@@ -28,8 +30,12 @@ function ViewListing(props) {
 						</div>
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
-							<button className="buynow-button">Buy Now</button>
-							<button className="addtowatchlist-button">Add to Watchlist</button>
+							<button className="buynow-button">
+								<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
+							</button>
+							<button className="addtowatchlist-button">
+								<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
+							</button>
 						</div>
 					</div>	
 				<div className="view-listing-details">

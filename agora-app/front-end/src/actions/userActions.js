@@ -7,8 +7,7 @@ import {
     USER_SIGNIN_FAIL, 
     USER_SIGNIN_REQUEST, 
     USER_SIGNIN_SUCCESS, 
-    USER_LOGOUT, 
-    USER_CREATELISTING_REQUEST
+    USER_LOGOUT
 } from "../constants/userConstants";
 
 const signUp = (studentid, fname, sname, username, password, email,
@@ -42,8 +41,5 @@ const logout = () => (dispatch) => {
     dispatch({type:USER_LOGOUT});
 }
 
-/*const createListing = () => (dispatch) => {
-    dispatch({type: USER_CREATELISTING_REQUEST, payload: {}})
-}*/
 
-export { signUp, signIn, logout } 
+export { signUp, signIn, logout }
