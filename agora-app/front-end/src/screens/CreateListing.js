@@ -68,7 +68,7 @@ function CreateListing(props) {
   return (
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
-        <h2>Create a Listing</h2>
+        <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
@@ -94,7 +94,7 @@ function CreateListing(props) {
           <br></br>
 
           <label>Category: </label>
-          <select id="myList">
+          <select id="categories" onChange={(e) => setCategory(e.target.value)}>
             <option value="Antiques">Antiques</option>
             <option value="University Textbooks">University Textbooks</option>
             <option value="Books">Books</option>

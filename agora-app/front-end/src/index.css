@@ -190,7 +190,7 @@ ul li a {
   border-radius: 0.5rem;
   border-top: 2px rgb(102, 102, 102) solid;
   border-bottom: 2px rgb(59, 59, 59) solid;
-  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61)
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
 
 .listing-image {
@@ -220,7 +220,7 @@ ul li a {
   justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background: rgb(235, 235, 235);  
+  background: rgb(235, 235, 235);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   padding: 0.5rem;
@@ -290,7 +290,7 @@ ul li a {
   height: 18rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background: rgb(235, 235, 235); 
+  background: rgb(235, 235, 235);
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
@@ -394,7 +394,7 @@ ul li a {
   height: 15rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background: rgb(235, 235, 235); 
+  background: rgb(235, 235, 235);
   align-items: center;
   box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
@@ -438,38 +438,6 @@ ul li a {
   width: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 13px;
-}
-
-/* Create listing */
-
-.createListingContainer {
-  display: flex;
-  font-family: "Permanent Marker", cursive;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: bold;
-  color: rgb(9, 8, 17);
-  text-decoration: none;
-  min-height: 45rem;
-  justify-content: center;
-}
-
-.innerCreateListingContainer {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  background-color: white;
-  width: 40rem;
-  clear: both;
-  border: hidden;
-  height: 100%;
-  text-align: center;
-}
-
-.innerCreateListingContainer form {
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  margin-top: 5px;
 }
 
 /* Sign up screen */
@@ -576,35 +544,30 @@ label:after {
 }
 
 /* sign in page */
-.sign-in-logo{
-
-    margin: 0px auto; 
-    display: flex;
-    text-decoration: none;
-    width: 50%;
-
-
+.sign-in-logo {
+  margin: 0px auto;
+  display: flex;
+  text-decoration: none;
+  width: 50%;
 }
-.sign-in-container{
-background-color: white; 
-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 10.9);
-width: 45%;
-margin: 0 auto; 
-border-radius: 44px;
-margin-top: 15px;
-margin-bottom: 30px;
-max-width: 320px;
-/*background-image: url(images/agoralogo.png);
+.sign-in-container {
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 10.9);
+  width: 45%;
+  margin: 0 auto;
+  border-radius: 44px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  max-width: 320px;
+  /*background-image: url(images/agoralogo.png);
 background-size: 740px ;*/
-margin-top: 1rem;
-margin-bottom: 10rem;
-min-height: 20rem;
-text-align: center;
-padding: 60px 0;
-height: 10px;
-padding-bottom: 1px;
-
-
+  margin-top: 1rem;
+  margin-bottom: 10rem;
+  min-height: 20rem;
+  text-align: center;
+  padding: 60px 0;
+  height: 10px;
+  padding-bottom: 1px;
 }
 .createAccountContainer {
   border-style: none;
@@ -612,9 +575,8 @@ padding-bottom: 1px;
   padding-top: 0.5rem;
 }
 
-
-
-.create-account-form h2{ /* "Sign In" text*/ 
+.create-account-form h2 {
+  /* "Sign In" text*/
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: rgb(29, 27, 46);
   font-size: 20px;
@@ -634,7 +596,8 @@ input[type="email"] {
   box-sizing: border-box;
 }
 
-.create-account-form button { /*sign in button*/
+.create-account-form button {
+  /*sign in button*/
   width: 25%;
   height: 20px;
   margin-top: 80px;
@@ -650,15 +613,13 @@ input[type="email"] {
   opacity: 0.8;
   transform: scale(0.96);
 }
-.create-account-link{
- font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
- padding-bottom: 15px;
- font-size: 10px;
- font-weight: bold;
- text-align: center;
- text-decoration: none;
-
- 
+.create-account-link {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding-bottom: 15px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
 }
 span.psw {
   float: right;
@@ -730,13 +691,13 @@ span.psw {
 
 /* Profile */
 
-.mainContainer{
-	background: white;
-	justify-content: space-between; 
-	display: flex; 
+.mainContainer {
+  background: white;
+  justify-content: space-between;
+  display: flex;
 }
 
-.logout { 
+.logout {
   margin-left: 70%;
   margin-bottom: 50px;
   display: flex;
@@ -751,7 +712,7 @@ span.psw {
   padding-top: 10px;
 }
 
-.profile-contents{
+.profile-contents {
   width: 100%;
   margin-top: 10px;
   padding: 5px;
@@ -760,84 +721,78 @@ span.psw {
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
 }
 
-
-.profile-form label{
-color: red;
-
+.profile-form label {
+  color: red;
 }
 
-.profileContainer { 
-	background-color: white;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
-	width: 30%;
-	margin-left: 5px; 
-	margin-right: 5px;
-	border-radius: 44px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	min-height: 30rem;
-	text-align: center;
-	padding: 2rem;
-	-moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+.profileContainer {
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
+  width: 30%;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 44px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-height: 30rem;
+  text-align: center;
+  padding: 2rem;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
 }
 
-.watchlistContainer { 
-	background-color: white;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
-	width: 30%;
-	margin-left: 5px; 
-	margin-right: 5px;
-	border-radius: 44px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	min-height: 30rem;
-	text-align: center;
-	padding: 1rem;
-	-moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+.watchlistContainer {
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
+  width: 30%;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 44px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-height: 30rem;
+  text-align: center;
+  padding: 1rem;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
 }
 
-
-
-.listingsContainer{
-	background-color: white;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
-	width: 30%;
-	margin-left: 5px; 
-	margin-right: 5px; 
-	border-radius: 44px;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	min-height: 30rem;
-	text-align: center;
-	padding: 1rem;
-	-moz-border-radius: 0px;
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
+.listingsContainer {
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
+  width: 30%;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 44px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  min-height: 30rem;
+  text-align: center;
+  padding: 1rem;
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
 }
-
-
 
 .avatar_head {
-width: 30px;
-height: 30px;
--moz-border-radius: 15px;
--webkit-border-radius: 15px;
-border-radius: 15px;
-color: black; 
+  width: 30px;
+  height: 30px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  border-radius: 15px;
+  color: black;
 }
 /* misc */
 
