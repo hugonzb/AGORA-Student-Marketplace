@@ -131,7 +131,7 @@ ul li a {
 
 .footer {
   height: 0.5rem;
-  font-size: 20px;
+  font-size: 18px;
   padding: 0.5rem;
   background-color: #1d4c61;
   color: white;
@@ -458,16 +458,14 @@ ul li a {
 }
 
 .sign-up-container h2 {
-  font-family: "Permanent Marker", cursive;
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(255, 255, 255);
   font-size: 18px;
-  font-style: italic;
   font-weight: bold;
   color: rgb(9, 8, 17);
   padding: 14px 25px;
   text-align: center;
   text-decoration: none;
-  border-radius: 44px;
   display: inline-block;
 }
 .createnewAccountContainer {
@@ -560,14 +558,11 @@ label:after {
   width: 100%;
   margin: 0 auto;
   border-radius: 44px;
-  margin-top: 15px;
-  margin-bottom: 30px;
+  margin-top: 2.5rem;
   max-width: 320px;
   /*background-image: url(images/agoralogo.png);
 background-size: 740px ;*/
-  margin-top: 1rem;
-  margin-bottom: 10rem;
-  min-height: 20rem;
+  margin-bottom: 2.5rem;
   text-align: center;
   padding: 60px 0;
   height: 100%;
@@ -575,8 +570,8 @@ background-size: 740px ;*/
 }
 .createAccountContainer {
   border-style: none;
-  top-margin: 10px;
-  padding-top: 0.5rem;
+  padding-top: 0rem;
+
 }
 
 .create-account-form h2 {
