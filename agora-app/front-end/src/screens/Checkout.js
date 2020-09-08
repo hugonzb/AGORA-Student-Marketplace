@@ -1,12 +1,21 @@
-import React from "react";
+
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { detailListing } from '../actions/listingActions';
+import profileicon from "../images/profileicon.png";
+import { Link } from "react-router-dom";
 
 
-function Checkout(props) {
-    return (
-        <div className="product-card">
-            
-        </div>
-    );
-}
 
-export default Checkout;
+    function Checkout(props) {
+        return(
+            <div>
+                
+            </div>
+        
+
+        );
+    }
+
+    export default Checkout;
+    

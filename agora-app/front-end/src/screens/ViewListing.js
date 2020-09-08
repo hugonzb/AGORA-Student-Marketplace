@@ -28,9 +28,10 @@ function ViewListing(props) {
 						</div>
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
-						<Link to="/Checkout">
-						 <button className="buynow-button">Buy Now</button>
-						 </Link>
+						<Link to={'/Checkout'}>
+							<button className="buynow-button">Buy Now</button>
+						</Link>
+						
 							<button className="addtowatchlist-button">Add to Watchlist</button>
 						</div>
 					</div>	

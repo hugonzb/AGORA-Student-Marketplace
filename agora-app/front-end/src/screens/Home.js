@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import profileicon from "../images/profileicon.png";
 
+
 function Home (props) {
     const [categorySortOrder, setCategorySortOrder] = useState('');
     const [locationSortOrder, setLocationSortOrder] = useState('');
@@ -72,8 +73,11 @@ function Home (props) {
             </Link>
             </li>)
             }
-        </div>: <div> There are no listings available that match your request. Please check again later. </div>
-    }
+        </div>: 
+        
+        <div> There are no listings available that match your request. Please check again later. </div>
+}
+        
     </div>
     </>
 }
