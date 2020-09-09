@@ -110,70 +110,70 @@ function SignUp(props) {
                 </div>
           
               <div className="input_wrap">
-          <label>Email:</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Enter Email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          </div>
+                  <label>Email:</label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    required
+                    onChange={(e) => setEmail(e.target.value)}
+                  ></input>
+               </div>
           </div>
     
           <div className="input_grp">
         
-          <div className="input_wrap">
-          <label>User Name:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Enter a Username"
-            required
-            onChange={(e) => setUsername(e.target.value)}
-          ></input>
-          </div>
+              <div className="input_wrap">
+                  <label>User Name:</label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter a Username"
+                    required
+                    onChange={(e) => setUsername(e.target.value)}
+                  ></input>
+              </div>
  
-          <div className="input_wrap">
-          <label>Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter Password"
-            required
-            onChange={(e) => setPassword(e.target.value)}
-          ></input>
-          </div>
+              <div className="input_wrap">
+                  <label>Password:</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></input>
+              </div>
 
           </div> 
+          
+          <div className="input_grp">
+              <div className="input_wrap">
+                  <label for="gender">Choose a Gender: </label>
+                  <select
+                    id="gender"
+                    name="gender"
+                    onChange={(e) => setGender(e.target.value)}
+                  >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+              </div>
 
-                <div className="input_wrap">
-          <label for="gender">Choose a Gender: </label>
-          <select
-            id="gender"
-            name="gender"
-            onChange={(e) => setGender(e.target.value)}
-          >
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-          </select>
-          </div>
-
-      
-
-          <div className="input_wrap">
-          <label for="DOB"> Date of Birth:</label>
-          <input
-            type="date"
-            id="DOB"
-            name="DOB"
-            required
-            onChange={(e) => setDOB(e.target.value)}
-          ></input>
+              <div className="input_wrap">
+                  <label for="DOB"> Date of Birth:</label>
+                  <input
+                    type="date"
+                    id="DOB"
+                    name="DOB"
+                    required
+                    onChange={(e) => setDOB(e.target.value)}
+                  ></input>
+              </div>
           </div>
 
           <div className="input_wrap">

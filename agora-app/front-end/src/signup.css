@@ -26,7 +26,7 @@ body{
 	background: #545871;
 	padding: 25px;
 	border-radius: 5px;
-	width: 500px;
+	width: 600px;
 
 }
 
@@ -34,7 +34,7 @@ body{
 	text-align: center;
 	font-size: 20px;
 	text-transform: uppercase;
-	color: #ebd0ce;
+	color: #f1f1f1;
 	letter-spacing: 5px;
 	font-weight: 700;
 }
@@ -59,7 +59,8 @@ body{
 
 .form_wrap .input_grp{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	align-items:flex-start;
 }
 
 .form_wrap .input_grp  input[type="text"]{
