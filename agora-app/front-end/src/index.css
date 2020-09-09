@@ -548,15 +548,12 @@ label:after {
 
 /* sign in page */
 .sign-in-logo{
-
     margin: 0px auto; 
     display: flex;
     text-decoration: none;
     width: 50%;
-	
-
-
 }
+
 .sign-in-container {
   background-color: white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 10.9);
@@ -564,14 +561,34 @@ label:after {
   margin: 0 auto;
   border-radius: 44px;
   margin-top: 2.5rem;
-  max-width: 320px;
-  /*background-image: url(images/agoralogo.png);
-background-size: 740px ;*/
+  max-width: 370px;
   margin-bottom: 2.5rem;
   text-align: center;
   padding: 60px 0;
   height: 100%;
   padding-bottom: 1px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.signin-header{
+  font-family: "Play", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 1rem;
+}
+
+.signin-button{
+  margin: 1rem;
+  padding: 7px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0.5rem;
+  outline: none;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 12px;
+  background-color: rgb(233, 128, 42);
+  cursor: pointer
 }
 .createAccountContainer {
   border-style: none;
@@ -603,18 +620,6 @@ input[type="email"] {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
 
-.create-account-form button {
-  /*sign in button*/
-  width: 25%;
-  height: 20px;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  background: #48b096;
-  color: #fff;
-  border-radius: 44px;
-  cursor: pointer;
-  transition: 0.8s;
-}
 
 .create-account-form button:hover {
   opacity: 0.8;
