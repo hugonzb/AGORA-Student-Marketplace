@@ -13,7 +13,7 @@ function CreateListing(props) {
   const [image, setImage] = useState("An image");
   const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
   const [price, setPrice] = useState(""); //unsure about this for now
-  const [location, setLocation] = useState("");
+  const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
   const [condition, setCondition] = useState("");
@@ -39,6 +39,7 @@ function CreateListing(props) {
     if (userInfo) {
       setSeller(userInfo.fname + " " + userInfo.sname);
       setUniversity(userInfo.university);
+      setCity(userInfo.city);
     }
     return () => {};
   }, [userInfo]);
@@ -52,9 +53,10 @@ function CreateListing(props) {
         image,
         category,
         price,
-        location,
+        city,
         university,
         brand,
+        condition,
         seller,
         deliveryoption
       )
@@ -125,17 +127,6 @@ function CreateListing(props) {
             placeholder="$0.00"
             required
             onChange={(e) => setPrice(e.target.value)}
-          ></input>
-          <br></br>
-
-          <label> Location: </label>
-          <input
-            type="text"
-            id="location "
-            name="location "
-            placeholder="location "
-            required
-            onChange={(e) => setLocation(e.target.value)}
           ></input>
           <br></br>
           <label>Product brand: </label>

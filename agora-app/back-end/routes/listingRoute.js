@@ -39,9 +39,10 @@ router.post("/create", async (req, res) => {
     image: req.body.image,
     category: req.body.category,
     price: req.body.price,
-    location: req.body.location,
+    city: req.body.city,
     university: req.body.university,
     brand: req.body.brand,
+    condition: req.body.condition,
     seller: req.body.seller,
     deliveryoption: req.body.deliveryoption,
   });

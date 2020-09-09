@@ -10,7 +10,8 @@ function Profile(props) {
   const [email, setEmail] = useState("");
   const [id, setID] = useState("");
   const [username, setUsername] = useState("");
-  const [university, setUniversity] = useState("University of Auckland");
+  const [university, setUniversity] = useState("");
+  const [city, setCity] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
@@ -35,6 +36,7 @@ function Profile(props) {
       setEmail(userInfo.email);
       setUsername(userInfo.username);
       setUniversity(userInfo.university);
+      setCity(userInfo.city);
     }
     return () => {};
   }, [userInfo]);
@@ -68,8 +70,12 @@ function Profile(props) {
                   Username: {userInfo.username}
                 </label>
                 <br></br>
-                <label for="email" value={university}>
+                <label for="university" value={university}>
                   University: {userInfo.university}
+                </label>
+                <br></br>
+                <label for="city" value={city}>
+                  City: {userInfo.city}
                 </label>
                 <br></br>
               </form>

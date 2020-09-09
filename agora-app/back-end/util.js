@@ -10,6 +10,7 @@ const getToken = (user) => {
       email: user.email,
       username: user.username,
       university: user.university,
+      city: user.city,
     },
     config.JWT_SECRET,
     {
