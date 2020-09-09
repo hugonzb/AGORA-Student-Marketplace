@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
 import { Link } from "react-router-dom";
+import "../signup.css";
 
 function SignUp(props) {
   const [fname, setFname] = useState("");
@@ -54,196 +55,70 @@ function SignUp(props) {
   };
 
   
-}
 
-return(
+return (
 <div class="wrapper">
 	<div class="registration_form">
 		<div class="title">
 			Registration Form
 		</div>
-		{loading}
-		{error && <div>Email or Student ID has been taken</div>} 
-		<form onSubmit={submitHandler}>
+
+		<form>
 			<div class="form_wrap">
 				<div class="input_grp">
-
-				    <div class="input_wrap">
-						<label for="studentid">First Name:</label>
-					<input 
-						type="text" 
-						id="fname"
-						name="fname"
-						placeholder="Enter First Name"
-						required
-						onChange={(e) => setFname(e.target.value)}
-					></input>
-					</div>
-
-				    <div class="input_wrap">
-						<label for="fname">Student ID:</label>
-					<input 
-						type="text" 
-						id="studentid"
-						name="studentid"
-						placeholder="Enter Student-ID"
-						required
-						onChange={(e) => setStudentid(e.target.value)}
-					></input>
-					</div>
-					
 					<div class="input_wrap">
-						<label for="lname">Last Name:</label>
-					<input 
-						type="text" 
-						id="sname"
-						name="sname"
-						placeholder="Enter Surname"
-						required
-						onChange={(e) => setSname(e.target.value)}
-					></input>
+						<label for="fname">First Name</label>
+						<input type="text" id="fname">
+						</input>
 					</div>
-
 					<div class="input_wrap">
+						<label for="lname">Last Name</label>
+						<input type="text" id="lname">
+						</input>
+					</div>
+				</div>
+				<div class="input_wrap">
+					<label for="email">Email Address</label>
+					<input type="text" id="email"></input>
+				</div>
+				<div class="input_wrap">
 					<label>Gender</label>
 					<ul>
 						<li>
 							<label class="radio_wrap">
 								<input type="radio" name="gender" value="male" class="input_radio" checked>
 								<span>Male</span>
+								</input>
 							</label>
+
 						</li>
 						<li>
 							<label class="radio_wrap">
 								<input type="radio" name="gender" value="female" class="input_radio">
 								<span>Female</span>
+								</input>
 							</label>
 						</li>
 					</ul>
-					</div>
-					
-					<div class="input_wrap">
-						<label>Username:</label>
-					<input 
-						type="text" 
-						id="username"
-						name="username"
-						placeholder="Enter a Username"
-						required
-						onChange={(e) => setUsername(e.target.value)}
-					></input>
-					</div>
-
-					<div class="input_wrap">
-						<label>Password:</label>
-					<input 
-						type="password" 
-						id="password" 
-						name="password" 
-						placeholder="Enter Password"
-						required
-						onChange={(e) => setPassword(e.target.value)}
-					></input>
-					</div>
-
-					<div class="input_wrap">
-						<label>Email:</label>
-					<input 
-						type="text" 
-						id="email"
-						name="email"
-						placeholder="Enter Email"
-						required
-						onChange={(e) => setEmail(e.target.value)}
-					></input>
-					</div>
-
-					<div class="input_wrap">
-						<label for "DOB">Date of Birth:</label>
-						<input 
-						type="date" 
-						id="DOB"
-						name="DOB"
-						required
-						onChange={(e) => setDOB(e.target.value)}
-						></input>
-					</div>
 				</div>
-
 				<div class="input_wrap">
-						<label for "school">University:</label>
-						<input 
-						id="school"
-						name="school"
-						placeholder="Select University"
-						onChange={(e) => setUniversity(e.target.value)}
-					>
-					  <option value="University of Auckland">
-						University of Auckland
-					  </option>
-					  <option value="Auckland University of Technology (AUT)">
-						Auckland University of Technology (AUT)
-				      </option>
-					  <option value="University of Waikato">
-					  University of Waikato</option>
-					  <option value="Massey University">
-					  Massey University</option>
-					  <option value="Victoria University of Wellington">
-					  Victoria University of Wellington
-					  </option>
-					  <option value="University of Canterbury">
-					  University of Canterbury
-					  </option>
-					  <option value="Lincoln University">
-					  Lincoln University</option>
-					  <option value="University of Otago">
-					  University of Otago</option>
-				  </select>
-						
-						></input>
-					</div>
+					<label for="city">City</label>
+					<input type="text" id="city">
+					</input>
 				</div>
-
 				<div class="input_wrap">
-					<label>Address</label>
-					<input 
-					type="text" 
-					id="address"
-					name="address"
-					placeholder="Enter Address"
-					required
-					onChange={(e) => setStreet(e.target.value)}
-					></input>
+					<label for="country">Country</label>
+					<input type="text" id="country">
+					</input>
 				</div>
-
 				<div class="input_wrap">
-						<label>City:</label>
-					<input 
-						type="text" 
-						id="city"
-						name="city"
-						placeholder="Enter City"
-						required
-						onChange={(e) => setCity(e.target.value)}
-					></input>
-					</div>
-
-				<div class="input_wrap">
-						<label>Postcode:</label>
-					<input 
-						type="text" 
-						id="postcode"
-						name="postcode"
-						placeholder="Enter Postcode"
-						required
-						onChange={(e) => setPostcode(e.target.value)}
-					></input>
-					</div>
-			
+					<input type="submit" value="Register Now" class="submit_btn">
+					</input>
+				</div>
 			</div>
 		</form>
 	</div>
 </div>
 );
-
+};//I don't know why but you need this here. 
 export default SignUp;
