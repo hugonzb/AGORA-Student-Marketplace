@@ -47,7 +47,6 @@ ul li a {
   font-size: 30px;
   text-align: center;
   display: flex;
-
   align-items: center;
   padding: 15px;
   text-align: center;
@@ -408,9 +407,12 @@ ul li a {
   width: 100%;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background-color: rgb(255, 255, 255);
-  box-shadow: 0px 0px 10px 0px rgba(185, 185, 185, 0.61);
+  background-color: #a7bbc7;
+  color: rgb(0, 0, 0);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  box-shadow: 0px 2px 5px 0px rgba(54, 54, 54, 0.61);
 }
 
 .view-listing-description-container {

@@ -39,7 +39,7 @@ function ViewListing(props) {
 						</div>
 					</div>	
 				<div className="view-listing-details">
-					<div className="view-listing-details-title"> Listing Information </div>
+					<div className="view-listing-details-title"> LISTING INFORMATION </div>
 					<div className="view-listing-description-container"> 
 						<div className="view-listing-description">
 							{listing.description} 
@@ -61,16 +61,16 @@ function ViewListing(props) {
 										<div className="view-listing-sellername">{listing.seller}</div>
 									</div>	
 								</td>
-								<td>Null</td>
-								<td>None</td>
+								<td>{listing.condition}</td>
+								<td>{listing.brand}</td>
 								<td>{listing.category}</td>
-								<td>Null</td>
+								<td>{listing.city}</td>
 							</tr>
 						</table>				
 					</div>
 				</div>
 				<div className="view-listing-details">
-					<div className="view-listing-details-title"> Questions & Answers </div>
+					<div className="view-listing-details-title"> QUESTIONS & ANSWERS </div>
 					<div className="view-listing-qa-container">
 						There are no questions posted yet.	
 					</div>
