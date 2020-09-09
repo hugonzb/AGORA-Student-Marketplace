@@ -141,13 +141,10 @@ function CreateListing(props) {
             onChange={(e) => setBrand(e.target.value)}
           ></input>
           <label>Condition: </label>
-          <input
-            type="text"
-            id="condition"
-            name="condition"
-            placeholder="Condition"
-            onChange={(e) => setCondition(e.target.value)}
-          ></input>
+          <select id="condition" onChange={(e) => setCondition(e.target.value)}>
+            <option value="New">New</option>
+            <option value="Used">Used</option>
+          </select>
           <label>Delivery </label>
           <input
             type="radio"

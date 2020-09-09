@@ -86,9 +86,7 @@ function Profile(props) {
               LOGOUT
             </button>
           </div>
-
           <div className="listingsContainer">LISTINGS</div>
-
           <div className="watchlistContainer">WATCHLIST</div>
         </div>
       ) : (
