@@ -68,17 +68,7 @@ function SignUp(props) {
 
         <form className="form_wrap" onSubmit={submitHandler}>
             <div className="input_grp">
-                <div className="input_wrap">
-                  <label>Student ID:</label>
-                  <input 
-                    type="text"
-                    id="studentid"
-                    name="studentid"
-                    placeholder="Enter Student-ID"
-                    required
-                    onChange={(e) => setStudentid(e.target.value)}
-                    ></input>
-                </div>
+             
           
                 <div className="input_wrap"> 
                    <label>First Name:</label>
@@ -91,35 +81,48 @@ function SignUp(props) {
                         onChange={(e) => setFname(e.target.value)}
                       ></input>
                 </div>
+                 
+                <div className="input_wrap">
+                      <label>Last Name:</label>
+                      <input
+                        type="text"
+                        id="sname"
+                        name="sname"
+                        placeholder="Enter Surname"
+                        required
+                        onChange={(e) => setSname(e.target.value)}
+                      ></input>
+                </div>
 
                 </div>
 
-       
-          <div className="input_wrap">
-              <label>Last Name:</label>
-              <input
-                type="text"
-                id="sname"
-                name="sname"
-                placeholder="Enter Surname"
-                required
-                onChange={(e) => setSname(e.target.value)}
-              ></input>
-          </div>
+            <div className="input_grp">
+             <div className="input_wrap">
+                  <label>Student ID:</label>
+                  <input 
+                    type="text"
+                    id="studentid"
+                    name="studentid"
+                    placeholder="Enter Student-ID"
+                    required
+                    onChange={(e) => setStudentid(e.target.value)}
+                    ></input>
+                </div>
           
-          <div className="input_wrap">
-          <label for="gender">Choose a Gender: </label>
-          <select
-            id="gender"
-            name="gender"
-            onChange={(e) => setGender(e.target.value)}
-          >
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-          </select>
+              <div className="input_wrap">
+          <label>Email:</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Enter Email"
+            required
+            onChange={(e) => setEmail(e.target.value)}
+          ></input>
           </div>
-
+          </div>
+    
+          <div className="input_grp">
         
           <div className="input_wrap">
           <label>User Name:</label>
@@ -145,17 +148,22 @@ function SignUp(props) {
           ></input>
           </div>
 
-          <div className="input_wrap">
-          <label>Email:</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Enter Email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
+          </div> 
+
+                <div className="input_wrap">
+          <label for="gender">Choose a Gender: </label>
+          <select
+            id="gender"
+            name="gender"
+            onChange={(e) => setGender(e.target.value)}
+          >
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+          </select>
           </div>
+
+      
 
           <div className="input_wrap">
           <label for="DOB"> Date of Birth:</label>
@@ -195,6 +203,7 @@ function SignUp(props) {
           </select>
           </div>
 
+          <div className="input_grp">
           <div className="input_wrap">
           <label>Address:</label>
           <input
@@ -230,6 +239,7 @@ function SignUp(props) {
             onChange={(e) => setPostcode(e.target.value)}
            ></input>
           </div> 
+          </div>
          
           <div className="input_wrap">
           <button type="submit" value="Submit">
