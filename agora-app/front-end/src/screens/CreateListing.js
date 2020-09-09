@@ -16,6 +16,7 @@ function CreateListing(props) {
   const [location, setLocation] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
+  const [condition, setCondition] = useState("");
   const [seller, setSeller] = useState("");
   const [deliveryoption, setDeliveryoption] = useState("");
 
@@ -145,7 +146,15 @@ function CreateListing(props) {
             placeholder="brand"
             onChange={(e) => setBrand(e.target.value)}
           ></input>
-
+          <label>Condition: </label>
+          <input
+            type="text"
+            id="condition"
+            name="condition"
+            placeholder="Condition"
+            onChange={(e) => setCondition(e.target.value)}
+          ></input>
+          <label>Delivery </label>
           <input
             type="radio"
             id="pickup"
@@ -163,7 +172,6 @@ function CreateListing(props) {
             required
             onChange={(e) => setDeliveryoption(e.target.value)}
           ></input>
-          <label>Delivery </label>
           <button type="submit" value="Submit">
             Create Listing
           </button>
