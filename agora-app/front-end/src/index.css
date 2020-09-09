@@ -703,13 +703,18 @@ span.psw {
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .logout {
-  margin-left: 70%;
-  margin-bottom: 50px;
+  margin-top: 20px;
   display: flex;
   justify-content: flex-end;
+  padding: 5px;
+  background-color: rgb(214, 8, 8);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .profile-container {
@@ -723,13 +728,15 @@ span.psw {
 .profile-contents {
   width: 100%;
   margin-top: 10px;
-  padding: 5px;
-  text-align: left;
+  padding: 1px;
   color: black;
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-form label {
@@ -737,6 +744,8 @@ span.psw {
 }
 
 .profileContainer {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
   width: 30%;
@@ -748,10 +757,10 @@ span.psw {
   margin-bottom: 1rem;
   min-height: 30rem;
   text-align: center;
+  align-items: center;
   padding: 2rem;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
-  border-radius: 0px;
 }
 
 .watchlistContainer {

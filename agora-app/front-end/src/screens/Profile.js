@@ -79,12 +79,10 @@ function Profile(props) {
                 </label>
                 <br></br>
               </form>
-            </div>
-
-            <div className="avatar_head"></div>
-            <button type="button" className="logout" onClick={handleLogout}>
-              LOGOUT
+              <button type="button" className="logout" onClick={handleLogout}>
+                  LOGOUT
             </button>
+            </div>
           </div>
           <div className="listingsContainer">LISTINGS</div>
           <div className="watchlistContainer">WATCHLIST</div>
