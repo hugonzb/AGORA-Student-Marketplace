@@ -12,6 +12,7 @@ const listingSchema = new mongoose.Schema({
   brand: { type: String, required: false },
   condition: { type: String, required: false },
   seller: { type: String, required: true },
+  sellerId: { type: Number, required: true },
   deliveryoption: { type: String, required: true },
 });
 

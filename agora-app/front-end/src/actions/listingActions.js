@@ -33,12 +33,12 @@ const detailListing = (listingId) => async (dispatch) => {
 }
 
 const createListing = (name, description, image, category, price,
-    city, university, brand, condition, seller, deliveryoption) => async (dispatch) => {
+    city, university, brand, condition, seller, sellerId, deliveryoption) => async (dispatch) => {
     dispatch({type: CREATELISTING_REQUEST, payload: {name, description, image, category, price,
-        city, university, brand, condition, seller, deliveryoption}});
+        city, university, brand, condition, seller, sellerId, deliveryoption}});
         try{
             const {data} = await axios.post("/api/listings/create", {name, description, image, category, price,
-                city, university, brand, condition, seller, deliveryoption});
+                city, university, brand, condition, seller, sellerId, deliveryoption});
                 dispatch({type:CREATELISTING_SUCCESS, payload: data});
         }catch(error){
             dispatch({type: CREATELISTING_FAIL, payload: error.message});

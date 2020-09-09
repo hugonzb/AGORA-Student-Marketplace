@@ -18,6 +18,7 @@ function CreateListing(props) {
   const [brand, setBrand] = useState("");
   const [condition, setCondition] = useState("");
   const [seller, setSeller] = useState("");
+  const [sellerId, setSellerId] = useState("");
   const [deliveryoption, setDeliveryoption] = useState("");
 
   const userSignin = useSelector((state) => state.userSignin);
@@ -40,6 +41,7 @@ function CreateListing(props) {
       setSeller(userInfo.fname + " " + userInfo.sname);
       setUniversity(userInfo.university);
       setCity(userInfo.city);
+      setSellerId(userInfo.studentid);
     }
     return () => {};
   }, [userInfo]);
@@ -58,6 +60,7 @@ function CreateListing(props) {
         brand,
         condition,
         seller,
+        sellerId,
         deliveryoption
       )
     );

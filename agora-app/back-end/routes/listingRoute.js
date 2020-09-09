@@ -44,6 +44,7 @@ router.post("/create", async (req, res) => {
     brand: req.body.brand,
     condition: req.body.condition,
     seller: req.body.seller,
+    sellerId: req.body.sellerId,
     deliveryoption: req.body.deliveryoption,
   });
   const newListing = await listing.save();
