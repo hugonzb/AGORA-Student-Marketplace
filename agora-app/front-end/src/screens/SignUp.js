@@ -50,7 +50,7 @@ function SignUp(props) {
         postcode
       )
     );
-    error && props.history.push("/signin");
+    error && props.history.push("/account/signin");
   };
 
   return (

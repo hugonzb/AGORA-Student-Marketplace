@@ -16,7 +16,7 @@ const signUp = (studentid, fname, sname, username, password, email,
             type: USER_SIGNUP_REQUEST, payload: {studentid, fname, sname, username, password, email,
                 dob, gender, university, street_address, city, postcode } });
     try {
-        const { data } = await Axios.post("/api/users/signup", {studentid, fname, sname, username, password, email,
+        const { data } = await Axios.post("/api/users/account/signup", {studentid, fname, sname, username, password, email,
             dob, gender, university, street_address, city, postcode });
         dispatch({type:USER_SIGNUP_SUCCESS, payload: data});
     }catch(error){
@@ -27,7 +27,7 @@ const signUp = (studentid, fname, sname, username, password, email,
 const signIn = (email, password) => async (dispatch) => {
     dispatch({type: USER_SIGNIN_REQUEST, payload: {email, password}});
     try{
-        const { data } = await Axios.post("/api/users/signin", {email, password});
+        const { data } = await Axios.post("/api/users/account/signin", {email, password});
         dispatch({type:USER_SIGNIN_SUCCESS, payload: data});
         Cookie.set('userInfo', JSON.stringify(data));
     }catch(error){

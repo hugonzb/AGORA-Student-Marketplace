@@ -4,7 +4,7 @@ import { getToken } from "../util";
 
 const router = express.Router();
 
-router.post("/signup", async (req, res) => {
+router.post("/account/signup", async (req, res) => {
   try {
     const user = new User({
       studentid: req.body.studentid,
@@ -29,7 +29,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
-router.post("/signin", async (req, res) => {
+router.post("/account/signin", async (req, res) => {
   const signinUser = await User.findOne({
     email: req.body.email,
     password: req.body.password,

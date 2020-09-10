@@ -40,7 +40,8 @@ function Profile(props) {
     }
     dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
-  }, [userInfo, sellerId]);
+    // eslint-disable-next-line
+  }, [userInfo, searchWord, category, location, sellerId]);
 
   return (
     <BrowserRouter>
