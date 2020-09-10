@@ -780,6 +780,7 @@ span.psw {
   text-align: center;
   align-items: center;
   padding: 2rem;
+  min-height: 35rem;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
 }
@@ -812,12 +813,12 @@ span.psw {
   margin-bottom: 15px;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  min-height: 30rem;
   text-align: center;
   padding: 1rem;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
+  overflow: scroll;
 }
 
 .profile-listing{
