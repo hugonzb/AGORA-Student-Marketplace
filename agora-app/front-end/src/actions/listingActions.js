@@ -8,13 +8,10 @@ import {
   LISTING_DETAILS_REQUEST,
   CREATELISTING_REQUEST,
   CREATELISTING_FAIL,
-  CREATELISTING_SUCCESS,
-  USER_LISTING_REQUEST,
-  USER_LISTING_SUCCESS,
-  USER_LISTING_FAIL,
+  CREATELISTING_SUCCESS
 } from "../constants/listingConstants";
 
-const listListings = (searchWord = "", category = "", location = "") => async (
+const listListings = (searchWord = "", category = "", location = "", seller="") => async (
   dispatch
 ) => {
   try {
@@ -25,7 +22,10 @@ const listListings = (searchWord = "", category = "", location = "") => async (
         "&categorySortOrder=" +
         category +
         "&locationSortOrder=" +
-        location
+        location +
+        "&sellerName=" +
+        seller
+
     );
     dispatch({ type: LISTING_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -33,15 +33,15 @@ const listListings = (searchWord = "", category = "", location = "") => async (
   }
 };
 
-const userListings = (studentid = "") => async (dispatch) => {
+/*const userListings = (seller = "") => async (dispatch) => {
   try {
     dispatch({ type: LISTING_LIST_REQUEST });
-    const { data } = await axios.get("/api/listings?studentid=" + studentid);
+    const { data } = await axios.get("/api/listings?seller=" + seller);
     dispatch({ type: LISTING_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: LISTING_LIST_FAIL, payload: error.message });
   }
-};
+};*/
 
 const detailListing = (listingId) => async (dispatch) => {
   try {
@@ -105,4 +105,4 @@ const createListing = (
   }
 };
 
-export { listListings, detailListing, createListing, userListings };
+export { listListings, detailListing, createListing };

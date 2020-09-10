@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
-import { userListings } from "../actions/listingActions";
+import { listListings } from "../actions/listingActions";
 import { BrowserRouter, Link } from "react-router-dom";
 import "../index.css";
 import profileicon from "../images/profileicon.png";
 
 function Profile(props) {
   const [name, setName] = useState("");
+  const [searchWord] = useState("");
+  const [category] = useState("");
+  const [location] = useState("");
   const [email, setEmail] = useState("");
   const [studentid, setStudentid] = useState("");
   const [username, setUsername] = useState("");
@@ -15,6 +18,7 @@ function Profile(props) {
   const [city, setCity] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+  const [seller] = useState(userInfo.fname);
   const listingList = useSelector((state) => state.listingList);
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
@@ -28,17 +32,17 @@ function Profile(props) {
   };
 
   useEffect(() => {
-    dispatch(userListings(studentid));
     if (userInfo) {
-      setName(userInfo.name);
+      setName(userInfo.fname);
       setStudentid(userInfo.id);
       setEmail(userInfo.email);
       setUsername(userInfo.username);
       setUniversity(userInfo.university);
       setCity(userInfo.city);
     }
+    dispatch(listListings(searchWord, category, location, seller));
     return () => {};
-  }, [userInfo, studentid]);
+  }, [userInfo, seller]);
 
   return (
     <BrowserRouter>

@@ -25,10 +25,20 @@ router.get("/", async (req, res) => {
     ? { location: req.query.locationSortOrder }
     : {};
 
+  const sellerName = req.query.sellerName
+    ? {
+        seller: {
+          $regex: req.query.sellerName,
+          $options: "i",
+        },
+      }
+    : {};
+
   const listings = await Listing.find({
     ...searchWord,
     ...categorySortOrder,
     ...locationSortOrder,
+    ...sellerName
   });
   res.send(listings);
 });
@@ -45,11 +55,16 @@ router.get("/:id", async (req, res) => {
 //get user listings on profile
 router.get("/account/profile"),
   async (req, res) => {
-    const sellerid = req.query.studentid
-    ? { sellerid: req.query.studentid }
+    const seller = req.query.seller
+    ? {
+        seller: {
+          $regex: "Hugo Baird",
+          $options: "i",
+        },
+      }
     : {};
     const listings = await Listing.find({
-      ...sellerid
+      ...seller
     });
     if (listings) {
       res.send(listings);
