@@ -1,21 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
-import { BrowserRouter, Link } from "react-router-dom";
+import { listListings } from "../actions/listingActions";
+import { Link } from "react-router-dom";
 import "../index.css";
 import profileicon from "../images/profileicon.png";
 
 function Profile(props) {
   const [name, setName] = useState("");
+  const [searchWord] = useState("");
+  const [category] = useState("");
+  const [location] = useState("");
   const [email, setEmail] = useState("");
-  const [id, setID] = useState("");
   const [username, setUsername] = useState("");
-  const [university, setUniversity] = useState("University of Auckland");
+  const [university, setUniversity] = useState("");
+  const [city, setCity] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+  const [sellerId] = useState(userInfo.studentid);
+  const listingList = useSelector((state) => state.listingList);
+  const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
 
-  // This runs when the logout button is pressed
+  // This runs when the logout button is pressed 
   const handleLogout = () => {
     dispatch(logout());
     // This line redirects the user to the sign in screen
@@ -24,24 +31,20 @@ function Profile(props) {
   };
 
   useEffect(() => {
-    // If userInfo exists, set the email and name fields
     if (userInfo) {
-      // Log the name field just to make sure it's correct
-      //console.log("user name: " + userInfo.fname);
-      //console.log("email: " + userInfo.email);
-      //console.log("user id: " + userInfo.id);
-      setName(userInfo.name);
-      setID(userInfo.id);
+      setName(userInfo.fname);
       setEmail(userInfo.email);
       setUsername(userInfo.username);
       setUniversity(userInfo.university);
+      setCity(userInfo.city);
     }
+    dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
-  }, [userInfo]);
+    // eslint-disable-next-line
+  }, [userInfo, searchWord, category, location, sellerId]);
 
   return (
-    <BrowserRouter>
-      {userInfo ? (
+      <> {userInfo ? (
         <div className="mainContainer">
           <div className="profileContainer">
             <h2> Profile </h2>
@@ -56,8 +59,8 @@ function Profile(props) {
 
             <div className="profile-contents">
               <form className="profile-form">
-                <label for="username" value={id}>
-                  Student ID: {userInfo.studentid}
+                <label for="username" value={sellerId}>
+                  Student ID: {sellerId}
                 </label>
                 <br></br>
                 <label for="email" value={email}>
@@ -68,30 +71,72 @@ function Profile(props) {
                   Username: {userInfo.username}
                 </label>
                 <br></br>
-                <label for="email" value={university}>
+                <label for="university" value={university}>
                   University: {userInfo.university}
                 </label>
                 <br></br>
+                <label for="city" value={city}>
+                  City: {userInfo.city}
+                </label>
+                <br></br>
               </form>
+              <button type="button" className="logout" onClick={handleLogout}>
+                LOGOUT
+              </button>
             </div>
-
-            <div className="avatar_head"></div>
-            <button type="button" className="logout" onClick={handleLogout}>
-              LOGOUT
-            </button>
           </div>
-
-          <div className="listingsContainer">LISTINGS</div>
-
+          <div className="listingsContainer">
+            ACTIVE LISTINGS
+            {loading ? (
+              <div className="loading">Loading listings ...</div>
+            ) : error ? (
+              <div className="error">
+                {" "}
+                {error} - 404 Server error: Server does not currently seem to be
+                running.
+              </div>
+            ) : listings.length > 0 ? (
+              <div className="listings">
+                {listings.map((listing) => (
+                  <li key={listing._id}>
+                    <Link to={"/listing/" + listing._id}>
+                      <div className="profile-listing">
+                        <div className="profile-listing-image">
+                          <img
+                            className="listing-image"
+                            src={listing.image}
+                            alt="listing"
+                          ></img>
+                        </div>
+                        <div className="listing-content">
+                          <div className="listing-name">{listing.name}</div>
+                          <div className="listing-price">
+                            Asking Price: ${listing.price}
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </div>
+            ) : (
+              <div>
+                {" "}
+                You currently dont have any listings. Click "create listing" to
+                get started!{" "}
+                <Link to="/account/createlisting">Create listing</Link>
+              </div>
+            )}
+          </div>
           <div className="watchlistContainer">WATCHLIST</div>
         </div>
       ) : (
         <div>
-          <Link to="account/signin">Sign in</Link>
-          <Link to="account/signup">Sign Up</Link>
+          <Link to="/account/signin">Sign in</Link>
+          <Link to="/account/signup">Sign Up</Link>
         </div>
       )}
-    </BrowserRouter>
+    </>
   );
 }
 

@@ -50,7 +50,7 @@ function SignUp(props) {
         postcode
       )
     );
-    error && props.history.push("/signin");
+    error && props.history.push("/account/signin");
   };
 
   return (
@@ -61,7 +61,7 @@ function SignUp(props) {
       </h2>
       <div className="createnewAccountContainer">
         {loading}
-        {error && <div>Email or Student ID has been taken</div>}
+        {error && <div>The student ID or email has already been taken</div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Student ID:</label>
           <input

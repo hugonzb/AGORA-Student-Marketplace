@@ -10,13 +10,15 @@ function CreateListing(props) {
     */
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [image, setImage] = useState("An image");
+  const [image] = useState("An image");
   const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
   const [price, setPrice] = useState(""); //unsure about this for now
-  const [location, setLocation] = useState("");
+  const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
+  const [condition, setCondition] = useState("");
   const [seller, setSeller] = useState("");
+  const [sellerId, setSellerId] = useState("");
   const [deliveryoption, setDeliveryoption] = useState("");
 
   const userSignin = useSelector((state) => state.userSignin);
@@ -38,6 +40,8 @@ function CreateListing(props) {
     if (userInfo) {
       setSeller(userInfo.fname + " " + userInfo.sname);
       setUniversity(userInfo.university);
+      setCity(userInfo.city);
+      setSellerId(userInfo.studentid);
     }
     return () => {};
   }, [userInfo]);
@@ -51,10 +55,12 @@ function CreateListing(props) {
         image,
         category,
         price,
-        location,
+        city,
         university,
         brand,
+        condition,
         seller,
+        sellerId,
         deliveryoption
       )
     );
@@ -126,17 +132,6 @@ function CreateListing(props) {
             onChange={(e) => setPrice(e.target.value)}
           ></input>
           <br></br>
-
-          <label> Location: </label>
-          <input
-            type="text"
-            id="location "
-            name="location "
-            placeholder="location "
-            required
-            onChange={(e) => setLocation(e.target.value)}
-          ></input>
-          <br></br>
           <label>Product brand: </label>
           <input
             type="text"
@@ -145,7 +140,12 @@ function CreateListing(props) {
             placeholder="brand"
             onChange={(e) => setBrand(e.target.value)}
           ></input>
-
+          <label>Condition: </label>
+          <select id="condition" onChange={(e) => setCondition(e.target.value)}>
+            <option value="New">New</option>
+            <option value="Used">Used</option>
+          </select>
+          <label>Delivery </label>
           <input
             type="radio"
             id="pickup"
@@ -163,7 +163,6 @@ function CreateListing(props) {
             required
             onChange={(e) => setDeliveryoption(e.target.value)}
           ></input>
-          <label>Delivery </label>
           <button type="submit" value="Submit">
             Create Listing
           </button>

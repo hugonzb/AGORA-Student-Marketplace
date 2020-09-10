@@ -10,6 +10,8 @@ import {Link} from "react-router-dom";
 function ViewListing(props) {
 	const listingDetails = useSelector(state => state.listingDetails);
 	const { listing, loading, error } = listingDetails;
+	const userSignin = useSelector((state) => state.userSignin);
+	const { userInfo } = userSignin;
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -29,8 +31,10 @@ function ViewListing(props) {
 						<div className="view-listing-title">
 							{listing.name}
 						</div>
+						{userInfo.studentid !== listing.sellerId ? 
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
+<<<<<<< HEAD
 							<Link to={'/item/checkout'}>
 							<button className="buynow-button">
 								<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
@@ -39,10 +43,26 @@ function ViewListing(props) {
 							<button className="addtowatchlist-button">
 								<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
 							</button>
+=======
+								<button className="buynow-button">
+									<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
+								</button>
+								<button className="addtowatchlist-button">
+									<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
+								</button>
+>>>>>>> ff0ccede500d01a54630b1ad9f917196792625f3
 						</div>
+						: 	<div className="view-listing-buttons">
+								<div className="view-listing-price">Asking Price: ${listing.price}</div>
+								<div className="view-listing-seller-message">
+									<div className="view-listing-seller-message-text">
+										You listed this item.
+									</div>
+								</div>
+							</div>}
 					</div>	
 				<div className="view-listing-details">
-					<div className="view-listing-details-title"> Listing Information </div>
+					<div className="view-listing-details-title"> LISTING INFORMATION </div>
 					<div className="view-listing-description-container"> 
 						<div className="view-listing-description">
 							{listing.description} 
@@ -64,16 +84,16 @@ function ViewListing(props) {
 										<div className="view-listing-sellername">{listing.seller}</div>
 									</div>	
 								</td>
-								<td>Null</td>
-								<td>None</td>
+								<td>{listing.condition}</td>
+								<td>{listing.brand}</td>
 								<td>{listing.category}</td>
-								<td>Null</td>
+								<td>{listing.city}</td>
 							</tr>
 						</table>				
 					</div>
 				</div>
 				<div className="view-listing-details">
-					<div className="view-listing-details-title"> Questions & Answers </div>
+					<div className="view-listing-details-title"> QUESTIONS & ANSWERS </div>
 					<div className="view-listing-qa-container">
 						There are no questions posted yet.	
 					</div>

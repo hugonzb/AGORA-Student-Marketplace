@@ -9,11 +9,12 @@ function Home(props) {
   const [locationSortOrder, setLocationSortOrder] = useState("");
   const searchWord = props.match.params.id ? props.match.params.id : "";
   const listingList = useSelector((state) => state.listingList);
+  const [seller] = useState("");
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(listListings(searchWord));
+    dispatch(listListings(searchWord, seller));
     return () => {};
     // eslint-disable-next-line
   }, [searchWord]);
@@ -70,6 +71,7 @@ function Home(props) {
               }}
             >
               <option value=""> All Locations </option>
+              <option value="Christchurch"> Auckland </option>
               <option value="Christchurch"> Christchurch </option>
               <option value="Dunedin"> Dunedin </option>
               <option value="Wellington"> Wellington </option>
