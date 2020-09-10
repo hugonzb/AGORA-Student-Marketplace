@@ -99,7 +99,7 @@ function Profile(props) {
               <div className="listings">
                 {listings.map((listing) => (
                   <li key={listing._id}>
-                    <Link to={"/profile/" + listing._studentID}>
+                    <Link to={"/listing/" + listing._id}>
                       <div className="listing-container">
                         <div className="listing-image">
                           <img
