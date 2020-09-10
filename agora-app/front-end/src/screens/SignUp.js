@@ -61,7 +61,7 @@ function SignUp(props) {
       </h2>
       <div className="createnewAccountContainer">
         {loading}
-        {error && <div>{error}</div>}
+        {error && <div>The student ID or email has already been taken</div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Student ID:</label>
           <input

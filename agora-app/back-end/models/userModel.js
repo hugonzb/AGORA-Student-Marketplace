@@ -3,18 +3,18 @@ import { strict } from "assert";
 
 // Database schema for a user
 const userSchema = new mongoose.Schema({
-  studentid: { type: Number, required: false }, 
-  fname: { type: String, required: false },
-  sname: { type: String, required: false },
-  username: { type: String, required: false },
-  password: { type: String, required: false },
+  studentid: { type: Number, required: true }, 
+  fname: { type: String, required: true },
+  sname: { type: String, required: true },
+  username: { type: String, required: true },
+  password: { type: String, required: true },
   email: { type: String, required: false }, 
-  dob: { type: Date, required: false },
-  gender: { type: String, required: false },
-  university: { type: String, required: false },
-  street_address: { type: String, required: false },
-  city: { type: String, required: false },
-  postcode: { type: String, required: false }
+  dob: { type: Date, required: true },
+  gender: { type: String, required: true },
+  university: { type: String, required: true },
+  street_address: { type: String, required: true },
+  city: { type: String, required: true },
+  postcode: { type: String, required: true }
 },{
   timestamps: true,
 },{strict: true});

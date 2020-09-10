@@ -5,6 +5,7 @@ import { getToken } from "../util";
 const router = express.Router();
 
 router.post("/signup", async (req, res) => {
+  try{
     const user = new User({
       studentid: req.body.studentid,
       fname: req.body.fname,
@@ -22,6 +23,9 @@ router.post("/signup", async (req, res) => {
     });
     const newUser = await user.save();
     res.send(newUser);
+  }catch(UnhandledPromiseRejectionWarning){
+    res.status(404).send({ message: "User Not Found." });
+  }
 });
 
 router.post("/signin", async (req, res) => {
