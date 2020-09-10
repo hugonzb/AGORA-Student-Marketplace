@@ -30,7 +30,7 @@ function ViewListing(props) {
 						<div className="view-listing-title">
 							{listing.name}
 						</div>
-						{userInfo.studentid != listing.sellerId ? 
+						{userInfo.studentid !== listing.sellerId ? 
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
 								<button className="buynow-button">
