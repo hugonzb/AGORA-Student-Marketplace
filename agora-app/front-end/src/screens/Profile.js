@@ -15,8 +15,8 @@ function Profile(props) {
   const [city, setCity] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-  const userListings = useSelector((state) => state.userListings);
-  const { listings, loading, error } = userListing;
+  const listingList = useSelector((state) => state.listinglist);
+  const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
 
   // This runs when the logout button is pressed 
@@ -28,12 +28,8 @@ function Profile(props) {
   };
 
   useEffect(() => {
-    // If userInfo exists, set the email and name fields
+    dispatch(userListings(id));
     if (userInfo) {
-      // Log the name field just to make sure it's correct
-      //console.log("user name: " + userInfo.fname);
-      //console.log("email: " + userInfo.email);
-      //console.log("user id: " + userInfo.id);
       setName(userInfo.name);
       setID(userInfo.id);
       setEmail(userInfo.email);
