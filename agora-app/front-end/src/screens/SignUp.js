@@ -4,6 +4,8 @@ import { signUp } from "../actions/userActions";
 import { Link } from "react-router-dom";
 import "../index.css";
 import "../signup.css";
+import signin from "../screens/SignIn";
+import agoralogo from "../images/agoralogo.png";
 
 function SignUp(props) {
   const [fname, setFname] = useState("");
@@ -57,18 +59,26 @@ function SignUp(props) {
 
   
   return (
+
     <div className="wrapper">
         {loading}
         {error && <div>Email or Student ID has been taken</div>}
         
-        <div class="registration_form">
-        	<div class="title">
-			    Registration Form
-		    </div>
+        <div className="registration_form">
+                <div className = "title"> <img src={agoralogo} 
+                        className="sign-up-logo" alt=""/> 
+                </div>
+        	        <div className="title">
+			            <h4>Registration Form</h4>
+                        <div className="title">
+                            Already have an account?  <Link to="/signin">Sign in</Link>
+		                </div>
+                    
+            </div>
+            
 
         <form className="form_wrap" onSubmit={submitHandler}>
             <div className="input_grp">
-             
           
                 <div className="input_wrap"> 
                    <label>First Name:</label>
@@ -123,9 +133,8 @@ function SignUp(props) {
           </div>
     
           <div className="input_grp">
-        
               <div className="input_wrap">
-                  <label>User Name:</label>
+                  <label>Username:</label>
                   <input
                     type="text"
                     id="username"
@@ -176,56 +185,31 @@ function SignUp(props) {
               </div>
           </div>
 
-          <div className="input_wrap">
-          <label for="school">University: </label>
-          <select
-            id="school"
-            name="school"
-            placeholder="Select University"
-            onChange={(e) => setUniversity(e.target.value)}
-          >
-            <option value="University of Auckland">
-              University of Auckland
-            </option>
-            <option value="Auckland University of Technology (AUT)">
-              Auckland University of Technology (AUT)
-            </option>
-            <option value="University of Waikato">University of Waikato</option>
-            <option value="Massey University">Massey University</option>
-            <option value="Victoria University of Wellington">
-              Victoria University of Wellington
-            </option>
-            <option value="University of Canterbury">
-              University of Canterbury
-            </option>
-            <option value="Lincoln University">Lincoln University</option>
-            <option value="University of Otago">University of Otago</option>
-          </select>
-          </div>
+         
 
           <div className="input_grp">
-          <div className="input_wrap">
-          <label>Address:</label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            placeholder="Enter Address"
-            required
-            onChange={(e) => setStreet(e.target.value)}
-          ></input>
+               <div className="input_wrap">
+              <label>Address:</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Enter Address"
+                required
+                onChange={(e) => setStreet(e.target.value)}
+              ></input>
           </div> 
 
           <div className="input_wrap">
-          <label>City:</label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            placeholder="Enter city"
-            required
-            onChange={(e) => setCity(e.target.value)}
-          ></input>
+              <label>City:</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Enter city"
+                required
+                onChange={(e) => setCity(e.target.value)}
+              ></input>
           </div> 
 
           <div className="input_wrap">
@@ -242,21 +226,44 @@ function SignUp(props) {
           </div>
          
           <div className="input_wrap">
-          <button type="submit" value="Submit">
-            Register
-          </button>
-          </div> 
-          <h4>Already have an account?</h4>
+              <label for="school">University: </label>
+              <select
+                id="school"
+                name="school"
+                placeholder="Select University"
+                onChange={(e) => setUniversity(e.target.value)}
+              >
+                <option value="University of Auckland">
+                  University of Auckland
+                </option>
+                <option value="Auckland University of Technology (AUT)">
+                  Auckland University of Technology (AUT)
+                </option>
+                <option value="University of Waikato">University of Waikato</option>
+                <option value="Massey University">Massey University</option>
+                <option value="Victoria University of Wellington">
+                  Victoria University of Wellington
+                </option>
+                <option value="University of Canterbury">
+                  University of Canterbury
+                </option>
+                <option value="Lincoln University">Lincoln University</option>
+                <option value="University of Otago">University of Otago</option>
+          </select>
 
-          <div className="link-new-acc">
-            <Link to="/SignIn">Sign in</Link>
           </div>
 
-       
+
+          <div class="input_wrap">
+					<input type="submit" value="Register Now" class="submit_btn"></input>
+		  </div>
+
         </form>
       
       </div>
       </div>
+   
+
       
     
   );
