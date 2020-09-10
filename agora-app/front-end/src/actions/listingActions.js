@@ -105,4 +105,4 @@ const createListing = (
   }
 };
 
-export { listListings, detailListing, createListing };
+export { listListings, detailListing, createListing, userListings };
