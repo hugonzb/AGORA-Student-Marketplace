@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
 import { listListings } from "../actions/listingActions";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../index.css";
 import profileicon from "../images/profileicon.png";
 
@@ -44,8 +44,7 @@ function Profile(props) {
   }, [userInfo, searchWord, category, location, sellerId]);
 
   return (
-    <BrowserRouter>
-      {userInfo ? (
+      <> {userInfo ? (
         <div className="mainContainer">
           <div className="profileContainer">
             <h2> Profile </h2>
@@ -131,7 +130,7 @@ function Profile(props) {
                 {" "}
                 You currently dont have any listings. Click "create listing" to
                 get started!{" "}
-                <Link to="account/createlisting">Create listing</Link>{" "}
+                <Link to="/account/createlisting">Create listing</Link>
               </div>
             )}
           </div>
@@ -139,11 +138,11 @@ function Profile(props) {
         </div>
       ) : (
         <div>
-          <Link to="account/signin">Sign in</Link>
-          <Link to="account/signup">Sign Up</Link>
+          <Link to="/account/signin">Sign in</Link>
+          <Link to="/account/signup">Sign Up</Link>
         </div>
       )}
-    </BrowserRouter>
+    </>
   );
 }
 
