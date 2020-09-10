@@ -46,7 +46,7 @@ router.get("/:id", async (req, res) => {
 router.get("/profile"),
   async (req, res) => {
     const userListings = await Listing.find({
-      studentID: req.params.studentID,
+      _studentID: req.params.studentID,
     });
     if (userListings) {
       res.send(listing);
