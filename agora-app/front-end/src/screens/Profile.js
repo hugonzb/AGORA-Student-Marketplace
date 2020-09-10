@@ -38,7 +38,7 @@ function Profile(props) {
       setCity(userInfo.city);
     }
     return () => {};
-  }, [userInfo]);
+  }, [userInfo, id]);
 
   return (
     <BrowserRouter>
