@@ -9,6 +9,8 @@ import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 function ViewListing(props) {
 	const listingDetails = useSelector(state => state.listingDetails);
 	const { listing, loading, error } = listingDetails;
+	const userSignin = useSelector((state) => state.userSignin);
+	const { userInfo } = userSignin;
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -28,15 +30,24 @@ function ViewListing(props) {
 						<div className="view-listing-title">
 							{listing.name}
 						</div>
+						{userInfo.studentid != listing.sellerId ? 
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
-							<button className="buynow-button">
-								<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
-							</button>
-							<button className="addtowatchlist-button">
-								<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
-							</button>
+								<button className="buynow-button">
+									<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
+								</button>
+								<button className="addtowatchlist-button">
+									<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
+								</button>
 						</div>
+						: 	<div className="view-listing-buttons">
+								<div className="view-listing-price">Asking Price: ${listing.price}</div>
+								<div className="view-listing-seller-message">
+									<div className="view-listing-seller-message-text">
+										You listed this item.
+									</div>
+								</div>
+							</div>}
 					</div>	
 				<div className="view-listing-details">
 					<div className="view-listing-details-title"> LISTING INFORMATION </div>

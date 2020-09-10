@@ -86,7 +86,7 @@ function Profile(props) {
             </div>
           </div>
           <div className="listingsContainer">
-            LISTINGS
+            ACTIVE LISTINGS
             {loading ? (
               <div className="loading">Loading listings ...</div>
             ) : error ? (
@@ -100,8 +100,8 @@ function Profile(props) {
                 {listings.map((listing) => (
                   <li key={listing._id}>
                     <Link to={"/listing/" + listing._id}>
-                      <div className="listing-container">
-                        <div className="listing-image">
+                      <div className="profile-listing">
+                        <div className="profile-listing-image">
                           <img
                             className="listing-image"
                             src={listing.image}
@@ -112,12 +112,6 @@ function Profile(props) {
                           <div className="listing-name">{listing.name}</div>
                           <div className="listing-price">
                             Asking Price: ${listing.price}
-                          </div>
-                          <div className="view-listing-user">
-                            <img src={profileicon} alt="profile" />
-                            <div className="view-listing-sellername">
-                              {listing.seller}
-                            </div>
                           </div>
                         </div>
                       </div>

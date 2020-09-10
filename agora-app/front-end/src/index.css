@@ -321,6 +321,22 @@ ul li a {
   box-shadow: 0px 0px 6px 0px rgba(170, 170, 170, 0.61);
 }
 
+.view-listing-seller-message{
+  display: flex;
+  font-weight: bold;
+  font-family: "Play";
+  height: 6rem;
+  text-align: center;
+  align-items: center;
+}
+
+.view-listing-seller-message-text{
+  border: 1px solid rgb(71, 71, 71);
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 245);
+  padding: 1rem;
+}
+
 .buynow-button {
   background-color: #2cbd33;
   border-radius: 8px;
@@ -802,6 +818,39 @@ span.psw {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
+}
+
+.profile-listing{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid rgb(165, 164, 164);
+  margin: 0.5rem;
+  width: 250px;
+  min-height: 6rem;
+  font-family: arial;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border-top: 2px rgb(102, 102, 102) solid;
+  border-bottom: 2px rgb(59, 59, 59) solid;
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
+}
+
+.profile-listing img{
+  max-width: 5rem;
+  border: 0px;
+  padding-left: 5px;
+}
+
+.profile-listing-image {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  width: 100px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-right: 1px solid rgb(212, 212, 212);
 }
 
 .avatar_head {
