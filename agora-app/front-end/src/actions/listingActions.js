@@ -33,10 +33,10 @@ const listListings = (searchWord = "", category = "", location = "") => async (
   }
 };
 
-const userListings = (studentID = "") => async (dispatch) => {
+const userListings = (studentid = "") => async (dispatch) => {
   try {
     dispatch({ type: LISTING_LIST_REQUEST });
-    const { data } = await axios.get("/api/listings?studentID=" + studentID);
+    const { data } = await axios.get("/api/listings?studentid=" + studentid);
     dispatch({ type: LISTING_LIST_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: LISTING_LIST_FAIL, payload: error.message });

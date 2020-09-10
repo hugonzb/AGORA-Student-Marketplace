@@ -43,13 +43,16 @@ router.get("/:id", async (req, res) => {
 });
 
 //get user listings on profile
-router.get("/profile"),
+router.get("/account/profile"),
   async (req, res) => {
-    const userListings = await Listing.find({
-      _studentID: req.params.studentID,
+    const sellerid = req.query.studentid
+    ? { sellerid: req.query.studentid }
+    : {};
+    const listings = await Listing.find({
+      ...sellerid
     });
-    if (userListings) {
-      res.send(listing);
+    if (listings) {
+      res.send(listings);
     } else {
       res.status(404).send({ message: "User Listings not found." });
     }
