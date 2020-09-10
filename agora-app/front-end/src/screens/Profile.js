@@ -15,7 +15,7 @@ function Profile(props) {
   const [city, setCity] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-  const listingList = useSelector((state) => state.listinglist);
+  const listingList = useSelector((state) => state.listingList);
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
 
