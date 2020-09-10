@@ -4,8 +4,7 @@ import { getToken } from "../util";
 
 const router = express.Router();
 
-router.post("/account/signup", async (req, res) => {
-  try {
+router.post("/signup", async (req, res) => {
     const user = new User({
       studentid: req.body.studentid,
       fname: req.body.fname,
@@ -20,16 +19,12 @@ router.post("/account/signup", async (req, res) => {
       city: req.body.city,
       postcode: req.body.postcode,
       date_created: req.body.date_created,
-      token: getToken(user),
     });
     const newUser = await user.save();
     res.send(newUser);
-  } catch {
-    res.status(401).send("Sign up failed");
-  }
 });
 
-router.post("/account/signin", async (req, res) => {
+router.post("/signin", async (req, res) => {
   const signinUser = await User.findOne({
     email: req.body.email,
     password: req.body.password,
