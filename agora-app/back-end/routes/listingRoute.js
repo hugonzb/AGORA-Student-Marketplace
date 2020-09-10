@@ -25,10 +25,10 @@ router.get("/", async (req, res) => {
     ? { location: req.query.locationSortOrder }
     : {};
 
-  const sellerName = req.query.sellerName
+  const sellerIdListing = req.query.sellerIdListing
     ? {
-        seller: {
-          $regex: req.query.sellerName,
+        sellerId: {
+          $regex: req.query.sellerIdListing,
           $options: "i",
         },
       }
@@ -38,7 +38,7 @@ router.get("/", async (req, res) => {
     ...searchWord,
     ...categorySortOrder,
     ...locationSortOrder,
-    ...sellerName
+    ...sellerIdListing
   });
   res.send(listings);
 });

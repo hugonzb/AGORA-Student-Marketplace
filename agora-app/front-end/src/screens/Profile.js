@@ -12,13 +12,12 @@ function Profile(props) {
   const [category] = useState("");
   const [location] = useState("");
   const [email, setEmail] = useState("");
-  const [studentid, setStudentid] = useState("");
   const [username, setUsername] = useState("");
   const [university, setUniversity] = useState("");
   const [city, setCity] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
-  const [seller] = useState(userInfo.fname);
+  const [sellerId] = useState(userInfo.studentid);
   const listingList = useSelector((state) => state.listingList);
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
@@ -34,15 +33,14 @@ function Profile(props) {
   useEffect(() => {
     if (userInfo) {
       setName(userInfo.fname);
-      setStudentid(userInfo.id);
       setEmail(userInfo.email);
       setUsername(userInfo.username);
       setUniversity(userInfo.university);
       setCity(userInfo.city);
     }
-    dispatch(listListings(searchWord, category, location, seller));
+    dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
-  }, [userInfo, seller]);
+  }, [userInfo, sellerId]);
 
   return (
     <BrowserRouter>
@@ -61,8 +59,8 @@ function Profile(props) {
 
             <div className="profile-contents">
               <form className="profile-form">
-                <label for="username" value={studentid}>
-                  Student ID: {userInfo.studentid}
+                <label for="username" value={sellerId}>
+                  Student ID: {sellerId}
                 </label>
                 <br></br>
                 <label for="email" value={email}>

@@ -11,7 +11,7 @@ import {
   CREATELISTING_SUCCESS
 } from "../constants/listingConstants";
 
-const listListings = (searchWord = "", category = "", location = "", seller="") => async (
+const listListings = (searchWord = "", category = "", location = "", sellerId="") => async (
   dispatch
 ) => {
   try {
@@ -23,8 +23,8 @@ const listListings = (searchWord = "", category = "", location = "", seller="") 
         category +
         "&locationSortOrder=" +
         location +
-        "&sellerName=" +
-        seller
+        "&sellerIdListing=" +
+        sellerId
 
     );
     dispatch({ type: LISTING_LIST_SUCCESS, payload: data });
