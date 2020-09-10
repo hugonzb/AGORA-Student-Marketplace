@@ -19,7 +19,7 @@ function Profile(props) {
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
 
-  // This runs when the logout button is pressed 
+  // This runs when the logout button is pressed
   const handleLogout = () => {
     dispatch(logout());
     // This line redirects the user to the sign in screen
