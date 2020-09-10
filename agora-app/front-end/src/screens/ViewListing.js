@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailListing } from '../actions/listingActions';
 import profileicon from "../images/profileicon.png";
@@ -7,18 +7,24 @@ import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 
 function ViewListing(props) {
+	const [studentId, setStudentId] = useState("");
 	const listingDetails = useSelector(state => state.listingDetails);
 	const { listing, loading, error } = listingDetails;
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
 	const dispatch = useDispatch();
 
+
 	useEffect(() => {
+		if (userInfo) {
+			setStudentId(userInfo.studentid);
+		}
         dispatch(detailListing(props.match.params.id));
         return () => {
         };
     // eslint-disable-next-line
 	}, []);
+
 	
 	return loading ? <div className="loading">Loading listings ...</div> : 
 	error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
@@ -30,7 +36,7 @@ function ViewListing(props) {
 						<div className="view-listing-title">
 							{listing.name}
 						</div>
-						{userInfo.studentid !== listing.sellerId ? 
+						{studentId != listing.sellerId ? 
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
 								<button className="buynow-button">
