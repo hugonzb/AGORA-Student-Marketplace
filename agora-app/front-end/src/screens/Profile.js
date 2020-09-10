@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
+import { userListings } from "../actions/listingActions";
 import { BrowserRouter, Link } from "react-router-dom";
 import "../index.css";
 import profileicon from "../images/profileicon.png";
@@ -14,6 +15,8 @@ function Profile(props) {
   const [city, setCity] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+  const userListings = useSelector((state) => state.userListings);
+  const { listings, loading, error } = userListing;
   const dispatch = useDispatch();
 
   // This runs when the logout button is pressed 
@@ -98,7 +101,7 @@ function Profile(props) {
               <div className="listings">
                 {listings.map((listing) => (
                   <li key={listing._id}>
-                    <Link to={"/listing/" + listing._id}>
+                    <Link to={"/profile/" + listing._studentID}>
                       <div className="listing-container">
                         <div className="listing-image">
                           <img
