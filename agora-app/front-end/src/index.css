@@ -940,6 +940,8 @@ span.psw {
 
 /*Checkout*/
 
-.checkout-container{
 
-}
+ .checkout-container{
+   height: 100vh;   
+ }
+

@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 
     function Checkout(props) {
         return(
-            <div>
+            
             <div className="checkout-container">
               
             </div>
-            </div>
+            
         
 
         );

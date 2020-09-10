@@ -51,6 +51,7 @@ function App(props) {
           <Route path="/account/signin" component={SignIn} />
           <Route path="/info/about" component={About} />
           <Route path="/info/contact" component={Contact} />
+          <Route path="/item/Checkout" component={Checkout}/>
           <Route path="/account/profile" component={Profile} />
           <Route path="/account/createlisting" component={CreateListing} />
         </div>
