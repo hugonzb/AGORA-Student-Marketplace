@@ -45,8 +45,11 @@ router.get("/:id", async (req, res) => {
 //get user listings on profile
 router.get("/profile"),
   async (req, res) => {
+    const sellerid = req.query.studentid
+    ? { sellerid: req.query.studentid }
+    : {};
     const userListings = await Listing.find({
-      _studentID: req.params.studentID,
+      ...sellerid
     });
     if (userListings) {
       res.send(listing);

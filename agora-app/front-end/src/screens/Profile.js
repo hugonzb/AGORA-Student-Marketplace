@@ -9,7 +9,7 @@ import profileicon from "../images/profileicon.png";
 function Profile(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [id, setID] = useState("");
+  const [studentid, setStudentid] = useState("");
   const [username, setUsername] = useState("");
   const [university, setUniversity] = useState("");
   const [city, setCity] = useState("");
@@ -28,17 +28,17 @@ function Profile(props) {
   };
 
   useEffect(() => {
-    dispatch(userListings(id));
+    dispatch(userListings(studentid));
     if (userInfo) {
       setName(userInfo.name);
-      setID(userInfo.id);
+      setStudentid(userInfo.id);
       setEmail(userInfo.email);
       setUsername(userInfo.username);
       setUniversity(userInfo.university);
       setCity(userInfo.city);
     }
     return () => {};
-  }, [userInfo, id]);
+  }, [userInfo, studentid]);
 
   return (
     <BrowserRouter>
@@ -57,7 +57,7 @@ function Profile(props) {
 
             <div className="profile-contents">
               <form className="profile-form">
-                <label for="username" value={id}>
+                <label for="username" value={studentid}>
                   Student ID: {userInfo.studentid}
                 </label>
                 <br></br>
