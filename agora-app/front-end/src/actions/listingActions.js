@@ -9,6 +9,9 @@ import {
   CREATELISTING_REQUEST,
   CREATELISTING_FAIL,
   CREATELISTING_SUCCESS,
+  USER_LISTING_REQUEST,
+  USER_LISTING_SUCCESS,
+  USER_LISTING_FAIL,
 } from "../constants/listingConstants";
 
 const listListings = (searchWord = "", category = "", location = "") => async (
@@ -30,21 +33,20 @@ const listListings = (searchWord = "", category = "", location = "") => async (
   }
 };
 
+const getUserListings = (studentID = "") => async (dispatch) => {
+  try {
+    dispatch({ type: USER_LIST_REQUEST });
+    const { data } = await axios.get("/api/listings?studentID=" + studentID);
+    dispatch({ type: USER_LIST_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({ type: USER_LIST_FAIL, payload: error.message });
+  }
+};
+
 const detailListing = (listingId) => async (dispatch) => {
   try {
     dispatch({ type: LISTING_DETAILS_REQUEST, payload: listingId });
     const { data } = await axios.get("/api/listings/" + listingId);
-    dispatch({ type: LISTING_DETAILS_SUCCESS, payload: data });
-  } catch (error) {
-    dispatch({ type: LISTING_DETAILS_FAIL, payload: error.message });
-  }
-};
-
-//profile page user listings
-const getUsersListings = (listingId) => async (dispatch) => {
-  try {
-    dispatch({ type: LISTING_DETAILS_REQUEST, payload: userID });
-    const { data } = await axios.get("api/profile/" + userID);
     dispatch({ type: LISTING_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: LISTING_DETAILS_FAIL, payload: error.message });

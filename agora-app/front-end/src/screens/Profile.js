@@ -84,7 +84,55 @@ function Profile(props) {
               </button>
             </div>
           </div>
-          <div className="listingsContainer">LISTINGS</div>
+          <div className="listingsContainer">
+            LISTINGS
+            {loading ? (
+              <div className="loading">Loading listings ...</div>
+            ) : error ? (
+              <div className="error">
+                {" "}
+                {error} - 404 Server error: Server does not currently seem to be
+                running.
+              </div>
+            ) : listings.length > 0 ? (
+              <div className="listings">
+                {listings.map((listing) => (
+                  <li key={listing._id}>
+                    <Link to={"/listing/" + listing._id}>
+                      <div className="listing-container">
+                        <div className="listing-image">
+                          <img
+                            className="listing-image"
+                            src={listing.image}
+                            alt="listing"
+                          ></img>
+                        </div>
+                        <div className="listing-content">
+                          <div className="listing-name">{listing.name}</div>
+                          <div className="listing-price">
+                            Asking Price: ${listing.price}
+                          </div>
+                          <div className="view-listing-user">
+                            <img src={profileicon} alt="profile" />
+                            <div className="view-listing-sellername">
+                              {listing.seller}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </div>
+            ) : (
+              <div>
+                {" "}
+                You currently dont have any listings. Click "create listing" to
+                get started!{" "}
+                <Link to="account/createlisting">Create listing</Link>{" "}
+              </div>
+            )}
+          </div>
           <div className="watchlistContainer">WATCHLIST</div>
         </div>
       ) : (

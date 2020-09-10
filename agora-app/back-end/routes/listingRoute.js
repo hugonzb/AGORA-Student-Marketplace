@@ -25,10 +25,6 @@ router.get("/", async (req, res) => {
     ? { location: req.query.locationSortOrder }
     : {};
 
-  const getUserListings = req.query.getUserListings
-    ? { userID: req.query.getUserListings }
-    : {};
-
   const listings = await Listing.find({
     ...searchWord,
     ...categorySortOrder,
@@ -45,6 +41,19 @@ router.get("/:id", async (req, res) => {
     res.status(404).send({ message: "Listing Not Found." });
   }
 });
+
+//get user listings on profile
+router.get("/profile"),
+  async (req, res) => {
+    const userListings = await Listing.find({
+      studentID: req.params.studentID,
+    });
+    if (userListings) {
+      res.send(listing);
+    } else {
+      res.status(404).send({ message: "User Listings not found." });
+    }
+  };
 
 // Hope it's ok to make the post uri to /listing/create
 router.post("/create", async (req, res) => {
