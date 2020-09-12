@@ -36,7 +36,8 @@ function ViewListing(props) {
 						<div className="view-listing-title">
 							{listing.name}
 						</div>
-						{studentId != listing.sellerId ? 
+						{// eslint-disable-next-line 
+						studentId != listing.sellerId ? 
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
 								<button className="buynow-button">
