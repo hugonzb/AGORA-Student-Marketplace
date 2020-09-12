@@ -34,23 +34,12 @@ function ViewListing(props) {
 						{userInfo.studentid !== listing.sellerId ? 
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
-<<<<<<< HEAD
-							<Link to={'/item/checkout'}>
-							<button className="buynow-button">
-								<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
-							</button>
-							</Link>
-							<button className="addtowatchlist-button">
-								<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
-							</button>
-=======
 								<button className="buynow-button">
 									<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
 								</button>
 								<button className="addtowatchlist-button">
 									<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
 								</button>
->>>>>>> ff0ccede500d01a54630b1ad9f917196792625f3
 						</div>
 						: 	<div className="view-listing-buttons">
 								<div className="view-listing-price">Asking Price: ${listing.price}</div>
