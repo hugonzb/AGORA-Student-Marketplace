@@ -62,7 +62,7 @@ function ViewListing(props) {
 							{listing.description} 
 						</div>
 					</div>	
-					<div>
+					<div className="view-listing-table">
 						<table>
 							<tr>
 								<th>Seller</th>
