@@ -61,7 +61,7 @@ function ViewListing(props) {
 						<div className="view-listing-price">Asking Price: ${listing.price}</div>
 						<div className="view-listing-seller-message">
 							<div className="view-listing-seller-message-text">
-								Please login to reveal options.
+								Please Sign In To Reveal Options.
 							</div>
 						</div>
 						</div>

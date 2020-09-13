@@ -71,7 +71,7 @@ function Home(props) {
               }}
             >
               <option value=""> All Locations </option>
-              <option value="Christchurch"> Auckland </option>
+              <option value="Auckland"> Auckland </option>
               <option value="Christchurch"> Christchurch </option>
               <option value="Dunedin"> Dunedin </option>
               <option value="Wellington"> Wellington </option>

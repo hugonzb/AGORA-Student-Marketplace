@@ -22,7 +22,7 @@ router.get("/", async (req, res) => {
       }
     : {};
   const locationSortOrder = req.query.locationSortOrder
-    ? { location: req.query.locationSortOrder }
+    ? { city: req.query.locationSortOrder }
     : {};
 
   const sellerIdListing = req.query.sellerIdListing
