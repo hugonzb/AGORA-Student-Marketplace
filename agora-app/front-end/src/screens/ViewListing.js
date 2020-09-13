@@ -36,29 +36,36 @@ function ViewListing(props) {
 					<div className="view-listing-actions">
 						<div className="view-listing-title">
 							{listing.name}
-						</div>
+						</div> 
 						{// eslint-disable-next-line 
-						studentId != listing.sellerId ? 
+						studentId == listing.sellerId ?
 						<div className="view-listing-buttons">
-							<div className="view-listing-price">Asking Price: ${listing.price}</div>
-								<Link to={"/checkout/"+ listing._id}>
-									<button className="buynow-button">
-										<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
-									</button>
-								</Link>
-									<button className="addtowatchlist-button">
-										<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
-									</button>
-								
-						</div>
-						: 	<div className="view-listing-buttons">
 								<div className="view-listing-price">Asking Price: ${listing.price}</div>
 								<div className="view-listing-seller-message">
 									<div className="view-listing-seller-message-text">
 										You listed this item.
 									</div>
 								</div>
-							</div>}
+						</div>
+						: userInfo ? <div className="view-listing-buttons">
+						<div className="view-listing-price">Asking Price: ${listing.price}</div>
+							<Link to={"/checkout/"+ listing._id}>
+								<button className="buynow-button">
+									<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
+								</button>
+							</Link>
+								<button className="addtowatchlist-button">
+									<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
+								</button>	
+						</div> : <div className="view-listing-buttons">
+						<div className="view-listing-price">Asking Price: ${listing.price}</div>
+						<div className="view-listing-seller-message">
+							<div className="view-listing-seller-message-text">
+								Please login to reveal options.
+							</div>
+						</div>
+						</div>
+						}
 					</div>	
 				<div className="view-listing-details">
 					<div className="view-listing-details-title"> LISTING INFORMATION </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import visa_logo from "../images/visa_logo.png";
 import mastercard_logo from "../images/mastercard_logo.png";
 import cash from "../images/cash.png";
