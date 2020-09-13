@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import visa_logo from "../images/visa_logo.png";
 import mastercard_logo from "../images/mastercard_logo.png";
 import cash from "../images/cash.png";
@@ -20,8 +20,8 @@ import cash from "../images/cash.png";
     <div className="payment-method">
       <label for="card" className="method card">
         <div className="card-logos">
-          <img src={visa_logo}/>
-         <img src={mastercard_logo}/>
+          <img src={visa_logo} alt="visa"/>
+         <img src={mastercard_logo} alt="mastercard"/>
         </div>
  
         <div className="radio-input">
@@ -32,7 +32,8 @@ import cash from "../images/cash.png";
  
       <label for="cash" className="method cash">
           <div className="container-cash">
-        <img src={cash}/></div>
+            <img src={cash} alt="cash"/>
+          </div>
         <div className="radio-input">
           <input id="cash" type="radio" name="payment"/>
           Pay with Cash
