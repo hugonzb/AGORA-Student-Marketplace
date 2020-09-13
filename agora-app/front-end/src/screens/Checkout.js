@@ -1,14 +1,27 @@
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import visa_logo from "../images/visa_logo.png";
 import mastercard_logo from "../images/mastercard_logo.png";
 import cash from "../images/cash.png";
+import { useSelector, useDispatch } from 'react-redux';
+import {Link} from "react-router-dom";
+import { detailListing } from '../actions/listingActions';
 
 
     function Checkout(props) {
+      const listingDetails = useSelector(state => state.listingDetails);
+      const { listing, loading, error } = listingDetails;
+      const dispatch = useDispatch();
+
+      
+      useEffect(() => {
+          dispatch(detailListing(props.match.params.id));
+          return () => {
+          };
+        // eslint-disable-next-line
+      }, []);
         
-        return(
-            
+        return loading ? <div className="loading">Loading listing ...</div> :
+        error? <div className="error"> {error} </div> :
          <div className="checkout-container-body">
          <div className="checkout-panel"> 
                 <div className="panel-body">        
@@ -68,12 +81,13 @@ import cash from "../images/cash.png";
     </div>
   </div>
    <div className="panel-footer">
-    <button className="btnc back-btn">Cancel</button>
+    <Link to={"/listing/"+ listing._id}>
+      <button className="btnc back-btn">Cancel</button>
+    </Link>
     <button className="btnc next-btn">Proceed</button>
    </div>        
 </div> 
             </div>              
-        );
     }
 
     export default Checkout;

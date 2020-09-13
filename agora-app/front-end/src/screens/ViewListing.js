@@ -27,7 +27,7 @@ function ViewListing(props) {
 	}, []);
 
 	
-	return loading ? <div className="loading">Loading listings ...</div> : 
+	return loading ? <div className="loading">Loading listing ...</div> : 
 	error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
 			<div className="view-listing-container">
 					<div className="view-listing-image">
@@ -42,13 +42,13 @@ function ViewListing(props) {
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
 								<Link to={"/checkout/"+ listing._id}>
-								<button className="buynow-button">
-									<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
-								</button>
+									<button className="buynow-button">
+										<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
+									</button>
 								</Link>
-								<button className="addtowatchlist-button">
-									<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
-								</button>
+									<button className="addtowatchlist-button">
+										<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
+									</button>
 								
 						</div>
 						: 	<div className="view-listing-buttons">
