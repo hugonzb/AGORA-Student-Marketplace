@@ -41,7 +41,7 @@ function ViewListing(props) {
 						studentId != listing.sellerId ? 
 						<div className="view-listing-buttons">
 							<div className="view-listing-price">Asking Price: ${listing.price}</div>
-								<Link to="/item/Checkout">
+								<Link to={"/checkout/"+ listing._id}>
 								<button className="buynow-button">
 									<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
 								</button>
