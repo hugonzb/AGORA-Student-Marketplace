@@ -66,12 +66,12 @@ function SignUp(props) {
         
         <div className="registration_form">
             <div className="sign-up-logo">
-
+               
                <img src={agoralogo} 
                className="sign-up-logo" alt=""/>
-                
+               <div className="heading">
 			   <h4>Registration Form</h4> Already have an account?  <h4><Link to="/signin">Sign in</Link></h4>
-		                 
+		    </div>       
             </div>
             
 

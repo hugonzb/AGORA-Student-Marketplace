@@ -2,7 +2,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap");
 
-
+/*signup && registration*/
 
 *{
 	margin: 0;
@@ -24,7 +24,7 @@ body{
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	justify-content: space-around; 
-
+	 
 }
 
 .sign-up-logo {
@@ -36,6 +36,13 @@ body{
   align-items: center; 
 }
 
+.heading{
+margin-top: 2px;
+max-height: 4.5rem;
+width: 50px; 
+justify-content: flex-start; 
+display: inline; 
+}
 
 .registration_form{
 	background: #545871;
@@ -46,6 +53,8 @@ body{
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 10.9);
 	margin-top: 1rem;
 	justify-content: space-around;
+	border: 1px solid rgb(187, 187, 187);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
 
 .registration-form title{
@@ -54,7 +63,7 @@ body{
 	color: #f1f1f1;
 	letter-spacing: 5px;
 	font-weight: 700;
-	justify-content: space-between;
+	justify-content: flex-end;
 	display: inline;
 }
 
