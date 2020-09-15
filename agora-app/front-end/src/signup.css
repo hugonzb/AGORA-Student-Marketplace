@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap");
+
+/*signup && registration*/
+
+*{
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body{
+	
+}
+ 
+.wrapper{
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	justify-content: space-around; 
+	 
+}
+
+.sign-up-logo {
+  margin-top: 2px;
+  max-height: 4.5rem;
+  width: 50px;
+  justify-content: center;
+  display: inline; 
+  align-items: center; 
+}
+
+.heading{
+margin-top: 2px;
+max-height: 4.5rem;
+width: 50px; 
+justify-content: flex-start; 
+display: inline; 
+}
+
+.registration_form{
+	background: #545871;
+	padding: 25px;
+	border-radius: 5px;
+	width: 550px;
+	background: white;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 10.9);
+	margin-top: 1rem;
+	justify-content: space-around;
+	border: 1px solid rgb(187, 187, 187);
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
+}
+
+.registration-form title{
+	
+	font-size: 20px;
+	color: #f1f1f1;
+	letter-spacing: 5px;
+	font-weight: 700;
+	justify-content: flex-end;
+	display: inline;
+}
+
+.form_wrap{
+	margin-top: 45px;
+}
+
+.form_wrap .input_wrap{
+	margin-bottom: 15px;
+}
+
+.form_wrap .input_wrap:last-child{
+	margin-bottom: 0;
+}
+
+.form_wrap .input_wrap label{
+	display: block;
+	margin-bottom: 3px;
+	color: #9597a6;
+}
+
+.form_wrap .input_grp{
+	display: flex;
+	justify-content: space-around;
+	align-items:flex-start;
+}
+
+.form_wrap .input_grp  input[type="text"]{
+	width: 165px;
+}
+
+.form_wrap  input[type="text"]{
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+
+.form_wrap  input[type="text"]:focus{
+	border-color: #ebd0ce;
+}
+
+.form_wrap ul{
+	background: #fff;
+	padding: 8px 10px;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+}
+
+.form_wrap ul li:first-child{
+	margin-right: 15px;
+}
+
+.form_wrap ul .radio_wrap{
+	position: relative;
+	margin-bottom: 0;
+}
+
+.form_wrap ul .radio_wrap .input_radio{
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+}
+
+.form_wrap ul .radio_wrap span{
+	display: inline-block;
+	font-size: 14px;
+	padding: 3px 20px;
+	border-radius: 3px;
+	color: #545871;
+}
+
+.form_wrap .input_radio:checked ~ span{
+	background: #ebd0ce;
+}
+
+.form_wrap .submit_btn{
+	width: 100%;
+	background: #ff7b00;
+	padding: 10px;
+	border: 0;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	cursor: pointer;
+	font-weight: 700;
+}
+
+.form_wrap .submit_btn:hover{
+	background: #ffa754;
+}
