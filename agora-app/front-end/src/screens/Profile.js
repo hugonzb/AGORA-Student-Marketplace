@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
-import { listListings } from "../actions/listingActions";
+import { listListings, deleteListing } from "../actions/listingActions";
 import { Link } from "react-router-dom";
 import "../index.css";
 import profileicon from "../images/profileicon.png";
@@ -22,12 +22,24 @@ function Profile(props) {
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
 
-  // This runs when the logout button is pressed 
+  // This runs when the logout button is pressed
   const handleLogout = () => {
     dispatch(logout());
     // This line redirects the user to the sign in screen
     // when they press logout
     props.history.push("/account/signin");
+  };
+
+  const listingDelete = useSelector((state) => state.listingDelete);
+  const {
+    loading: loadingDelete,
+    success: successDelete,
+    error: errorDelete,
+  } = listingDelete;
+
+  const deleteHandler = (listing) => {
+    alert("Deleted");
+    dispatch(deleteListing(listing._id));
   };
 
   useEffect(() => {
@@ -41,10 +53,12 @@ function Profile(props) {
     dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
     // eslint-disable-next-line
-  }, [userInfo, searchWord, category, location, sellerId]);
+  }, [userInfo, searchWord, category, location, sellerId, successDelete]);
 
-  return (
-      <> {userInfo ? (
+  return ( 
+    <>
+      {" "}
+      {userInfo ? (
         <div className="mainContainer">
           <div className="profileContainer">
             <h2> Profile </h2>
@@ -99,23 +113,37 @@ function Profile(props) {
               <div className="listings">
                 {listings.map((listing) => (
                   <li key={listing._id}>
-                    <Link to={"/listing/" + listing._id}>
-                      <div className="profile-listing">
+                    <div className="profile-listing">
+               
                         <div className="profile-listing-image">
+                        <Link to={"/listing/" + listing._id}>
                           <img
                             className="listing-image"
                             src={listing.image}
                             alt="listing"
                           ></img>
+                        </Link>
                         </div>
-                        <div className="listing-content">
-                          <div className="listing-name">{listing.name}</div>
-                          <div className="listing-price">
-                            Asking Price: ${listing.price}
-                          </div>
+                    
+                      <div className="listing-content"> 
+                      <Link to={"/listing/" + listing._id}>
+                        <div className="listing-name">{listing.name}</div>
+                        <div className="listing-price">
+                          Asking Price: ${listing.price}
                         </div>
+                        <div className="delete-listing">
+                        </div>
+                      </Link>
                       </div>
-                    </Link>
+                      <button
+                            type="button"
+                            className="delete-button"
+                            onClick={() => deleteHandler(listing)}
+                          >
+                            delete
+                          </button>
+                    </div>
+                    
                   </li>
                 ))}
               </div>
