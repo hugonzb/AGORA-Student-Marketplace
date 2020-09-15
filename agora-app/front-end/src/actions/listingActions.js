@@ -111,7 +111,7 @@ const createListing = (
 };
 
 //delete listing action
-const deleteListing = (listingId) => async (dispatch) => {
+const deleteListing = (listingId) => async (dispatch, getState) => {
   try {
     const {
       userSignin: { userInfo },
@@ -122,10 +122,10 @@ const deleteListing = (listingId) => async (dispatch) => {
         Authorization: "Bearer " + userInfo.token,
       },
     });
-    dispatch({ type: PRODUCT_DELETE_SUCCESS, payload: data, success: true });
+    dispatch({ type: LISTING_DELETE_SUCCESS, payload: data, success: true });
   } catch (error) {
     dispatch({ type: LISTING_DELETE_FAIL, payload: error.message });
   }
 };
 
-export { listListings, detailListing, createListing };
+export { listListings, detailListing, createListing, deleteListing };

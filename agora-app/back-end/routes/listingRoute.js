@@ -115,7 +115,7 @@ router.post("/create", async (req, res) => {
   }
 });
 
-//delete listing
+//delete listing router
 router.delete("/:id", async (req, res) => {
   const deletedProduct = await Listing.findById(req.param.id);
   if (deletedProduct) {
