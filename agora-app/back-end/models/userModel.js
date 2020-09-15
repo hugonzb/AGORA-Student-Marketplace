@@ -3,12 +3,12 @@ import { strict } from "assert";
 
 // Database schema for a user
 const userSchema = new mongoose.Schema({
-  studentid: { type: Number, required: true, unique: true }, 
+  studentid: { type: Number, required: true }, 
   fname: { type: String, required: true },
   sname: { type: String, required: true },
   username: { type: String, required: true },
   password: { type: String, required: true },
-  email: { type: String, required: true, unique: true }, 
+  email: { type: String, required: false }, 
   dob: { type: Date, required: true },
   gender: { type: String, required: true },
   university: { type: String, required: true },

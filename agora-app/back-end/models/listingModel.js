@@ -7,10 +7,12 @@ const listingSchema = new mongoose.Schema({
   image: { type: String, required: false },
   category: { type: String, required: true },
   price: { type: Number, required: true },
-  location: { type: String, required: true },
+  city: { type: String, required: true },
   university: { type: String, required: true },
   brand: { type: String, required: false },
+  condition: { type: String, required: false },
   seller: { type: String, required: true },
+  sellerId: { type: String, required: true },
   deliveryoption: { type: String, required: true },
 });
 

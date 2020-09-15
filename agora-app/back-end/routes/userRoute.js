@@ -5,7 +5,7 @@ import { getToken } from "../util";
 const router = express.Router();
 
 router.post("/signup", async (req, res) => {
-  try {
+  try{
     const user = new User({
       studentid: req.body.studentid,
       fname: req.body.fname,
@@ -20,12 +20,11 @@ router.post("/signup", async (req, res) => {
       city: req.body.city,
       postcode: req.body.postcode,
       date_created: req.body.date_created,
-      token: getToken(user),
     });
     const newUser = await user.save();
     res.send(newUser);
-  } catch {
-    res.status(401).send("Sign up failed");
+  }catch(UnhandledPromiseRejectionWarning){
+    res.status(404).send({ message: "User Not Found." });
   }
 });
 
@@ -42,6 +41,7 @@ router.post("/signin", async (req, res) => {
       email: signinUser.email,
       username: signinUser.username,
       university: signinUser.university,
+      city: signinUser.city,
       token: getToken(signinUser),
     });
   } else {

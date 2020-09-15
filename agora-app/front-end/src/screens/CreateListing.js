@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createListing } from "../actions/listingActions";
+import Axios from "axios";
 
 function CreateListing(props) {
   /* 
@@ -10,14 +11,20 @@ function CreateListing(props) {
     */
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [image, setImage] = useState("An image");
+  // This sets the image file path to initially be the default image in /images/default.png
+  // Will be updated if user chooses to select an image however.
+  const [image, setImage] = useState("/images/default.png");
   const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
   const [price, setPrice] = useState(""); //unsure about this for now
-  const [location, setLocation] = useState("");
+  const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
+  const [condition, setCondition] = useState("");
   const [seller, setSeller] = useState("");
+  const [sellerId, setSellerId] = useState("");
   const [deliveryoption, setDeliveryoption] = useState("");
+  // This should used to determine if the user has chosen a file to upload.
+  const [uploading, setUploading] = useState(false);
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
@@ -38,9 +45,36 @@ function CreateListing(props) {
     if (userInfo) {
       setSeller(userInfo.fname + " " + userInfo.sname);
       setUniversity(userInfo.university);
+      setCity(userInfo.city);
+      setSellerId(userInfo.studentid);
     }
     return () => {};
   }, [userInfo]);
+
+
+  const uploadFileHandler = (e) => {
+    const file = e.target.files[0];
+    const bodyFormData = new FormData();
+
+    bodyFormData.append('image', file);
+    // Now we are ready to send an AJAX request with Axios
+
+    // This line will produce the div that tells the user their file is uploading
+    setUploading(false);
+    Axios.post("/api/listings/uploadimage", bodyFormData, {
+      headers:{
+        'Content-Type' : 'multipart/form-data'
+      }
+    }).then(response => {
+      setImage(response.data);
+      // This line will remove the "uploading..." div
+      setUploading(false);
+    }).catch(err => {
+      console.log(err);
+      setUploading(false);
+    });
+  }
+
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -51,10 +85,12 @@ function CreateListing(props) {
         image,
         category,
         price,
-        location,
+        city,
         university,
         brand,
+        condition,
         seller,
+        sellerId,
         deliveryoption
       )
     );
@@ -92,7 +128,16 @@ function CreateListing(props) {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <br></br>
-
+          <label>Upload Image</label>
+          <input
+            type="text"
+            name="image"
+            value={image}
+            id="image"
+            onChange = {(e) => setImage(e.target.value)}
+            ></input>
+          <input type="file" onChange={uploadFileHandler}></input>
+          {uploading && <div>Uploading...</div>}
           <label>Category: </label>
           <select id="categories" onChange={(e) => setCategory(e.target.value)}>
             <option value="Antiques">Antiques</option>
@@ -126,17 +171,6 @@ function CreateListing(props) {
             onChange={(e) => setPrice(e.target.value)}
           ></input>
           <br></br>
-
-          <label> Location: </label>
-          <input
-            type="text"
-            id="location "
-            name="location "
-            placeholder="location "
-            required
-            onChange={(e) => setLocation(e.target.value)}
-          ></input>
-          <br></br>
           <label>Product brand: </label>
           <input
             type="text"
@@ -145,7 +179,12 @@ function CreateListing(props) {
             placeholder="brand"
             onChange={(e) => setBrand(e.target.value)}
           ></input>
-
+          <label>Condition: </label>
+          <select id="condition" onChange={(e) => setCondition(e.target.value)}>
+            <option value="New">New</option>
+            <option value="Used">Used</option>
+          </select>
+          <label>Delivery </label>
           <input
             type="radio"
             id="pickup"
@@ -163,7 +202,6 @@ function CreateListing(props) {
             required
             onChange={(e) => setDeliveryoption(e.target.value)}
           ></input>
-          <label>Delivery </label>
           <button type="submit" value="Submit">
             Create Listing
           </button>

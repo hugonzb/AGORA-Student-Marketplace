@@ -54,16 +54,14 @@ function SignUp(props) {
         postcode
       )
     );
-    error && props.history.push("/signin");
+    if(error){
+      props.history.push("/account/signin");
+    }
   };
 
   
   return (
-
     <div className="wrapper">
-        {loading}
-        {error && <div>Email or Student ID has been taken</div>}
-        
         <div className="registration_form">
             <div className="sign-up-logo">
                
@@ -73,8 +71,8 @@ function SignUp(props) {
 			   <h4>Registration Form</h4> Already have an account?  <h4><Link to="/signin">Sign in</Link></h4>
 		    </div>       
             </div>
-            
-
+            {loading}
+        {error && <div>{error}</div>}
         <form className="form_wrap" onSubmit={submitHandler}>
             <div className="input_grp">
           

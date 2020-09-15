@@ -35,15 +35,12 @@ function SignIn(props) {
     <div className="sign-in-container">
 
       <div className="createAccountContainer">
-      <div className = "sign-in-logo"> <img src={agoralogo} 
-                        className="sign-in-logo" alt=""/> </div>
+      <div className = "sign-in-logo">
+         <img src={agoralogo} className="sign-in-logo" alt=""/> </div>
         <form className="create-account-form" onSubmit={submitHandler}>
-          <h2>Sign In</h2>
+          <div className="signin-header">Sign In</div>
           {loading && <div>Loading...</div>}
           {error && <div>Invalid Email or Password</div>}
-          <div className="create-account-link">
-            <Link to="/SignUp">or Create an Account</Link>
-          </div>
           <input
             type="email"
             id="email"
@@ -60,9 +57,12 @@ function SignIn(props) {
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           ></input>
-          <button type="submit" value="Submit">Sign In</button>
+          <button className="signin-button" type="submit" value="Submit">SIGN IN</button>
           <br></br>
         </form>
+        <div className="create-account-link">
+            <Link to="/SignUp">or Create an Account</Link>
+          </div>
       </div>
 
     </div>
