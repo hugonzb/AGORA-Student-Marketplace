@@ -22,7 +22,7 @@ function Profile(props) {
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
 
-  // This runs when the logout button is pressed 
+  // This runs when the logout button is pressed
   const handleLogout = () => {
     dispatch(logout());
     // This line redirects the user to the sign in screen
@@ -44,7 +44,9 @@ function Profile(props) {
   }, [userInfo, searchWord, category, location, sellerId]);
 
   return (
-      <> {userInfo ? (
+    <>
+      {" "}
+      {userInfo ? (
         <div className="mainContainer">
           <div className="profileContainer">
             <h2> Profile </h2>
@@ -112,6 +114,9 @@ function Profile(props) {
                           <div className="listing-name">{listing.name}</div>
                           <div className="listing-price">
                             Asking Price: ${listing.price}
+                          </div>
+                          <div className="delete-listing">
+                            <button className="delete-button">delete</button>
                           </div>
                         </div>
                       </div>
