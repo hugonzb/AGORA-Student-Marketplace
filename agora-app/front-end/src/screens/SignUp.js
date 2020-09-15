@@ -4,7 +4,7 @@ import { signUp } from "../actions/userActions";
 import { Link } from "react-router-dom";
 import "../index.css";
 import "../signup.css";
-import signin from "../screens/SignIn";
+import { removeUser } from "../actions/userActions";
 import agoralogo from "../images/agoralogo.png";
 
 function SignUp(props) {
@@ -27,10 +27,11 @@ function SignUp(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    /*if (userInfo) {
-      props.history.push("/signin");
+    if (userInfo) {
+      props.history.push("/account/signin");
       alert("You have successfully created an account");
-    }*/
+    }
+    dispatch(removeUser());
     return () => {};
     // eslint-disable-next-line
   }, [userInfo]);
@@ -54,9 +55,6 @@ function SignUp(props) {
         postcode
       )
     );
-    if(error){
-      props.history.push("/account/signin");
-    }
   };
 
   
