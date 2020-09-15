@@ -236,10 +236,14 @@ ul li a {
 .listing-name {
   padding-bottom: 1rem;
   font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
 
 .listing-price {
   padding-bottom: 1rem;
+  text-decoration: none;
+  color: black;
 }
 
 /* View Listing */
