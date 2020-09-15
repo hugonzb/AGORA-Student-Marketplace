@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
-import { listListings } from "../actions/listingActions";
+import { listListings, deleteListing } from "../actions/listingActions";
 import { Link } from "react-router-dom";
 import "../index.css";
 import profileicon from "../images/profileicon.png";
@@ -28,6 +28,10 @@ function Profile(props) {
     // This line redirects the user to the sign in screen
     // when they press logout
     props.history.push("/account/signin");
+  };
+
+  const deleteHandler = (listing) => {
+    dispatch(deleteListing(listing._id));
   };
 
   useEffect(() => {
@@ -116,7 +120,13 @@ function Profile(props) {
                             Asking Price: ${listing.price}
                           </div>
                           <div className="delete-listing">
-                            <button className="delete-button">delete</button>
+                            <button
+                              type="button"
+                              className="delete-button"
+                              onClick={() => deleteHandler(listing)}
+                            >
+                              delete
+                            </button>
                           </div>
                         </div>
                       </div>
