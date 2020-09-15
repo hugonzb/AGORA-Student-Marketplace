@@ -36,9 +36,9 @@ function Profile(props) {
     success: successDelete,
     error: errorDelete,
   } = listingDelete;
-  const dispatch = useDispatch();
 
   const deleteHandler = (listing) => {
+    alert("Deleted");
     dispatch(deleteListing(listing._id));
   };
 

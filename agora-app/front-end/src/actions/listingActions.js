@@ -111,18 +111,11 @@ const createListing = (
 };
 
 //delete listing action
-const deleteListing = (listingId) => async (dispatch, getState) => {
+const deleteListing = (listingId) => async (dispatch) => {
   try {
-    const {
-      userSignin: { userInfo },
-    } = getState();
     dispatch({ type: LISTING_DELETE_REQUEST, payload: listingId });
-    const { data } = await axios.delete("/api/listings/" + listingId, {
-      headers: {
-        Authorization: "Bearer " + userInfo.token,
-      },
-    });
-    dispatch({ type: LISTING_DELETE_SUCCESS, payload: data, success: true });
+    const { data } = await axios.delete("/api/listings/" + listingId);
+    dispatch({ type: LISTING_DELETE_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: LISTING_DELETE_FAIL, payload: error.message });
   }
