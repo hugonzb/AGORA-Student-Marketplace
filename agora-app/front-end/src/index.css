@@ -463,7 +463,7 @@ ul li a {
 }
 
 .sign-up-container h2 {
-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(255, 255, 255);
   font-size: 18px;
   font-weight: bold;
@@ -547,11 +547,11 @@ label:after {
 }
 
 /* sign in page */
-.sign-in-logo{
-    margin: 0px auto; 
-    display: flex;
-    text-decoration: none;
-    width: 50%;
+.sign-in-logo {
+  margin: 0px auto;
+  display: flex;
+  text-decoration: none;
+  width: 50%;
 }
 
 .sign-in-container {
@@ -570,14 +570,14 @@ label:after {
   font-family: "Quicksand", sans-serif;
 }
 
-.signin-header{
+.signin-header {
   font-family: "Play", sans-serif;
   font-weight: bold;
   font-size: 25px;
   padding: 1rem;
 }
 
-.signin-button{
+.signin-button {
   margin: 1rem;
   padding: 7px;
   padding-left: 1rem;
@@ -588,12 +588,11 @@ label:after {
   font-weight: bold;
   font-size: 12px;
   background-color: rgb(233, 128, 42);
-  cursor: pointer
+  cursor: pointer;
 }
 .createAccountContainer {
   border-style: none;
   padding-top: 0rem;
-
 }
 
 .create-account-form h2 {
@@ -619,7 +618,6 @@ input[type="email"] {
   border: 1px solid rgb(187, 187, 187);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
-
 
 .create-account-form button:hover {
   opacity: 0.8;
@@ -802,6 +800,7 @@ span.psw {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
+  overflow: scroll;
 }
 
 .avatar_head {
