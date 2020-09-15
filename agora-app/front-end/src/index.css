@@ -321,6 +321,22 @@ ul li a {
   box-shadow: 0px 0px 6px 0px rgba(170, 170, 170, 0.61);
 }
 
+.view-listing-seller-message {
+  display: flex;
+  font-weight: bold;
+  font-family: "Play";
+  height: 6rem;
+  text-align: center;
+  align-items: center;
+}
+
+.view-listing-seller-message-text {
+  border: 1px solid rgb(71, 71, 71);
+  border-radius: 0.5rem;
+  background-color: rgb(245, 245, 245);
+  padding: 1rem;
+}
+
 .buynow-button {
   background-color: #2cbd33;
   border-radius: 8px;
@@ -432,6 +448,11 @@ ul li a {
 
 .view-listing-description {
   padding: 1rem;
+}
+
+.view-listing-table {
+  width: 100%;
+  background-color: white;
 }
 
 .view-listing-qa-container {
@@ -723,7 +744,6 @@ span.psw {
 .profile-container {
   width: auto;
   display: flex;
-  height: 30px;
   padding: 2px;
   padding-top: 10px;
 }
@@ -749,7 +769,7 @@ span.psw {
 .profileContainer {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: rgb(250, 250, 250);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
   width: 30%;
   min-width: 19.5rem;
@@ -758,16 +778,16 @@ span.psw {
   margin-bottom: 15px;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  min-height: 30rem;
   text-align: center;
   align-items: center;
   padding: 2rem;
+  min-height: 30rem;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
 }
 
 .watchlistContainer {
-  background-color: white;
+  background-color: rgb(250, 250, 250);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
   width: 30%;
   min-width: 21.5rem;
@@ -785,7 +805,7 @@ span.psw {
 }
 
 .listingsContainer {
-  background-color: white;
+  background-color: rgb(250, 250, 250);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
   width: 30%;
   min-width: 21.5rem;
@@ -794,13 +814,46 @@ span.psw {
   margin-bottom: 15px;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  min-height: 30rem;
   text-align: center;
   padding: 1rem;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   border-radius: 0px;
   overflow: scroll;
+  overflow-x: hidden;
+}
+
+.profile-listing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid rgb(165, 164, 164);
+  margin: 0.5rem;
+  width: 250px;
+  min-height: 6rem;
+  font-family: arial;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  border-top: 2px rgb(102, 102, 102) solid;
+  border-bottom: 2px rgb(59, 59, 59) solid;
+  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
+}
+
+.profile-listing img {
+  max-width: 5rem;
+  border: 0px;
+  padding-left: 5px;
+}
+
+.profile-listing-image {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  width: 100px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-right: 1px solid rgb(212, 212, 212);
 }
 
 .avatar_head {
@@ -919,7 +972,7 @@ span.psw {
 @media screen and (max-width: 700px) {
   th,
   td {
-    padding: 5px;
+    padding: 2px;
     padding-top: 11px;
     padding-bottom: 11px;
     text-align: center;
@@ -928,21 +981,188 @@ span.psw {
     font-size: 11px;
   }
 }
+/*cehckout*/
+.checkout-container-body {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #f4f4f4;
+  justify-content: center;
+  align-items: center;
+}
+.checkout-panel {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 940px;
+  height: 766px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+}
 
-@media screen and (max-width: 350px) {
-  th,
-  td {
-    padding: 5px;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 8px;
-  }
+.panel-body {
+  padding: 45px 80px 0;
+  flex: 1;
+}
 
-  .view-listing-image img {
-    width: 20rem;
-    border: 0px;
-  }
+.title {
+  font-family: "Play", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 1rem;
+}
+
+.payment-method {
+  display: flex;
+  margin-bottom: 60px;
+  justify-content: space-between;
+}
+
+.method {
+  display: flex;
+  flex-direction: column;
+  width: 382px;
+  height: 122px;
+  padding-top: 20px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: rgb(249, 249, 249);
+  justify-content: center;
+  align-items: center;
+}
+
+.card-logos {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container-cash {
+  display: flex;
+  width: 90px;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.container-cash img {
+  width: 80%;
+}
+
+.radio-input {
+  margin-top: 20px;
+}
+
+input[type="radio"] {
+  display: inline-block;
+}
+.input-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-fields label {
+  display: block;
+  margin-bottom: 10px;
+  color: #b4b4b4;
+}
+
+.info {
+  font-size: 12px;
+  font-weight: 300;
+  display: block;
+  margin-top: 50px;
+  opacity: 0.5;
+  color: #2e2e2e;
+}
+
+div[class*="column"] {
+  width: auto;
+}
+
+input[type='text']
+/*input[type='password']*/ {
+  font-size: 16px;
+  width: 100%;
+  height: 50px;
+  padding-right: 40px;
+  padding-left: 16px;
+  color: rgba(46, 46, 46, 0.8);
+  border: 1px solid rgb(225, 225, 225);
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type='text']:focus
+/*input[type='password']:focus*/ {
+  border-color: rgb(119, 219, 119);
+}
+
+#date {
+  background: url(images/icons_calendar_black.png) no-repeat 95%;
+}
+#cardholder {
+  background: url(images/icons_person_black.png) no-repeat 95%;
+}
+#cardnumber {
+  background: url(images/icons_card_black.png) no-repeat 95%;
+}
+#verification {
+  background: url(images/icons_lock_black.png) no-repeat 95%;
+}
+
+.small-inputs {
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.small-inputs div {
+  width: 182px;
+}
+
+.panel-footer {
+  margin-bottom: 20px;
+  display: flex;
+  /*width: 100%;*/
+  height: 96px;
+  padding: 0 80px;
+  background-color: rgb(239, 239, 239);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnc {
+  font-size: 16px;
+  width: 163px;
+  height: 48px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 23px;
+}
+
+.back-btn {
+  color: #fff;
+  background: #f70909;
+}
+
+.next-btn {
+  color: #fff;
+  background: #229147;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.blue-border {
+  border: 1px solid rgb(110, 178, 251);
 }

@@ -35,8 +35,8 @@ function SignIn(props) {
     <div className="sign-in-container">
 
       <div className="createAccountContainer">
-      <div className = "sign-in-logo"> <img src={agoralogo} 
-                        className="sign-in-logo" alt=""/> </div>
+      <div className = "sign-in-logo">
+         <img src={agoralogo} className="sign-in-logo" alt=""/> </div>
         <form className="create-account-form" onSubmit={submitHandler}>
           <div className="signin-header">Sign In</div>
           {loading && <div>Loading...</div>}

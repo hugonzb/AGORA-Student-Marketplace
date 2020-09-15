@@ -1,20 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
-import { userListings } from "../actions/listingActions";
-import { BrowserRouter, Link } from "react-router-dom";
+import { listListings } from "../actions/listingActions";
+import { Link } from "react-router-dom";
 import "../index.css";
 import profileicon from "../images/profileicon.png";
 
 function Profile(props) {
   const [name, setName] = useState("");
+  const [searchWord] = useState("");
+  const [category] = useState("");
+  const [location] = useState("");
   const [email, setEmail] = useState("");
-  const [studentid, setStudentid] = useState("");
   const [username, setUsername] = useState("");
   const [university, setUniversity] = useState("");
   const [city, setCity] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
+  const [sellerId] = useState(userInfo.studentid);
   const listingList = useSelector((state) => state.listingList);
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
@@ -28,21 +31,20 @@ function Profile(props) {
   };
 
   useEffect(() => {
-    dispatch(userListings(studentid));
     if (userInfo) {
-      setName(userInfo.name);
-      setStudentid(userInfo.id);
+      setName(userInfo.fname);
       setEmail(userInfo.email);
       setUsername(userInfo.username);
       setUniversity(userInfo.university);
       setCity(userInfo.city);
     }
+    dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
-  }, [userInfo, studentid]);
+    // eslint-disable-next-line
+  }, [userInfo, searchWord, category, location, sellerId]);
 
   return (
-    <BrowserRouter>
-      {userInfo ? (
+      <> {userInfo ? (
         <div className="mainContainer">
           <div className="profileContainer">
             <h2> Profile </h2>
@@ -57,8 +59,8 @@ function Profile(props) {
 
             <div className="profile-contents">
               <form className="profile-form">
-                <label for="username" value={studentid}>
-                  Student ID: {userInfo.studentid}
+                <label for="username" value={sellerId}>
+                  Student ID: {sellerId}
                 </label>
                 <br></br>
                 <label for="email" value={email}>
@@ -84,7 +86,7 @@ function Profile(props) {
             </div>
           </div>
           <div className="listingsContainer">
-            LISTINGS
+            ACTIVE LISTINGS
             {loading ? (
               <div className="loading">Loading listings ...</div>
             ) : error ? (
@@ -97,9 +99,9 @@ function Profile(props) {
               <div className="listings">
                 {listings.map((listing) => (
                   <li key={listing._id}>
-                    <Link to={"/profile/" + listing._studentID}>
-                      <div className="listing-container">
-                        <div className="listing-image">
+                    <Link to={"/listing/" + listing._id}>
+                      <div className="profile-listing">
+                        <div className="profile-listing-image">
                           <img
                             className="listing-image"
                             src={listing.image}
@@ -110,12 +112,6 @@ function Profile(props) {
                           <div className="listing-name">{listing.name}</div>
                           <div className="listing-price">
                             Asking Price: ${listing.price}
-                          </div>
-                          <div className="view-listing-user">
-                            <img src={profileicon} alt="profile" />
-                            <div className="view-listing-sellername">
-                              {listing.seller}
-                            </div>
                           </div>
                         </div>
                       </div>
@@ -128,7 +124,7 @@ function Profile(props) {
                 {" "}
                 You currently dont have any listings. Click "create listing" to
                 get started!{" "}
-                <Link to="account/createlisting">Create listing</Link>{" "}
+                <Link to="/account/createlisting">Create listing</Link>
               </div>
             )}
           </div>
@@ -136,11 +132,11 @@ function Profile(props) {
         </div>
       ) : (
         <div>
-          <Link to="account/signin">Sign in</Link>
-          <Link to="account/signup">Sign Up</Link>
+          <Link to="/account/signin">Sign in</Link>
+          <Link to="/account/signup">Sign Up</Link>
         </div>
       )}
-    </BrowserRouter>
+    </>
   );
 }
 

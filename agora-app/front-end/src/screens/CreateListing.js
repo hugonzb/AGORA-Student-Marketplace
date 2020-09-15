@@ -10,7 +10,7 @@ function CreateListing(props) {
     */
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
-  const [image, setImage] = useState("An image");
+  const [image] = useState("An image");
   const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
   const [price, setPrice] = useState(""); //unsure about this for now
   const [city, setCity] = useState("");
