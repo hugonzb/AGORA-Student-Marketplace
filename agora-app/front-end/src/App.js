@@ -5,7 +5,7 @@ import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import About from "./screens/About";
-import Contact from "./screens/Contact";
+import Contact from "./screens/contact";
 import ViewListing from "./screens/ViewListing";
 import Checkout from "./screens/Checkout";
 import CreateListing from "./screens/CreateListing";
