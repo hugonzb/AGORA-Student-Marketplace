@@ -5,7 +5,7 @@ import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
 import About from "./screens/About";
-import Contact from "./screens/Contact";
+import Contact from "./screens/contact";
 import ViewListing from "./screens/ViewListing";
 import Checkout from "./screens/Checkout";
 import CreateListing from "./screens/CreateListing";
@@ -51,7 +51,7 @@ function App(props) {
           <Route path="/account/signin" component={SignIn} />
           <Route path="/info/about" component={About} />
           <Route path="/info/contact" component={Contact} />
-          <Route path="/checkout/:id" component={Checkout}/>
+          <Route path="/checkout/:id" component={Checkout} />
           <Route path="/account/profile" component={Profile} />
           <Route path="/account/createlisting" component={CreateListing} />
         </div>

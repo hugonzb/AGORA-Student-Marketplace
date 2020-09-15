@@ -8,12 +8,18 @@ import {
   LISTING_DETAILS_REQUEST,
   CREATELISTING_REQUEST,
   CREATELISTING_FAIL,
-  CREATELISTING_SUCCESS
+  CREATELISTING_SUCCESS,
+  LISTING_DELETE_REQUEST,
+  LISTING_DELETE_SUCCESS,
+  LISTING_DELETE_FAIL,
 } from "../constants/listingConstants";
 
-const listListings = (searchWord = "", category = "", location = "", sellerId="") => async (
-  dispatch
-) => {
+const listListings = (
+  searchWord = "",
+  category = "",
+  location = "",
+  sellerId = ""
+) => async (dispatch) => {
   try {
     dispatch({ type: LISTING_LIST_REQUEST });
     const { data } = await axios.get(
@@ -25,7 +31,6 @@ const listListings = (searchWord = "", category = "", location = "", sellerId=""
         location +
         "&sellerIdListing=" +
         sellerId
-
     );
     dispatch({ type: LISTING_LIST_SUCCESS, payload: data });
   } catch (error) {
@@ -102,6 +107,24 @@ const createListing = (
     dispatch({ type: CREATELISTING_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: CREATELISTING_FAIL, payload: error.message });
+  }
+};
+
+//delete listing action
+const deleteListing = (listingId) => async (dispatch) => {
+  try {
+    const {
+      userSignin: { userInfo },
+    } = getState();
+    dispatch({ type: LISTING_DELETE_REQUEST, payload: listingId });
+    const { data } = await axios.delete("/api/listings/" + listingId, {
+      headers: {
+        Authorization: "Bearer " + userInfo.token,
+      },
+    });
+    dispatch({ type: PRODUCT_DELETE_SUCCESS, payload: data, success: true });
+  } catch (error) {
+    dispatch({ type: LISTING_DELETE_FAIL, payload: error.message });
   }
 };
 
