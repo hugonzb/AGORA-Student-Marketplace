@@ -57,7 +57,6 @@ function SignUp(props) {
     );
   };
 
-  
   return (
     <div className="wrapper">
         <div className="registration_form">
@@ -70,7 +69,7 @@ function SignUp(props) {
 		    </div>       
             </div>
             {loading}
-        {error && <div>{error}</div>}
+        {error && <div>Student ID or Email Address has been taken.</div>}
         <form className="form_wrap" onSubmit={submitHandler}>
             <div className="input_grp">
           
@@ -85,7 +84,6 @@ function SignUp(props) {
                         onChange={(e) => setFname(e.target.value)}
                       ></input>
                 </div>
-                 
                 <div className="input_wrap">
                       <label>Last Name:</label>
                       <input
@@ -97,8 +95,7 @@ function SignUp(props) {
                         onChange={(e) => setSname(e.target.value)}
                       ></input>
                 </div>
-
-                </div>
+              </div>
 
             <div className="input_grp">
              <div className="input_wrap">
