@@ -117,15 +117,12 @@ router.post("/create", async (req, res) => {
 
 //delete listing router
 router.delete("/:id", async (req, res) => {
-  const deletedProduct = await Listing.findById(req.param.id);
-  if (deletedProduct) {
-    await deletedProduct.remove();
+  const listing = await Listing.findOne({ _id: req.params.id });
+  if (listing) {
+    await listing.remove();
     res.send({ message: "listing has been deleted succesfully." });
   } else {
-    res.send({
-      message:
-        "listing could not be deleted at this time. \n Please try again later.",
-    });
+    res.send('Error in Deletion.');
   }
 });
 

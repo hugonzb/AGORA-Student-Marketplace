@@ -53,9 +53,9 @@ function Profile(props) {
     dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
     // eslint-disable-next-line
-  }, [userInfo, searchWord, category, location, sellerId]);
+  }, [userInfo, searchWord, category, location, sellerId, successDelete]);
 
-  return (
+  return ( 
     <>
       {" "}
       {userInfo ? (

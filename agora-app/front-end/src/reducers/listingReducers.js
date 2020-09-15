@@ -41,7 +41,7 @@ function listingDeleteReducer(state = { listing: {} }, action) {
     case LISTING_DELETE_REQUEST:
       return { loading: true };
     case LISTING_DELETE_SUCCESS:
-      return { loading: false, product: action.payload, success: true };
+      return { loading: false, listing: action.payload, success: true };
     case LISTING_DELETE_FAIL:
       return { loading: false, error: action.payload };
     default:

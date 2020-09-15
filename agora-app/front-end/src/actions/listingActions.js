@@ -115,7 +115,7 @@ const deleteListing = (listingId) => async (dispatch) => {
   try {
     dispatch({ type: LISTING_DELETE_REQUEST, payload: listingId });
     const { data } = await axios.delete("/api/listings/" + listingId);
-    dispatch({ type: LISTING_DELETE_SUCCESS, payload: data });
+    dispatch({ type: LISTING_DELETE_SUCCESS, payload: data, success: true});
   } catch (error) {
     dispatch({ type: LISTING_DELETE_FAIL, payload: error.message });
   }
