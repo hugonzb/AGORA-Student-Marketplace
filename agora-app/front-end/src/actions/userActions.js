@@ -41,5 +41,10 @@ const logout = () => (dispatch) => {
     dispatch({type:USER_LOGOUT});
 }
 
+const removeUser = () => (dispatch) => {
+    dispatch({type:USER_LOGOUT});
+}
 
-export { signUp, signIn, logout }
+
+export { signUp, signIn, logout, removeUser}
+

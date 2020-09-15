@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
 import { Link } from "react-router-dom";
+import "../index.css";
+import "../signup.css";
+import { removeUser } from "../actions/userActions";
+import agoralogo from "../images/agoralogo.png";
 
 function SignUp(props) {
   const [fname, setFname] = useState("");
@@ -23,10 +27,11 @@ function SignUp(props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    /*if (userInfo) {
-      props.history.push("/signin");
+    if (userInfo) {
+      props.history.push("/account/signin");
       alert("You have successfully created an account");
-    }*/
+    }
+    dispatch(removeUser());
     return () => {};
     // eslint-disable-next-line
   }, [userInfo]);
@@ -50,148 +55,155 @@ function SignUp(props) {
         postcode
       )
     );
-    error && props.history.push("/account/signin");
   };
 
   return (
-    <div className="sign-up-container">
-      <h2>
-        Welcome to Agora! Please enter your details to sign up using the form
-        below.
-      </h2>
-      <div className="createnewAccountContainer">
-        {loading}
-        {error && <div>The student ID or email has already been taken</div>}
-        <form className="create-new-account-form" onSubmit={submitHandler}>
-          <label>Student ID:</label>
-          <input
-            type="text"
-            id="studentid"
-            name="studentid"
-            placeholder="Enter Student-ID"
-            required
-            onChange={(e) => setStudentid(e.target.value)}
-          ></input>
-          <br></br>
+    <div className="wrapper">
+        <div className="registration_form">
+            <div className="sign-up-logo">
+               
+               <img src={agoralogo} 
+               className="sign-up-logo" alt=""/>
+               <div className="heading">
+			   <h4>Registration Form</h4> Already have an account?  <h4><Link to="/signin">Sign in</Link></h4>
+		    </div>       
+            </div>
+            {loading}
+        {error && <div>Student ID or Email Address has been taken.</div>}
+        <form className="form_wrap" onSubmit={submitHandler}>
+            <div className="input_grp">
+          
+                <div className="input_wrap"> 
+                   <label>First Name:</label>
+                   <input
+                   type="text"
+                        id="fname"
+                        name="fname"
+                        placeholder="Enter First Name"
+                        required
+                        onChange={(e) => setFname(e.target.value)}
+                      ></input>
+                </div>
+                <div className="input_wrap">
+                      <label>Last Name:</label>
+                      <input
+                        type="text"
+                        id="sname"
+                        name="sname"
+                        placeholder="Enter Surname"
+                        required
+                        onChange={(e) => setSname(e.target.value)}
+                      ></input>
+                </div>
+              </div>
 
-          <label>First Name:</label>
-          <input
-            type="text"
-            id="fname"
-            name="fname"
-            placeholder="Enter First Name"
-            required
-            onChange={(e) => setFname(e.target.value)}
-          ></input>
-          <br></br>
+            <div className="input_grp">
+             <div className="input_wrap">
+                  <label>Student ID:</label>
+                  <input 
+                    type="text"
+                    id="studentid"
+                    name="studentid"
+                    placeholder="Enter Student-ID"
+                    required
+                    onChange={(e) => setStudentid(e.target.value)}
+                    ></input>
+                </div>
+          
+              <div className="input_wrap">
+                  <label>Email:</label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    required
+                    onChange={(e) => setEmail(e.target.value)}
+                  ></input>
+               </div>
+          </div>
+    
+          <div className="input_grp">
+              <div className="input_wrap">
+                  <label>Username:</label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter a Username"
+                    required
+                    onChange={(e) => setUsername(e.target.value)}
+                  ></input>
+              </div>
+ 
+              <div className="input_wrap">
+                  <label>Password:</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></input>
+              </div>
 
-          <label>Last Name:</label>
-          <input
-            type="text"
-            id="sname"
-            name="sname"
-            placeholder="Enter Surname"
-            required
-            onChange={(e) => setSname(e.target.value)}
-          ></input>
-          <br></br>
-          <label for="gender">Choose a Gender: </label>
-          <select
-            id="gender"
-            name="gender"
-            onChange={(e) => setGender(e.target.value)}
-          >
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-          </select>
-          <br></br>
+          </div> 
+          
+          <div className="input_grp">
+              <div className="input_wrap">
+                  <label for="gender">Choose a Gender: </label>
+                  <select
+                    id="gender"
+                    name="gender"
+                    onChange={(e) => setGender(e.target.value)}
+                  >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                  </select>
+              </div>
 
-          <label>User Name:</label>
-          <input
-            type="text"
-            id="username"
-            name="username"
-            placeholder="Enter a Username"
-            required
-            onChange={(e) => setUsername(e.target.value)}
-          ></input>
-          <br></br>
+              <div className="input_wrap">
+                  <label for="DOB"> Date of Birth:</label>
+                  <input
+                    type="date"
+                    id="DOB"
+                    name="DOB"
+                    required
+                    onChange={(e) => setDOB(e.target.value)}
+                  ></input>
+              </div>
+          </div>
 
-          <label>Password:</label>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Enter Password"
-            required
-            onChange={(e) => setPassword(e.target.value)}
-          ></input>
-          <br></br>
-          <label>Email:</label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="Enter Email"
-            required
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          <br></br>
-          <label for="DOB"> Date of Birth:</label>
-          <input
-            type="date"
-            id="DOB"
-            name="DOB"
-            required
-            onChange={(e) => setDOB(e.target.value)}
-          ></input>
-          <br></br>
-          <label for="school">University: </label>
-          <select
-            id="school"
-            name="school"
-            placeholder="Select University"
-            onChange={(e) => setUniversity(e.target.value)}
-          >
-            <option value="University of Auckland">
-              University of Auckland
-            </option>
-            <option value="Auckland University of Technology (AUT)">
-              Auckland University of Technology (AUT)
-            </option>
-            <option value="University of Waikato">University of Waikato</option>
-            <option value="Massey University">Massey University</option>
-            <option value="Victoria University of Wellington">
-              Victoria University of Wellington
-            </option>
-            <option value="University of Canterbury">
-              University of Canterbury
-            </option>
-            <option value="Lincoln University">Lincoln University</option>
-            <option value="University of Otago">University of Otago</option>
-          </select>
-          <br></br>
-          <label>Address:</label>
-          <input
-            type="text"
-            id="address"
-            name="address"
-            placeholder="Enter Address"
-            required
-            onChange={(e) => setStreet(e.target.value)}
-          ></input>
-          <br></br>
-          <label>City:</label>
-          <input
-            type="text"
-            id="city"
-            name="city"
-            placeholder="Enter city"
-            required
-            onChange={(e) => setCity(e.target.value)}
-          ></input>
-          <br></br>
+         
+
+          <div className="input_grp">
+               <div className="input_wrap">
+              <label>Address:</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                placeholder="Enter Address"
+                required
+                onChange={(e) => setStreet(e.target.value)}
+              ></input>
+          </div> 
+
+          <div className="input_wrap">
+              <label>City:</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Enter city"
+                required
+                onChange={(e) => setCity(e.target.value)}
+              ></input>
+          </div> 
+
+          <div className="input_wrap">
           <label>Post Code:</label>
           <input
             type="text"
@@ -200,19 +212,52 @@ function SignUp(props) {
             placeholder="Enter Postcode"
             required
             onChange={(e) => setPostcode(e.target.value)}
-          ></input>
-          <br></br>
-          <button type="submit" value="Submit">
-            Register
-          </button>
-          <h4>Already have an account?</h4>
-          <div className="link-new-acc">
-            <Link to="/SignIn">Sign in</Link>
+           ></input>
+          </div> 
           </div>
+         
+          <div className="input_wrap">
+              <label for="school">University: </label>
+              <select
+                id="school"
+                name="school"
+                placeholder="Select University"
+                onChange={(e) => setUniversity(e.target.value)}
+              >
+                <option value="University of Auckland">
+                  University of Auckland
+                </option>
+                <option value="Auckland University of Technology (AUT)">
+                  Auckland University of Technology (AUT)
+                </option>
+                <option value="University of Waikato">University of Waikato</option>
+                <option value="Massey University">Massey University</option>
+                <option value="Victoria University of Wellington">
+                  Victoria University of Wellington
+                </option>
+                <option value="University of Canterbury">
+                  University of Canterbury
+                </option>
+                <option value="Lincoln University">Lincoln University</option>
+                <option value="University of Otago">University of Otago</option>
+          </select>
+
+          </div>
+
+
+          <div class="input_wrap">
+					<input type="submit" value="Register Now" class="submit_btn"></input>
+		  </div>
+
         </form>
+      
       </div>
-    </div> //leave this in its a parent from App.js everything on the page will need to go in here
+      </div>
+   
+
+      
+    
   );
 }
-
+ 
 export default SignUp;
