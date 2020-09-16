@@ -57,6 +57,8 @@ function Profile(props) {
 
   return ( 
     <>
+      {loadingDelete}
+      {errorDelete}
       {" "}
       {userInfo ? (
         <div className="mainContainer">
