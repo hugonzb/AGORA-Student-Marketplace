@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import dv from "../images/dv.png";
+import pu from "../images/pu.png";
 import visa_logo from "../images/visa_logo.png";
 import mastercard_logo from "../images/mastercard_logo.png";
 import cash from "../images/cash.png";
@@ -32,6 +34,29 @@ import { detailListing } from '../actions/listingActions';
 
     <div className="payment-method">
       <label for="card" className="method card">
+        <div className="ship-logos">
+          <img src={pu} alt="delivery"/>
+        </div>
+ 
+        <div className="radio-input">
+          <input id="card" type="radio" name="deliver"/>
+          Click for Pick-up
+        </div>
+      </label>
+ 
+      <label for="cash" className="method cash">
+          <div className="container-cash">
+            <img src={dv} alt="pick-up"/>
+          </div>
+        <div className="radio-input">
+          <input id="cash" type="radio" name="deliver"/>
+          Click for Shipping
+        </div>
+      </label>
+    </div>
+
+    <div className="payment-method">
+      <label for="card" className="method card">
         <div className="card-logos">
           <img src={visa_logo} alt="visa"/>
          <img src={mastercard_logo} alt="mastercard"/>
@@ -53,6 +78,10 @@ import { detailListing } from '../actions/listingActions';
         </div>
       </label>
     </div>
+ 
+    
+
+    
  
     <div className="input-fields">
       <div className="column-1">
@@ -80,6 +109,7 @@ import { detailListing } from '../actions/listingActions';
       </div>
     </div>
   </div>
+  
    <div className="panel-footer">
     <Link to={"/listing/"+ listing._id}>
       <button className="btnc back-btn">Cancel</button>
