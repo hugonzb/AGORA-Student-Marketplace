@@ -1027,7 +1027,7 @@ span.psw {
 
 .payment-method {
   display: flex;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
   justify-content: space-between;
 }
  
@@ -1052,6 +1052,15 @@ span.psw {
   align-items: center;
 }
 
+.ship-logos {
+  display: flex;
+  width: 90px; 
+}
+.ship-logos img {
+    width: 70%;
+    
+}
+
 .container-cash{
   display: flex;
   width: 90px;
@@ -1060,7 +1069,8 @@ span.psw {
   align-items: center;
 }
 .container-cash img {
-    width: 80%;
+    width: 100%; 
+    
     
 }
 
@@ -1073,6 +1083,8 @@ input[type='radio'] {
   display: inline-block;
 }
 .input-fields {
+  margin-top: 10px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -1132,9 +1144,10 @@ input[type='text']:focus
 
 .panel-footer {
   margin-bottom: 20px;
+  margin-top: 20px;
   display: flex;
   /*width: 100%;*/
-  height: 96px;
+  height: 100%;
   padding: 0 80px;
   background-color: rgb(239, 239, 239);
   justify-content: space-between;
