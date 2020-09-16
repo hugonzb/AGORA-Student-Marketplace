@@ -188,8 +188,7 @@ const Gender = [
                 <div className="row">
                     <div className="col-md-3"></div>
                         <div className="col-md-6">
-                            <Select options={Gender} components={animatedComponents}/>
-                           
+                            <Select options={Gender} components={animatedComponents} onChange={(e) => setGender(e.target.value)}/>
                         </div>
                     <div classNane="col-md-4"></div>
                     </div>
@@ -255,8 +254,7 @@ const Gender = [
             <div className="row">
                 <div className="col-md-3"></div>
                     <div className="col-md-6">
-                        <Select options={Universities} components={animatedComponents}/>
-                       
+                        <Select options={Universities} components={animatedComponents} onChange={(e) => setUniversity(e.target.value)}/>
                     </div>
                 <div classNane="col-md-4"></div>
             </div>
