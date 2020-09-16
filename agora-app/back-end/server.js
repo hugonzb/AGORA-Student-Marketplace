@@ -26,7 +26,10 @@ app.use("/api/users", userRoute);
 app.use(bodyParser.json());
 app.use("/api/listings", listingRoute);
 
-app.use('images', express.static(path.join(__dirname, '/../front-end/public/images')));
+// Here we tell the server to serve images from the front-end/public/images folder
+app.use('/images', express.static(path.join(__dirname, '/images')));
+
+
 /* run server on port 5000 */
 app.listen(5000, () => {
   console.log("Backend server started at http://localhost:5000\n");
