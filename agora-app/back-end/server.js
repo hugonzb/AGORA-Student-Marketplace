@@ -30,6 +30,6 @@ app.use("/api/listings", listingRoute);
 app.use('/images', express.static(path.join(__dirname, '/images')));
 
 /* run server on port 5000 */
-app.listen(5000, () => {
+app.listen(config.PORT, () => {
   console.log("Backend server started at http://localhost:5000\n");
 });
