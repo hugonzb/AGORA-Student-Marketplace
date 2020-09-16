@@ -60,11 +60,11 @@ function CreateListing(props) {
     // Now we are ready to send an AJAX request with Axios
 
     // This line will produce the div that tells the user their file is uploading
-    setUploading(false);
+    setUploading(true);
     Axios.post("/api/listings/uploadimage", bodyFormData, {
       headers:{
-        'Content-Type' : 'multipart/form-data'
-      }
+        'Content-Type' : 'multipart/form-data',
+      },
     }).then(response => {
       setImage(response.data);
       // This line will remove the "uploading..." div

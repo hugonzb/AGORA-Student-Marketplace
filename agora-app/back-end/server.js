@@ -21,6 +21,7 @@ app.use("api/customers", userRoute);
 
 app.use(bodyParser.json());
 app.use("/api/users", userRoute);
+app.use(bodyParser.json());
 app.use("/api/listings", listingRoute);
 
 /* run server on port 5000 */
