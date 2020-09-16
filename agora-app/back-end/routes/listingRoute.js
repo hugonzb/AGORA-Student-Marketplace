@@ -88,7 +88,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 router.post('/uploadimage', upload.single('image'), (req, res) => {
-  res.send("/images/" + req.file.originalname);
+  console.log(req.file.filename);
+  res.send("/images/" + req.file.filename);
 });
 
 // Hope it's ok to make the post uri to /listing/create
