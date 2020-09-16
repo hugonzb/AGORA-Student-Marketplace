@@ -69,7 +69,7 @@ function SignUp(props) {
                    <span> 
 			       <h4>Registration Form</h4> 
                    Already have an account?  
-                   <h4><Link to="/signin">Sign in</Link></h4>
+                   <h4><Link to="/account/signin">Sign in</Link></h4>
                    </span>
              
                 
