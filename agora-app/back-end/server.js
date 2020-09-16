@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import userRoute from "./routes/userRoute";
 import listingRoute from "./routes/listingRoute";
 import bodyParser from "body-parser";
+import path from "path";
+
 
 const mongodbUrl = config.MONGODB_URL;
 
@@ -23,6 +25,10 @@ app.use(bodyParser.json());
 app.use("/api/users", userRoute);
 app.use(bodyParser.json());
 app.use("/api/listings", listingRoute);
+
+// Here we tell the server to serve images from the front-end/public/images folder
+app.use('/images', express.static(path.join(__dirname, '/images')));
+
 
 /* run server on port 5000 */
 app.listen(5000, () => {
