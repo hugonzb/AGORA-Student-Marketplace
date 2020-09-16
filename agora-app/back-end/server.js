@@ -4,6 +4,8 @@ import mongoose from "mongoose";
 import userRoute from "./routes/userRoute";
 import listingRoute from "./routes/listingRoute";
 import bodyParser from "body-parser";
+import path from "path";
+
 
 const mongodbUrl = config.MONGODB_URL;
 
@@ -24,6 +26,7 @@ app.use("/api/users", userRoute);
 app.use(bodyParser.json());
 app.use("/api/listings", listingRoute);
 
+app.use('images', express.static(path.join(__dirname, '/../front-end/public/images')));
 /* run server on port 5000 */
 app.listen(5000, () => {
   console.log("Backend server started at http://localhost:5000\n");

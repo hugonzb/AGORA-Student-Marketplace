@@ -78,7 +78,7 @@ router.get("/account/profile"),
 // Method which will give us the filename and path of an uploaded image
 const storage = multer.diskStorage({
   destination(req, file, cb) {
-    cb(null, 'uploads/');
+    cb(null, 'front-end/public/images');
   },
   filename(req, file, cb) {
     cb(null, Date.now() + ".jpg");
