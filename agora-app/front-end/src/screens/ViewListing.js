@@ -13,7 +13,7 @@ function ViewListing(props) {
 	const { listing, loading, error } = listingDetails;
 	const userSignin = useSelector((state) => state.userSignin);
 	const { userInfo } = userSignin;
-	const dispatch = useDispatch();
+	const dispatch = useDispatch(); 
 
 
 	useEffect(() => {

@@ -14,12 +14,12 @@ function CreateListing(props) {
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
   const [image, setImage] = useState("/images/default.png");
-  const [category, setCategory] = useState("Default Category"); //need to add all categories in the html will do this tomorrow.
+  const [category, setCategory] = useState("Antiques"); //need to add all categories in the html will do this tomorrow.
   const [price, setPrice] = useState(""); //unsure about this for now
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
-  const [condition, setCondition] = useState("");
+  const [condition, setCondition] = useState("New");
   const [seller, setSeller] = useState("");
   const [sellerId, setSellerId] = useState("");
   const [deliveryoption, setDeliveryoption] = useState("");
@@ -60,11 +60,11 @@ function CreateListing(props) {
     // Now we are ready to send an AJAX request with Axios
 
     // This line will produce the div that tells the user their file is uploading
-    setUploading(false);
+    setUploading(true);
     Axios.post("/api/listings/uploadimage", bodyFormData, {
       headers:{
-        'Content-Type' : 'multipart/form-data'
-      }
+        'Content-Type' : 'multipart/form-data',
+      },
     }).then(response => {
       setImage(response.data);
       // This line will remove the "uploading..." div

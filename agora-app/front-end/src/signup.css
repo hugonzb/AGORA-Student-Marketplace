@@ -31,17 +31,17 @@ body{
   margin-top: 2px;
   max-height: 4.5rem;
   width: 50px;
-  justify-content: center;
-  display: inline; 
+  justify-content: space-around;
+  display: inline-block; 
   align-items: center; 
 }
 
-.heading{
-margin-top: 2px;
-max-height: 4.5rem;
-width: 50px; 
-justify-content: flex-start; 
-display: inline; 
+.form-heading > img,
+.form-heading > span {
+display: inline-block;
+justify-content: space-around;
+padding-left: 1rem;
+
 }
 
 .registration_form{

@@ -60,13 +60,19 @@ function SignUp(props) {
   return (
     <div className="wrapper">
         <div className="registration_form">
-            <div className="sign-up-logo">
+            <div className="form-heading">
+                
                
-               <img src={agoralogo} 
-               className="sign-up-logo" alt=""/>
-               <div className="heading">
-			   <h4>Registration Form</h4> Already have an account?  <h4><Link to="/signin">Sign in</Link></h4>
-		    </div>       
+                   <img src={agoralogo} 
+                   className="sign-up-logo" alt=""/>
+               
+                   <span> 
+			       <h4>Registration Form</h4> 
+                   Already have an account?  
+                   <h4><Link to="/account/signin">Sign in</Link></h4>
+                   </span>
+             
+                
             </div>
             {loading}
         {error && <div>Student ID or Email Address has been taken.</div>}

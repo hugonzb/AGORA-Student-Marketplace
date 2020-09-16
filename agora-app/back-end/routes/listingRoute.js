@@ -40,7 +40,7 @@ router.get("/", async (req, res) => {
     ...searchWord,
     ...categorySortOrder,
     ...locationSortOrder,
-    ...sellerIdListing
+    ...sellerIdListing,
   });
   res.send(listings);
 });
@@ -58,15 +58,15 @@ router.get("/:id", async (req, res) => {
 router.get("/account/profile"),
   async (req, res) => {
     const seller = req.query.seller
-    ? {
-        seller: {
-          $regex: "Hugo Baird",
-          $options: "i",
-        },
-      }
-    : {};
+      ? {
+          seller: {
+            $regex: "Hugo Baird",
+            $options: "i",
+          },
+        }
+      : {};
     const listings = await Listing.find({
-      ...seller
+      ...seller,
     });
     if (listings) {
       res.send(listings);
@@ -77,18 +77,19 @@ router.get("/account/profile"),
 
 // Method which will give us the filename and path of an uploaded image
 const storage = multer.diskStorage({
-  destination(req, file, cb){
-    cb(null, 'uploads/')
+  destination(req, file, cb) {
+    cb(null, 'front-end/public/images');
   },
-  filename(req, file, cb){
-    cb(null, Date.now() + '.jpg')
-  }
+  filename(req, file, cb) {
+    cb(null, Date.now() + ".jpg");
+  },
 });
 
-const upload = multer({storage});
+const upload = multer({ storage });
 
-router.post("/uploadimage", upload.single('image'), (req, res) => {
-  res.send('/' + req.file.path);
+router.post('/uploadimage', upload.single('image'), (req, res) => {
+  console.log(req.file.filename);
+  res.send("/images/" + req.file.filename);
 });
 
 // Hope it's ok to make the post uri to /listing/create
@@ -112,6 +113,17 @@ router.post("/create", async (req, res) => {
     res.send(newListing);
   } else {
     return res.status(401).send({ message: "could not create new listing" });
+  }
+});
+
+//delete listing router
+router.delete("/:id", async (req, res) => {
+  const listing = await Listing.findOne({ _id: req.params.id });
+  if (listing) {
+    await listing.remove();
+    res.send({ message: "listing has been deleted succesfully." });
+  } else {
+    res.send('Error in Deletion.');
   }
 });
 
