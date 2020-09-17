@@ -136,13 +136,14 @@ function Profile(props) {
                         </Link>
                       </div>
                       <div className="update-listing">
-                        <button
-                          type="button"
-                          className="update-listing-button"
-                          //onClick={() => getListingID(listing)}
-                        >
-                          update
-                        </button>
+                        <Link to={"/updatelisting/" + listing._id}>
+                          <button
+                            type="button"
+                            className="update-listing-button"
+                          >
+                            update
+                          </button>
+                        </Link>
                       </div>
                       <button
                         type="button"
