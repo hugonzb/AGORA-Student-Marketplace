@@ -6,7 +6,7 @@ import "../signup.css";
 import { removeUser } from "../actions/userActions";
 import agoralogo from "../images/agoralogo.png";
 import Select from "react-select";
-
+import Axios from "axios";
 import makeAnimated from "react-select/animated";
 
 function SignUp(props) {
@@ -22,7 +22,8 @@ function SignUp(props) {
   const [street_address, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
-
+  const [profilePicture, setProfilePicture] = useState("/profilePictures/defaultProfilePicture.jpg");
+  const [upLoading, setUpLoading] = useState(false);
   const userSignup = useSelector((state) => state.userSignup);
   const { loading, userInfo, error } = userSignup;
 
@@ -34,9 +35,33 @@ function SignUp(props) {
       alert("You have successfully created an account");
     }
     dispatch(removeUser());
-    return () => {};
+    return () => { };
     // eslint-disable-next-line
   }, [userInfo]);
+
+
+  const uploadFileHandler = (e) => {
+    const file = e.target.files[0];
+    const bodyFormData = new FormData();
+
+    bodyFormData.append('image', file);
+    // Now we are ready to send an AJAX request with Axios
+
+    // This line will produce the div that tells the user their file is uploading
+    setUpLoading(true);
+    Axios.post("/api/users/uploadProfilePicture", bodyFormData, {
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    }).then(response => {
+      setProfilePicture(response.data);
+      // This line will remove the "uploading..." div
+      setUpLoading(false);
+    }).catch(err => {
+      console.log(err);
+      setUpLoading(false);
+    });
+  }
 
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
@@ -54,7 +79,8 @@ function SignUp(props) {
         university,
         street_address,
         city,
-        postcode
+        postcode, 
+        profilePicture
       )
     );
   };
@@ -62,23 +88,19 @@ function SignUp(props) {
   const animatedComponents = makeAnimated();
 
   const Gender = [
+
     { label: "Male", value: "Male" },
     { label: "Female", value: "Female" },
     { label: "Other", value: "Other" },
+
   ];
 
   const Universities = [
     { label: "University of Auckland", value: "University of Auckland" },
-    {
-      label: "Auckland University of Technology",
-      value: "Auckland University of Technology",
-    },
+    { label: "Auckland University of Technology", value: "Auckland University of Technology" },
     { label: "University of Waikato", value: "University of Waikato" },
     { label: "Massey University", value: "Massey University" },
-    {
-      label: "Victoria University of Wellington",
-      value: "Victoria University of Wellington",
-    },
+    { label: "Victoria University of Wellington", value: "Victoria University of Wellington" },
     { label: "University of Canterbury", value: "University of Canterbury" },
     { label: "Lincoln University", value: "Lincoln University" },
     { label: "University of Otago", value: "University of Otago" },
@@ -176,6 +198,39 @@ function SignUp(props) {
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
             </div>
+
+          </div>
+
+          <div className="input_wrap">
+            <label>Upload a profile picture</label>
+            <input type="file" onChange={uploadFileHandler}></input>
+            {upLoading && <div>Uploading...</div>}
+          </div>
+
+          <div className="input_grp">
+            <div className="input_wrap">
+              <label>Username:</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter a Username"
+                required
+                onChange={(e) => setUsername(e.target.value)}
+              ></input>
+            </div>
+
+            <div className="input_wrap">
+              <label>Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter Password"
+                required
+                onChange={(e) => setPassword(e.target.value)}
+              ></input>
+            </div>
           </div>
 
           <div className="input_grp">
@@ -185,11 +240,7 @@ function SignUp(props) {
                   <div className="row">
                     <div className="col-md-3"></div>
                     <div className="col-md-6">
-                      <Select
-                        options={Gender}
-                        components={animatedComponents}
-                        onChange={(e) => setGender(e.target.value)}
-                      />
+                      <Select options={Gender} components={animatedComponents} onChange={(e) => setGender(e.target.value)} />
                     </div>
                     <div classNane="col-md-4"></div>
                   </div>
@@ -254,29 +305,29 @@ function SignUp(props) {
                   <div className="row">
                     <div className="col-md-3"></div>
                     <div className="col-md-6">
-                      <Select
-                        options={Universities}
-                        components={animatedComponents}
-                        onChange={(e) => setUniversity(e.target.value)}
-                      />
+                      <Select options={Universities} components={animatedComponents} onChange={(e) => setUniversity(e.target.value)} />
                     </div>
                     <div classNane="col-md-4"></div>
                   </div>
                 </div>
               </div>
             </div>
+
           </div>
 
+
           <div class="input_wrap">
-            <input
-              type="submit"
-              value="Register Now"
-              class="submit_btn"
-            ></input>
+            <input type="submit" value="Register Now" class="submit_btn"></input>
           </div>
+
         </form>
+
       </div>
     </div>
+
+
+
+
   );
 }
 

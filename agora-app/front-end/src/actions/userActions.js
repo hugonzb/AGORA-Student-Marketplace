@@ -11,13 +11,13 @@ import {
 } from "../constants/userConstants";
 
 const signUp = (studentid, fname, sname, username, password, email,
-    dob, gender, university, street_address, city, postcode ) => async (dispatch) => {
+    dob, gender, university, street_address, city, postcode, profilePicture ) => async (dispatch) => {
         dispatch({
             type: USER_SIGNUP_REQUEST, payload: {studentid, fname, sname, username, password, email,
-                dob, gender, university, street_address, city, postcode } });
+                dob, gender, university, street_address, city, postcode, profilePicture } });
     try {
         const { data } = await Axios.post("/api/users/signup", {studentid, fname, sname, username, password, email,
-            dob, gender, university, street_address, city, postcode });
+            dob, gender, university, street_address, city, postcode, profilePicture });
         dispatch({type:USER_SIGNUP_SUCCESS, payload: data});
     }catch(error){
         dispatch({type: USER_SIGNUP_FAIL, payload: error.message});
