@@ -1044,20 +1044,15 @@ span.psw {
   align-items: center;
 }
 
-<<<<<<< HEAD
-.container-cash {
-=======
 .ship-logos {
   display: flex;
-  width: 90px; 
+  width: 90px;
 }
 .ship-logos img {
-    width: 70%;
-    
+  width: 70%;
 }
 
-.container-cash{
->>>>>>> 50111eee1cf5b35866dc25d9f495ecee83996b60
+.container-cash {
   display: flex;
   width: 90px;
 
@@ -1065,13 +1060,7 @@ span.psw {
   align-items: center;
 }
 .container-cash img {
-<<<<<<< HEAD
-  width: 80%;
-=======
-    width: 100%; 
-    
-    
->>>>>>> 50111eee1cf5b35866dc25d9f495ecee83996b60
+  width: 100%;
 }
 
 .radio-input {
