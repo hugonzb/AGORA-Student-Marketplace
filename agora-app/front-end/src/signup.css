@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
+ 
 @import url("https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap");
-
+ 
 /*signup && registration*/
-
+ 
 *{
 	margin: 0;
 	padding: 0;
-
+ 
 	list-style: none;
 	font-family: 'Montserrat', sans-serif;
 }
-
+ 
 body{
 	
 }
  
 .wrapper{
 	
+	height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -26,7 +27,7 @@ body{
 	justify-content: space-around; 
 	 
 }
-
+ 
 .sign-up-logo {
   margin-top: 2px;
   max-height: 4.5rem;
@@ -35,82 +36,116 @@ body{
   display: inline-block; 
   align-items: center; 
 }
-
+ 
 .form-heading > img,
 .form-heading > span {
 display: inline-block;
 justify-content: space-around;
 padding-left: 1rem;
-
+ 
 }
-
+ 
 .registration_form{
+    height: 85vh;
 	background: #545871;
 	padding: 25px;
 	border-radius: 5px;
-	width: 450px;
+	width: 550px;
 	background: white;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 10.9);
-	margin-top: 0.5rem;
+	margin-top: 1rem;
 	justify-content: space-around;
 	border: 1px solid rgb(187, 187, 187);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
-
-.registration-form title{ 
+ 
+.registration-form title{
 	
 	font-size: 20px;
 	color: #f1f1f1;
 	letter-spacing: 5px;
 	font-weight: 700;
-	justify-content: flex-start;
+	justify-content: flex-end;
 	display: inline;
 }
-
+ 
 .form_wrap{
 	margin-top: 45px;
 }
-
+ 
 .form_wrap .input_wrap{
 	margin-bottom: 15px;
 }
-
+ 
 .form_wrap .input_wrap:last-child{
 	margin-bottom: 0;
 }
-
+ 
 .form_wrap .input_wrap label{
-	display: flex;
-	margin-bottom: 3px;
+	display: block;
+	margin-bottom: 10px;
 	color: #9597a6;
-	align-items: center;
-
 }
-
+ 
 .form_wrap .input_grp{
 	display: flex;
-	justify-content: space-between;
-	align-items:flex;
+	justify-content: space-around;
+	align-items:flex-start;
+	
 }
-
+ 
 .form_wrap .input_grp  input[type="text"]{
-	width: 150px;
+	width: 165px;
 }
-
+ 
 .form_wrap  input[type="text"]{
-	width: 40%;
+	width: 100%;
 	border-radius: 3px;
 	border: 1px solid #9597a6;
-	padding: 8px;
+	padding: 10px;
 	outline: none;
-	font-size: 12px;
 }
-
+ 
 .form_wrap  input[type="text"]:focus{
 	border-color: #ebd0ce;
 }
-
-
+ 
+.form_wrap ul{
+	background: #fff;
+	padding: 8px 10px;
+	border-radius: 3px;
+	display: flex;
+	justify-content: center;
+}
+ 
+.form_wrap ul li:first-child{
+	margin-right: 15px;
+}
+ 
+.form_wrap ul .radio_wrap{
+	position: relative;
+	margin-bottom: 0;
+}
+ 
+.form_wrap ul .radio_wrap .input_radio{
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+}
+ 
+.form_wrap ul .radio_wrap span{
+	display: inline-block;
+	font-size: 14px;
+	padding: 3px 20px;
+	border-radius: 3px;
+	color: #545871;
+}
+ 
+.form_wrap .input_radio:checked ~ span{
+	background: #ebd0ce;
+}
+ 
 .form_wrap .submit_btn{
 	width: 100%;
 	background: #ff7b00;
@@ -121,8 +156,9 @@ padding-left: 1rem;
 	letter-spacing: 3px;
 	cursor: pointer;
 	font-weight: 700;
+	margin-top: 10px;
 }
-
+ 
 .form_wrap .submit_btn:hover{
 	background: #ffa754;
 }
