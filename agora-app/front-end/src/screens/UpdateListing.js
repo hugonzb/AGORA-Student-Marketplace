@@ -112,7 +112,7 @@ function UpdateListing(props) {
             type="text"
             id="listingName"
             name="listingName"
-            placeholder={listing.name}
+            defaultValue={listing.name}
             required
             onChange={(e) => setName(e.target.value)}
           ></input>
@@ -122,7 +122,7 @@ function UpdateListing(props) {
             type="text"
             id="listingDescription"
             name="listingDescription"
-            placeholder={listing.description}
+            defaultValue={listing.description}
             rows="5"
             cols="40"
             required
@@ -139,8 +139,13 @@ function UpdateListing(props) {
           ></input>
           <input type="file" onChange={uploadFileHandler}></input>
           {uploading && <div>Uploading...</div>}
+
           <label>Category: </label>
-          <select id="categories" onChange={(e) => setCategory(e.target.value)}>
+          <select
+            id="categories"
+            defaultValue={listing.category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
             <option value="Antiques">Antiques</option>
             <option value="University Textbooks">University Textbooks</option>
             <option value="Books">Books</option>
@@ -167,7 +172,7 @@ function UpdateListing(props) {
             type="number"
             id="price"
             name="price"
-            placeholder={listing.price}
+            defaultValue={listing.price}
             required
             onChange={(e) => setPrice(e.target.value)}
           ></input>
@@ -177,11 +182,15 @@ function UpdateListing(props) {
             type="text"
             id="brand"
             name="brand"
-            placeholder={listing.brand}
+            defaultValue={listing.brand}
             onChange={(e) => setBrand(e.target.value)}
           ></input>
           <label>Condition: </label>
-          <select id="condition" onChange={(e) => setCondition(e.target.value)}>
+          <select
+            id="condition"
+            defaultValue={listing.condition}
+            onChange={(e) => setCondition(e.target.value)}
+          >
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
@@ -191,6 +200,7 @@ function UpdateListing(props) {
             id="pickup"
             name="deliveryoptions"
             value="pickup"
+            defaultValue={listing.deliveryoption}
             required
             onChange={(e) => setDeliveryoption(e.target.value)}
           ></input>
@@ -204,7 +214,7 @@ function UpdateListing(props) {
             onChange={(e) => setDeliveryoption(e.target.value)}
           ></input>
           <button type="submit" value="Submit">
-            Create Listing
+            Update Listing
           </button>
         </form>
       </div>
