@@ -87,8 +87,6 @@ function SignUp(props) {
 
   const animatedComponents = makeAnimated();
 
-  const animatedComponents = makeAnimated();
-
   const Gender = [
 
     { label: "Male", value: "Male" },
