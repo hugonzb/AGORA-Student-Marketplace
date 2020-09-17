@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { createListing } from "../actions/listingActions";
 import Axios from "axios";
 
-function CreateListing(props) {
+function UpdateListing(props) {
   /* 
         These fields will be used to get the data the user enters
         into the form into js variables that we can send to the backend
@@ -15,7 +15,7 @@ function CreateListing(props) {
   // Will be updated if user chooses to select an image however.
   const [image, setImage] = useState("/images/default.png");
   const [category, setCategory] = useState("Antiques");
-  const [price, setPrice] = useState(""); 
+  const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
@@ -30,17 +30,7 @@ function CreateListing(props) {
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
-  // currently just need to figure out how to dispatch the information when submit button is clicked to the post
-  // in listingRoute. I believe I have done everything already needed there.
-  /* 
-  const listingSave = useSelector((state) => state.listingSave);
-  const {
-    loading: loadingSave,
-    success: successSave,
-    error: errorSave,
-  } = listingSave;
-  */
-
+  // gets the users details
   useEffect(() => {
     if (userInfo) {
       setSeller(userInfo.fname + " " + userInfo.sname);
@@ -51,30 +41,30 @@ function CreateListing(props) {
     return () => {};
   }, [userInfo]);
 
-
   const uploadFileHandler = (e) => {
     const file = e.target.files[0];
     const bodyFormData = new FormData();
 
-    bodyFormData.append('image', file);
+    bodyFormData.append("image", file);
     // Now we are ready to send an AJAX request with Axios
 
     // This line will produce the div that tells the user their file is uploading
     setUploading(true);
     Axios.post("/api/listings/uploadimage", bodyFormData, {
-      headers:{
-        'Content-Type' : 'multipart/form-data',
+      headers: {
+        "Content-Type": "multipart/form-data",
       },
-    }).then(response => {
-      setImage(response.data);
-      // This line will remove the "uploading..." div
-      setUploading(false);
-    }).catch(err => {
-      console.log(err);
-      setUploading(false);
-    });
-  }
-
+    })
+      .then((response) => {
+        setImage(response.data);
+        // This line will remove the "uploading..." div
+        setUploading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setUploading(false);
+      });
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -134,8 +124,8 @@ function CreateListing(props) {
             name="image"
             value={image}
             id="image"
-            onChange = {(e) => setImage(e.target.value)}
-            ></input>
+            onChange={(e) => setImage(e.target.value)}
+          ></input>
           <input type="file" onChange={uploadFileHandler}></input>
           {uploading && <div>Uploading...</div>}
           <label>Category: </label>
@@ -211,4 +201,4 @@ function CreateListing(props) {
   );
 }
 
-export default CreateListing;
+export default UpdateListing;
