@@ -944,16 +944,19 @@ padding-left: 1rem;
 .form_wrap{
 	margin-top: 45px;
 	
+	
 }
 
 
 .form_wrap .input_wrap{
 	margin-bottom: 15px;
 	width: 100%;
+	display: flex; 
 }
 
 .form_wrap .input_wrap:last-child{
 	margin-bottom: 0;
+	width: 100%; 
 }
 
 .form_wrap .input_wrap label{
