@@ -55,7 +55,7 @@ function App(props) {
           <Route path="/checkout/:id" component={Checkout} />
           <Route path="/account/profile" component={Profile} />
           <Route path="/account/createlisting" component={CreateListing} />
-          <Route path="/account/updatelisting" component={UpdateListing} />
+          <Route path="/account/updatelisting/:id" component={UpdateListing} />
         </div>
       </div>
       <div className="footer">All Rights Reserved.</div>

@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createListing } from "../actions/listingActions";
 import Axios from "axios";
+import { detailListing } from "../actions/listingActions";
 
 function UpdateListing(props) {
-  /* 
-        These fields will be used to get the data the user enters
-        into the form into js variables that we can send to the backend
-        which will then send it to the database.
-    */
+  //get user details
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+
+  //get the current listings details
+  const listingDetails = useSelector((state) => state.listingDetails);
+  const { listing, loading, error } = listingDetails;
+
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   // This sets the image file path to initially be the default image in /images/default.png
@@ -26,8 +30,6 @@ function UpdateListing(props) {
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
 
-  const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
   // gets the users details
@@ -38,6 +40,8 @@ function UpdateListing(props) {
       setCity(userInfo.city);
       setSellerId(userInfo.studentid);
     }
+    dispatch(detailListing(props.match.params.id));
+
     return () => {};
   }, [userInfo]);
 
@@ -91,17 +95,24 @@ function UpdateListing(props) {
     return () => {};
   });
 
-  return (
+  return loading ? (
+    <div className="loading">Loading listing ...</div>
+  ) : error ? (
+    <div className="error">
+      {" "}
+      {error} - Make sure you are running the server to fetch data{" "}
+    </div>
+  ) : (
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
-        <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
+        <h2>Hello {userInfo.fname}! update your listing: </h2>
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
             type="text"
             id="listingName"
             name="listingName"
-            placeholder="Listing Name"
+            placeholder={listing.name}
             required
             onChange={(e) => setName(e.target.value)}
           ></input>
@@ -111,7 +122,7 @@ function UpdateListing(props) {
             type="text"
             id="listingDescription"
             name="listingDescription"
-            placeholder="Your Description Here."
+            placeholder={listing.description}
             rows="5"
             cols="40"
             required
@@ -156,7 +167,7 @@ function UpdateListing(props) {
             type="number"
             id="price"
             name="price"
-            placeholder="$0.00"
+            placeholder={listing.price}
             required
             onChange={(e) => setPrice(e.target.value)}
           ></input>
@@ -166,7 +177,7 @@ function UpdateListing(props) {
             type="text"
             id="brand"
             name="brand"
-            placeholder="brand"
+            placeholder={listing.brand}
             onChange={(e) => setBrand(e.target.value)}
           ></input>
           <label>Condition: </label>
