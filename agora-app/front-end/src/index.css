@@ -1054,7 +1054,7 @@ span.psw {
 
 .ship-logos {
   display: flex;
-  width: 90px; 
+  width: 90%; 
 }
 .ship-logos img {
     width: 70%;
