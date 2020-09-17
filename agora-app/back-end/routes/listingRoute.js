@@ -78,7 +78,7 @@ router.get("/account/profile"),
 // Method which will give us the filename and path of an uploaded image
 const storage = multer.diskStorage({
   destination(req, file, cb) {
-    cb(null, 'front-end/public/images');
+    cb(null, "front-end/public/images");
   },
   filename(req, file, cb) {
     cb(null, Date.now() + ".jpg");
@@ -87,7 +87,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.post('/uploadimage', upload.single('image'), (req, res) => {
+router.post("/uploadimage", upload.single("image"), (req, res) => {
   console.log(req.file.filename);
   res.send("/images/" + req.file.filename);
 });
@@ -123,7 +123,7 @@ router.delete("/:id", async (req, res) => {
     await listing.remove();
     res.send({ message: "listing has been deleted succesfully." });
   } else {
-    res.send('Error in Deletion.');
+    res.send("Error in Deletion.");
   }
 });
 

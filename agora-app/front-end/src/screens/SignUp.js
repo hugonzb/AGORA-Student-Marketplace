@@ -85,6 +85,7 @@ function SignUp(props) {
     );
   };
 
+  const animatedComponents = makeAnimated();
 
   const animatedComponents = makeAnimated();
 
@@ -111,23 +112,19 @@ function SignUp(props) {
     <div className="wrapper">
       <div className="registration_form">
         <div className="form-heading">
-
-
-          <img src={agoralogo}
-            className="sign-up-logo" alt="" />
+          <img src={agoralogo} className="sign-up-logo" alt="" />
 
           <span>
             <h4>Registration Form</h4>
-                   Already have an account?
-                   <h4><Link to="/account/signin">Sign in</Link></h4>
+            Already have an account?
+            <h4>
+              <Link to="/account/signin">Sign in</Link>
+            </h4>
           </span>
-
-
         </div>
         {loading}
         {error && <div>Student ID or Email Address has been taken.</div>}
         <form className="form_wrap" onSubmit={submitHandler}>
-
           <div className="input_grp">
             <div className="input_wrap">
               <label>First Name:</label>
@@ -213,7 +210,32 @@ function SignUp(props) {
           </div>
 
           <div className="input_grp">
+            <div className="input_wrap">
+              <label>Username:</label>
+              <input
+                type="text"
+                id="username"
+                name="username"
+                placeholder="Enter a Username"
+                required
+                onChange={(e) => setUsername(e.target.value)}
+              ></input>
+            </div>
 
+            <div className="input_wrap">
+              <label>Password:</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter Password"
+                required
+                onChange={(e) => setPassword(e.target.value)}
+              ></input>
+            </div>
+          </div>
+
+          <div className="input_grp">
             <div className="input_wrap">
               <div className="gender">
                 <div className="container">
@@ -239,7 +261,6 @@ function SignUp(props) {
               ></input>
             </div>
           </div>
-
 
           <div className="input_grp">
             <div className="input_wrap">
