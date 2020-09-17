@@ -5,32 +5,40 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch back-end --exec babel-node back-end/server.js",
-    "build": "rm -rf dist && babel back-end -d dist"
+    "build": "rm -rf dist && babel back-end -d dist",
+    "heroku-postbuild": "npm install && npm run build && cd front-end && npm run build"
   },
   "keywords": [],
   "author": "Agora",
   "license": "ISC",
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.19.2",
-    "components": "^0.1.0",
+    "bootstrap": "^4.5.2",
     "config": "^3.3.1",
-    "dependencies": "0.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.10.5",
     "multer": "^1.4.2",
+<<<<<<< HEAD
     "node": "^14.10.1",
+=======
+>>>>>>> cde1404c670fa48f77887400a694dff0557f044c
     "react": "^16.13.1",
     "react-apps": "^0.2.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.3",
+    "react-select": "^3.1.0",
     "react-thunk": "^1.0.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
@@ -42,10 +50,10 @@
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
+    "graceful-fs": "^4.2.4",
     "nodemon": "^2.0.4"
   },
-  "engines": {
-    "node": "12.4.0",
-    "npm": "6.9.0"
+  "resolutions": {
+    "graceful-fs": "4.2.4"
   }
 }

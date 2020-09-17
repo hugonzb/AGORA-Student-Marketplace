@@ -1,5 +1,5 @@
 import express from "express";
-import config from "../back-end/config.js";
+import config from "./config.js";
 import mongoose from "mongoose";
 import userRoute from "./routes/userRoute";
 import listingRoute from "./routes/listingRoute";
@@ -11,7 +11,7 @@ const mongodbUrl = config.MONGODB_URL;
 
 mongoose
   .connect(mongodbUrl, {
-    useNewUrlParser: true,
+    useNewUrlParser: true, 
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
@@ -27,10 +27,15 @@ app.use(bodyParser.json());
 app.use("/api/listings", listingRoute);
 
 // Here we tell the server to serve images from the front-end/public/images folder
-app.use('/images', express.static(path.join(__dirname, '/images')));
+app.use('/images', express.static(path.join(__dirname, '/../front-end/public/images')));
 
+
+app.use(express.static(path.join(__dirname, '/../front-end/build')));
+app.get('*', (req, res) => {
+    res.sendFile(path.join(`${__dirname}/../front-end/build/index.html`));
+});
 
 /* run server on port 5000 */
-app.listen(5000, () => {
+app.listen(config.PORT, () => {
   console.log("Backend server started at http://localhost:5000\n");
 });
