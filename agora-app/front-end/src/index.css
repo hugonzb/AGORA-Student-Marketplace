@@ -222,7 +222,7 @@ ul li a {
   justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background: rgb(235, 235, 235);
+  background: rgb(240, 240, 240);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   padding: 0.5rem;
@@ -242,6 +242,7 @@ ul li a {
   padding-bottom: 1rem;
   text-decoration: none;
   color: black;
+  font-size: 15px;
 }
 
 /* View Listing */
@@ -296,7 +297,7 @@ ul li a {
   height: 18rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background: rgb(235, 235, 235);
+  background: rgb(240, 240, 240);
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
@@ -404,6 +405,7 @@ ul li a {
 .view-listing-sellername {
   display: flex;
   padding: 0.2rem;
+  font-size: 13px;
   width: 5rem;
 }
 
@@ -416,7 +418,7 @@ ul li a {
   height: 15rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background: rgb(235, 235, 235);
+  background: rgb(240, 240, 240);
   align-items: center;
   box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
@@ -466,6 +468,7 @@ ul li a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  background: rgb(240, 240, 240);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 13px;
 }
