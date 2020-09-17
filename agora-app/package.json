@@ -6,27 +6,29 @@
   "scripts": {
     "start": "nodemon --watch back-end --exec babel-node back-end/server.js",
     "build": "rm -rf dist && babel back-end -d dist",
-    "heroku-postbuild": "npm run build && cd front-end && npm install && npm run build"
+    "heroku-postbuild": "npm install && npm run build && cd front-end && npm run build"
   },
   "keywords": [],
   "author": "Agora",
   "license": "ISC",
+  "engines": {
+    "node": "12.4.0",
+    "npm": "6.9.0"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/react-fontawesome": "^0.1.11",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.2",
-    "components": "^0.1.0",
     "config": "^3.3.1",
     "dependencies": "0.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "js-cookie": "^2.2.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.3",
+    "mongoose": "^5.10.5",
     "multer": "^1.4.2",
-    "node": "^14.8.0",
     "react": "^16.13.1",
     "react-apps": "^0.2.1",
     "react-dom": "^16.13.1",
@@ -45,10 +47,10 @@
     "@babel/core": "^7.11.6",
     "@babel/node": "^7.10.5",
     "@babel/preset-env": "^7.11.5",
+    "graceful-fs": "^4.2.4",
     "nodemon": "^2.0.4"
   },
-  "engines": {
-    "node": "12.4.0",
-    "npm": "6.9.0"
+  "resolutions": {
+    "graceful-fs": "4.2.4"
   }
 }

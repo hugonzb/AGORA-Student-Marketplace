@@ -2,9 +2,7 @@
 
 body {
   background-color: rgb(250, 250, 250);
-  
 }
-
 
 a:hover,
 a:visited,
@@ -327,7 +325,7 @@ ul li a {
   box-shadow: 0px 0px 6px 0px rgba(170, 170, 170, 0.61);
 }
 
-.view-listing-seller-message{
+.view-listing-seller-message {
   display: flex;
   font-weight: bold;
   font-family: "Play";
@@ -336,7 +334,7 @@ ul li a {
   align-items: center;
 }
 
-.view-listing-seller-message-text{
+.view-listing-seller-message-text {
   border: 1px solid rgb(71, 71, 71);
   border-radius: 0.5rem;
   background-color: rgb(245, 245, 245);
@@ -344,7 +342,6 @@ ul li a {
 }
 
 .buynow-button {
-  
   background-color: #2cbd33;
   border-radius: 8px;
   border: 0;
@@ -370,7 +367,6 @@ ul li a {
 }
 
 .addtowatchlist-button {
- 
   background-color: #ff9900;
   border-radius: 8px;
   border: 0;
@@ -492,7 +488,7 @@ ul li a {
 }
 
 .sign-up-container h2 {
-font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: rgb(255, 255, 255);
   font-size: 18px;
   font-weight: bold;
@@ -576,11 +572,11 @@ label:after {
 }
 
 /* sign in page */
-.sign-in-logo{
-    margin: 0px auto; 
-    display: flex;
-    text-decoration: none;
-    width: 50%;
+.sign-in-logo {
+  margin: 0px auto;
+  display: flex;
+  text-decoration: none;
+  width: 50%;
 }
 
 .sign-in-container {
@@ -599,14 +595,14 @@ label:after {
   font-family: "Quicksand", sans-serif;
 }
 
-.signin-header{
+.signin-header {
   font-family: "Play", sans-serif;
   font-weight: bold;
   font-size: 25px;
   padding: 1rem;
 }
 
-.signin-button{
+.signin-button {
   margin: 1rem;
   padding: 7px;
   padding-left: 1rem;
@@ -617,12 +613,11 @@ label:after {
   font-weight: bold;
   font-size: 12px;
   background-color: rgb(233, 128, 42);
-  cursor: pointer
+  cursor: pointer;
 }
 .createAccountContainer {
   border-style: none;
   padding-top: 0rem;
-
 }
 
 .create-account-form h2 {
@@ -648,7 +643,6 @@ input[type="email"] {
   border: 1px solid rgb(187, 187, 187);
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
-
 
 .create-account-form button:hover {
   opacity: 0.8;
@@ -833,8 +827,7 @@ span.psw {
   overflow-x: hidden;
 }
 
-
-.profile-listing{
+.profile-listing {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -850,7 +843,7 @@ span.psw {
   box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
 
-.profile-listing img{
+.profile-listing img {
   max-width: 5rem;
   border: 0px;
   padding-left: 5px;
@@ -897,10 +890,6 @@ span.psw {
 	padding: 0;
 	list-style: none;
 	font-family: 'Montserrat', sans-serif;
-}
-
-body{
-	
 }
  
 .wrapper{
@@ -1006,8 +995,8 @@ padding-left: 1rem;
   }
 }
 /*cehckout*/
-.checkout-container-body{
-  font-family: 'Montserrat', sans-serif;
+.checkout-container-body {
+  font-family: "Montserrat", sans-serif;
   display: flex;
   width: 100%;
   height: 100%;
@@ -1022,20 +1011,19 @@ padding-left: 1rem;
   width: 940px;
   height: 766px;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .2);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
 }
 
 .panel-body {
   padding: 45px 80px 0;
   flex: 1;
 }
- 
+
 .title {
   font-family: "Play", sans-serif;
   font-weight: bold;
   font-size: 25px;
   padding: 1rem;
-
 }
 
 .payment-method {
@@ -1043,7 +1031,7 @@ padding-left: 1rem;
   margin-bottom: 10px;
   justify-content: space-between;
 }
- 
+
 .method {
   display: flex;
   flex-direction: column;
@@ -1057,7 +1045,7 @@ padding-left: 1rem;
   justify-content: center;
   align-items: center;
 }
- 
+
 .card-logos {
   display: flex;
   width: 150px;
@@ -1067,32 +1055,28 @@ padding-left: 1rem;
 
 .ship-logos {
   display: flex;
-  width: 90px; 
+  width: 90px;
 }
 .ship-logos img {
-    width: 70%;
-    
+  width: 70%;
 }
 
-.container-cash{
+.container-cash {
   display: flex;
   width: 90px;
-  
+
   justify-content: space-between;
   align-items: center;
 }
 .container-cash img {
-    width: 100%; 
-    
-    
+  width: 100%;
 }
 
 .radio-input {
   margin-top: 20px;
-  
 }
- 
-input[type='radio'] {
+
+input[type="radio"] {
   display: inline-block;
 }
 .input-fields {
@@ -1101,26 +1085,26 @@ input[type='radio'] {
   display: flex;
   justify-content: space-between;
 }
- 
+
 .input-fields label {
   display: block;
   margin-bottom: 10px;
   color: #b4b4b4;
 }
- 
+
 .info {
   font-size: 12px;
   font-weight: 300;
   display: block;
   margin-top: 50px;
-  opacity: .5;
+  opacity: 0.5;
   color: #2e2e2e;
 }
- 
-div[class*='column'] {
+
+div[class*="column"] {
   width: auto;
 }
- 
+
 input[type='text']
 /*input[type='password']*/ {
   font-size: 16px;
@@ -1128,29 +1112,36 @@ input[type='text']
   height: 50px;
   padding-right: 40px;
   padding-left: 16px;
-  color: rgba(46, 46, 46, .8);
+  color: rgba(46, 46, 46, 0.8);
   border: 1px solid rgb(225, 225, 225);
   border-radius: 4px;
   outline: none;
 }
- 
+
 input[type='text']:focus
 /*input[type='password']:focus*/ {
   border-color: rgb(119, 219, 119);
 }
- 
-#date { background: url(images/icons_calendar_black.png) no-repeat 95%; }
-#cardholder { background: url(images/icons_person_black.png) no-repeat 95%; }
-#cardnumber { background: url(images/icons_card_black.png) no-repeat 95%; }
-#verification { background: url(images/icons_lock_black.png) no-repeat 95%; }
 
- 
+#date {
+  background: url(images/icons_calendar_black.png) no-repeat 95%;
+}
+#cardholder {
+  background: url(images/icons_person_black.png) no-repeat 95%;
+}
+#cardnumber {
+  background: url(images/icons_card_black.png) no-repeat 95%;
+}
+#verification {
+  background: url(images/icons_lock_black.png) no-repeat 95%;
+}
+
 .small-inputs {
   display: flex;
   margin-top: 20px;
   justify-content: space-between;
 }
- 
+
 .small-inputs div {
   width: 182px;
 }
@@ -1172,27 +1163,26 @@ input[type='text']:focus
   width: 163px;
   height: 48px;
   cursor: pointer;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   letter-spacing: 1px;
   border: none;
   border-radius: 23px;
 }
- 
+
 .back-btn {
   color: #fff;
   background: #f70909;
-  
 }
- 
+
 .next-btn {
   color: #fff;
   background: #229147;
 }
- 
+
 .btn:focus {
   outline: none;
 }
- 
+
 .btn:hover {
   transform: scale(1.1);
 }

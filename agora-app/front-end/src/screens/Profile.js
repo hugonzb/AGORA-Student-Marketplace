@@ -55,11 +55,10 @@ function Profile(props) {
     // eslint-disable-next-line
   }, [userInfo, searchWord, category, location, sellerId, successDelete]);
 
-  return ( 
+  return (
     <>
       {loadingDelete}
-      {errorDelete}
-      {" "}
+      {errorDelete}{" "}
       {userInfo ? (
         <div className="mainContainer">
           <div className="profileContainer">
@@ -116,8 +115,7 @@ function Profile(props) {
                 {listings.map((listing) => (
                   <li key={listing._id}>
                     <div className="profile-listing">
-               
-                        <div className="profile-listing-image">
+                      <div className="profile-listing-image">
                         <Link to={"/listing/" + listing._id}>
                           <img
                             className="listing-image"
@@ -125,27 +123,36 @@ function Profile(props) {
                             alt="listing"
                           ></img>
                         </Link>
-                        </div>
-                    
-                      <div className="listing-content"> 
-                      <Link to={"/listing/" + listing._id}>
-                        <div className="listing-name">{listing.name}</div>
-                        <div className="listing-price">
-                          Asking Price: ${listing.price}
-                        </div>
-                        <div className="delete-listing">
-                        </div>
-                      </Link>
+                      </div>
+
+                      <div className="listing-content">
+                        <Link to={"/listing/" + listing._id}>
+                          <div className="listing-name">{listing.name}</div>
+                          <div className="listing-price">
+                            Asking Price: ${listing.price}
+                          </div>
+
+                          <div className="delete-listing"></div>
+                        </Link>
+                      </div>
+                      <div className="update-listing">
+                        <Link to={"/account/updatelisting/" + listing._id}>
+                          <button
+                            type="button"
+                            className="update-listing-button"
+                          >
+                            update
+                          </button>
+                        </Link>
                       </div>
                       <button
-                            type="button"
-                            className="delete-button"
-                            onClick={() => deleteHandler(listing)}
-                          >
-                            delete
-                          </button>
+                        type="button"
+                        className="delete-button"
+                        onClick={() => deleteHandler(listing)}
+                      >
+                        delete
+                      </button>
                     </div>
-                    
                   </li>
                 ))}
               </div>
