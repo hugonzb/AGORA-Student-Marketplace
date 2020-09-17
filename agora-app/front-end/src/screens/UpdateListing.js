@@ -41,7 +41,9 @@ function UpdateListing(props) {
       setSellerId(userInfo.studentid);
     }
     dispatch(detailListing(props.match.params.id));
-
+    if (loading == false) {
+      setName(listing.name);
+    }
     return () => {};
   }, [userInfo]);
 
