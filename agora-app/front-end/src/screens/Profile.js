@@ -136,7 +136,7 @@ function Profile(props) {
                         </Link>
                       </div>
                       <div className="update-listing">
-                        <Link to={"/updatelisting/" + listing._id}>
+                        <Link to={"/account/updatelisting/" + listing._id}>
                           <button
                             type="button"
                             className="update-listing-button"
