@@ -1,6 +1,8 @@
 import express from "express";
 import User from "../models/userModel";
 import { getToken } from "../util";
+import multer from "multer";
+
 
 const router = express.Router();
 
@@ -49,5 +51,26 @@ router.post("/signin", async (req, res) => {
     res.status(401).send({ msg: "Invalid Email or Password." });
   }
 });
+
+
+// Method which will give us the filename and path of an uploaded image
+const storage = multer.diskStorage({
+  destination(req, file, cb) {
+    cb(null, 'front-end/public/profilePictures');
+  },
+  filename(req, file, cb) {
+    // This line of code sets the file name to be the original name of the file concatenated
+    // with the current date/time and finished with .jpg
+    cb(null, file.originalname + Date.now() + ".jpg");
+  },
+});
+
+const upload = multer({ storage });
+
+router.post('/uploadProfilePicture', upload.single('image'), (req, res) => {
+  console.log(req.file.filename);
+  res.send("/profilePictures/" + req.file.filename);
+});
+
 
 export default router;
