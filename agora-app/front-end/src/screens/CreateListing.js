@@ -23,6 +23,7 @@ function CreateListing(props) {
   const [seller, setSeller] = useState("");
   const [sellerId, setSellerId] = useState("");
   const [deliveryoption, setDeliveryoption] = useState("");
+  const [profilePicture, setProfilePicture] = useState("/profilePictures/defaultProfilePicture.jpg");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
 
