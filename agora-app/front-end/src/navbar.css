@@ -73,15 +73,25 @@ ul{
 }
 
 .showNav{
-    height: 170px;
+    height: 160px;
     padding-top: 1rem;
     background-color: white;
+}
+
+
+.showNavLoggedIn{
+height: 190px;
+padding-top: 1rem;
+background-color: white;
+
 }
 
 .headerNav{
     padding-top: 0rem;
     margin-right: 1rem;
 }
+
+
 
 ul li a{
     background-color: white;
