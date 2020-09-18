@@ -12,7 +12,7 @@ import { detailListing } from '../actions/listingActions';
       
       useEffect(() => {
           dispatch(detailListing(props.match.params.id));
-          return () => {
+          return () => { 
           };
         // eslint-disable-next-line
       }, []);
