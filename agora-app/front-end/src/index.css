@@ -245,7 +245,7 @@ ul li a {
   font-size: 13px;
   padding-left: 12px;
   padding-right: 12px;
-  background-color: rgb(253, 253, 253);
+  background-color: rgb(255, 255, 255);
   padding: 6px;
   border: 1px solid rgb(253, 102, 2);
   border-radius: 0.6rem;
@@ -799,11 +799,10 @@ span.psw {
   border-radius: 44px;
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   min-height: 30rem;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;

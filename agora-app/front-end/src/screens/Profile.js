@@ -62,7 +62,7 @@ function Profile(props) {
       {userInfo ? (
         <div className="mainContainer">
           <div className="profileContainer">
-            <h2> Profile </h2>
+            PROFILE
 
             <img src={profileicon} alt="profile" />
             <h2>
