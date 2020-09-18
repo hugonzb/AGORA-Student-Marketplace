@@ -7,7 +7,7 @@ import { detailListing } from '../actions/listingActions';
     function Checkout(props) {
       const listingDetails = useSelector(state => state.listingDetails);
       const { listing, loading, error } = listingDetails;
-      const dispatch = useDispatch();
+      const dispatch = useDispatch(); 
 
       
       useEffect(() => {
