@@ -132,7 +132,7 @@ ul li a {
   height: 0.5rem;
   font-size: 18px;
   padding: 0.5rem;
-  background-color: #1d4c61;
+  background-color: #143747;
   color: white;
   text-align: center;
 }
@@ -333,6 +333,7 @@ ul li a {
   height: 6rem;
   text-align: center;
   align-items: center;
+  max-width: 23rem;
 }
 
 .view-listing-seller-message-text {
@@ -340,6 +341,12 @@ ul li a {
   border-radius: 0.5rem;
   background-color: rgb(245, 245, 245);
   padding: 1rem;
+  margin: 2rem;
+}
+
+.view-listing-seller-message-text a{
+  color: blue;
+  text-decoration: none;
 }
 
 .buynow-button {
@@ -588,9 +595,9 @@ label:after {
   width: 100%;
   margin: 0 auto;
   border-radius: 44px;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   max-width: 370px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
   text-align: center;
   padding: 60px 0;
   height: 100%;
@@ -617,6 +624,12 @@ label:after {
 	font-weight: 700;
 	margin-top: 20px;
 }
+
+.signin-button:hover {
+  opacity: 0.8;
+  transform: scale(0.96);
+}
+
 .createAccountContainer {
   border-style: none;
   padding-top: 0rem;
@@ -646,10 +659,6 @@ input[type="email"] {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
 
-.create-account-form button:hover {
-  opacity: 0.8;
-  transform: scale(0.96);
-}
 .create-account-link {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 15px;
@@ -934,10 +943,7 @@ padding-left: 1rem;
 
 .form_wrap{
 	margin-top: 45px;
-	
-	
 }
-
 
 .form_wrap .input_wrap{
 	margin-bottom: 15px;
@@ -961,9 +967,6 @@ padding-left: 1rem;
 .form_wrap .input_grp{
 	display: flex;
 	justify-content:space-between;
-
-	
-	
 }
 
 .form_wrap .input_grp  input[type="text"]{
@@ -982,7 +985,6 @@ padding-left: 1rem;
 .form_wrap  input[type="text"]:focus{
 	border-color: #ebd0ce;
 }
-
 
 @media screen and (max-width: 700px) {
   th,
