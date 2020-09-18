@@ -15,7 +15,7 @@ table,
 td,
 th {
   border: 1px solid rgb(218, 218, 218);
-  background-color: rgb(255, 255, 255);
+  background: rgb(253, 253, 253);
   box-shadow: 0px 0px 5px 0px rgba(221, 221, 221, 0.61);
 }
 
@@ -132,7 +132,7 @@ ul li a {
   height: 0.5rem;
   font-size: 18px;
   padding: 0.5rem;
-  background-color: #1d4c61;
+  background-color: #143747;
   color: white;
   text-align: center;
 }
@@ -143,10 +143,9 @@ ul li a {
   text-align: center;
   height: 100%;
   min-height: 35rem;
-  margin-top: 1rem;
   margin-bottom: 1rem;
   padding-top: 1rem;
-  background-color: rgb(255, 255, 255);
+  background: rgb(245, 245, 245);
   border-radius: 0.5rem;
 }
 
@@ -156,6 +155,7 @@ ul li a {
   width: 100%;
   justify-content: center;
   align-items: center;
+  
 }
 
 .home-filter form {
@@ -166,9 +166,11 @@ ul li a {
   margin: 20px;
   cursor: pointer;
   outline: none;
-  border: 1px solid rgb(216, 216, 216);
+  border-bottom: 1px solid rgb(151, 151, 151);
+  border-top: 1px solid rgb(151, 151, 151);
   border-radius: 0.5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: 0px 0px 1px 1px rgba(189, 189, 189, 0.61);
 }
 
 .listings {
@@ -190,9 +192,8 @@ ul li a {
   font-family: arial;
   cursor: pointer;
   border-radius: 0.5rem;
-  border-top: 2px rgb(102, 102, 102) solid;
-  border-bottom: 2px rgb(59, 59, 59) solid;
-  box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
+  border: 2px rgb(150, 149, 149) solid;
+  box-shadow: 0px 0px 5px 0px rgba(126, 126, 126, 0.61);
 }
 
 .listing-image {
@@ -222,7 +223,7 @@ ul li a {
   justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background: rgb(235, 235, 235);
+  background: rgb(253, 253, 253);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   padding: 0.5rem;
@@ -232,16 +233,23 @@ ul li a {
 }
 
 .listing-name {
-  padding-bottom: 1rem;
   font-weight: bold;
   text-decoration: none;
   color: black;
 }
 
 .listing-price {
-  padding-bottom: 1rem;
+  margin: 1rem;
   text-decoration: none;
   color: black;
+  font-size: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: white;
+  padding: 4px;
+  border: 1px solid rgb(85, 85, 85);
+  border-radius: 0.6rem;
+  width: 100%;
 }
 
 /* View Listing */
@@ -250,11 +258,10 @@ ul li a {
   display: flex;
   width: 100%;
   height: 100%;
-  margin-top: 1rem;
   margin-bottom: 1rem;
   flex-wrap: wrap;
   justify-content: center;
-  background: rgb(255, 255, 255);
+  background: rgb(240, 240, 240);
   padding-top: 1rem;
   border-radius: 0.5rem;
 }
@@ -262,6 +269,7 @@ ul li a {
 .view-listing-image {
   display: flex;
   flex: 1, 1, 20rem;
+  background: rgb(253, 253, 253);
   width: 30rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
@@ -296,7 +304,7 @@ ul li a {
   height: 18rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background: rgb(235, 235, 235);
+  background: rgb(253, 253, 253);
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
@@ -316,7 +324,7 @@ ul li a {
   align-items: center;
   justify-content: center;
   height: 2rem;
-  width: 18rem;
+  width: 19rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: 1px solid rgb(194, 194, 194);
   background-color: rgb(255, 255, 255);
@@ -332,6 +340,7 @@ ul li a {
   height: 6rem;
   text-align: center;
   align-items: center;
+  max-width: 23rem;
 }
 
 .view-listing-seller-message-text {
@@ -339,6 +348,12 @@ ul li a {
   border-radius: 0.5rem;
   background-color: rgb(245, 245, 245);
   padding: 1rem;
+  margin: 2rem;
+}
+
+.view-listing-seller-message-text a{
+  color: blue;
+  text-decoration: none;
 }
 
 .buynow-button {
@@ -383,7 +398,7 @@ ul li a {
   outline: none;
 }
 .addtowatchlist-button:hover {
-  background-color: #e4c229;
+  background-color: #ffd000;
 }
 .addtowatchlist-button:active {
   box-shadow: 0px 0px 10px 0px rgba(255, 217, 0, 0.61);
@@ -404,6 +419,7 @@ ul li a {
 .view-listing-sellername {
   display: flex;
   padding: 0.2rem;
+  font-size: 13px;
   width: 5rem;
 }
 
@@ -416,13 +432,14 @@ ul li a {
   height: 15rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background: rgb(235, 235, 235);
+  background: rgb(253, 253, 253);
   align-items: center;
   box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
 
 .view-listing-details-title {
   height: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -430,7 +447,7 @@ ul li a {
   width: 100%;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background-color: #bac8d1;
+  background-color: #c5d6e0;
   color: rgb(0, 0, 0);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
@@ -439,7 +456,7 @@ ul li a {
 }
 
 .view-listing-description-container {
-  height: 7rem;
+  height: 6rem;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -447,16 +464,17 @@ ul li a {
   width: 100%;
   border-bottom: 2px solid rgb(196, 196, 196);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .view-listing-description {
   padding: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .view-listing-table {
   width: 100%;
-  background-color: white;
+  background: rgb(253, 253, 253);
 }
 
 .view-listing-qa-container {
@@ -466,8 +484,9 @@ ul li a {
   justify-content: center;
   align-items: center;
   width: 100%;
+  background: rgb(253, 253, 253);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* Sign up screen */
@@ -585,13 +604,13 @@ label:after {
   width: 100%;
   margin: 0 auto;
   border-radius: 44px;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   max-width: 370px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 4rem;
   text-align: center;
   padding: 60px 0;
   height: 100%;
-  padding-bottom: 1px;
+  padding-bottom: 20px;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -603,18 +622,23 @@ label:after {
 }
 
 .signin-button {
-  margin: 1rem;
-  padding: 7px;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: 0.5rem;
-  outline: none;
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  font-size: 12px;
-  background-color: rgb(233, 128, 42);
-  cursor: pointer;
+	width: 220px;
+	background: #ff7b00;
+	padding: 10px;
+	border: 0;
+	border-radius: 3px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	cursor: pointer;
+	font-weight: 700;
+	margin-top: 20px;
 }
+
+.signin-button:hover {
+  opacity: 0.8;
+  transform: scale(0.96);
+}
+
 .createAccountContainer {
   border-style: none;
   padding-top: 0rem;
@@ -644,10 +668,6 @@ input[type="email"] {
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
 
-.create-account-form button:hover {
-  opacity: 0.8;
-  transform: scale(0.96);
-}
 .create-account-link {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   padding-bottom: 15px;
@@ -932,10 +952,7 @@ padding-left: 1rem;
 
 .form_wrap{
 	margin-top: 45px;
-	
-	
 }
-
 
 .form_wrap .input_wrap{
 	margin-bottom: 15px;
@@ -959,9 +976,6 @@ padding-left: 1rem;
 .form_wrap .input_grp{
 	display: flex;
 	justify-content:space-between;
-
-	
-	
 }
 
 .form_wrap .input_grp  input[type="text"]{
@@ -980,7 +994,6 @@ padding-left: 1rem;
 .form_wrap  input[type="text"]:focus{
 	border-color: #ebd0ce;
 }
-
 
 @media screen and (max-width: 700px) {
   th,

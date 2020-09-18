@@ -161,4 +161,8 @@ padding-left: 1rem;
  
 .form_wrap .submit_btn:hover{
 	background: #ffa754;
+	opacity: 0.8;
+	transform: scale(0.96);
 }
+
+  
