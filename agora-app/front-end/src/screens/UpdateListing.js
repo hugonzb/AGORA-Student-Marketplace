@@ -2,20 +2,24 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createListing } from "../actions/listingActions";
 import Axios from "axios";
+import { detailListing } from "../actions/listingActions";
 
-function CreateListing(props) {
-  /* 
-        These fields will be used to get the data the user enters
-        into the form into js variables that we can send to the backend
-        which will then send it to the database.
-    */
+function UpdateListing(props) {
+  //get user details
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo } = userSignin;
+
+  //get the current listings details
+  const listingDetails = useSelector((state) => state.listingDetails);
+  const { listing, loading, error } = listingDetails;
+
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
   const [image, setImage] = useState("/images/default.png");
   const [category, setCategory] = useState("Antiques");
-  const [price, setPrice] = useState(""); 
+  const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
@@ -26,21 +30,9 @@ function CreateListing(props) {
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
 
-  const userSignin = useSelector((state) => state.userSignin);
-  const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
-  // currently just need to figure out how to dispatch the information when submit button is clicked to the post
-  // in listingRoute. I believe I have done everything already needed there.
-  /* 
-  const listingSave = useSelector((state) => state.listingSave);
-  const {
-    loading: loadingSave,
-    success: successSave,
-    error: errorSave,
-  } = listingSave;
-  */
-
+  // gets the users details
   useEffect(() => {
     if (userInfo) {
       setSeller(userInfo.fname + " " + userInfo.sname);
@@ -48,33 +40,37 @@ function CreateListing(props) {
       setCity(userInfo.city);
       setSellerId(userInfo.studentid);
     }
+    dispatch(detailListing(props.match.params.id));
+    if (loading == false) {
+      setName(listing.name);
+    }
     return () => {};
   }, [userInfo]);
-
 
   const uploadFileHandler = (e) => {
     const file = e.target.files[0];
     const bodyFormData = new FormData();
 
-    bodyFormData.append('image', file);
+    bodyFormData.append("image", file);
     // Now we are ready to send an AJAX request with Axios
 
     // This line will produce the div that tells the user their file is uploading
     setUploading(true);
     Axios.post("/api/listings/uploadimage", bodyFormData, {
-      headers:{
-        'Content-Type' : 'multipart/form-data',
+      headers: {
+        "Content-Type": "multipart/form-data",
       },
-    }).then(response => {
-      setImage(response.data);
-      // This line will remove the "uploading..." div
-      setUploading(false);
-    }).catch(err => {
-      console.log(err);
-      setUploading(false);
-    });
-  }
-
+    })
+      .then((response) => {
+        setImage(response.data);
+        // This line will remove the "uploading..." div
+        setUploading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setUploading(false);
+      });
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -101,17 +97,24 @@ function CreateListing(props) {
     return () => {};
   });
 
-  return (
+  return loading ? (
+    <div className="loading">Loading listing ...</div>
+  ) : error ? (
+    <div className="error">
+      {" "}
+      {error} - Make sure you are running the server to fetch data{" "}
+    </div>
+  ) : (
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
-        <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
+        <h2>Hello {userInfo.fname}! update your listing: </h2>
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
             type="text"
             id="listingName"
             name="listingName"
-            placeholder="Listing Name"
+            defaultValue={listing.name}
             required
             onChange={(e) => setName(e.target.value)}
           ></input>
@@ -121,7 +124,7 @@ function CreateListing(props) {
             type="text"
             id="listingDescription"
             name="listingDescription"
-            placeholder="Your Description Here."
+            defaultValue={listing.description}
             rows="5"
             cols="40"
             required
@@ -134,12 +137,17 @@ function CreateListing(props) {
             name="image"
             value={image}
             id="image"
-            onChange = {(e) => setImage(e.target.value)}
-            ></input>
+            onChange={(e) => setImage(e.target.value)}
+          ></input>
           <input type="file" onChange={uploadFileHandler}></input>
           {uploading && <div>Uploading...</div>}
+
           <label>Category: </label>
-          <select id="categories" onChange={(e) => setCategory(e.target.value)}>
+          <select
+            id="categories"
+            defaultValue={listing.category}
+            onChange={(e) => setCategory(e.target.value)}
+          >
             <option value="Antiques">Antiques</option>
             <option value="University Textbooks">University Textbooks</option>
             <option value="Books">Books</option>
@@ -166,7 +174,7 @@ function CreateListing(props) {
             type="number"
             id="price"
             name="price"
-            placeholder="$0.00"
+            defaultValue={listing.price}
             required
             onChange={(e) => setPrice(e.target.value)}
           ></input>
@@ -176,11 +184,15 @@ function CreateListing(props) {
             type="text"
             id="brand"
             name="brand"
-            placeholder="brand"
+            defaultValue={listing.brand}
             onChange={(e) => setBrand(e.target.value)}
           ></input>
           <label>Condition: </label>
-          <select id="condition" onChange={(e) => setCondition(e.target.value)}>
+          <select
+            id="condition"
+            defaultValue={listing.condition}
+            onChange={(e) => setCondition(e.target.value)}
+          >
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
@@ -190,6 +202,7 @@ function CreateListing(props) {
             id="pickup"
             name="deliveryoptions"
             value="pickup"
+            defaultValue={listing.deliveryoption}
             required
             onChange={(e) => setDeliveryoption(e.target.value)}
           ></input>
@@ -203,7 +216,7 @@ function CreateListing(props) {
             onChange={(e) => setDeliveryoption(e.target.value)}
           ></input>
           <button type="submit" value="Submit">
-            Create Listing
+            Update Listing
           </button>
         </form>
       </div>
@@ -211,4 +224,4 @@ function CreateListing(props) {
   );
 }
 
-export default CreateListing;
+export default UpdateListing;

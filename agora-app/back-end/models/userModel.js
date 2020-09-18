@@ -14,7 +14,8 @@ const userSchema = new mongoose.Schema({
   university: { type: String, required: true },
   street_address: { type: String, required: true },
   city: { type: String, required: true },
-  postcode: { type: String, required: true }
+  postcode: { type: String, required: true },
+  profilePicture: {type: String, required: true}
 },{
   timestamps: true,
 },{strict: true});

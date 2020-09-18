@@ -26,8 +26,9 @@ app.use("/api/users", userRoute);
 app.use(bodyParser.json());
 app.use("/api/listings", listingRoute);
 
-// Here we tell the server to serve images from the front-end/public/images folder
+// Here we tell the server to serve images from the front-end/public/ image folders.
 app.use('/images', express.static(path.join(__dirname, '/../front-end/public/images')));
+app.use('/profilePictures', express.static(path.join(__dirname, '/../front-end/public/profilePictures')));
 
 
 app.use(express.static(path.join(__dirname, '/../front-end/build')));
