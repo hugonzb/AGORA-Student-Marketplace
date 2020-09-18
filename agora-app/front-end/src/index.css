@@ -232,17 +232,23 @@ ul li a {
 }
 
 .listing-name {
-  padding-bottom: 1rem;
   font-weight: bold;
   text-decoration: none;
   color: black;
 }
 
 .listing-price {
-  padding-bottom: 1rem;
+  margin: 1rem;
   text-decoration: none;
   color: black;
   font-size: 15px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: white;
+  padding: 4px;
+  border: 1px solid rgb(85, 85, 85);
+  border-radius: 0.6rem;
+  width: 100%;
 }
 
 /* View Listing */
@@ -456,7 +462,7 @@ ul li a {
   width: 100%;
   border-bottom: 2px solid rgb(196, 196, 196);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
 }
 
 .view-listing-description {
