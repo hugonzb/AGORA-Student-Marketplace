@@ -41,11 +41,12 @@ function UpdateListing(props) {
       setSellerId(userInfo.studentid);
     }
     dispatch(detailListing(props.match.params.id));
+    // eslint-disable-next-line
     if (loading == false) {
       setName(listing.name);
     }
     return () => {};
-  }, [userInfo]);
+  }, [dispatch, userInfo, listing.name, loading, props.match.params.id]);
 
   const uploadFileHandler = (e) => {
     const file = e.target.files[0];
