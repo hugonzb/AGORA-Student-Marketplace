@@ -324,7 +324,7 @@ ul li a {
   align-items: center;
   justify-content: center;
   height: 2rem;
-  width: 18rem;
+  width: 19rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   border: 1px solid rgb(194, 194, 194);
   background-color: rgb(255, 255, 255);
@@ -439,6 +439,7 @@ ul li a {
 
 .view-listing-details-title {
   height: 2rem;
+  margin-bottom: 1rem;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -446,7 +447,7 @@ ul li a {
   width: 100%;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background-color: #bac8d1;
+  background-color: #c5d6e0;
   color: rgb(0, 0, 0);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
@@ -455,7 +456,7 @@ ul li a {
 }
 
 .view-listing-description-container {
-  height: 7rem;
+  height: 6rem;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -463,11 +464,12 @@ ul li a {
   width: 100%;
   border-bottom: 2px solid rgb(196, 196, 196);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .view-listing-description {
   padding: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .view-listing-table {
@@ -484,7 +486,7 @@ ul li a {
   width: 100%;
   background: rgb(253, 253, 253);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* Sign up screen */

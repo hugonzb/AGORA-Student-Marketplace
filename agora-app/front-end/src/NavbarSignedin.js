@@ -39,11 +39,13 @@ class NavbarSignedin extends Component{
                     </div>          
                 </div>
                 <div className="nav-buttons">
-                    <ul className={this.state.isOpen ? "showNav":"headerNav"}>
+                    <ul className={this.state.isOpen ? "showNavLoggedIn":"headerNav"}>
                         <li><Link to="/"onClick=
                         {this.closeNavbar}> Home</Link></li>
                         <li><Link to="/account/profile"onClick=
-                        {this.closeNavbar}> Profile</Link></li>
+                        {this.closeNavbar}> Profile</Link></li> 
+                        <li><Link to="/account/history"onClick=
+                        {this.closeNavbar}> History</Link></li>
                         <li><Link to="/account/createlisting"onClick=
                         {this.closeNavbar}> List an Item</Link></li>
                         <li><Link to="/info/about"onClick=
