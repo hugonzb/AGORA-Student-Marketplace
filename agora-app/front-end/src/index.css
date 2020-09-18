@@ -1011,6 +1011,14 @@ padding-left: 1rem;
  
 }
 
+.listing-submit-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+
 .checkout-heading{
   margin-top: 25px;
   margin-bottom: 25px;
@@ -1022,7 +1030,6 @@ padding-left: 1rem;
   display: flex;
   -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
-  margin: 0 -16px;
 }
 
 .col-25 {
@@ -1076,22 +1083,24 @@ label {
   background-color: #e63f3f;
   color: white;
   padding: 12px;
-  margin: 10px 0;
+  margin-bottom: 10px;
   border: none;
-  width: 47.5%;
-  margin-right: 60px;
+  width: 100%;
+  min-width: 15rem;
   border-radius: 3px;
   cursor: pointer;
   font-size: 17px;
+  margin-top: 10px;
 }
 
 .ch-btn-c{
   background-color: #4ec74a;
   color: white;
   padding: 12px;
-  margin: 10px 0;
+  margin-bottom: 10px;
   border: none;
-  width: 47.5%;
+  min-width: 15rem;
+  width: 100%;
   border-radius: 3px;
   cursor: pointer;
   font-size: 17px;

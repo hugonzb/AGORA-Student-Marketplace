@@ -83,12 +83,15 @@ import { detailListing } from '../actions/listingActions';
           </div>
           
         </div>
-        <Link to={"/listing/"+ listing._id}>
-        <input type="submit" value="Cancel" className="ch-btn"/>
-         </Link>
-		<input type="submit" value="Proceed" className="ch-btn-c"/>
-       
       </form>
+    </div>
+    <div className="listing-submit-buttons">
+      <div>
+      <Link to={"/listing/"+ listing._id}>
+        <input type="submit" value="Cancel" className="ch-btn"/>
+      </Link>
+		  <input type="submit" value="Proceed" className="ch-btn-c"/>
+      </div>
     </div>
   </div>
   <div className="col-25">
