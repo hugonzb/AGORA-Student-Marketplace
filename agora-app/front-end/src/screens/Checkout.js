@@ -34,7 +34,7 @@ import { detailListing } from '../actions/listingActions';
           <div className="col-50">
             <h3>Shipping Address</h3>
             <label for="fname"><i className="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="First and Last Name"/>
+            <input type="text" id="fname" name="firstname" placeholder="Full Name"/>
             <label for="email"><i className="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" placeholder="E-mail"/>
             <label for="adr"><i className="fa fa-address-card-o"></i> Address</label>
@@ -45,7 +45,7 @@ import { detailListing } from '../actions/listingActions';
             <div className="ch-row">
               <div className="col-50">
                 <label for="state">Region</label>
-                <input type="text" id="state" name="state" placeholder="AUC"/>
+                <input type="text" id="state" name="state" placeholder="AKL"/>
               </div>
               <div className="col-50">
                 <label for="zip">Post Code</label>
@@ -66,18 +66,18 @@ import { detailListing } from '../actions/listingActions';
             </div>
             <label for="cname">Name on Card</label>
             <input type="text" id="cname" name="cardname" placeholder="Sam H Smith"/>
-            <label for="ccnum">Credit card number</label>
+            <label for="ccnum">Credit Card Number</label>
             <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"/>
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September"/>
+            <label for="expmonth">Bank</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="BNZ"/>
             <div className="ch-row">
               <div className="col-50">
                 <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2024"/>
+                <input type="text" id="expyear" name="expyear" placeholder="MM/YY"/>
               </div>
               <div className="col-50">
                 <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="798"/>
+                <input type="text" id="cvv" name="cvv" placeholder="***"/>
               </div>
             </div>
           </div>
