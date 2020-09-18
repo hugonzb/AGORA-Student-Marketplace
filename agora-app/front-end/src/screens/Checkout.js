@@ -94,8 +94,7 @@ import { detailListing } from '../actions/listingActions';
   <div className="col-25">
     <div className="ch-container">
       <h4>Product Image and price here </h4>
-      <p><a href="#">Product Listing</a> <span className="price">$</span></p>
-      
+        
       <hr></hr>
       <p>Pay<span className="price"><b>$</b></span></p>
     </div>
