@@ -15,7 +15,7 @@ table,
 td,
 th {
   border: 1px solid rgb(218, 218, 218);
-  background: rgb(253, 253, 253);
+  background: rgb(250, 250, 250);
   box-shadow: 0px 0px 5px 0px rgba(221, 221, 221, 0.61);
 }
 
@@ -42,7 +42,6 @@ ul li a {
 /* App */
 
 .header {
-  height: 4rem;
   max-width: 100rem;
   font-size: 30px;
   text-align: center;
@@ -75,6 +74,7 @@ ul li a {
 }
 
 .search {
+  min-height:3rem;
   display: flex;
   height: 2rem;
   align-items: center;
@@ -223,7 +223,7 @@ ul li a {
   justify-content: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
-  background: rgb(253, 253, 253);
+  background: rgb(250, 250, 250);
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   padding: 0.5rem;
@@ -242,14 +242,14 @@ ul li a {
   margin: 1rem;
   text-decoration: none;
   color: black;
-  font-size: 15px;
-  padding-left: 8px;
-  padding-right: 8px;
-  background-color: white;
-  padding: 4px;
-  border: 1px solid rgb(85, 85, 85);
+  font-size: 13px;
+  padding-left: 12px;
+  padding-right: 12px;
+  background-color: rgb(253, 253, 253);
+  padding: 6px;
+  border: 1px solid rgb(253, 102, 2);
   border-radius: 0.6rem;
-  width: 100%;
+  width: 80%;
 }
 
 /* View Listing */
@@ -269,7 +269,7 @@ ul li a {
 .view-listing-image {
   display: flex;
   flex: 1, 1, 20rem;
-  background: rgb(253, 253, 253);
+  background: rgb(250, 250, 250);
   width: 30rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
@@ -304,7 +304,7 @@ ul li a {
   height: 18rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background: rgb(253, 253, 253);
+  background: rgb(250, 250, 250);
   align-items: center;
   justify-content: center;
   box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
@@ -432,7 +432,7 @@ ul li a {
   height: 15rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background: rgb(253, 253, 253);
+  background: rgb(250, 250, 250);
   align-items: center;
   box-shadow: 0px 0px 6px 0px rgba(54, 54, 54, 0.61);
 }
@@ -474,7 +474,6 @@ ul li a {
 
 .view-listing-table {
   width: 100%;
-  background: rgb(253, 253, 253);
 }
 
 .view-listing-qa-container {
@@ -484,7 +483,7 @@ ul li a {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background: rgb(253, 253, 253);
+  background: rgb(250, 250, 250);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
 }
@@ -1007,7 +1006,7 @@ padding-left: 1rem;
     font-size: 11px;
   }
 }
-/*cehckout*/
+/*checkout*/
 *{
   box-sizing: border-box;
  
