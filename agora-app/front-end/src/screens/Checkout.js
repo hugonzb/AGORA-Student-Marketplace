@@ -1,9 +1,4 @@
 import React, { useEffect } from 'react';
-import dv from "../images/dv.png";
-import pu from "../images/pu.png";
-import visa_logo from "../images/visa_logo.png";
-import mastercard_logo from "../images/mastercard_logo.png";
-import cash from "../images/cash.png";
 import { useSelector, useDispatch } from 'react-redux';
 import {Link} from "react-router-dom";
 import { detailListing } from '../actions/listingActions';
@@ -64,10 +59,10 @@ import { detailListing } from '../actions/listingActions';
 			
             <label for="fname">Accepted Cards</label>
             <div className="icon-ch-container">
-              <i className="fa fa-cc-visa"></i>
-              <i className="fa fa-cc-amex"></i>
-              <i className="fa fa-cc-mastercard" ></i>
-              <i className="fa fa-cc-discover"></i>
+              <i className="fa fa-cc-visa" style={{color: "navy", marginRight:"10px"}}></i>
+              <i className="fa fa-cc-amex" style={{color: "blue", marginRight:"10px"}}></i>
+              <i className="fa fa-cc-mastercard" style={{color: "red"}}></i>
+              
             </div>
             <label for="cname">Name on Card</label>
             <input type="text" id="cname" name="cardname" placeholder="Sam H Smith"/>
