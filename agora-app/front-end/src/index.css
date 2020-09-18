@@ -391,7 +391,7 @@ ul li a {
   outline: none;
 }
 .addtowatchlist-button:hover {
-  background-color: #e4c229;
+  background-color: #ffd000;
 }
 .addtowatchlist-button:active {
   box-shadow: 0px 0px 10px 0px rgba(255, 217, 0, 0.61);

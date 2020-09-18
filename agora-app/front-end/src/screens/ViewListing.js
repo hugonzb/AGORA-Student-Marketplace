@@ -26,6 +26,9 @@ function ViewListing(props) {
     // eslint-disable-next-line
 	}, []);
 
+	const developmentMessage = (e) => {
+		alert("Sorry! Unfortunately this feature is currently in development")
+	};
 	
 	return loading ? <div className="loading">Loading listing ...</div> : 
 	error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
@@ -54,7 +57,7 @@ function ViewListing(props) {
 									<FontAwesomeIcon size="lg" icon={faShoppingCart}/> &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
 								</button>
 							</Link>
-								<button className="addtowatchlist-button">
+								<button className="addtowatchlist-button" onClick={developmentMessage}>
 									<FontAwesomeIcon size="lg" icon={faStar}/> Add to Watchlist
 								</button>	
 						</div> : <div className="view-listing-buttons">
