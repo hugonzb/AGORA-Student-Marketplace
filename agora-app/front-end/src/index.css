@@ -1083,12 +1083,11 @@ input[type=text] {
 }
 
 label {
-  margin-bottom: 10px;
   display: block;
+  margin-bottom: 5px;
 }
 
 .icon-ch-container {
-  margin-bottom: 20px;
   padding: 7px 0;
   font-size: 24px;
 }
@@ -1157,6 +1156,7 @@ span.shipping {
   margin-top: 2rem;
   display: flex;
   min-width: 12rem;
+  min-height: 12rem;
   align-items: center;
   justify-content: center;
   background-color: rgb(250, 250, 250);
@@ -1186,6 +1186,10 @@ span.shipping {
   margin-bottom: 1rem;
   text-align: center;
   font-size: 18px;
+}
+
+.checkout-warning {
+  color: red;
 }
 
 

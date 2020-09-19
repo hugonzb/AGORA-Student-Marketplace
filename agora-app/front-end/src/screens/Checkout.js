@@ -35,6 +35,7 @@ import { detailListing } from '../actions/listingActions';
         <div className="ch-row">
           <div className="col-50">
             <h3>Shipping Address</h3>
+            <br></br>
             <label for="fname"><i className="fa fa-user"></i> Full Name</label>
             <input type="text" id="fname" name="firstname" defaultValue={userInfo.fname + " " + userInfo.sname}/>
             <label for="email"><i className="fa fa-envelope"></i> Email</label>
@@ -58,13 +59,12 @@ import { detailListing } from '../actions/listingActions';
 
           <div className="col-50">
             <h3>Payment</h3>
-			
-            <label for="fname">Accepted Cards</label>
+            <label for="warning" className="checkout-warning">YOU DO NOT NEED TO ENTER DETAILS AS THIS IS A DEMO. WE DO NOT RECORD ANYTHING YOU INPUT IN THESE FIELDS.</label>
+            <label for="fname"><h4>Accepted Cards</h4></label>
             <div className="icon-ch-container">
               <i className="fa fa-cc-visa" style={{color: "navy", marginRight:"10px"}}></i>
               <i className="fa fa-cc-amex" style={{color: "blue", marginRight:"10px"}}></i>
               <i className="fa fa-cc-mastercard" style={{color: "red"}}></i>
-              
             </div>
             <label for="cname">Name on Card</label>
             <input type="text" id="cname" name="cardname" placeholder="Full Name"/>
