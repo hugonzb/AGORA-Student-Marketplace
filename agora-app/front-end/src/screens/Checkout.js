@@ -105,8 +105,21 @@ import { detailListing } from '../actions/listingActions';
           ></img>
         </div>
         <div className="checkout-listing-info">
-
-        
+          <li>
+            <b>{listing.name}</b>
+          </li>
+          <li>
+            Condition: {listing.condition}
+          </li>
+          <li>
+            Brand: {listing.brand}
+          </li>
+          <li>
+            Location: {listing.city}
+          </li>
+          <li>
+            Seller: {listing.seller}
+          </li>
         </div>  
       </div>
       <p>Pay<span className="price"><b>$ {listing.price}</b></span></p>

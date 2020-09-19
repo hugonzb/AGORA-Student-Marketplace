@@ -1137,10 +1137,12 @@ hr {
 span.price {
   float: right;
   color: grey;
+
 }
 
 .checkout-listing {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
@@ -1151,17 +1153,34 @@ span.price {
   min-width: 12rem;
   align-items: center;
   justify-content: center;
-  background-color: white;
+  background-color: rgb(250, 250, 250);
 }
 
 .checkout-listing-image{
-  max-width: 10rem;
-  max-height: 10rem;
+  width: 90%;
+  max-width: 15rem;
+  max-height: 15rem;
+  margin-top: 1rem;
 }
 
 .checkout-listing-info {
-  background-color: white;
+  height: 13rem;
+  min-width: 15rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: rgb(250, 250, 250);
 }
+
+.checkout-listing-info li {
+  margin-bottom: 0.5rem;
+}
+
+.checkout-listing-info li:first-child {
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 18px;
+}
+
 
 /* Responsive layout */
 @media (max-width: 800px) {
@@ -1175,12 +1194,22 @@ span.price {
 
   .col-60 {
     padding-left: 0;
-  }
+  } 
 }
 
 @media (max-width: 1000px) {
   .ch-row {
     flex-direction: column-reverse;
+  }
+  .checkout-listing {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .checkout-listing-info{
+    min-height: 15rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 }
 
