@@ -43,11 +43,11 @@ import { detailListing } from '../actions/listingActions';
             <input type="text" id="city" name="city" placeholder="Auckland"/>
 
             <div className="ch-row">
-              <div className="col-50">
+              <div className="col-70">
                 <label for="state">Region</label>
                 <input type="text" id="state" name="state" placeholder="AKL"/>
               </div>
-              <div className="col-50">
+              <div className="col-60">
                 <label for="zip">Post Code</label>
                 <input type="text" id="zip" name="zip" placeholder="12345"/>
               </div>
@@ -71,11 +71,11 @@ import { detailListing } from '../actions/listingActions';
             <label for="expmonth">Bank</label>
             <input type="text" id="expmonth" name="expmonth" placeholder="BNZ"/>
             <div className="ch-row">
-              <div className="col-50">
+              <div className="col-70">
                 <label for="expyear">Exp Year</label>
                 <input type="text" id="expyear" name="expyear" placeholder="MM/YY"/>
               </div>
-              <div className="col-50">
+              <div className="col-60">
                 <label for="cvv">CVV</label>
                 <input type="text" id="cvv" name="cvv" placeholder="***"/>
               </div>
@@ -96,10 +96,20 @@ import { detailListing } from '../actions/listingActions';
   </div>
   <div className="col-25">
     <div className="ch-container">
-      <h4>Product Image and price here </h4>
+      <div className="checkout-listing">
+        <div className="checkout-listing-image-container">
+          <img
+            className="checkout-listing-image"
+            src={listing.image}
+            alt="listing"
+          ></img>
+        </div>
+        <div className="checkout-listing-info">
+
         
-      <hr></hr>
-      <p>Pay<span className="price"><b>$</b></span></p>
+        </div>  
+      </div>
+      <p>Pay<span className="price"><b>$ {listing.price}</b></span></p>
     </div>
   </div>
 </div>
