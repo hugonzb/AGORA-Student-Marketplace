@@ -8,6 +8,8 @@ import { detailListing } from '../actions/listingActions';
       const listingDetails = useSelector(state => state.listingDetails);
       const { listing, loading, error } = listingDetails;
       const dispatch = useDispatch(); 
+      const userSignin = useSelector((state) => state.userSignin);
+      const { userInfo } = userSignin;
 
       
       useEffect(() => {
@@ -34,22 +36,22 @@ import { detailListing } from '../actions/listingActions';
           <div className="col-50">
             <h3>Shipping Address</h3>
             <label for="fname"><i className="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="Full Name"/>
+            <input type="text" id="fname" name="firstname" defaultValue={userInfo.fname + " " + userInfo.sname}/>
             <label for="email"><i className="fa fa-envelope"></i> Email</label>
-            <input type="text" id="email" name="email" placeholder="E-mail"/>
+            <input type="text" id="email" name="email" defaultValue={userInfo.email}/>
             <label for="adr"><i className="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="111 11. Queens.st"/>
+            <input type="text" id="adr" name="address" placeholder="Delivery address" required/>
             <label for="city"><i className="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="Auckland"/>
+            <input type="text" id="city" name="city" placeholder="City" required/>
 
             <div className="ch-row">
               <div className="col-70">
                 <label for="state">Region</label>
-                <input type="text" id="state" name="state" placeholder="AKL"/>
+                <input type="text" id="state" name="state" placeholder="Region"/>
               </div>
               <div className="col-60">
                 <label for="zip">Post Code</label>
-                <input type="text" id="zip" name="zip" placeholder="12345"/>
+                <input type="text" id="zip" name="zip" placeholder="Postcode"/>
               </div>
             </div>
           </div>
@@ -65,11 +67,11 @@ import { detailListing } from '../actions/listingActions';
               
             </div>
             <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="Sam H Smith"/>
+            <input type="text" id="cname" name="cardname" placeholder="Full Name"/>
             <label for="ccnum">Credit Card Number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"/>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="XXXX-XXXX-XXXX-XXXX"/>
             <label for="expmonth">Bank</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="BNZ"/>
+            <input type="text" id="expmonth" name="expmonth" placeholder="Bank"/>
             <div className="ch-row">
               <div className="col-70">
                 <label for="expyear">Exp Year</label>
@@ -83,15 +85,15 @@ import { detailListing } from '../actions/listingActions';
           </div>
           
         </div>
-      </form>
-    </div>
-    <div className="listing-submit-buttons">
+        <div className="listing-submit-buttons">
       <div>
       <Link to={"/listing/"+ listing._id}>
         <input type="submit" value="Cancel" className="ch-btn"/>
       </Link>
 		  <input type="submit" value="Proceed" className="ch-btn-c"/>
       </div>
+    </div>
+      </form>
     </div>
   </div>
   <div className="col-25">
