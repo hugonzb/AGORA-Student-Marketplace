@@ -1145,6 +1145,11 @@ span.shipping {
   color: grey;
 }
 
+span.seller-contact {
+  float: right;
+  color: grey;
+}
+
 .checkout-listing {
   display: flex;
   flex-direction: column;

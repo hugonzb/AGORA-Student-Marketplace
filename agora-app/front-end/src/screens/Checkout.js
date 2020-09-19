@@ -127,6 +127,8 @@ import { detailListing } from '../actions/listingActions';
       <p>Pay<span className="price"><b>$ {listing.price}</b></span></p>
       <br></br>
       <p>Shipping<span className="shipping"><b>To Be Arranged</b></span></p>
+      <br></br>
+      <p>Contact<span className="seller-contact"><b>Revealed After Checkout</b></span></p>
     </div>
   </div>
 </div>
