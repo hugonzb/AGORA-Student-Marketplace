@@ -60,7 +60,7 @@ import { detailListing } from '../actions/listingActions';
           <div className="col-50">
             <h3>Payment</h3>
             <label for="warning" className="checkout-warning">YOU DO NOT NEED TO ENTER DETAILS AS THIS IS A DEMO. WE DO NOT RECORD ANYTHING YOU INPUT IN THESE FIELDS.</label>
-            <label for="fname"><h4>Accepted Cards</h4></label>
+            <div className="checkout-accepted-cards">Accepted Cards</div>
             <div className="icon-ch-container">
               <i className="fa fa-cc-visa" style={{color: "navy", marginRight:"10px"}}></i>
               <i className="fa fa-cc-amex" style={{color: "blue", marginRight:"10px"}}></i>
