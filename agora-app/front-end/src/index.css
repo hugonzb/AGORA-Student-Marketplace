@@ -1071,6 +1071,7 @@ padding-left: 1rem;
   padding: 5px 20px 15px 20px;
   border: 1px solid lightgrey;
   border-radius: 3px;
+  min-height: 40rem;
 }
 
 input[type=text] {
@@ -1137,7 +1138,11 @@ hr {
 span.price {
   float: right;
   color: grey;
+}
 
+span.shipping {
+  float: right;
+  color: grey;
 }
 
 .checkout-listing {
@@ -1149,6 +1154,7 @@ span.price {
 }
 
 .checkout-listing-image-container {
+  margin-top: 2rem;
   display: flex;
   min-width: 12rem;
   align-items: center;
@@ -1169,6 +1175,7 @@ span.price {
   padding: 2rem;
   border-radius: 0.5rem;
   background-color: rgb(250, 250, 250);
+  margin-bottom: 2rem;
 }
 
 .checkout-listing-info li {
@@ -1201,15 +1208,18 @@ span.price {
   .ch-row {
     flex-direction: column-reverse;
   }
-  .checkout-listing {
-    display: flex;
-    flex-direction: row;
-  }
 
   .checkout-listing-info{
     min-height: 15rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .checkout-listing-image-container{
+    margin-top: 0rem;
+  }
+  .checkout-listing-image{
+    margin-top: 0rem;
   }
 }
 
