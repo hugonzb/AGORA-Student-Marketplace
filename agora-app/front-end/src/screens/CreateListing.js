@@ -15,7 +15,7 @@ function CreateListing(props) {
   // Will be updated if user chooses to select an image however.
   const [image, setImage] = useState("/images/default.png");
   const [category, setCategory] = useState("Antiques");
-  const [price, setPrice] = useState(""); 
+  const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
@@ -30,18 +30,9 @@ function CreateListing(props) {
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
+  
   let file;
-  // currently just need to figure out how to dispatch the information when submit button is clicked to the post
-  // in listingRoute. I believe I have done everything already needed there.
-  /* 
-  const listingSave = useSelector((state) => state.listingSave);
-  const {
-    loading: loadingSave,
-    success: successSave,
-    error: errorSave,
-  } = listingSave;
-  */
-
+  
   useEffect(() => {
     if (userInfo) {
       setSeller(userInfo.fname + " " + userInfo.sname);
@@ -49,7 +40,7 @@ function CreateListing(props) {
       setCity(userInfo.city);
       setSellerId(userInfo.studentid);
     }
-    return () => {};
+    return () => { };
   }, [userInfo]);
 
 
@@ -115,7 +106,7 @@ function CreateListing(props) {
   };
 
   useEffect(() => {
-    return () => {};
+    return () => { };
   });
 
   return (
