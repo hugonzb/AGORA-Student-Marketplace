@@ -18,6 +18,9 @@ import { detailListing } from '../actions/listingActions';
       const [listingImage, setListingImage] = useState("");
       const [listingPrice, setListingPrice] = useState("");
       const [buyerAddress, setBuyerAddress] = useState("");
+      const [buyerCity, setBuyerCity] = useState("");
+      const [buyerPostcode, setBuyerPostcode] = useState("");
+      const [buyerRegion, setBuyerRegion] = useState("");
       const [sellerEmail, setSellerEmail] = useState("");
       const [buyerEmail, setBuyerEmail] = useState("");
 
@@ -38,7 +41,6 @@ import { detailListing } from '../actions/listingActions';
         setBuyerEmail(userInfo.email);
         setSellerEmail(listing.email);
         setBuyerName(userInfo.fname + " " + userInfo.sname);
-        setBuyerAddress(userInfo.address);
         console.log(buyerStudentid);
         console.log(sellerStudentid);
         console.log(sellerName);
@@ -46,6 +48,9 @@ import { detailListing } from '../actions/listingActions';
         console.log(listingImage);
         console.log(listingPrice);
         console.log(buyerAddress);
+        console.log(buyerCity);
+        console.log(buyerRegion);
+        console.log(buyerPostcode);
         console.log(sellerEmail);
         console.log(buyerEmail);
       };
@@ -72,18 +77,18 @@ import { detailListing } from '../actions/listingActions';
             <label htmlFor="email"><i className="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" defaultValue={userInfo.email}/>
             <label htmlFor="adr"><i className="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="Delivery address" required/>
+            <input type="text" id="adr" name="address" placeholder="Delivery address" required onChange={(e) => setBuyerAddress(e.target.value)}/>
             <label htmlFor="city"><i className="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="City" required/>
+            <input type="text" id="city" name="city" placeholder="City" required onChange={(e) => setBuyerCity(e.target.value)}/>
 
             <div className="ch-row">
               <div className="col-70">
                 <label htmlFor="state">Region</label>
-                <input type="text" id="state" name="state" placeholder="Region"/>
+                <input type="text" id="state" name="state" placeholder="Region" onChange={(e) => setBuyerRegion(e.target.value)}/>
               </div>
               <div className="col-60">
                 <label htmlFor="zip">Post Code</label>
-                <input type="text" id="zip" name="zip" placeholder="Postcode"/>
+                <input type="text" id="zip" name="zip" placeholder="Postcode" onChange={(e) => setBuyerPostcode(e.target.value)}/>
               </div>
             </div>
           </div>
