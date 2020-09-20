@@ -3,6 +3,7 @@ import config from "./config.js";
 import mongoose from "mongoose";
 import userRoute from "./routes/userRoute";
 import listingRoute from "./routes/listingRoute";
+import uploadFileRoute from "./routes/uploadFileRoute";
 import bodyParser from "body-parser";
 import path from "path";
 
@@ -25,6 +26,8 @@ app.use(bodyParser.json());
 app.use("/api/users", userRoute);
 app.use(bodyParser.json());
 app.use("/api/listings", listingRoute);
+app.use("/api/fileUpload", uploadFileRoute);
+
 
 // Here we tell the server to serve images from the front-end/public/ image folders.
 app.use('/images', express.static(path.join(__dirname, '/../front-end/public/images')));

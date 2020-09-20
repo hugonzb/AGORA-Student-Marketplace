@@ -55,7 +55,7 @@ function CreateListing(props) {
 
     // This line will produce the div that tells the user their file is uploading
     setUploading(true);
-    Axios.post("/api/listings/uploadimage", bodyFormData, {
+    Axios.post("/api/fileUpload/uploadimage", bodyFormData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
