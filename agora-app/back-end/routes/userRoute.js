@@ -61,7 +61,7 @@ const storage = multer.diskStorage({
   filename(req, file, cb) {
     // This line of code sets the file name to be the original name of the file concatenated
     // with the current date/time and finished with .jpg
-    cb(null, file.originalname + Date.now() + ".jpg");
+    cb(null, Date.now() + ".jpg");
   },
 });
 

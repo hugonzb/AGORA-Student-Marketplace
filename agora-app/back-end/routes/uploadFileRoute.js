@@ -18,7 +18,7 @@ const upload = multer({ storage });
 
 router.post("/uploadimage", upload.single("image"), (req, res) => {
     // Logging info detailing where file was saved
-    console.log("uploaded " + req.file.filename + "to /images/" + req.file.filename);
+    console.log("uploaded " + req.file.filename + " to /images/" + req.file.filename);
     res.send("/images/" + req.file.filename);
 });
 

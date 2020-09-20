@@ -30,9 +30,10 @@ function CreateListing(props) {
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
-  
-  let file;
-  
+  const [file, setFile] = useState(null);
+  let filename = "";
+
+
   useEffect(() => {
     if (userInfo) {
       setSeller(userInfo.fname + " " + userInfo.sname);
@@ -61,9 +62,8 @@ function CreateListing(props) {
       },
     })
       .then((response) => {
-        console.log("got response");
         setImage(response.data);
-        console.log(image);
+        filename = response.data;
         // This line will remove the "uploading..." div
         setUploading(false);
       })
@@ -77,15 +77,19 @@ function CreateListing(props) {
   /* This method sets the file var to whatever file is currently marked for upload
   in the upload file section of this page. It should be called whenever the filed upload
   field is updated by the user
-  */
+  Currently it is not used.
   const uploadFileHandler = (e) => {
     file = e.target.files[0];
   }
-
+*/
 
   const submitHandler = (e) => {
     e.preventDefault();
-    uploadFile();
+    if(file != null){
+      uploadFile();
+    }
+    setImage(filename);
+    console.log(image);
     dispatch(
       createListing(
         name,
@@ -102,7 +106,7 @@ function CreateListing(props) {
         deliveryoption
       )
     );
-    props.history.push("/");
+    //props.history.push("/");
   };
 
   useEffect(() => {
@@ -137,7 +141,7 @@ function CreateListing(props) {
           ></textarea>
           <br></br>
           <label>Upload Image</label>
-          <input type="file" onChange={uploadFileHandler}></input>
+          <input type="file" onChange={(e) => setFile(e.target.files[0])}></input>
           {uploading && <div>Uploading...</div>}
           <label>Category: </label>
           <select id="categories" onChange={(e) => setCategory(e.target.value)}>
