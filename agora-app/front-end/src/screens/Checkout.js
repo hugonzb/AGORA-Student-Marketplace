@@ -67,22 +67,22 @@ import { detailListing } from '../actions/listingActions';
           <div className="col-50">
             <h3>Shipping Address</h3>
             <br></br>
-            <label for="fname"><i className="fa fa-user"></i> Full Name</label>
+            <label htmlFor="fname"><i className="fa fa-user"></i> Full Name</label>
             <input type="text" id="fname" name="firstname" defaultValue={userInfo.fname + " " + userInfo.sname}/>
-            <label for="email"><i className="fa fa-envelope"></i> Email</label>
+            <label htmlFor="email"><i className="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" defaultValue={userInfo.email}/>
-            <label for="adr"><i className="fa fa-address-card-o"></i> Address</label>
+            <label htmlFor="adr"><i className="fa fa-address-card-o"></i> Address</label>
             <input type="text" id="adr" name="address" placeholder="Delivery address" required/>
-            <label for="city"><i className="fa fa-institution"></i> City</label>
+            <label htmlFor="city"><i className="fa fa-institution"></i> City</label>
             <input type="text" id="city" name="city" placeholder="City" required/>
 
             <div className="ch-row">
               <div className="col-70">
-                <label for="state">Region</label>
+                <label htmlFor="state">Region</label>
                 <input type="text" id="state" name="state" placeholder="Region"/>
               </div>
               <div className="col-60">
-                <label for="zip">Post Code</label>
+                <label htmlFor="zip">Post Code</label>
                 <input type="text" id="zip" name="zip" placeholder="Postcode"/>
               </div>
             </div>
@@ -90,26 +90,26 @@ import { detailListing } from '../actions/listingActions';
 
           <div className="col-50">
             <h3>Payment</h3>
-            <label for="warning" className="checkout-warning">YOU DO NOT NEED TO ENTER DETAILS AS THIS IS A DEMO. WE DO NOT RECORD ANYTHING YOU INPUT IN THESE FIELDS.</label>
+            <label htmlFor="warning" className="checkout-warning">YOU DO NOT NEED TO ENTER DETAILS AS THIS IS A DEMO. WE DO NOT RECORD ANYTHING YOU INPUT IN THESE FIELDS.</label>
             <div className="checkout-accepted-cards">Accepted Cards</div>
             <div className="icon-ch-container">
               <i className="fa fa-cc-visa" style={{color: "navy", marginRight:"10px"}}></i>
               <i className="fa fa-cc-amex" style={{color: "blue", marginRight:"10px"}}></i>
               <i className="fa fa-cc-mastercard" style={{color: "red"}}></i>
             </div>
-            <label for="cname">Name on Card</label>
+            <label htmlFor="cname">Name on Card</label>
             <input type="text" id="cname" name="cardname" placeholder="Full Name"/>
-            <label for="ccnum">Credit Card Number</label>
+            <label htmlFor="ccnum">Credit Card Number</label>
             <input type="text" id="ccnum" name="cardnumber" placeholder="XXXX-XXXX-XXXX-XXXX"/>
-            <label for="expmonth">Bank</label>
+            <label htmlFor="expmonth">Bank</label>
             <input type="text" id="expmonth" name="expmonth" placeholder="Bank"/>
             <div className="ch-row">
               <div className="col-70">
-                <label for="expyear">Exp Year</label>
+                <label htmlFor="expyear">Exp Year</label>
                 <input type="text" id="expyear" name="expyear" placeholder="MM/YY"/>
               </div>
               <div className="col-60">
-                <label for="cvv">CVV</label>
+                <label htmlFor="cvv">CVV</label>
                 <input type="text" id="cvv" name="cvv" placeholder="***"/>
               </div>
             </div>
