@@ -23,7 +23,6 @@ function CreateListing(props) {
   const [seller, setSeller] = useState("");
   const [sellerId, setSellerId] = useState("");
   const [sellerEmail, setSellerEmail] = useState("");
-  const [deliveryoption, setDeliveryoption] = useState("");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
 
@@ -33,7 +32,6 @@ function CreateListing(props) {
 
   const [file, setFile] = useState(null);
   let filename = "";
-
 
   useEffect(() => {
     if (userInfo) {
@@ -191,24 +189,6 @@ function CreateListing(props) {
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
-          <label>Delivery </label>
-          <input
-            type="radio"
-            id="pickup"
-            name="deliveryoptions"
-            value="pickup"
-            required
-            onChange={(e) => setDeliveryoption(e.target.value)}
-          ></input>
-          <label>Pick-Up </label>
-          <input
-            type="radio"
-            id="delivery"
-            name="deliveryoptions"
-            value="delivery"
-            required
-            onChange={(e) => setDeliveryoption(e.target.value)}
-          ></input>
           <button type="submit" value="Submit">
             Create Listing
           </button>
