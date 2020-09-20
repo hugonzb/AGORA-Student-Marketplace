@@ -50,7 +50,7 @@ import { detailListing } from '../actions/listingActions';
         console.log(buyerEmail);
       };
         
-        return loading ? <div className="loading">Loading listing ...</div> :
+        return loading ? <div className="loading">Loading checkout ...</div> :
         error? <div className="error"> {error} </div> :
 
         

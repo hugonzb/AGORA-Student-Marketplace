@@ -891,7 +891,7 @@ span.psw {
 
 .loading {
   display: flex;
-  min-height: 34rem;
+  min-height: 43.5rem;
   text-align: center;
   justify-content: center;
   padding: 10rem;
@@ -899,7 +899,7 @@ span.psw {
 }
 
 .error {
-  min-height: 35rem;
+  min-height: 43.5rem;
 }
 
 /* contact page */
