@@ -30,7 +30,7 @@ function CreateListing(props) {
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
-  let file = null;
+  let file;
   // currently just need to figure out how to dispatch the information when submit button is clicked to the post
   // in listingRoute. I believe I have done everything already needed there.
   /* 
@@ -56,6 +56,7 @@ function CreateListing(props) {
   /*
    */
   const uploadFile = () => {
+    console.log("calling uploadFile()");
     const bodyFormData = new FormData();
 
     bodyFormData.append("image", file);
@@ -69,7 +70,9 @@ function CreateListing(props) {
       },
     })
       .then((response) => {
+        console.log("got response");
         setImage(response.data);
+        console.log(image);
         // This line will remove the "uploading..." div
         setUploading(false);
       })
@@ -91,9 +94,7 @@ function CreateListing(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if(file != null){
-      uploadFile;
-    }
+    uploadFile();
     dispatch(
       createListing(
         name,
@@ -145,13 +146,6 @@ function CreateListing(props) {
           ></textarea>
           <br></br>
           <label>Upload Image</label>
-          <input
-            type="text"
-            name="image"
-            value={image}
-            id="image"
-            onChange = {(e) => setImage(e.target.value)}
-            ></input>
           <input type="file" onChange={uploadFileHandler}></input>
           {uploading && <div>Uploading...</div>}
           <label>Category: </label>
