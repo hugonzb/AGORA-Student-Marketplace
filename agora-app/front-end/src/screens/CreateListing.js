@@ -91,6 +91,9 @@ function CreateListing(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    if(file != null){
+      uploadFile;
+    }
     dispatch(
       createListing(
         name,
