@@ -70,7 +70,7 @@ const createListing = (
   condition,
   seller,
   sellerId,
-  deliveryoption
+  sellerEmail
 ) => async (dispatch) => {
   dispatch({
     type: CREATELISTING_REQUEST,
@@ -86,7 +86,7 @@ const createListing = (
       condition,
       seller,
       sellerId,
-      deliveryoption,
+      sellerEmail,
     },
   });
   try {
@@ -102,7 +102,7 @@ const createListing = (
       condition,
       seller,
       sellerId,
-      deliveryoption,
+      sellerEmail,
     });
     dispatch({ type: CREATELISTING_SUCCESS, payload: data });
   } catch (error) {

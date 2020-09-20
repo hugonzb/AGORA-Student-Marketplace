@@ -22,6 +22,7 @@ function CreateListing(props) {
   const [condition, setCondition] = useState("New");
   const [seller, setSeller] = useState("");
   const [sellerId, setSellerId] = useState("");
+  const [sellerEmail, setSellerEmail] = useState("");
   const [deliveryoption, setDeliveryoption] = useState("");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
@@ -40,6 +41,7 @@ function CreateListing(props) {
       setUniversity(userInfo.university);
       setCity(userInfo.city);
       setSellerId(userInfo.studentid);
+      setSellerEmail(userInfo.email);
     }
     return () => { };
   }, [userInfo]);
@@ -103,7 +105,7 @@ function CreateListing(props) {
         condition,
         seller,
         sellerId,
-        deliveryoption
+        sellerEmail
       )
     );
     //props.history.push("/");

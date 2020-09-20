@@ -90,7 +90,7 @@ router.post("/create", async (req, res) => {
     condition: req.body.condition,
     seller: req.body.seller,
     sellerId: req.body.sellerId,
-    deliveryoption: req.body.deliveryoption,
+    sellerEmail: req.body.sellerEmail,
   });
   const newListing = await listing.save();
   if (newListing) {
