@@ -6,6 +6,10 @@
 
 }*/
 
+nav{
+    padding-bottom: 0.5rem;
+}
+
 .logo {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -117,7 +121,7 @@ padding-left: 18px;
 
 /* responsive mode */
 
-@media screen and (min-width:920px){
+@media screen and (min-width:930px){
 
 
     nav{
@@ -125,7 +129,7 @@ padding-left: 18px;
      display: flex; 
      justify-content: space-between; 
      align-items: center; 
-     border-bottom:22px #ff7b00;
+
 	}
 
     
