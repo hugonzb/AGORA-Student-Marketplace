@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {Link} from "react-router-dom";
 import { detailListing } from '../actions/listingActions';
@@ -11,18 +11,49 @@ import { detailListing } from '../actions/listingActions';
       const userSignin = useSelector((state) => state.userSignin);
       const { userInfo } = userSignin;
 
-      
+      const [sellerStudentid, setSellerStudentid] = useState("");
+      const [buyerStudentid, setBuyerStudentid] = useState("");
+      const [sellerName, setSellerName] = useState("");
+      const [buyerName, setBuyerName] = useState("");
+      const [listingImage, setListingImage] = useState("");
+      const [listingPrice, setListingPrice] = useState("");
+      const [buyerAddress, setBuyerAddress] = useState("");
+      const [sellerEmail, setSellerEmail] = useState("");
+      const [buyerEmail, setBuyerEmail] = useState("");
+
       useEffect(() => {
           dispatch(detailListing(props.match.params.id));
           return () => { 
           };
         // eslint-disable-next-line
       }, []);
+
+      const submitHandler = (e) => {
+        e.preventDefault();
+        setBuyerStudentid(userInfo.studentid);
+        setSellerStudentid(listing.sellerId);
+        setListingImage(listing.image);
+        setListingPrice(listing.price);
+        setSellerName(listing.seller);
+        setBuyerEmail(userInfo.email);
+        setSellerEmail(listing.email);
+        setBuyerName(userInfo.fname + " " + userInfo.sname);
+        setBuyerAddress(userInfo.address);
+        console.log(buyerStudentid);
+        console.log(sellerStudentid);
+        console.log(sellerName);
+        console.log(buyerName);
+        console.log(listingImage);
+        console.log(listingPrice);
+        console.log(buyerAddress);
+        console.log(sellerEmail);
+        console.log(buyerEmail);
+      };
         
         return loading ? <div className="loading">Loading listing ...</div> :
         error? <div className="error"> {error} </div> :
 
-   
+        
          <div className="checkout-container">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
  <h2 className="checkout-heading">Checkout Form</h2>
@@ -30,7 +61,7 @@ import { detailListing } from '../actions/listingActions';
 <div className="ch-row">
   <div className="col-75">
     <div className="ch-container">
-      <form>
+      <form onSubmit={submitHandler}>
       
         <div className="ch-row">
           <div className="col-50">
