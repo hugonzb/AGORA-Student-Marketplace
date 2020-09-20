@@ -30,6 +30,7 @@ function CreateListing(props) {
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
+  let file = null;
   // currently just need to figure out how to dispatch the information when submit button is clicked to the post
   // in listingRoute. I believe I have done everything already needed there.
   /* 
@@ -52,27 +53,39 @@ function CreateListing(props) {
   }, [userInfo]);
 
 
-  const uploadFileHandler = (e) => {
-    const file = e.target.files[0];
+  /*
+   */
+  const uploadFile = () => {
     const bodyFormData = new FormData();
 
-    bodyFormData.append('image', file);
+    bodyFormData.append("image", file);
     // Now we are ready to send an AJAX request with Axios
 
     // This line will produce the div that tells the user their file is uploading
     setUploading(true);
     Axios.post("/api/listings/uploadimage", bodyFormData, {
-      headers:{
-        'Content-Type' : 'multipart/form-data',
+      headers: {
+        "Content-Type": "multipart/form-data",
       },
-    }).then(response => {
-      setImage(response.data);
-      // This line will remove the "uploading..." div
-      setUploading(false);
-    }).catch(err => {
-      console.log(err);
-      setUploading(false);
-    });
+    })
+      .then((response) => {
+        setImage(response.data);
+        // This line will remove the "uploading..." div
+        setUploading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setUploading(false);
+      });
+  }
+
+
+  /* This method sets the file var to whatever file is currently marked for upload
+  in the upload file section of this page. It should be called whenever the filed upload
+  field is updated by the user
+  */
+  const uploadFileHandler = (e) => {
+    file = e.target.files[0];
   }
 
 
