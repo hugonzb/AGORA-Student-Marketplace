@@ -1,8 +1,15 @@
+import {
+    CREATELISTINGCOMPLETE_REQUEST,
+    CREATELISTINGCOMPLETE_FAIL,
+    CREATELISTINGCOMPLETE_SUCCESS
+  } from "../constants/listingCompleteConstants";
+
 const createListingComplete = (
     buyerStudentid,
     sellerStudentid,
     sellerName,
     buyerName,
+    listingName,
     listingImage,
     listingPrice,
     buyerAddress,
@@ -13,12 +20,13 @@ const createListingComplete = (
     buyerEmail
   ) => async (dispatch) => {
     dispatch({
-      type: CREATELISTING_REQUEST,
+      type: CREATELISTINGCOMPLETE_REQUEST,
       payload: {
         buyerStudentid,
         sellerStudentid,
         sellerName,
         buyerName,
+        listingName,
         listingImage,
         listingPrice,
         buyerAddress,
@@ -35,6 +43,7 @@ const createListingComplete = (
         sellerStudentid,
         sellerName,
         buyerName,
+        listingName,
         listingImage,
         listingPrice,
         buyerAddress,
@@ -44,8 +53,10 @@ const createListingComplete = (
         sellerEmail,
         buyerEmail
       });
-      dispatch({ type: CREATELISTING_SUCCESS, payload: data });
+      dispatch({ type: CREATELISTINGCOMPLETE_SUCCESS, payload: data });
     } catch (error) {
-      dispatch({ type: CREATELISTING_FAIL, payload: error.message });
+      dispatch({ type: CREATELISTINGCOMPLETE_FAIL, payload: error.message });
     }
   };
+
+  export { createListingComplete }
