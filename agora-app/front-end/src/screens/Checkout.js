@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {Link} from "react-router-dom";
 import { detailListing } from '../actions/listingActions';
+import { createListingComplete } from '../actions/listingCompleteActions';
 
 
     function Checkout(props) {
@@ -31,7 +32,7 @@ import { detailListing } from '../actions/listingActions';
         // eslint-disable-next-line
       }, []);
 
-      const submitHandler = (e) => {
+      const setFields = (e) => {
         e.preventDefault();
         setBuyerStudentid(userInfo.studentid);
         setSellerStudentid(listing.sellerId);
@@ -55,12 +56,33 @@ import { detailListing } from '../actions/listingActions';
         console.log(buyerPostcode);
         console.log(sellerEmail);
         console.log(buyerEmail);
+      }
+      
+      const submitHandler = (e) => {
+        e.preventDefault();
+        if(listing){
+          dispatch(
+            createListingComplete(
+              buyerStudentid,
+              sellerStudentid,
+              sellerName,
+              buyerName,
+              listingName,
+              listingImage,
+              listingPrice,
+              buyerAddress,
+              buyerCity,
+              buyerRegion,
+              buyerPostcode,
+              sellerEmail,
+              buyerEmail
+            )
+          );
+        }
       };
         
         return loading ? <div className="loading">Loading checkout ...</div> :
         error? <div className="error"> {error} </div> :
-
-        
          <div className="checkout-container">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
  <h2 className="checkout-heading">Checkout Form</h2>
@@ -79,7 +101,7 @@ import { detailListing } from '../actions/listingActions';
             <label htmlFor="email"><i className="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" defaultValue={userInfo.email}/>
             <label htmlFor="adr"><i className="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="Delivery address" required onChange={(e) => setBuyerAddress(e.target.value)}/>
+            <input type="text" id="adr" name="address" placeholder="Delivery address" required onInput={setFields} onChange={(e) => setBuyerAddress(e.target.value)}/>
             <label htmlFor="city"><i className="fa fa-institution"></i> City</label>
             <input type="text" id="city" name="city" placeholder="City" required onChange={(e) => setBuyerCity(e.target.value)}/>
 
