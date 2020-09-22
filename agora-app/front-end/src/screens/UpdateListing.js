@@ -57,7 +57,7 @@ function UpdateListing(props) {
 
   const uploadFileHandler = (e) => {
     // Make upload field disappear
-    setUploadButton(false);
+    //setUploadButton(false);         // JUST UNCOMMENT IT THIS LINE
     console.log("calling uploadFile()");
     const file = e.target.files[0];
     const bodyFormData = new FormData();
