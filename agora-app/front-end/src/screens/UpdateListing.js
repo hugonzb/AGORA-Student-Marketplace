@@ -26,7 +26,6 @@ function UpdateListing(props) {
   const [condition, setCondition] = useState("New");
   const [seller, setSeller] = useState("");
   const [sellerId, setSellerId] = useState("");
-  const [deliveryoption, setDeliveryoption] = useState("");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
 
@@ -44,13 +43,22 @@ function UpdateListing(props) {
     // eslint-disable-next-line
     if (loading == false) {
       setName(listing.name);
+      setDescription(listing.description);
+      setBrand(listing.brand);
+      setCondition(listing.condition);
+      setCategory(listing.category);
+      setPrice(listing.price);
       setListingID(listing._id);
+      setImage(listing.image);
     }
     return () => {};
     // eslint-disable-next-line
   }, [userInfo]);
 
   const uploadFileHandler = (e) => {
+    // Make upload field disappear
+    setUploadButton(false);
+    console.log("calling uploadFile()");
     const file = e.target.files[0];
     const bodyFormData = new FormData();
 
@@ -59,7 +67,7 @@ function UpdateListing(props) {
 
     // This line will produce the div that tells the user their file is uploading
     setUploading(true);
-    Axios.post("/api/listings/uploadimage", bodyFormData, {
+    Axios.post("/api/fileUpload/uploadimage", bodyFormData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -70,7 +78,7 @@ function UpdateListing(props) {
         setUploading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Caught error while uploading: " + err);
         setUploading(false);
       });
   };
@@ -90,11 +98,9 @@ function UpdateListing(props) {
         brand,
         condition,
         seller,
-        sellerId,
-        deliveryoption
+        sellerId
       )
     );
-    console.log("here");
     props.history.push("/");
   };
 
@@ -140,9 +146,8 @@ function UpdateListing(props) {
           <input
             type="text"
             name="image"
-            value={image}
+            defaultValue={listing.image}
             id="image"
-            onChange={(e) => setImage(e.target.value)}
           ></input>
           <input type="file" onChange={uploadFileHandler}></input>
           {uploading && <div>Uploading...</div>}
@@ -201,25 +206,6 @@ function UpdateListing(props) {
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
-          <label>Delivery </label>
-          <input
-            type="radio"
-            id="pickup"
-            name="deliveryoptions"
-            value="pickup"
-            defaultValue={listing.deliveryoption}
-            required
-            onChange={(e) => setDeliveryoption(e.target.value)}
-          ></input>
-          <label>Pick-Up </label>
-          <input
-            type="radio"
-            id="delivery"
-            name="deliveryoptions"
-            value="delivery"
-            required
-            onChange={(e) => setDeliveryoption(e.target.value)}
-          ></input>
           <button type="submit" value="Submit">
             Update Listing
           </button>
