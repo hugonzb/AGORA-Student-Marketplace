@@ -11,35 +11,35 @@ function About(props) {
 
       <div className="profiles">
         <div className="profile-card">
-          <img src={profileicon} className="profile-img" />
+          <img src={profileicon} className="profile-img" alt="profile"/>
           <h3 className="user-name">Name</h3>
           <h5>Memeber Role</h5>
           <p></p>
         </div>
 
         <div className="profile-card">
-          <img src={profileicon} className="profile-img" />
+          <img src={profileicon} className="profile-img" alt="profile"/>
           <h3 className="user-name">Name</h3>
           <h5>Memeber Role</h5>
           <p></p>
         </div>
 
         <div className="profile-card">
-          <img src={profileicon} className="profile-img" />
+          <img src={profileicon} className="profile-img" alt="profile"/>
           <h3 className="user-name">Name</h3>
           <h5>Memeber Role</h5>
           <p></p>
         </div>
 
         <div className="profile-card">
-          <img src={profileicon} className="profile-img" />
+          <img src={profileicon} className="profile-img" alt="profile"/>
           <h3 className="user-name">Name</h3>
           <h5>Memeber Role</h5>
           <p></p>
         </div>
 
         <div className="profile-card">
-          <img src={profileicon} className="profile-img" />
+          <img src={profileicon} className="profile-img" alt="profile"/>
           <h3 className="user-name">Name</h3>
           <h5>Memeber Role</h5>
           <p></p>
