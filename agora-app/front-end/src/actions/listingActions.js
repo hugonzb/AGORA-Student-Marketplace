@@ -90,37 +90,37 @@ const createListing = (
     },
   });
   try {
-    if (!listing.listingId) {
-      const { data } = await axios.post("/api/listings/create", {
-        name,
-        description,
-        image,
-        category,
-        price,
-        city,
-        university,
-        brand,
-        condition,
-        seller,
-        sellerId,
-        sellerEmail,
-      });
-    } else {
-      const { data } = await axios.put("api/listings/" + listing.listingId, {
-        name,
-        description,
-        image,
-        category,
-        price,
-        city,
-        university,
-        brand,
-        condition,
-        seller,
-        sellerId,
-        sellerEmail,
-      });
-    }
+    //if (!listingId) {
+    const { data } = await axios.post("/api/listings/create", {
+      name,
+      description,
+      image,
+      category,
+      price,
+      city,
+      university,
+      brand,
+      condition,
+      seller,
+      sellerId,
+      sellerEmail,
+    });
+    // } else {
+    //   const { data } = await axios.put("api/listings/" + listingId, {
+    //     name,
+    //     description,
+    //     image,
+    //     category,
+    //     price,
+    //     city,
+    //     university,
+    //     brand,
+    //     condition,
+    //     seller,
+    //     sellerId,
+    //     sellerEmail,
+    //});
+    //}
     dispatch({ type: CREATELISTING_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: CREATELISTING_FAIL, payload: error.message });
