@@ -18,7 +18,7 @@ body{
  
 .wrapper{
 	
-	height: 110vh;
+	height: 115vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,11 +46,11 @@ padding-left: 1rem;
 }
  
 .registration_form{
-    height: 100vh;
+    height: 110vh;
 	background: #545871;
 	padding: 25px;
 	border-radius: 5px;
-	width: 550px;
+	width: 500px;
 	background: white;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 10.9);
 	margin-top: 1rem;
@@ -70,19 +70,18 @@ padding-left: 1rem;
 }
  
 .form_wrap{
-	margin-top: 45px;
+	margin-top: 15px;
 }
  
 .form_wrap .input_wrap{
-	margin-bottom: 15px;
+	margin-bottom: 5px;
+	display: block;
 }
  
-.form_wrap .input_wrap:last-child{
-	margin-bottom: 0;
-}
+
  
 .form_wrap .input_wrap label{
-	display: block;
+	display: inline-block;
 	margin-bottom: 10px;
 	color: #9597a6;
 	
@@ -96,7 +95,7 @@ padding-left: 1rem;
 }
  
 .form_wrap .input_grp  input[type="text"]{
-	width: 165px;
+	width: 140;
 }
  
 .form_wrap  input[type="text"]{
@@ -115,36 +114,11 @@ padding-left: 1rem;
 	background: #fff;
 	padding: 8px 10px;
 	border-radius: 3px;
-	display: flex;
-	justify-content: center;
 }
  
 .form_wrap ul li:first-child{
 	margin-right: 15px;
-}
- 
-.form_wrap ul .radio_wrap{
-	position: relative;
-	margin-bottom: 0;
-}
- 
-.form_wrap ul .radio_wrap .input_radio{
-	position: absolute;
-	top: 0;
-	right: 0;
-	opacity: 0;
-}
- 
-.form_wrap ul .radio_wrap span{
 	display: inline-block;
-	font-size: 14px;
-	padding: 3px 20px;
-	border-radius: 3px;
-	color: #545871;
-}
- 
-.form_wrap .input_radio:checked ~ span{
-	background: #ebd0ce;
 }
  
 .form_wrap .submit_btn{
