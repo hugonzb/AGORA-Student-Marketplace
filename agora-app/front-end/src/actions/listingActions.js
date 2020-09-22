@@ -90,20 +90,37 @@ const createListing = (
     },
   });
   try {
-    const { data } = await axios.post("/api/listings/create", {
-      name,
-      description,
-      image,
-      category,
-      price,
-      city,
-      university,
-      brand,
-      condition,
-      seller,
-      sellerId,
-      sellerEmail,
-    });
+    if (!listing.listingId) {
+      const { data } = await axios.post("/api/listings/create", {
+        name,
+        description,
+        image,
+        category,
+        price,
+        city,
+        university,
+        brand,
+        condition,
+        seller,
+        sellerId,
+        sellerEmail,
+      });
+    } else {
+      const { data } = await axios.put("api/listings/" + listing.listingId, {
+        name,
+        description,
+        image,
+        category,
+        price,
+        city,
+        university,
+        brand,
+        condition,
+        seller,
+        sellerId,
+        sellerEmail,
+      });
+    }
     dispatch({ type: CREATELISTING_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: CREATELISTING_FAIL, payload: error.message });
@@ -115,7 +132,7 @@ const deleteListing = (listingId) => async (dispatch) => {
   try {
     dispatch({ type: LISTING_DELETE_REQUEST, payload: listingId });
     const { data } = await axios.delete("/api/listings/" + listingId);
-    dispatch({ type: LISTING_DELETE_SUCCESS, payload: data, success: true});
+    dispatch({ type: LISTING_DELETE_SUCCESS, payload: data, success: true });
   } catch (error) {
     dispatch({ type: LISTING_DELETE_FAIL, payload: error.message });
   }
