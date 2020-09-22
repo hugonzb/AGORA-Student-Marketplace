@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { createListing } from "../actions/listingActions";
+import { updateListing } from "../actions/listingActions";
 import Axios from "axios";
 import { detailListing } from "../actions/listingActions";
 
@@ -13,6 +13,7 @@ function UpdateListing(props) {
   const listingDetails = useSelector((state) => state.listingDetails);
   const { listing, loading, error } = listingDetails;
 
+  const [_id, setListingID] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   // This sets the image file path to initially be the default image in /images/default.png
@@ -44,6 +45,7 @@ function UpdateListing(props) {
     // eslint-disable-next-line
     if (loading == false) {
       setName(listing.name);
+      setListingID(listing._id);
     }
     return () => {};
     // eslint-disable-next-line
@@ -77,7 +79,8 @@ function UpdateListing(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
-      createListing(
+      updateListing(
+        _id,
         name,
         description,
         image,
@@ -110,6 +113,7 @@ function UpdateListing(props) {
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
         <h2>Hello {userInfo.fname}! update your listing: </h2>
+        <p>listing id: {listing._id} </p>
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
