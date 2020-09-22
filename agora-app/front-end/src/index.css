@@ -1020,6 +1020,10 @@ padding-left: 1rem;
   flex-direction: column;
 }
 
+.checkout-container{
+  height: 100%;
+}
+
 .checkout-heading{
   margin-top: 25px;
   margin-bottom: 25px;
@@ -1027,6 +1031,13 @@ padding-left: 1rem;
 }
 
 .ch-row {
+  display: -ms-flexbox; 
+  display: flex;
+  -ms-flex-wrap: wrap; 
+  flex-wrap: wrap;
+}
+
+.ch-row2 {
   display: -ms-flexbox; 
   display: flex;
   -ms-flex-wrap: wrap; 
@@ -1072,7 +1083,6 @@ padding-left: 1rem;
   border: 1px solid lightgrey;
   border-radius: 3px;
   min-height: 39.5rem;
-  max-height: 39.5rem;
   margin-bottom: 1rem;
 }
 
@@ -1157,7 +1167,6 @@ span.seller-contact {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
 }
 
 .checkout-listing-image-container {

@@ -71,7 +71,42 @@ import { createListingComplete } from '../actions/listingCompleteActions';
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
  <h2 className="checkout-heading">Checkout Form</h2>
 <p></p>
-<div className="ch-row">
+<div className="ch-row2">
+<div className="col-25">
+    <div className="ch-container">
+      <div className="checkout-listing">
+        <div className="checkout-listing-image-container">
+          <img
+            className="checkout-listing-image"
+            src={listing.image}
+            alt="listing"
+          ></img>
+        </div>
+        <div className="checkout-listing-info">
+          <li>
+            <b>{listing.name}</b>
+          </li>
+          <li>
+            Condition: {listing.condition}
+          </li>
+          <li>
+            Brand: {listing.brand}
+          </li>
+          <li>
+            Location: {listing.city}
+          </li>
+          <li>
+            Seller: {listing.seller}
+          </li>
+        </div>  
+      </div>
+      <p>Pay<span className="price"><b>$ {listing.price}</b></span></p>
+      <br></br>
+      <p>Shipping<span className="shipping"><b>To Be Arranged</b></span></p>
+      <br></br>
+      <p>Contact<span className="seller-contact"><b>Revealed After Checkout</b></span></p>
+    </div>
+  </div>
   <div className="col-75">
     <div className="ch-container">
       <form onSubmit={submitHandler}>
@@ -140,43 +175,8 @@ import { createListingComplete } from '../actions/listingCompleteActions';
       </form>
     </div>
   </div>
-  <div className="col-25">
-    <div className="ch-container">
-      <div className="checkout-listing">
-        <div className="checkout-listing-image-container">
-          <img
-            className="checkout-listing-image"
-            src={listing.image}
-            alt="listing"
-          ></img>
-        </div>
-        <div className="checkout-listing-info">
-          <li>
-            <b>{listing.name}</b>
-          </li>
-          <li>
-            Condition: {listing.condition}
-          </li>
-          <li>
-            Brand: {listing.brand}
-          </li>
-          <li>
-            Location: {listing.city}
-          </li>
-          <li>
-            Seller: {listing.seller}
-          </li>
-        </div>  
-      </div>
-      <p>Pay<span className="price"><b>$ {listing.price}</b></span></p>
-      <br></br>
-      <p>Shipping<span className="shipping"><b>To Be Arranged</b></span></p>
-      <br></br>
-      <p>Contact<span className="seller-contact"><b>Revealed After Checkout</b></span></p>
-    </div>
-  </div>
 </div>
-            </div>              
+</div>              
     }
 
     export default Checkout;
