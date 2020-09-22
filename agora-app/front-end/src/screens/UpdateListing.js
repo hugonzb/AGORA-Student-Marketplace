@@ -17,7 +17,7 @@ function UpdateListing(props) {
   const [description, setDescription] = useState("");
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
-  const [image, setImage] = useState("/images/default.png");
+  const [image, setImage] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
@@ -28,6 +28,7 @@ function UpdateListing(props) {
   const [sellerId, setSellerId] = useState("");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
+  const [uploadButton, setUploadButton] = useState(true);
 
   const dispatch = useDispatch();
 
@@ -57,7 +58,7 @@ function UpdateListing(props) {
 
   const uploadFileHandler = (e) => {
     // Make upload field disappear
-    //setUploadButton(false);         // JUST UNCOMMENT IT THIS LINE
+    setUploadButton(false);
     console.log("calling uploadFile()");
     const file = e.target.files[0];
     const bodyFormData = new FormData();
@@ -81,10 +82,11 @@ function UpdateListing(props) {
         console.log("Caught error while uploading: " + err);
         setUploading(false);
       });
-  };
+  }
 
   const submitHandler = (e) => {
     e.preventDefault();
+    console.log(image);
     dispatch(
       listingUpdate(
         _id,
@@ -101,12 +103,9 @@ function UpdateListing(props) {
         sellerId
       )
     );
+    alert("Successfully updated listing");
     props.history.push("/listing/" + listing._id);
   };
-
-  useEffect(() => {
-    return () => {};
-  });
 
   return loading ? (
     <div className="loading">Loading listing ...</div>
@@ -119,6 +118,12 @@ function UpdateListing(props) {
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
         <h2>Hello {userInfo.fname}! update your listing: </h2>
+        <br></br>
+        <label>Upload Image</label>
+          {uploading && <div>Uploading...</div>}
+          { uploadButton ?
+            <input type="file" onChange={uploadFileHandler}></input>
+          : <div> Uploaded image successfully </div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
@@ -142,16 +147,6 @@ function UpdateListing(props) {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <br></br>
-          <label>Upload Image</label>
-          <input
-            type="text"
-            name="image"
-            defaultValue={listing.image}
-            id="image"
-          ></input>
-          <input type="file" onChange={uploadFileHandler}></input>
-          {uploading && <div>Uploading...</div>}
-
           <label>Category: </label>
           <select
             id="categories"

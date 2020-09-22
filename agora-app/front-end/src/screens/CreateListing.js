@@ -109,11 +109,6 @@ function CreateListing(props) {
     props.history.push("/");
   };
 
-
-  const setFields = (e) => {
-    e.preventDefault();
-  }
-
   return (
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
@@ -122,7 +117,7 @@ function CreateListing(props) {
         <label>Upload Image</label>
           {uploading && <div>Uploading...</div>}
           { uploadButton ?
-            <input type="file" onInput={setFields} onChange={uploadFileHandler}></input>
+            <input type="file" onChange={uploadFileHandler}></input>
           : <div> Uploaded image successfully </div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
@@ -177,7 +172,6 @@ function CreateListing(props) {
             name="price"
             placeholder="$0.00"
             required
-            onInput={setFields}
             onChange={(e) => setPrice(e.target.value)}
           ></input>
           <br></br>
