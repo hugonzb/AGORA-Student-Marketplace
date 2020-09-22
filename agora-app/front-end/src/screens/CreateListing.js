@@ -13,8 +13,8 @@ function CreateListing(props) {
   const [description, setDescription] = useState("");
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
-  const [image, setImage] = useState("/images/default.png");
   const [category, setCategory] = useState("Antiques");
+  const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
@@ -59,7 +59,11 @@ function CreateListing(props) {
       headers: {
         "Content-Type": "multipart/form-data",
       },
-    }).then((response) => {
+    })
+      .then((response) => {
+        setImage(response.data);
+        filename = response.data;
+        setImage(filename);
         // This line will remove the "uploading..." div
         setUploading(false);
       })
@@ -81,10 +85,7 @@ function CreateListing(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if(file != null){
-      console.log("File not null.");
-      uploadFile();
-    }
+    console.log(image);
     dispatch(
       createListing(
         name,
@@ -105,10 +106,19 @@ function CreateListing(props) {
   };
 
 
+  const setFields = (e) => {
+    e.preventDefault();
+  }
+
   return (
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
         <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
+        <input type="file" onInput={setFields} onChange={(e) => setFile(e.target.files[0])}></input>
+          {uploading && <div>Uploading...</div>}
+          <button onClick={uploadFile}>
+            Confirm upload
+          </button>
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
@@ -132,9 +142,6 @@ function CreateListing(props) {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <br></br>
-          <label>Upload Image</label>
-          <input type="file" onChange={(e) => setFile(e.target.files[0])}></input>
-          {uploading && <div>Uploading...</div>}
           <label>Category: </label>
           <select id="categories" onChange={(e) => setCategory(e.target.value)}>
             <option value="Antiques">Antiques</option>
@@ -165,6 +172,7 @@ function CreateListing(props) {
             name="price"
             placeholder="$0.00"
             required
+            onInput={setFields}
             onChange={(e) => setPrice(e.target.value)}
           ></input>
           <br></br>
@@ -181,6 +189,7 @@ function CreateListing(props) {
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
+          <label>Upload Image</label>
           <button type="submit" value="Submit">
             Create Listing
           </button>
