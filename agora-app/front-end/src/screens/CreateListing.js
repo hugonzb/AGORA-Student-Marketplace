@@ -13,8 +13,8 @@ function CreateListing(props) {
   const [description, setDescription] = useState("");
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
-  const [image, setImage] = useState("/images/default.png");
   const [category, setCategory] = useState("Antiques");
+  const [image, setImage] = useState("");
   const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
@@ -25,13 +25,15 @@ function CreateListing(props) {
   const [sellerEmail, setSellerEmail] = useState("");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
+  // This field will be used to show the upload confirm button.
+  const [uploadButton, setUploadButton] = useState(true);
+
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
-  const [file, setFile] = useState(null);
-  let filename = "";
+  //const [file, setFile] = useState(null);
 
   useEffect(() => {
     if (userInfo) {
@@ -47,8 +49,11 @@ function CreateListing(props) {
 
   /*
    */
-  const uploadFile = () => {
+  const uploadFileHandler = (e) => {
+    // Make upload field disappear
+    setUploadButton(false);
     console.log("calling uploadFile()");
+    const file = e.target.files[0];
     const bodyFormData = new FormData();
 
     bodyFormData.append("image", file);
@@ -63,12 +68,11 @@ function CreateListing(props) {
     })
       .then((response) => {
         setImage(response.data);
-        filename = response.data;
         // This line will remove the "uploading..." div
         setUploading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Caught error while uploading: " + err);
         setUploading(false);
       });
   }
@@ -77,18 +81,14 @@ function CreateListing(props) {
   /* This method sets the file var to whatever file is currently marked for upload
   in the upload file section of this page. It should be called whenever the filed upload
   field is updated by the user
-  Currently it is not used.
   const uploadFileHandler = (e) => {
-    file = e.target.files[0];
-  }
-*/
+    file_name = e.target.files[0];
+    setImage()
+  }*/
+
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if(file != null){
-      uploadFile();
-    }
-    setImage(filename);
     console.log(image);
     dispatch(
       createListing(
@@ -106,17 +106,24 @@ function CreateListing(props) {
         sellerEmail
       )
     );
-    //props.history.push("/");
+    props.history.push("/");
   };
 
-  useEffect(() => {
-    return () => { };
-  });
+
+  const setFields = (e) => {
+    e.preventDefault();
+  }
 
   return (
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
         <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
+        <br></br>
+        <label>Upload Image</label>
+          {uploading && <div>Uploading...</div>}
+          { uploadButton ?
+            <input type="file" onInput={setFields} onChange={uploadFileHandler}></input>
+          : <div> Uploaded image successfully </div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
@@ -140,9 +147,6 @@ function CreateListing(props) {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <br></br>
-          <label>Upload Image</label>
-          <input type="file" onChange={(e) => setFile(e.target.files[0])}></input>
-          {uploading && <div>Uploading...</div>}
           <label>Category: </label>
           <select id="categories" onChange={(e) => setCategory(e.target.value)}>
             <option value="Antiques">Antiques</option>
@@ -173,6 +177,7 @@ function CreateListing(props) {
             name="price"
             placeholder="$0.00"
             required
+            onInput={setFields}
             onChange={(e) => setPrice(e.target.value)}
           ></input>
           <br></br>

@@ -9,9 +9,13 @@ const storage = multer.diskStorage({
         cb(null, "front-end/public/images");
     },
     filename(req, file, cb) {
-        cb(null, Date.now() + ".jpg");
+        /* This line saves the file with the original name of the file + the date/time it was uploaded
+            and a .jpg extension
+         */
+        cb(null, file.originalname.substring(0, file.originalname.length-4) + '_' +  Date.now() + ".jpg");
     },
 });
+
 
 
 const upload = multer({ storage });

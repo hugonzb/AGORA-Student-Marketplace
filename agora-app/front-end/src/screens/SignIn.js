@@ -31,41 +31,38 @@ function SignIn(props) {
   };
 
   return (
+    <div className="home-container">
+      <div className="sign-in-container">
+        <div className = "sign-in-logo">
+          <img src={agoralogo} className="sign-in-logo" alt=""/> </div>
+          <form className="create-account-form" onSubmit={submitHandler}>
+            <div className="signin-header">Sign In</div>
+            {loading && <div>Loading...</div>}
+            {error && <div>Invalid Email or Password</div>}
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              onChange={(e) => setEmail(e.target.value)}
+            ></input>
+            <br></br>
 
-    <div className="sign-in-container">
-
-      <div className="createAccountContainer">
-      <div className = "sign-in-logo">
-         <img src={agoralogo} className="sign-in-logo" alt=""/> </div>
-        <form className="create-account-form" onSubmit={submitHandler}>
-          <div className="signin-header">Sign In</div>
-          {loading && <div>Loading...</div>}
-          {error && <div>Invalid Email or Password</div>}
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
-          <br></br>
-
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
-          ></input>
-          <button className="signin-button" type="submit" value="Submit">SIGN IN</button>
-          <br></br>
-        </form>
-        <div className="create-account-link">
-            <Link to="/account/signup">or Create an Account</Link>
-          </div>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              onChange={(e) => setPassword(e.target.value)}
+            ></input>
+            <button className="signin-button" type="submit" value="Submit">SIGN IN</button>
+            <br></br>
+          </form>
+          <div className="create-account-link">
+              <Link to="/account/signup">or Create an Account</Link>
+            </div>
+        </div>
       </div>
-
-    </div>
   );
 }
 
