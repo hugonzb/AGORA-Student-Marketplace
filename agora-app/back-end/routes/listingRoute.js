@@ -110,34 +110,26 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//update listing router
+//update listing
 router.put("/:id", async (req, res) => {
-  const listing = new Listing({
-    _id: req.body.id,
-    name: req.body.name,
-    description: req.body.description,
-    image: req.body.image,
-    category: req.body.category,
-    price: req.body.price,
-    city: req.body.city,
-    university: req.body.university,
-    brand: req.body.brand,
-    condition: req.body.condition,
-    seller: req.body.seller,
-    sellerId: req.body.sellerId,
-    sellerEmail: req.body.sellerEmail,
-  });
-  const getListing = await Listing.findOne({ _id: req.params.id });
-  if (getListing) {
-    updateListing = await listing.put();
+  const listingID = req.params.id;
+  const listing = await Listing.get(listingID);
+  if (listing) {
+    listing.name = req.params.name;
+    listing.description = req.params.description;
+    listing.image = req.params.image;
+    listing.category = req.params.category;
+    listing.price = req.params.price;
+    listing.brand = req.params.brand;
+    listing.condition = req.params.condition;
+    const updateListing = await listing.save();
     if (updateListing) {
-      res.send({ message: "your listing has been updated succesfully" });
-      return;
+      return res
+        .status(200)
+        .send({ message: "Listing Updated", data: updatedListing });
     }
   } else {
-    res.send(
-      "an error has occured in updating your listing. Please try again later"
-    );
+    return res.status(500).send({ message: " Error in Updating Listing." });
   }
 });
 
