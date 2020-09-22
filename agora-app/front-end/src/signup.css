@@ -18,7 +18,7 @@ body{
  
 .wrapper{
 	
-	height: 100vh;
+	height: 110vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,7 +46,7 @@ padding-left: 1rem;
 }
  
 .registration_form{
-    height: 85vh;
+    height: 100vh;
 	background: #545871;
 	padding: 25px;
 	border-radius: 5px;
@@ -54,7 +54,7 @@ padding-left: 1rem;
 	background: white;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 10.9);
 	margin-top: 1rem;
-	justify-content: space-around;
+	justify-content: space-between;
 	border: 1px solid rgb(187, 187, 187);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
@@ -85,6 +85,7 @@ padding-left: 1rem;
 	display: block;
 	margin-bottom: 10px;
 	color: #9597a6;
+	
 }
  
 .form_wrap .input_grp{
