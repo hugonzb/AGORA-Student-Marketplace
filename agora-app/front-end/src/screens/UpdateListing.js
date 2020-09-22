@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { createListing } from "../actions/listingActions";
 import Axios from "axios";
-import { detailListing } from "../actions/listingActions";
+import { detailListing, listingUpdate } from "../actions/listingActions";
 
 function UpdateListing(props) {
   //get user details
@@ -13,6 +12,7 @@ function UpdateListing(props) {
   const listingDetails = useSelector((state) => state.listingDetails);
   const { listing, loading, error } = listingDetails;
 
+  const [_id, setListingID] = useState("");
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   // This sets the image file path to initially be the default image in /images/default.png
@@ -44,9 +44,11 @@ function UpdateListing(props) {
     // eslint-disable-next-line
     if (loading == false) {
       setName(listing.name);
+      setListingID(listing._id);
     }
     return () => {};
-  }, [dispatch, userInfo, listing.name, loading, props.match.params.id]);
+    // eslint-disable-next-line
+  }, [userInfo]);
 
   const uploadFileHandler = (e) => {
     const file = e.target.files[0];
@@ -76,7 +78,8 @@ function UpdateListing(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
-      createListing(
+      listingUpdate(
+        _id,
         name,
         description,
         image,
@@ -91,6 +94,7 @@ function UpdateListing(props) {
         deliveryoption
       )
     );
+    console.log("here");
     props.history.push("/");
   };
 

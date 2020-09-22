@@ -25,6 +25,9 @@ function SignUp(props) {
   const [upLoading, setUpLoading] = useState(false);
   const userSignup = useSelector((state) => state.userSignup);
   const { loading, userInfo, error } = userSignup;
+  // This field will determine if the upload profile picture button is available
+  // for the user to press or not.
+  const [uploadButton, setUploadButton] = useState(true);
 
   const dispatch = useDispatch();
 
@@ -40,6 +43,7 @@ function SignUp(props) {
 
 
   const uploadFileHandler = (e) => {
+    setUploadButton(false);
     const file = e.target.files[0];
     const bodyFormData = new FormData();
 
@@ -182,11 +186,12 @@ function SignUp(props) {
               </div>
  
           </div> 
+         
           
          <div className="input_grp">
               <div className="input_wrap">
                   <label for="gender">Choose a Gender: </label>
-                  <select
+                  <select className="select-css"
                     id="gender"
                     name="gender"
                     onChange={(e) => setGender(e.target.value)}
@@ -199,7 +204,7 @@ function SignUp(props) {
 
                    <div className="input_wrap">
               <label for="school">University: </label>
-              <select
+              <select className ="select-css"
                 id="school"
                 name="school"
                 placeholder="Select University"
@@ -221,14 +226,13 @@ function SignUp(props) {
                 </option>
                 <option value="Lincoln University">Lincoln University</option>
                 <option value="University of Otago">University of Otago</option>
+                
           </select>
+           
  
               </div>
               </div>
- 
-          
- 
-         
+               <br></br>
  
           <div className="input_grp">
                <div className="input_wrap">
@@ -254,7 +258,7 @@ function SignUp(props) {
                 onChange={(e) => setCity(e.target.value)}
               ></input>
           </div> 
-          </div>
+        </div>
           
           <div className="input_grp">
               <div className="input_wrap">
@@ -270,7 +274,7 @@ function SignUp(props) {
               </div> 
 
                   <div className="input_wrap">
-                  <label for="DOB"> Date of Birth:</label>
+                  <label>Date of Birth:</label>
                   <input
                     type="date"
                     id="DOB"
@@ -283,8 +287,12 @@ function SignUp(props) {
           
         <div className="input_grp">
            <div className="input_wrap">
-            <label>Upload a profile picture</label>
-            <input type="file" onChange={uploadFileHandler}></input>
+            {uploadButton && <div>
+                <label>Upload a profile picture</label>
+                <input type="file" onChange={uploadFileHandler}></input>
+                <button onClick={(e) => setUploadButton(false)}>No profile picture</button>
+              </div>
+            }
             {upLoading && <div>Uploading...</div>}
           </div>
           </div>

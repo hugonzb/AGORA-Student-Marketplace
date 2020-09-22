@@ -30,8 +30,9 @@ app.use("api/customers", _userRoute.default);
 app.use(_bodyParser.default.json());
 app.use("/api/users", _userRoute.default);
 app.use(_bodyParser.default.json());
-app.use("/api/listings", _listingRoute.default); // Here we tell the server to serve images from the front-end/public/images folder
+app.use("/api/listings", _listingRoute.default); 
 
+// Here we tell the server to serve images from the front-end/public/images folder
 app.use('/images', _express.default.static(_path.default.join(__dirname, '/images')));
 app.use(_express.default.static(_path.default.join(__dirname, '/../front-end/build')));
 app.get('*', (req, res) => {

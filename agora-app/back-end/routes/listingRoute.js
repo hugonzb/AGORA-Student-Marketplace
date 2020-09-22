@@ -75,23 +75,6 @@ router.get("/account/profile"),
     }
   };
 
-// Method which will give us the filename and path of an uploaded image
-const storage = multer.diskStorage({
-  destination(req, file, cb) {
-    cb(null, "front-end/public/images");
-  },
-  filename(req, file, cb) {
-    cb(null, Date.now() + ".jpg");
-  },
-});
-
-const upload = multer({ storage });
-
-router.post("/uploadimage", upload.single("image"), (req, res) => {
-  console.log(req.file.filename);
-  res.send("/images/" + req.file.filename);
-});
-
 // Hope it's ok to make the post uri to /listing/create
 router.post("/create", async (req, res) => {
   const listing = new Listing({
@@ -106,7 +89,7 @@ router.post("/create", async (req, res) => {
     condition: req.body.condition,
     seller: req.body.seller,
     sellerId: req.body.sellerId,
-    deliveryoption: req.body.deliveryoption,
+    sellerEmail: req.body.sellerEmail,
   });
   const newListing = await listing.save();
   if (newListing) {
@@ -124,6 +107,29 @@ router.delete("/:id", async (req, res) => {
     res.send({ message: "listing has been deleted succesfully." });
   } else {
     res.send("Error in Deletion.");
+  }
+});
+
+//update listing
+router.put("/:id", async (req, res) => {
+  const listingID = req.params.id;
+  const listing = await Listing.findOne({ _id: listingID });
+  if (listing) {
+    listing.name = req.params.name;
+    listing.description = req.params.description;
+    listing.image = req.params.image;
+    listing.category = req.params.category;
+    listing.price = req.params.price;
+    listing.brand = req.params.brand;
+    listing.condition = req.params.condition;
+    const updateListing = await listing.save();
+    if (updateListing) {
+      return res
+        .status(200)
+        .send({ message: "Listing Updated", data: updatedListing });
+    }
+  } else {
+    return res.status(500).send({ message: " Error in Updating Listing." });
   }
 });
 
