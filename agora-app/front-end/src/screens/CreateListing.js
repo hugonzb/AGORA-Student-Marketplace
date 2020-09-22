@@ -114,6 +114,8 @@ function CreateListing(props) {
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
         <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
+        <br></br>
+        <label>Upload Image</label>
         <input type="file" onInput={setFields} onChange={(e) => setFile(e.target.files[0])}></input>
           {uploading && <div>Uploading...</div>}
           <button onClick={uploadFile}>
@@ -189,7 +191,6 @@ function CreateListing(props) {
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
-          <label>Upload Image</label>
           <button type="submit" value="Submit">
             Create Listing
           </button>
