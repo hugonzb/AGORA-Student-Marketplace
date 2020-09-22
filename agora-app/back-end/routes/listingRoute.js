@@ -113,9 +113,8 @@ router.delete("/:id", async (req, res) => {
 //update listing
 router.put("/:id", async (req, res) => {
   const listingID = req.params.id;
-  const listing = await Listing.get(listingID);
+  const listing = await Listing.findOne({ _id: listingID });
   if (listing) {
-    console.log.message("here");
     listing.name = req.params.name;
     listing.description = req.params.description;
     listing.image = req.params.image;

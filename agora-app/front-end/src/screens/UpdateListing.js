@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { listingUpdate } from "../actions/listingActions";
 import Axios from "axios";
-import { detailListing } from "../actions/listingActions";
+import { detailListing, listingUpdate } from "../actions/listingActions";
 
 function UpdateListing(props) {
   //get user details
@@ -95,6 +94,7 @@ function UpdateListing(props) {
         deliveryoption
       )
     );
+    console.log("here");
     props.history.push("/");
   };
 
