@@ -62,8 +62,6 @@ function CreateListing(props) {
     })
       .then((response) => {
         setImage(response.data);
-        filename = response.data;
-        setImage(filename);
         // This line will remove the "uploading..." div
         setUploading(false);
       })
