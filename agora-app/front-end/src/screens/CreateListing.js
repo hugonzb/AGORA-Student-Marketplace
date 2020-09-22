@@ -25,12 +25,15 @@ function CreateListing(props) {
   const [sellerEmail, setSellerEmail] = useState("");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
+  // This field will be used to show the upload confirm button.
+  const [uploadButton, setUploadButton] = useState(true);
+
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
-  const [file, setFile] = useState(null);
+  //const [file, setFile] = useState(null);
 
   useEffect(() => {
     if (userInfo) {
@@ -46,8 +49,11 @@ function CreateListing(props) {
 
   /*
    */
-  const uploadFile = () => {
+  const uploadFileHandler = (e) => {
+    // Make upload field disappear
+    setUploadButton(false);
     console.log("calling uploadFile()");
+    const file = e.target.files[0];
     const bodyFormData = new FormData();
 
     bodyFormData.append("image", file);
@@ -100,7 +106,7 @@ function CreateListing(props) {
         sellerEmail
       )
     );
-    //props.history.push("/");
+    props.history.push("/");
   };
 
 
@@ -114,11 +120,10 @@ function CreateListing(props) {
         <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
         <br></br>
         <label>Upload Image</label>
-        <input type="file" onInput={setFields} onChange={(e) => setFile(e.target.files[0])}></input>
           {uploading && <div>Uploading...</div>}
-          <button onClick={uploadFile}>
-            Confirm upload
-          </button>
+          { uploadButton &&
+            <input type="file" onInput={setFields} onChange={uploadFileHandler}></input>
+          }
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
