@@ -94,7 +94,6 @@ function UpdateListing(props) {
         deliveryoption
       )
     );
-    console.log("here");
     props.history.push("/");
   };
 

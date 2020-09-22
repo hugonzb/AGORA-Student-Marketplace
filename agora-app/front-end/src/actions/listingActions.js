@@ -95,7 +95,7 @@ const listingUpdate = (
     },
   });
   try {
-    console.log.message("here2");
+    console.log("reaches try statement");
     const { data } = await axios.put("/api/listings/" + _id, {
       _id,
       name,
@@ -112,7 +112,7 @@ const listingUpdate = (
       sellerEmail,
     });
     dispatch({ type: LISTING_UPDATE_SUCCESS, payload: data });
-    console.log.message("here3");
+    console.log("dispatch succesfull log");
   } catch (error) {
     dispatch({ type: LISTING_UPDATE_FAIL, payload: error.message });
   }
