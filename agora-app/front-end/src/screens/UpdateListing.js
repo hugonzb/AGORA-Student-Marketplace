@@ -14,7 +14,7 @@ function UpdateListing(props) {
 
   const [_id, setListingID] = useState("");
   const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+  const [description, setDescription] = useState("asdsdaad");
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
   const [image, setImage] = useState("/images/default.png");

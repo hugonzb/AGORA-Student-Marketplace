@@ -115,18 +115,18 @@ router.put("/:id", async (req, res) => {
   const listingID = req.params.id;
   const listing = await Listing.findOne({ _id: listingID });
   if (listing) {
-    listing.name = req.params.name;
-    listing.description = req.params.description;
-    listing.image = req.params.image;
-    listing.category = req.params.category;
-    listing.price = req.params.price;
-    listing.brand = req.params.brand;
-    listing.condition = req.params.condition;
+    listing.name = req.body.name;
+    listing.description = req.body.description;
+    listing.image = req.body.image;
+    listing.category = req.body.category;
+    listing.price = req.body.price;
+    listing.brand = req.body.brand;
+    listing.condition = req.body.condition;
     const updateListing = await listing.save();
     if (updateListing) {
       return res
         .status(200)
-        .send({ message: "Listing Updated", data: updatedListing });
+        .send({ message: "Listing Updated", data: updateListing });
     }
   } else {
     return res.status(500).send({ message: " Error in Updating Listing." });
