@@ -18,12 +18,12 @@ function UpdateListing(props) {
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
   const [image, setImage] = useState("/images/default.png");
-  const [category, setCategory] = useState("Antiques");
+  const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
-  const [condition, setCondition] = useState("New");
+  const [condition, setCondition] = useState("");
   const [seller, setSeller] = useState("");
   const [sellerId, setSellerId] = useState("");
   // This should used to determine if the user has chosen a file to upload.
@@ -101,7 +101,7 @@ function UpdateListing(props) {
         sellerId
       )
     );
-    props.history.push("/");
+    props.history.push("/listing/" + listing._id);
   };
 
   useEffect(() => {
