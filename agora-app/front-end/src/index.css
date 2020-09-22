@@ -610,6 +610,7 @@ label:after {
   text-align: center;
   padding: 60px 0;
   height: 100%;
+  min-height: 40rem;
   padding-bottom: 20px;
   font-family: "Quicksand", sans-serif;
 }
