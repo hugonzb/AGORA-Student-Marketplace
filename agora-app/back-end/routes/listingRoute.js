@@ -110,11 +110,30 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+//update listing router
 router.put("/:id", async (req, res) => {
-  const listing = await Listing.findOne({ _id: req.params.id });
-  if (listing) {
-    await listing.put();
-    res.send({ message: "your listing has been updated succesfully" });
+  const listing = new Listing({
+    _id: req.body.id,
+    name: req.body.name,
+    description: req.body.description,
+    image: req.body.image,
+    category: req.body.category,
+    price: req.body.price,
+    city: req.body.city,
+    university: req.body.university,
+    brand: req.body.brand,
+    condition: req.body.condition,
+    seller: req.body.seller,
+    sellerId: req.body.sellerId,
+    sellerEmail: req.body.sellerEmail,
+  });
+  const getListing = await Listing.findOne({ _id: req.params.id });
+  if (getListing) {
+    updateListing = await listing.put();
+    if (updateListing) {
+      res.send({ message: "your listing has been updated succesfully" });
+      return;
+    }
   } else {
     res.send(
       "an error has occured in updating your listing. Please try again later"
