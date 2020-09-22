@@ -60,8 +60,6 @@ function CreateListing(props) {
         "Content-Type": "multipart/form-data",
       },
     }).then((response) => {
-        setImage(response.data);
-        console.log("Image set to: " + response.data);
         // This line will remove the "uploading..." div
         setUploading(false);
       })
