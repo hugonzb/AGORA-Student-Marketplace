@@ -122,7 +122,15 @@ function UpdateListing(props) {
         <label>Upload Image</label>
           {uploading && <div>Uploading...</div>}
           { uploadButton ?
-            <input type="file" onChange={uploadFileHandler}></input>
+                              <div>
+                              <div className="listing-image">
+                                <img
+                                  className="listing-image"
+                                  src={listing.image}
+                                  alt="listing"
+                                ></img>
+                              </div>
+            <input type="file" onChange={uploadFileHandler}></input></div>
           : <div> Uploaded image successfully </div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
