@@ -1203,3 +1203,34 @@ input[type='text']:focus
 .blue-border {
   border: 1px solid rgb(110, 178, 251);
 }
+
+/*History Page*/
+
+.history-wrapper{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	justify-content: space-around; 
+}
+
+.tab-list {  border-bottom: 1px solid #ccc;
+  padding-left: 0;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+  background-color: white;
+  border: solid #ccc;
+  border-width: 1px 1px 0 1px;
+}
+
+
