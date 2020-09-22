@@ -113,8 +113,6 @@ function UpdateListing(props) {
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
         <h2>Hello {userInfo.fname}! update your listing: </h2>
-        <h3>listing id: {listing._id} </h3>
-
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input

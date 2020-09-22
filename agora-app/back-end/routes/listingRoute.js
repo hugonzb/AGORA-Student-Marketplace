@@ -115,6 +115,7 @@ router.put("/:id", async (req, res) => {
   const listingID = req.params.id;
   const listing = await Listing.get(listingID);
   if (listing) {
+    console.log.message("here");
     listing.name = req.params.name;
     listing.description = req.params.description;
     listing.image = req.params.image;
