@@ -14,7 +14,7 @@ function UpdateListing(props) {
 
   const [_id, setListingID] = useState("");
   const [name, setName] = useState("");
-  const [description, setDescription] = useState("asdsdaad");
+  const [description, setDescription] = useState("");
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
   const [image, setImage] = useState("/images/default.png");
@@ -26,7 +26,6 @@ function UpdateListing(props) {
   const [condition, setCondition] = useState("New");
   const [seller, setSeller] = useState("");
   const [sellerId, setSellerId] = useState("");
-  const [deliveryoption, setDeliveryoption] = useState("");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
 
@@ -44,6 +43,11 @@ function UpdateListing(props) {
     // eslint-disable-next-line
     if (loading == false) {
       setName(listing.name);
+      setDescription(listing.description);
+      setBrand(listing.brand);
+      setCondition(listing.condition);
+      setCategory(listing.category);
+      setPrice(listing.price);
       setListingID(listing._id);
     }
     return () => {};
@@ -90,8 +94,7 @@ function UpdateListing(props) {
         brand,
         condition,
         seller,
-        sellerId,
-        deliveryoption
+        sellerId
       )
     );
     props.history.push("/");
@@ -200,25 +203,6 @@ function UpdateListing(props) {
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
-          <label>Delivery </label>
-          <input
-            type="radio"
-            id="pickup"
-            name="deliveryoptions"
-            value="pickup"
-            defaultValue={listing.deliveryoption}
-            required
-            onChange={(e) => setDeliveryoption(e.target.value)}
-          ></input>
-          <label>Pick-Up </label>
-          <input
-            type="radio"
-            id="delivery"
-            name="deliveryoptions"
-            value="delivery"
-            required
-            onChange={(e) => setDeliveryoption(e.target.value)}
-          ></input>
           <button type="submit" value="Submit">
             Update Listing
           </button>

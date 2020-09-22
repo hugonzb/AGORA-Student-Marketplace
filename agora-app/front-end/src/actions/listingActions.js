@@ -95,7 +95,6 @@ const listingUpdate = (
     },
   });
   try {
-    console.log("reaches try statement");
     const { data } = await axios.put("/api/listings/" + _id, {
       _id,
       name,
