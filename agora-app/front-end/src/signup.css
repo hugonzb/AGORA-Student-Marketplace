@@ -18,7 +18,7 @@ body{
  
 .wrapper{
 	
-	height: 115vh;
+	min-height: 40rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -46,7 +46,7 @@ padding-left: 1rem;
 }
  
 .registration_form{
-    height: 110vh;
+    height: 95vh;
 	background: #545871;
 	padding: 25px;
 	border-radius: 5px;

@@ -190,7 +190,7 @@ function SignUp(props) {
          <div className="input_grp">
               <div className="input_wrap">
                   <label for="gender">Choose a Gender: </label>
-                  <select className="select-css">
+                  <select className="select-css"
                     id="gender"
                     name="gender"
                     onChange={(e) => setGender(e.target.value)}
