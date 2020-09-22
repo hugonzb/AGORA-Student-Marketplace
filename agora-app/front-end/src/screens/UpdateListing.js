@@ -49,6 +49,7 @@ function UpdateListing(props) {
       setCategory(listing.category);
       setPrice(listing.price);
       setListingID(listing._id);
+      setImage(listing.image);
     }
     return () => {};
     // eslint-disable-next-line
@@ -145,9 +146,8 @@ function UpdateListing(props) {
           <input
             type="text"
             name="image"
-            value={listing.image}
+            defaultValue={listing.image}
             id="image"
-            onChange={(e) => setImage(e.target.value)}
           ></input>
           <input type="file" onChange={uploadFileHandler}></input>
           {uploading && <div>Uploading...</div>}
