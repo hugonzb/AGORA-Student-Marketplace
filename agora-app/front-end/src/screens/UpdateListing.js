@@ -46,7 +46,8 @@ function UpdateListing(props) {
       setName(listing.name);
     }
     return () => {};
-  }, [dispatch, userInfo, listing.name, loading, props.match.params.id]);
+    // eslint-disable-next-line
+  }, [userInfo]);
 
   const uploadFileHandler = (e) => {
     const file = e.target.files[0];

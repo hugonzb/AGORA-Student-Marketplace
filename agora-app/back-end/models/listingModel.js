@@ -12,8 +12,8 @@ const listingSchema = new mongoose.Schema({
   brand: { type: String, required: false },
   condition: { type: String, required: false },
   seller: { type: String, required: true },
-  sellerId: { type: String, required: true },
-  deliveryoption: { type: String, required: true },
+  sellerEmail: { type: String, required: false },
+  sellerId: { type: String, required: true }
 });
 
 const listingModel = mongoose.model("Listing", listingSchema);

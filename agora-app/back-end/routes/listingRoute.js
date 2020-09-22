@@ -75,22 +75,6 @@ router.get("/account/profile"),
     }
   };
 
-// Method which will give us the filename and path of an uploaded image
-const storage = multer.diskStorage({
-  destination(req, file, cb) {
-    cb(null, "front-end/public/images");
-  },
-  filename(req, file, cb) {
-    cb(null, Date.now() + ".jpg");
-  },
-});
-
-const upload = multer({ storage });
-
-router.post("/uploadimage", upload.single("image"), (req, res) => {
-  console.log(req.file.filename);
-  res.send("/images/" + req.file.filename);
-});
 
 // Hope it's ok to make the post uri to /listing/create
 router.post("/create", async (req, res) => {
@@ -106,7 +90,7 @@ router.post("/create", async (req, res) => {
     condition: req.body.condition,
     seller: req.body.seller,
     sellerId: req.body.sellerId,
-    deliveryoption: req.body.deliveryoption,
+    sellerEmail: req.body.sellerEmail,
   });
   const newListing = await listing.save();
   if (newListing) {

@@ -13,33 +13,27 @@ function CreateListing(props) {
   const [description, setDescription] = useState("");
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
-  const [image, setImage] = useState("/images/default.png");
   const [category, setCategory] = useState("Antiques");
-  const [price, setPrice] = useState(""); 
+  const [image, setImage] = useState("");
+  const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
   const [brand, setBrand] = useState("");
   const [condition, setCondition] = useState("New");
   const [seller, setSeller] = useState("");
   const [sellerId, setSellerId] = useState("");
-  const [deliveryoption, setDeliveryoption] = useState("");
+  const [sellerEmail, setSellerEmail] = useState("");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
+  // This field will be used to show the upload confirm button.
+  const [uploadButton, setUploadButton] = useState(true);
+
 
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
 
-  // currently just need to figure out how to dispatch the information when submit button is clicked to the post
-  // in listingRoute. I believe I have done everything already needed there.
-  /* 
-  const listingSave = useSelector((state) => state.listingSave);
-  const {
-    loading: loadingSave,
-    success: successSave,
-    error: errorSave,
-  } = listingSave;
-  */
+  //const [file, setFile] = useState(null);
 
   useEffect(() => {
     if (userInfo) {
@@ -47,37 +41,55 @@ function CreateListing(props) {
       setUniversity(userInfo.university);
       setCity(userInfo.city);
       setSellerId(userInfo.studentid);
+      setSellerEmail(userInfo.email);
     }
-    return () => {};
+    return () => { };
   }, [userInfo]);
 
 
+  /*
+   */
   const uploadFileHandler = (e) => {
+    // Make upload field disappear
+    setUploadButton(false);
+    console.log("calling uploadFile()");
     const file = e.target.files[0];
     const bodyFormData = new FormData();
 
-    bodyFormData.append('image', file);
+    bodyFormData.append("image", file);
     // Now we are ready to send an AJAX request with Axios
 
     // This line will produce the div that tells the user their file is uploading
     setUploading(true);
-    Axios.post("/api/listings/uploadimage", bodyFormData, {
-      headers:{
-        'Content-Type' : 'multipart/form-data',
+    Axios.post("/api/fileUpload/uploadimage", bodyFormData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
       },
-    }).then(response => {
-      setImage(response.data);
-      // This line will remove the "uploading..." div
-      setUploading(false);
-    }).catch(err => {
-      console.log(err);
-      setUploading(false);
-    });
+    })
+      .then((response) => {
+        setImage(response.data);
+        // This line will remove the "uploading..." div
+        setUploading(false);
+      })
+      .catch((err) => {
+        console.log("Caught error while uploading: " + err);
+        setUploading(false);
+      });
   }
+
+
+  /* This method sets the file var to whatever file is currently marked for upload
+  in the upload file section of this page. It should be called whenever the filed upload
+  field is updated by the user
+  const uploadFileHandler = (e) => {
+    file_name = e.target.files[0];
+    setImage()
+  }*/
 
 
   const submitHandler = (e) => {
     e.preventDefault();
+    console.log(image);
     dispatch(
       createListing(
         name,
@@ -91,20 +103,27 @@ function CreateListing(props) {
         condition,
         seller,
         sellerId,
-        deliveryoption
+        sellerEmail
       )
     );
     props.history.push("/");
   };
 
-  useEffect(() => {
-    return () => {};
-  });
+
+  const setFields = (e) => {
+    e.preventDefault();
+  }
 
   return (
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
         <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
+        <br></br>
+        <label>Upload Image</label>
+          {uploading && <div>Uploading...</div>}
+          { uploadButton &&
+            <input type="file" onInput={setFields} onChange={uploadFileHandler}></input>
+          }
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
@@ -128,16 +147,6 @@ function CreateListing(props) {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
           <br></br>
-          <label>Upload Image</label>
-          <input
-            type="text"
-            name="image"
-            value={image}
-            id="image"
-            onChange = {(e) => setImage(e.target.value)}
-            ></input>
-          <input type="file" onChange={uploadFileHandler}></input>
-          {uploading && <div>Uploading...</div>}
           <label>Category: </label>
           <select id="categories" onChange={(e) => setCategory(e.target.value)}>
             <option value="Antiques">Antiques</option>
@@ -168,6 +177,7 @@ function CreateListing(props) {
             name="price"
             placeholder="$0.00"
             required
+            onInput={setFields}
             onChange={(e) => setPrice(e.target.value)}
           ></input>
           <br></br>
@@ -184,24 +194,6 @@ function CreateListing(props) {
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
-          <label>Delivery </label>
-          <input
-            type="radio"
-            id="pickup"
-            name="deliveryoptions"
-            value="pickup"
-            required
-            onChange={(e) => setDeliveryoption(e.target.value)}
-          ></input>
-          <label>Pick-Up </label>
-          <input
-            type="radio"
-            id="delivery"
-            name="deliveryoptions"
-            value="delivery"
-            required
-            onChange={(e) => setDeliveryoption(e.target.value)}
-          ></input>
           <button type="submit" value="Submit">
             Create Listing
           </button>

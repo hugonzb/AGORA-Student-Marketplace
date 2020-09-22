@@ -6,6 +6,10 @@
 
 }*/
 
+nav{
+    padding-bottom: 0.5rem;
+}
+
 .logo {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -25,7 +29,7 @@
 }
 
 .agora-text {
-    padding-top: 2.1rem;
+    padding-top: 1.3rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     font-size: 28px;
@@ -34,7 +38,7 @@
 }
   
 .sm-text {
-    padding-top: 2.2rem;
+    padding-top: 1.4rem;
     color: rgb(2, 3, 32);
     font-family: "Quicksand", sans-serif;
     font-size: 25px;
@@ -117,7 +121,7 @@ padding-left: 18px;
 
 /* responsive mode */
 
-@media screen and (min-width:845px){
+@media screen and (min-width:930px){
 
 
     nav{
@@ -125,7 +129,7 @@ padding-left: 18px;
      display: flex; 
      justify-content: space-between; 
      align-items: center; 
-     border-bottom:22px #ff7b00;
+
 	}
 
     
