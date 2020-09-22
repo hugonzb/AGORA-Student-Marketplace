@@ -190,7 +190,7 @@ function SignUp(props) {
          <div className="input_grp">
               <div className="input_wrap">
                   <label for="gender">Choose a Gender: </label>
-                  <select
+                  <select className="select-css">
                     id="gender"
                     name="gender"
                     onChange={(e) => setGender(e.target.value)}
@@ -203,7 +203,7 @@ function SignUp(props) {
 
                    <div className="input_wrap">
               <label for="school">University: </label>
-              <select
+              <select className ="select-css"
                 id="school"
                 name="school"
                 placeholder="Select University"
@@ -225,14 +225,12 @@ function SignUp(props) {
                 </option>
                 <option value="Lincoln University">Lincoln University</option>
                 <option value="University of Otago">University of Otago</option>
+                
           </select>
+           
  
               </div>
               </div>
- 
-          
- 
-         
  
           <div className="input_grp">
                <div className="input_wrap">
@@ -248,10 +246,7 @@ function SignUp(props) {
           </div> 
  
           <div className="input_wrap">
-              <div>
               <label>City:</label>
-              </div>
-              
               <input
                 type="text"
                 id="city"
