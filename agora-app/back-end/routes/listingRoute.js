@@ -75,7 +75,6 @@ router.get("/account/profile"),
     }
   };
 
-
 // Hope it's ok to make the post uri to /listing/create
 router.post("/create", async (req, res) => {
   const listing = new Listing({
@@ -108,6 +107,18 @@ router.delete("/:id", async (req, res) => {
     res.send({ message: "listing has been deleted succesfully." });
   } else {
     res.send("Error in Deletion.");
+  }
+});
+
+router.put("/:id", async (req, res) => {
+  const listing = await Listing.findOne({ _id: req.params.id });
+  if (listing) {
+    await listing.put();
+    res.send({ message: "your listing has been updated succesfully" });
+  } else {
+    res.send(
+      "an error has occured in updating your listing. Please try again later"
+    );
   }
 });
 
