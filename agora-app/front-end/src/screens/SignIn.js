@@ -59,6 +59,7 @@ function SignIn(props) {
             <br></br>
           </form>
           <div className="create-account-link">
+          <br></br>
               <Link to="/account/signup">or Create an Account</Link>
             </div>
         </div>

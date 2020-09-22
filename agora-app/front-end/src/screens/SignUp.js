@@ -186,6 +186,7 @@ function SignUp(props) {
               </div>
  
           </div> 
+         
           
          <div className="input_grp">
               <div className="input_wrap">
@@ -231,6 +232,7 @@ function SignUp(props) {
  
               </div>
               </div>
+               <br></br>
  
           <div className="input_grp">
                <div className="input_wrap">
