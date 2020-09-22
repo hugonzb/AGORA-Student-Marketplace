@@ -248,7 +248,10 @@ function SignUp(props) {
           </div> 
  
           <div className="input_wrap">
+              <div>
               <label>City:</label>
+              </div>
+              
               <input
                 type="text"
                 id="city"
@@ -258,7 +261,7 @@ function SignUp(props) {
                 onChange={(e) => setCity(e.target.value)}
               ></input>
           </div> 
-          </div>
+        </div>
           
           <div className="input_grp">
               <div className="input_wrap">
@@ -274,7 +277,7 @@ function SignUp(props) {
               </div> 
 
                   <div className="input_wrap">
-                  <label for="DOB"> Date of Birth:</label>
+                  <label>Date of Birth:</label>
                   <input
                     type="date"
                     id="DOB"
