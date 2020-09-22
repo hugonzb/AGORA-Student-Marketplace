@@ -31,7 +31,6 @@ function CreateListing(props) {
   const dispatch = useDispatch();
 
   const [file, setFile] = useState(null);
-  let filename = "";
 
   useEffect(() => {
     if (userInfo) {
@@ -60,15 +59,14 @@ function CreateListing(props) {
       headers: {
         "Content-Type": "multipart/form-data",
       },
-    })
-      .then((response) => {
+    }).then((response) => {
         setImage(response.data);
-        filename = response.data;
+        console.log("Image set to: " + response.data);
         // This line will remove the "uploading..." div
         setUploading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Caught error while uploading: " + err);
         setUploading(false);
       });
   }
@@ -77,19 +75,18 @@ function CreateListing(props) {
   /* This method sets the file var to whatever file is currently marked for upload
   in the upload file section of this page. It should be called whenever the filed upload
   field is updated by the user
-  Currently it is not used.
   const uploadFileHandler = (e) => {
-    file = e.target.files[0];
-  }
-*/
+    file_name = e.target.files[0];
+    setImage()
+  }*/
+
 
   const submitHandler = (e) => {
     e.preventDefault();
     if(file != null){
+      console.log("File not null.");
       uploadFile();
     }
-    setImage(filename);
-    console.log(image);
     dispatch(
       createListing(
         name,
@@ -109,9 +106,6 @@ function CreateListing(props) {
     //props.history.push("/");
   };
 
-  useEffect(() => {
-    return () => { };
-  });
 
   return (
     <div className="sign-up-container">
