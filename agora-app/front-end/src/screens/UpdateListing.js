@@ -55,6 +55,9 @@ function UpdateListing(props) {
   }, [userInfo]);
 
   const uploadFileHandler = (e) => {
+    // Make upload field disappear
+    setUploadButton(false);
+    console.log("calling uploadFile()");
     const file = e.target.files[0];
     const bodyFormData = new FormData();
 
@@ -63,7 +66,7 @@ function UpdateListing(props) {
 
     // This line will produce the div that tells the user their file is uploading
     setUploading(true);
-    Axios.post("/api/listings/uploadimage", bodyFormData, {
+    Axios.post("/api/fileUpload/uploadimage", bodyFormData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },
@@ -74,7 +77,7 @@ function UpdateListing(props) {
         setUploading(false);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Caught error while uploading: " + err);
         setUploading(false);
       });
   };
