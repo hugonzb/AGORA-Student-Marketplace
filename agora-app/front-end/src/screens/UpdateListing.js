@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateListing } from "../actions/listingActions";
+import { listingUpdate } from "../actions/listingActions";
 import Axios from "axios";
 import { detailListing } from "../actions/listingActions";
 
@@ -79,7 +79,7 @@ function UpdateListing(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
-      updateListing(
+      listingUpdate(
         _id,
         name,
         description,
@@ -113,7 +113,8 @@ function UpdateListing(props) {
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
         <h2>Hello {userInfo.fname}! update your listing: </h2>
-        <p>listing id: {listing._id} </p>
+        <h3>listing id: {listing._id} </h3>
+
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input

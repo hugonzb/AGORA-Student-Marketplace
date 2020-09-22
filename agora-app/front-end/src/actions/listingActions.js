@@ -1,5 +1,8 @@
 import axios from "axios";
 import {
+  LISTING_UPDATE_REQUEST,
+  LISTING_UPDATE_SUCCESS,
+  LISTING_UPDATE_FAIL,
   LISTING_LIST_REQUEST,
   LISTING_LIST_SUCCESS,
   LISTING_LIST_FAIL,
@@ -55,6 +58,61 @@ const detailListing = (listingId) => async (dispatch) => {
     dispatch({ type: LISTING_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: LISTING_DETAILS_FAIL, payload: error.message });
+  }
+};
+
+const listingUpdate = (
+  _id,
+  name,
+  description,
+  image,
+  category,
+  price,
+  city,
+  university,
+  brand,
+  condition,
+  seller,
+  sellerId,
+  sellerEmail
+) => async (dispatch) => {
+  dispatch({
+    type: LISTING_UPDATE_REQUEST,
+    payload: {
+      _id,
+      name,
+      description,
+      image,
+      category,
+      price,
+      city,
+      university,
+      brand,
+      condition,
+      seller,
+      sellerId,
+      sellerEmail,
+    },
+  });
+  try {
+    const { data } = await axios.put("/api/listings/" + _id, {
+      _id,
+      name,
+      description,
+      image,
+      category,
+      price,
+      city,
+      university,
+      brand,
+      condition,
+      seller,
+      sellerId,
+      sellerEmail,
+    });
+    dispatch({ type: LISTING_UPDATE_SUCCESS, payload: data });
+  } catch (error) {
+    dispatch({ type: LISTING_UPDATE_FAIL, payload: error.message });
   }
 };
 
@@ -121,4 +179,10 @@ const deleteListing = (listingId) => async (dispatch) => {
   }
 };
 
-export { listListings, detailListing, createListing, deleteListing };
+export {
+  listListings,
+  detailListing,
+  createListing,
+  deleteListing,
+  listingUpdate,
+};
