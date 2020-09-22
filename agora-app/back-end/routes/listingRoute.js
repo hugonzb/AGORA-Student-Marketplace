@@ -122,6 +122,7 @@ router.put("/:id", async (req, res) => {
     listing.price = req.body.price;
     listing.brand = req.body.brand;
     listing.condition = req.body.condition;
+    listing.image = req.body.image;
     const updateListing = await listing.save();
     if (updateListing) {
       return res

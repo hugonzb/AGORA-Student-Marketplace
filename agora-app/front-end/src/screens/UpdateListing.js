@@ -145,7 +145,7 @@ function UpdateListing(props) {
           <input
             type="text"
             name="image"
-            value={image}
+            value={listing.image}
             id="image"
             onChange={(e) => setImage(e.target.value)}
           ></input>
