@@ -47,11 +47,11 @@ align-items: center;
 }
  
 .registration_form{
-    height: 110vh;
+    height: 118vh;
 	background: #545871;
 	padding: 25px;
 	border-radius: 5px;
-	width: 500px;
+	width: 450px;
 	background: white;
 	margin-top: 1rem;
 	justify-content: space-between;
@@ -85,7 +85,7 @@ h4{
 
  
 .form_wrap .input_wrap label{
-	display: inline-block;
+	display: block;
 	margin-bottom: 5px;
 	color: #9597a6;
 }
