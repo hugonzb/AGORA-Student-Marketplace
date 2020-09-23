@@ -15,10 +15,10 @@ function Profile(props) {
   const [username, setUsername] = useState("");
   const [university, setUniversity] = useState("");
   const [city, setCity] = useState("");
-  const [profilePicture, setProfilePicture] = useState("../images/profileicon.png");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const [sellerId] = useState(userInfo.studentid);
+  const [profilePicture, setProfilePicture] = useState(userInfo.profilePicture);
   const listingList = useSelector((state) => state.listingList);
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
@@ -50,7 +50,7 @@ function Profile(props) {
       setUsername(userInfo.username);
       setUniversity(userInfo.university);
       setCity(userInfo.city);
-      //setProfilePicture(userInfo.profilePicture);
+      setProfilePicture(userInfo.profilePicture);
     }
     dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
@@ -66,7 +66,7 @@ function Profile(props) {
           <div className="profileContainer">
             PROFILE
 
-            <img src={profileicon} alt="profile" />
+            <img src={profilePicture} alt="profile" height="150" length="100"/>
             <h2>
               {" "}
               <label for="name" value={name}>
