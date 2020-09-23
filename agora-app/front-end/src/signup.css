@@ -39,9 +39,10 @@ body{
  
 .form-heading > img,
 .form-heading > span {
-display: inline-block;
+display: flex;
 justify-content: space-around;
 padding-left: 1rem;
+align-items: center; 
  
 }
  
