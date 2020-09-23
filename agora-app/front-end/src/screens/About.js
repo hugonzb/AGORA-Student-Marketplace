@@ -6,63 +6,54 @@ import profileicon from "../images/profileicon.png";
 function About(props) {
   return (
     
-    <div className="wrapperabout">
-      <h1>Agora Team</h1>
-      <div className="team">
+    <div className="about-container">
+      <h1 className="heading">Agora Team</h1>
 
-        <div className="team_member">
-          <div className="team_img">
-            <img src={profileicon} alt="Team_image" />
-          </div>
-          <h3>Member Name</h3>
-          <p className="role">Member role</p>
-          <p>some information about member</p>
+      <div className="profiles">
+        <div className="profile-card">
+          <img src={profileicon} className="profile-img" alt="profile"/>
+          <h3 className="user-name">Name</h3>
+          <h5>Memeber Role</h5>
+          <p></p>
         </div>
 
-        <div className="team_member">
-          <div className="team_img">
-            <img src={profileicon} alt="Team_image" />
-          </div>
-          <h3>Member Name</h3>
-          <p className="role">Member role</p>
-          <p>some information about member</p>
+        <div className="profile-card">
+          <img src={profileicon} className="profile-img" alt="profile"/>
+          <h3 className="user-name">Name</h3>
+          <h5>Memeber Role</h5>
+          <p></p>
         </div>
 
-        <div className="team_member">
-          <div className="team_img">
-            <img src={profileicon} alt="Team_image" />
-          </div>
-          <h3>Member Name</h3>
-          <p className="role">Member role</p>
-          <p>some information about member</p>
+        <div className="profile-card">
+          <img src={profileicon} className="profile-img" alt="profile"/>
+          <h3 className="user-name">Name</h3>
+          <h5>Memeber Role</h5>
+          <p></p>
         </div>
 
-        <div className="team_member">
-          <div className="team_img">
-            <img src={profileicon} alt="Team_image" />
-          </div>
-          <h3>Member Name</h3>
-          <p className="role">Member role</p>
-          <p>some information about member</p>
+        <div className="profile-card">
+          <img src={profileicon} className="profile-img" alt="profile"/>
+          <h3 className="user-name">Name</h3>
+          <h5>Memeber Role</h5>
+          <p></p>
         </div>
 
-        <div className="team_member">
-          <div className="team_img">
-            <img src={profileicon} alt="Team_image" />
-          </div>
-          <h3>Member Name</h3>
-          <p className="role">Member role</p>
-          <p>some information about member</p>
+        <div className="profile-card">
+          <img src={profileicon} className="profile-img" alt="profile"/>
+          <h3 className="user-name">Name</h3>
+          <h5>Memeber Role</h5>
+          <p></p>
         </div>
-
-
 
       </div>
-    </div>
-
-
-
-  
+      <form>
+       <div className="contact-comment"> <h2> Leave us a Comment </h2>	</div>
+        <input name="namess" type="text" className="feedback-input" placeholder="Name" />
+        <input name="emailss" type="text" className="feedback-input" placeholder="Email" />
+        <textarea name="texts" className="feedback-input" placeholder="Comment"></textarea>
+        <input type="submit" name="send it" value="Send" />
+      </form>
+    </div>  
     
   
 

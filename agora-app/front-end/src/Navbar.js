@@ -48,8 +48,6 @@ class Navbar extends Component{
                         {this.closeNavbar} >Sign In</Link></li>
                         <li><Link to="/info/about" onClick=
                         {this.closeNavbar} >About</Link></li>
-                        <li><Link to="/info/contact" onClick=
-                        {this.closeNavbar} >Contact Us</Link></li> 
                     </ul>
                 </div>
                 

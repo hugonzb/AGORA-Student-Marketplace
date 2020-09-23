@@ -111,11 +111,13 @@ const listingUpdate = (
       sellerEmail,
     });
     dispatch({ type: LISTING_UPDATE_SUCCESS, payload: data });
+    console.log("dispatch succesfull log");
   } catch (error) {
     dispatch({ type: LISTING_UPDATE_FAIL, payload: error.message });
   }
 };
 
+//create listing
 const createListing = (
   name,
   description,
