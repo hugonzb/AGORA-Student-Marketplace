@@ -18,7 +18,7 @@ body{
  
 .wrapper{
 	
-	min-height: 40rem;
+	min-height: 35rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -32,22 +32,22 @@ body{
   margin-top: 2px;
   max-height: 4.5rem;
   width: 50px;
-  justify-content: space-around;
-  display: inline-block; 
-  align-items: center; 
+  justify-content: space-between;
+  display:inline-block; 
+  float: left;
 }
  
-.form-heading > img,
+
 .form-heading > span {
-display: flex;
+display: inline-block;
 justify-content: space-around;
-padding-left: 1rem;
-align-items: center; 
+margin-left: 3rem;
+
  
 }
  
 .registration_form{
-    height: 118vh;
+    height: 111vh;
 	background: #545871;
 	padding: 25px;
 	border-radius: 5px;
@@ -65,8 +65,7 @@ align-items: center;
 	color: #f1f1f1;
 	letter-spacing: 5px;
 	font-weight: 700;
-	justify-content: flex-end;
-	display: inline;
+	display: inline-block;
 }
 
 h4{
