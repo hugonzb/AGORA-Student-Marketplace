@@ -65,8 +65,9 @@ function Profile(props) {
         <div className="mainContainer">
           <div className="profileContainer">
             PROFILE
-
-            <img src={profilePicture} alt="profile" height="150" length="100"/>
+            <br></br>
+            <img src={profilePicture} alt="profile" height="150" length="100"
+            border-radius="25px" border="2px solid black"/>
             <h2>
               {" "}
               <label for="name" value={name}>
