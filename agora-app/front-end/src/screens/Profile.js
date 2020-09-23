@@ -15,7 +15,7 @@ function Profile(props) {
   const [username, setUsername] = useState("");
   const [university, setUniversity] = useState("");
   const [city, setCity] = useState("");
-  const [] = useState("../images/profileicon.png");
+  const [profilePicture, setProfilePicture] = useState("../images/profileicon.png");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const [sellerId] = useState(userInfo.studentid);
@@ -50,6 +50,7 @@ function Profile(props) {
       setUsername(userInfo.username);
       setUniversity(userInfo.university);
       setCity(userInfo.city);
+      //setProfilePicture(userInfo.profilePicture);
     }
     dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
