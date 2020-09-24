@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { listListings } from "../actions/listingActions";
+import PropagateLoader from "react-spinners/PropagateLoader";
+
+// Can be a string as well. Need to ensure each key-value pair ends with ;
 
 function Home(props) {
   const [categorySortOrder, setCategorySortOrder] = useState("");
@@ -11,6 +14,7 @@ function Home(props) {
   const [seller] = useState("");
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
+
 
   useEffect(() => {
     dispatch(listListings(searchWord, seller));
@@ -31,6 +35,8 @@ function Home(props) {
   return (
     <>
       <div className="home-container">
+      <div className="sweet-loading">
+      </div>
         <div className="home-filter">
           <form>
             <select
@@ -78,7 +84,12 @@ function Home(props) {
           </form>
         </div>
         {loading ? (
-          <div className="loading">Loading listings ...</div>
+          <div className="loading">
+            <PropagateLoader
+              size={20}
+              color={"#123abc"}
+            />
+          </div>
         ) : error ? (
           <div className="error">
             {" "}

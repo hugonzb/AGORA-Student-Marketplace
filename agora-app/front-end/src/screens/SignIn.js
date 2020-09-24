@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { signIn } from '../actions/userActions';
 import agoralogo from "../images/agoralogo.png";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 function SignIn(props) {
   const [email, setEmail] = useState("");
@@ -37,7 +38,7 @@ function SignIn(props) {
           <img src={agoralogo} className="sign-in-logo" alt=""/> </div>
           <form className="create-account-form" onSubmit={submitHandler}>
             <div className="signin-header">Sign In</div>
-            {loading && <div>Loading...</div>}
+            {loading && <div></div>}
             {error && <div>Invalid Email or Password</div>}
             <input
               type="email"
