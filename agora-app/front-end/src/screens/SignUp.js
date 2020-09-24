@@ -21,7 +21,7 @@ function SignUp(props) {
   const [street_address, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
-  const [profilePicture, setProfilePicture] = useState("/profilePictures/defaultProfilePicture.jpg");
+  const [profilePicture, setProfilePicture] = useState("/profilePictures/defaultprofileicon.jpg");
   const [upLoading, setUpLoading] = useState(false);
   const userSignup = useSelector((state) => state.userSignup);
   const { loading, userInfo, error } = userSignup;

@@ -4,7 +4,6 @@ import { logout } from "../actions/userActions";
 import { listListings, deleteListing } from "../actions/listingActions";
 import { Link } from "react-router-dom";
 import "../index.css";
-import profileicon from "../images/profileicon.png";
 
 function Profile(props) {
   const [name, setName] = useState("");

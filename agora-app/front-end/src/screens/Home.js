@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { listListings } from "../actions/listingActions";
-import profileicon from "../images/profileicon.png";
 
 function Home(props) {
   const [categorySortOrder, setCategorySortOrder] = useState("");

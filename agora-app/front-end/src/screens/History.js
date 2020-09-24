@@ -4,8 +4,6 @@ import { logout } from "../actions/userActions";
 import { listListings, deleteListing } from "../actions/listingActions";
 import { Link } from "react-router-dom";
 import "../history.css";
-import profileicon from "../images/profileicon.png";
-import agoralogo from "../images/agoralogo.png";
 
 function History(props) {
   const [name, setName] = useState("");
