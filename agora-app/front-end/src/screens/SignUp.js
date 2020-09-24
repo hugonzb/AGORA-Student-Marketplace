@@ -98,7 +98,7 @@ function SignUp(props) {
                    className="sign-up-logo" alt=""/>
                
                    <span> 
-			       <h4>Registration Form</h4> 
+			       <h2>Registration Form</h2> 
                    Already have an account?  
                    <h4><Link to="/account/signin">Sign in</Link></h4>
                    </span>
@@ -275,7 +275,7 @@ function SignUp(props) {
 
                   <div className="input_wrap">
                   <label>Date of Birth:</label>
-                  <input
+                  <input className="select-css"
                     type="date"
                     id="DOB"
                     name="DOB"

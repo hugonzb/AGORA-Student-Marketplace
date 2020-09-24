@@ -809,8 +809,6 @@ body {
 
 
 
-form { max-width:420px; }
-
 .feedback-input {
   color:rgb(0, 0, 0);
   font-family: Helvetica, Arial, sans-serif;
@@ -1018,6 +1016,14 @@ textarea {
   font-weight: bold;
 }
 
+.loading-signin {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  font-weight: bold;
+}
+
 .error {
   min-height: 43.5rem;
 }
@@ -1130,72 +1136,72 @@ padding-left: 1rem;
   box-sizing: border-box;
  
 }
-
+ 
 .listing-submit-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   flex-direction: column;
-} 
-
+}
+ 
 .checkout-container{
   height: 100%;
 }
-
+ 
 .checkout-heading{
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 25px;
 }
-
+ 
 .ch-row {
   display: -ms-flexbox; 
   display: flex;
-  -ms-flex-wrap: wrap; 
-  flex-wrap: wrap;
+  flex-direction: row;
 }
-
+ 
 .ch-row2 {
   display: -ms-flexbox; 
   display: flex;
   -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
 }
-
+ 
 .col-25 {
   -ms-flex: 25%; 
   flex: 25%;
 }
-
+ 
 .col-50 {
   -ms-flex: 50%; 
   flex: 50%;
+  width: 100%;
 }
-
+ 
 .col-60 {
   -ms-flex: 50%; 
   flex: 50%;
   padding-left: 1rem;
 }
-
+ 
 .col-70 {
   -ms-flex: 50%; 
   flex: 50%;
   padding-right: 1rem;
 }
-
+ 
 .col-75 {
   -ms-flex: 75%; 
   flex: 75%;
 }
-
+ 
 .col-25,
 .col-50,
 .col-75 {
   padding: 0 16px;
 }
-
+ 
 .ch-container {
   background-color: #f2f2f2;
   padding: 5px 20px 15px 20px;

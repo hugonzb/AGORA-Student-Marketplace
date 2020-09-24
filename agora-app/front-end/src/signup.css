@@ -12,9 +12,10 @@
 	font-family: 'Montserrat', sans-serif;
 }
  
-body{
-	
+.form_wrap{
+ width: 100%;
 }
+
  
 .wrapper{
 	
@@ -50,12 +51,12 @@ margin-left: 3rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-    height: 95vh;
+    height: 100%;
 	background: #545871;
-	padding: 25px;
+	padding: 40px;
 	border-radius: 5px;
 	width: 100%;
-	max-width: 40rem;
+	max-width: 35rem;
 	background: white;
 	margin-top: 1rem;
 	border: 1px solid rgb(187, 187, 187);
@@ -71,7 +72,7 @@ margin-left: 3rem;
 	display: inline-block;
 }
 
-h4{
+h2{
 	color: #ff7b00;
 }
  
@@ -136,7 +137,7 @@ h4{
 	letter-spacing: 3px;
 	cursor: pointer;
 	font-weight: 700;
-	margin-top: 10px;
+	margin-top: 30px;
 }
  
 .form_wrap .submit_btn:hover{

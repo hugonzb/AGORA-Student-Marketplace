@@ -38,7 +38,11 @@ function SignIn(props) {
           <img src={agoralogo} className="sign-in-logo" alt=""/> </div>
           <form className="create-account-form" onSubmit={submitHandler}>
             <div className="signin-header">Sign In</div>
-            {loading && <div></div>}
+            {loading && <div className="loading-signin">
+              <PropagateLoader
+              size={10}
+              color={"#123abc"}
+              /></div>}
             {error && <div>Invalid Email or Password</div>}
             <input
               type="email"
