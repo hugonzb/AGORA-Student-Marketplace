@@ -121,7 +121,7 @@ function CreateListing(props) {
           {uploading && <div>Uploading...</div>}
           { uploadButton ?
             <input type="file" onChange={uploadFileHandler}></input>
-          : <div> Uploaded listing image successfully </div>}
+          : <div className="uploaded"> Uploaded listing image successfully </div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
