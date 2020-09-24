@@ -4,6 +4,7 @@ import { logout } from "../actions/userActions";
 import { listListings, deleteListing } from "../actions/listingActions";
 import { Link } from "react-router-dom";
 import "../index.css";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 function Profile(props) {
   const [name, setName] = useState("");
@@ -115,7 +116,11 @@ function Profile(props) {
           <div className="listingsContainer">
             ACTIVE LISTINGS
             {loading ? (
-              <div className="loading">Loading listings ...</div>
+              <div className="loading">
+                <PropagateLoader
+                  size={20}
+                  color={"#123abc"}
+                /></div>
             ) : error ? (
               <div className="error">
                 {" "}

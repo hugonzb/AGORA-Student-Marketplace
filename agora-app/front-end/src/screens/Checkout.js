@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {Link} from "react-router-dom";
 import { detailListing } from '../actions/listingActions';
 import { createListingComplete } from '../actions/listingCompleteActions';
-
+import PropagateLoader from "react-spinners/PropagateLoader";
 
     function Checkout(props) {
       const listingDetails = useSelector(state => state.listingDetails);
@@ -65,7 +65,12 @@ import { createListingComplete } from '../actions/listingCompleteActions';
         }
       };
         
-        return loading ? <div className="loading">Loading checkout ...</div> :
+        return loading ? <div className="loading">
+            <PropagateLoader
+              size={20}
+              color={"#123abc"}
+            />
+        </div> :
         error? <div className="error"> {error} </div> :
          <div className="checkout-container">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
