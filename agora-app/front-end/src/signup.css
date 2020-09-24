@@ -47,14 +47,17 @@ margin-left: 3rem;
 }
  
 .registration_form{
-    height: 111vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    height: 95vh;
 	background: #545871;
 	padding: 25px;
 	border-radius: 5px;
-	width: 450px;
+	width: 100%;
+	max-width: 40rem;
 	background: white;
 	margin-top: 1rem;
-	justify-content: space-between;
 	border: 1px solid rgb(187, 187, 187);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }

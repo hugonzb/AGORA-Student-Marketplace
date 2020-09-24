@@ -287,11 +287,11 @@ function SignUp(props) {
           
         <div className="input_grp">
            <div className="input_wrap">
-            {uploadButton && <div>
+            {uploadButton ? <div>
                 <label>Upload a profile picture</label>
                 <input type="file" onChange={uploadFileHandler}></input>
                 <button onClick={(e) => setUploadButton(false)}>No profile picture</button>
-              </div>
+              </div> : <div className="uploaded"> Uploaded profile picture successfully </div>
             }
             {upLoading && <div>Uploading...</div>}
           </div>
