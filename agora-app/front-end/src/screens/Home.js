@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { listListings } from "../actions/listingActions";
-import profileicon from "../images/profileicon.png";
 
 function Home(props) {
   const [categorySortOrder, setCategorySortOrder] = useState("");
@@ -104,7 +103,7 @@ function Home(props) {
                         Asking Price: ${listing.price}
                       </div>
                       <div className="view-listing-user">
-                        <img src={profileicon} alt="profile" />
+                        <img src={listing.sellerProfilePicture} alt="profile" />
                         <div className="view-listing-sellername">
                           {listing.seller}
                         </div>

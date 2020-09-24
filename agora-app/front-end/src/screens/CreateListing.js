@@ -23,6 +23,7 @@ function CreateListing(props) {
   const [seller, setSeller] = useState("");
   const [sellerId, setSellerId] = useState("");
   const [sellerEmail, setSellerEmail] = useState("");
+  const [sellerProfilePicture, setSellerProfilePicture] = useState("");
   // This should used to determine if the user has chosen a file to upload.
   const [uploading, setUploading] = useState(false);
   // This field will be used to show the upload confirm button.
@@ -42,6 +43,7 @@ function CreateListing(props) {
       setCity(userInfo.city);
       setSellerId(userInfo.studentid);
       setSellerEmail(userInfo.email);
+      setSellerProfilePicture(userInfo.profilePicture);
     }
     return () => { };
   }, [userInfo]);
@@ -103,7 +105,8 @@ function CreateListing(props) {
         condition,
         seller,
         sellerId,
-        sellerEmail
+        sellerEmail,
+        sellerProfilePicture
       )
     );
     props.history.push("/");
@@ -118,7 +121,7 @@ function CreateListing(props) {
           {uploading && <div>Uploading...</div>}
           { uploadButton ?
             <input type="file" onChange={uploadFileHandler}></input>
-          : <div> Uploaded image successfully </div>}
+          : <div className="uploaded"> Uploaded listing image successfully </div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input

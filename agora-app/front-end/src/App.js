@@ -14,6 +14,7 @@ import NavbarSignedin from "./NavbarSignedin";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import UpdateListing from "./screens/UpdateListing";
+import History from "./screens/History";
 
 function App(props) {
   const [search, setSearch] = useState("");
@@ -54,6 +55,7 @@ function App(props) {
           <Route path="/account/profile" component={Profile} />
           <Route path="/account/createlisting" component={CreateListing} />
           <Route path="/account/updatelisting/:id" component={UpdateListing} />
+          <Route path="/account/history" component={History}/>
         </div>
       </div>
       <div className="footer">All Rights Reserved.</div>

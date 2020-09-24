@@ -18,7 +18,7 @@ body{
  
 .wrapper{
 	
-	min-height: 40rem;
+	min-height: 35rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -32,28 +32,32 @@ body{
   margin-top: 2px;
   max-height: 4.5rem;
   width: 50px;
-  justify-content: space-around;
-  display: inline-block; 
-  align-items: center; 
+  justify-content: space-between;
+  display:inline-block; 
+  float: left;
 }
  
-.form-heading > img,
+
 .form-heading > span {
 display: inline-block;
 justify-content: space-around;
-padding-left: 1rem;
+margin-left: 3rem;
+
  
 }
  
 .registration_form{
-    height: 110vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    height: 95vh;
 	background: #545871;
 	padding: 25px;
 	border-radius: 5px;
-	width: 500px;
+	width: 100%;
+	max-width: 40rem;
 	background: white;
 	margin-top: 1rem;
-	justify-content: space-between;
 	border: 1px solid rgb(187, 187, 187);
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
@@ -64,8 +68,7 @@ padding-left: 1rem;
 	color: #f1f1f1;
 	letter-spacing: 5px;
 	font-weight: 700;
-	justify-content: flex-end;
-	display: inline;
+	display: inline-block;
 }
 
 h4{
@@ -84,7 +87,7 @@ h4{
 
  
 .form_wrap .input_wrap label{
-	display: inline-block;
+	display: block;
 	margin-bottom: 5px;
 	color: #9597a6;
 }

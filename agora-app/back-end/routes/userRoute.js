@@ -2,6 +2,7 @@ import express from "express";
 import User from "../models/userModel";
 import { getToken } from "../util";
 import multer from "multer";
+import { sign } from "jsonwebtoken";
 
 
 const router = express.Router();
@@ -44,6 +45,7 @@ router.post("/signin", async (req, res) => {
       email: signinUser.email,
       username: signinUser.username,
       university: signinUser.university,
+      profilePicture: signinUser.profilePicture,
       city: signinUser.city,
       token: getToken(signinUser),
     });

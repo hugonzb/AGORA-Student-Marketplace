@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailListing } from '../actions/listingActions';
-import profileicon from "../images/profileicon.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
@@ -89,7 +88,7 @@ function ViewListing(props) {
 							<tr>
 								<td>						
 									<div className="view-listing-user">
-										<img src={profileicon} alt="profile"/>
+										<img src={listing.sellerProfilePicture} alt="profile"/>
 										<div className="view-listing-sellername">{listing.seller}</div>
 									</div>	
 								</td>

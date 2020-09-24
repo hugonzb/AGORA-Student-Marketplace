@@ -415,13 +415,15 @@ ul li a {
 
 .view-listing-user img {
   max-width: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid black;
 }
 
 .view-listing-sellername {
   display: flex;
   padding: 0.2rem;
   font-size: 13px;
-  width: 5rem;
+  width: 4rem;
 }
 
 .view-listing-details {
@@ -682,71 +684,14 @@ span.psw {
   padding-top: 16px;
 }
 
-/*About us*/
-/*.wrapperabout {
-  margin-top: 50px;
-}
-
-.wrapperabout h1 {
-  font-family: "Allura", cursive;
-  font-size: 48px;
-  margin-bottom: 70px;
-  margin-top: -50px;
-  text-align: center;
-  padding: 14px 25px;
-}
-
-.team {
+.uploaded {
   display: flex;
-  justify-content: center;
-  width: auto;
   text-align: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 4rem;
 }
-
-.team .team_member {
-  background-color: rgba(21, 75, 136, 0.247);
-  margin: 5px;
-  margin-bottom: 50px;
-  width: 300px;
-  padding: 20px;
-  line-height: 20px;
-  color: #8e8b8b;
-  position: relative;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 10.9);
-}
-
-.team .team_member h3 {
-  color: #000000;
-  font-size: 26px;
-  margin-top: 50px;
-}
-
-.team .team_member p.role {
-  color: rgb(97, 97, 97);
-  margin: 12px 0;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-.team .team_member .team_img {
-  position: absolute;
-  top: -50px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: #fff;
-}
-
-.team .team_member .team_img img {
-  width: 100px;
-  height: 100px;
-}*/
-
-/*New About us*/
-
 
 * {
   padding: 0;
@@ -976,6 +921,12 @@ textarea {
   min-height: 30rem;
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
+}
+
+.profileContainer img{
+  border-radius: 50%;
+  border: 1px solid rgb(0, 0, 0);
+  margin-bottom: 1rem;
 }
 
 .watchlistContainer {

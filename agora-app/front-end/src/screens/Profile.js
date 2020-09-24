@@ -4,7 +4,6 @@ import { logout } from "../actions/userActions";
 import { listListings, deleteListing } from "../actions/listingActions";
 import { Link } from "react-router-dom";
 import "../index.css";
-import profileicon from "../images/profileicon.png";
 
 function Profile(props) {
   const [name, setName] = useState("");
@@ -18,6 +17,7 @@ function Profile(props) {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const [sellerId] = useState(userInfo.studentid);
+  const [profilePicture, setProfilePicture] = useState(userInfo.profilePicture);
   const listingList = useSelector((state) => state.listingList);
   const { listings, loading, error } = listingList;
   const dispatch = useDispatch();
@@ -49,6 +49,7 @@ function Profile(props) {
       setUsername(userInfo.username);
       setUniversity(userInfo.university);
       setCity(userInfo.city);
+      setProfilePicture(userInfo.profilePicture);
     }
     dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
@@ -63,8 +64,9 @@ function Profile(props) {
         <div className="mainContainer">
           <div className="profileContainer">
             PROFILE
-
-            <img src={profileicon} alt="profile" />
+            <br></br>
+            <img src={profilePicture} alt="profile" height="150" length="100"
+            border-radius="25px" border="2px solid black"/>
             <h2>
               {" "}
               <label for="name" value={name}>
