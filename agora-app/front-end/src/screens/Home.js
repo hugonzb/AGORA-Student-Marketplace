@@ -104,7 +104,7 @@ function Home(props) {
                         Asking Price: ${listing.price}
                       </div>
                       <div className="view-listing-user">
-                        <img src={profileicon} alt="profile" />
+                        <img src={listing.sellerProfilePicture} alt="profile" />
                         <div className="view-listing-sellername">
                           {listing.seller}
                         </div>

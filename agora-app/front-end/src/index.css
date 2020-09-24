@@ -415,13 +415,15 @@ ul li a {
 
 .view-listing-user img {
   max-width: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid black;
 }
 
 .view-listing-sellername {
   display: flex;
   padding: 0.2rem;
   font-size: 13px;
-  width: 5rem;
+  width: 4rem;
 }
 
 .view-listing-details {

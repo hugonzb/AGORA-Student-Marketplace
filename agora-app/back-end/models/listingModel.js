@@ -13,7 +13,8 @@ const listingSchema = new mongoose.Schema({
   condition: { type: String, required: false },
   seller: { type: String, required: false },
   sellerEmail: { type: String, required: false },
-  sellerId: { type: String, required: false }
+  sellerId: { type: String, required: false },
+  sellerProfilePicture: { type: String, required: false }
 });
 
 const listingModel = mongoose.model("Listing", listingSchema);
