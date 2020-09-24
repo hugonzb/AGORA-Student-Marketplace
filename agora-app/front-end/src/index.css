@@ -450,12 +450,12 @@ ul li a {
   width: 100%;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  background-color: #c5d6e0;
+  background-color: #d5dcec;
   color: rgb(0, 0, 0);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: bold;
   font-size: 11px;
-  box-shadow: 0px 2px 5px 0px rgba(54, 54, 54, 0.61);
+  box-shadow: 0px 1px 2px 0px rgba(54, 54, 54, 0.61);
 }
 
 .view-listing-description-container {
@@ -728,6 +728,10 @@ body {
   margin: 20px 80px;
 }
 
+.profile-heading {
+  height: 3rem;
+}
+
 .profile-card {
   flex-basis: 260px;
 }
@@ -908,7 +912,7 @@ textarea {
   background-color: rgb(250, 250, 250);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
   width: 30%;
-  min-width: 19.5rem;
+  min-width: 21.5rem;
   border-radius: 44px;
   margin-top: 15px;
   margin-bottom: 15px;

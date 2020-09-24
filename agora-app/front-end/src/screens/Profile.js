@@ -64,8 +64,9 @@ function Profile(props) {
       {userInfo ? (
         <div className="mainContainer">
           <div className="profileContainer">
-            PROFILE
-            <br></br>
+            <div className="profile-heading">
+              PROFILE
+            </div>
             <img
               src={profilePicture}
               alt="profile"
@@ -114,7 +115,9 @@ function Profile(props) {
             </div>
           </div>
           <div className="listingsContainer">
-            ACTIVE LISTINGS
+            <div className="profile-heading">
+              ACTIVE LISTINGS
+            </div>
             {loading ? (
               <div className="loading">
                 <PropagateLoader
@@ -182,7 +185,11 @@ function Profile(props) {
               </div>
             )}
           </div>
-          <div className="watchlistContainer">WATCHLIST</div>
+          <div className="watchlistContainer">
+              <div className="profile-heading">
+                WATCHLIST
+              </div>
+            </div>
         </div>
       ) : (
         <div>
