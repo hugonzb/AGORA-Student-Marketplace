@@ -70,8 +70,6 @@ function Profile(props) {
               alt="profile"
               height="150"
               length="100"
-              border-radius="25px"
-              border="2px solid black"
             />
             <h2>
               {" "}

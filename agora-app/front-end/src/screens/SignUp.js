@@ -12,7 +12,6 @@ function SignUp(props) {
   const [fname, setFname] = useState("");
   const [studentid, setStudentid] = useState("");
   const [sname, setSname] = useState("");
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
   const [email, setEmail] = useState("");

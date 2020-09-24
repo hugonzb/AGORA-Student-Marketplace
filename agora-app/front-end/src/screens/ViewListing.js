@@ -4,6 +4,7 @@ import { detailListing } from '../actions/listingActions';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar, faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
+import PropagateLoader from "react-spinners/PropagateLoader";
 
 
 function ViewListing(props) {
@@ -29,7 +30,11 @@ function ViewListing(props) {
 		alert("Sorry! Unfortunately this feature is currently in development")
 	};
 	
-	return loading ? <div className="loading">Loading listing ...</div> : 
+	return loading ? <div className="loading">            
+	<PropagateLoader
+		size={20}
+		color={"#123abc"}
+	/></div> : 
 	error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
 			<div className="view-listing-container">
 					<div className="view-listing-image">
