@@ -14,6 +14,7 @@ function SignUp(props) {
   const [sname, setSname] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [rePassword, setRePassword] = useState("");
   const [email, setEmail] = useState("");
   const [dob, setDOB] = useState("");
   const [gender, setGender] = useState("Male");
@@ -25,6 +26,7 @@ function SignUp(props) {
   const [upLoading, setUpLoading] = useState(false);
   const userSignup = useSelector((state) => state.userSignup);
   const { loading, userInfo, error } = userSignup;
+  const [message, setMessage] = useState('');
   // This field will determine if the upload profile picture button is available
   // for the user to press or not.
   const [uploadButton, setUploadButton] = useState(true);
@@ -69,31 +71,32 @@ function SignUp(props) {
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(
-      signUp(
-        studentid,
-        fname,
-        sname,
-        username,
-        password,
-        email,
-        dob,
-        gender,
-        university,
-        street_address,
-        city,
-        postcode, 
-        profilePicture
-      )
-    );
+    if(password === rePassword){
+      dispatch(
+        signUp(
+          studentid,
+          fname,
+          sname,
+          password,
+          email,
+          dob,
+          gender,
+          university,
+          street_address,
+          city,
+          postcode, 
+          profilePicture
+        )
+      );
+    } else {
+      setMessage("Passwords do not match");
+    }
   };
  
   return (
     <div className="wrapper">
         <div className="registration_form">
             <div className="form-heading">
-                
-               
                    <img src={agoralogo} 
                    className="sign-up-logo" alt=""/>
                
@@ -107,7 +110,19 @@ function SignUp(props) {
             </div>
             {loading}
         {error && <div>Student ID or Email Address has been taken.</div>}
+        {message}
         <form className="form_wrap" onSubmit={submitHandler}>
+        <div className="profilepic_grp">
+           <div className="input_wrap">
+            {uploadButton ? <div>
+                <label>Upload a profile picture</label>
+                <input type="file" onChange={uploadFileHandler}></input>
+                <button onClick={(e) => setUploadButton(false)}>No profile picture</button>
+              </div> : <div className="uploaded"> Uploaded profile picture successfully </div>
+            }
+            {upLoading && <div>Uploading...</div>}
+          </div>
+          </div>
             <div className="input_grp">
           
                 <div className="input_wrap"> 
@@ -159,33 +174,6 @@ function SignUp(props) {
                   ></input>
                </div>
           </div>
-    
-          <div className="input_grp">
-              <div className="input_wrap">
-                  <label>Username:</label>
-                  <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    placeholder="Enter a Username"
-                    required
-                    onChange={(e) => setUsername(e.target.value)}
-                  ></input>
-              </div>
- 
-              <div className="input_wrap">
-                  <label>Password:</label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    placeholder="Enter Password"
-                    required
-                    onChange={(e) => setPassword(e.target.value)}
-                  ></input>
-              </div>
- 
-          </div> 
          
           
          <div className="input_grp">
@@ -284,18 +272,32 @@ function SignUp(props) {
                   ></input>
               </div>
           </div>
-          
-        <div className="input_grp">
-           <div className="input_wrap">
-            {uploadButton ? <div>
-                <label>Upload a profile picture</label>
-                <input type="file" onChange={uploadFileHandler}></input>
-                <button onClick={(e) => setUploadButton(false)}>No profile picture</button>
-              </div> : <div className="uploaded"> Uploaded profile picture successfully </div>
-            }
-            {upLoading && <div>Uploading...</div>}
-          </div>
-          </div>
+
+          <div className="input_grp"> 
+              <div className="input_wrap">
+                  <label>Password:</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></input>
+              </div>
+              <div className="input_wrap">
+                  <label>Re-Enter Password:</label>
+                  <input
+                    type="password"
+                    id="repassword"
+                    name="repassword"
+                    placeholder="Re-Enter Password"
+                    required
+                    onChange={(e) => setRePassword(e.target.value)}
+                  ></input>
+              </div>
+          </div> 
+
 
  <div className="input_grp">
  

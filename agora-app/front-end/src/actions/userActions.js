@@ -10,13 +10,13 @@ import {
     USER_LOGOUT
 } from "../constants/userConstants";
 
-const signUp = (studentid, fname, sname, username, password, email,
+const signUp = (studentid, fname, sname, password, email,
     dob, gender, university, street_address, city, postcode, profilePicture ) => async (dispatch) => {
         dispatch({
-            type: USER_SIGNUP_REQUEST, payload: {studentid, fname, sname, username, password, email,
+            type: USER_SIGNUP_REQUEST, payload: {studentid, fname, sname, password, email,
                 dob, gender, university, street_address, city, postcode, profilePicture } });
     try {
-        const { data } = await Axios.post("/api/users/signup", {studentid, fname, sname, username, password, email,
+        const { data } = await Axios.post("/api/users/signup", {studentid, fname, sname, password, email,
             dob, gender, university, street_address, city, postcode, profilePicture });
         dispatch({type:USER_SIGNUP_SUCCESS, payload: data});
     }catch(error){

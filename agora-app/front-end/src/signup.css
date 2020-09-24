@@ -29,22 +29,14 @@
 	 
 }
  
-.sign-up-logo {
-  margin-top: 2px;
-  max-height: 4.5rem;
-  width: 50px;
-  justify-content: space-between;
-  display:inline-block; 
-  float: left;
+
+.form-heading {
+	display: flex;
 }
- 
 
-.form-heading > span {
-display: inline-block;
-justify-content: space-around;
-margin-left: 3rem;
-
- 
+.form-heading img {
+	min-width: 4rem;
+	padding-bottom: 0.5rem;
 }
  
 .registration_form{
@@ -85,6 +77,12 @@ h2{
 	display: block;
 }
  
+.profilepic_grp {
+	margin-bottom: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items:flex-start;
+}
 
  
 .form_wrap .input_wrap label{
@@ -113,6 +111,22 @@ h2{
 }
  
 .form_wrap  input[type="text"]:focus{
+	border-color: #ebd0ce;
+}
+
+.form_wrap .input_grp  input[type="password"]{
+	width: 180px;
+}
+ 
+.form_wrap  input[type="password"]{
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+}
+ 
+.form_wrap  input[type="password"]:focus{
 	border-color: #ebd0ce;
 }
  
