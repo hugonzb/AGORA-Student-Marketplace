@@ -65,15 +65,20 @@ function Profile(props) {
           <div className="profileContainer">
             PROFILE
             <br></br>
-            <img src={profilePicture} alt="profile" height="150" length="100"
-            border-radius="25px" border="2px solid black"/>
+            <img
+              src={profilePicture}
+              alt="profile"
+              height="150"
+              length="100"
+              border-radius="25px"
+              border="2px solid black"
+            />
             <h2>
               {" "}
               <label for="name" value={name}>
                 {userInfo.fname} {userInfo.sname}
               </label>
             </h2>
-
             <div className="profile-contents">
               <form className="profile-form">
                 <label for="username" value={sellerId}>
@@ -97,6 +102,13 @@ function Profile(props) {
                 </label>
                 <br></br>
               </form>
+              <div className="edit-profile">
+                <Link to={"/account/editprofile/" + userInfo.studentid}>
+                  <button type="button" className="edit-profile-button">
+                    Edit Profile
+                  </button>
+                </Link>
+              </div>
               <button type="button" className="logout" onClick={handleLogout}>
                 LOGOUT
               </button>
