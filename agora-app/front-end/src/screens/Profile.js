@@ -14,6 +14,7 @@ function Profile(props) {
   const [email, setEmail] = useState("");
   const [university, setUniversity] = useState("");
   const [city, setCity] = useState("");
+  const [created, setCreated] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const [sellerId] = useState(userInfo.studentid);
@@ -49,6 +50,7 @@ function Profile(props) {
       setUniversity(userInfo.university);
       setCity(userInfo.city);
       setProfilePicture(userInfo.profilePicture);
+      setCreated(new Date(userInfo.created).toString().substring(15,0));
     }
     dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
@@ -93,6 +95,10 @@ function Profile(props) {
                 <br></br>
                 <label for="city" value={city}>
                   City: {userInfo.city}
+                </label>
+                <br></br>
+                <label for="created" value={created}>
+                  Member since: {created}
                 </label>
                 <br></br>
               </form>

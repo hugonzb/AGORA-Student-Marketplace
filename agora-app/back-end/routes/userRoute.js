@@ -45,6 +45,7 @@ router.post("/signin", async (req, res) => {
       university: signinUser.university,
       profilePicture: signinUser.profilePicture,
       city: signinUser.city,
+      created: signinUser.createdAt,
       token: getToken(signinUser),
     });
   } else {
