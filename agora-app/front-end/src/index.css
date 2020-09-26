@@ -274,7 +274,6 @@ ul li a {
   width: 30rem;
   border: 1px solid rgb(134, 134, 134);
   border-radius: 0.5rem;
-  max-height: 17rem;
   justify-content: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -282,7 +281,7 @@ ul li a {
 }
 
 .view-listing-image img {
-  width: 22rem;
+  max-height: 16rem;
   border: 0px;
 }
 

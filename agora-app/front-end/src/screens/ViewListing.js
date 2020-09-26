@@ -38,7 +38,7 @@ function ViewListing(props) {
 	error? <div className="error"> {error} - Make sure you are running the server to fetch data ;) </div> :
 			<div className="view-listing-container">
 					<div className="view-listing-image">
-						<img className="listing-image" src={listing.image} alt="listing"></img>
+						<img src={listing.image} alt="listing"></img>
 					</div>	 
 					<div className="view-listing-actions">
 						<div className="view-listing-title">
