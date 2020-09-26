@@ -12,7 +12,6 @@ function Profile(props) {
   const [category] = useState("");
   const [location] = useState("");
   const [email, setEmail] = useState("");
-  const [username, setUsername] = useState("");
   const [university, setUniversity] = useState("");
   const [city, setCity] = useState("");
   const userSignin = useSelector((state) => state.userSignin);
@@ -47,7 +46,6 @@ function Profile(props) {
     if (userInfo) {
       setName(userInfo.fname);
       setEmail(userInfo.email);
-      setUsername(userInfo.username);
       setUniversity(userInfo.university);
       setCity(userInfo.city);
       setProfilePicture(userInfo.profilePicture);
@@ -87,10 +85,6 @@ function Profile(props) {
                 <br></br>
                 <label for="email" value={email}>
                   Email: {userInfo.email}
-                </label>
-                <br></br>
-                <label for="username" value={username}>
-                  Username: {userInfo.username}
                 </label>
                 <br></br>
                 <label for="university" value={university}>

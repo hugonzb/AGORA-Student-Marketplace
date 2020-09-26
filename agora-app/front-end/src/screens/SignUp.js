@@ -21,7 +21,7 @@ function SignUp(props) {
   const [street_address, setStreet] = useState("");
   const [city, setCity] = useState("");
   const [postcode, setPostcode] = useState("");
-  const [profilePicture, setProfilePicture] = useState("/profilePictures/defaultprofileicon.png");
+  const [profilePicture, setProfilePicture] = useState("/profilePictures/defaultprofileicon.jpg");
   const [upLoading, setUpLoading] = useState(false);
   const userSignup = useSelector((state) => state.userSignup);
   const { loading, userInfo, error } = userSignup;
@@ -189,7 +189,7 @@ function SignUp(props) {
                   </select>
               </div>
 
-                   <div className="input_wrap">
+              <div className="input_wrap">
               <label for="school">University: </label>
               <select className ="select-css"
                 id="school"
@@ -215,8 +215,6 @@ function SignUp(props) {
                 <option value="University of Otago">University of Otago</option>
                 
           </select>
-           
- 
               </div>
               </div>
                <br></br>
@@ -236,14 +234,16 @@ function SignUp(props) {
  
           <div className="input_wrap">
               <label>City:</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                placeholder="Enter city"
-                required
-                onChange={(e) => setCity(e.target.value)}
-              ></input>
+                  <select className="select-css"
+                    id="city"
+                    name="city"
+                    onChange={(e) => setCity(e.target.value)}
+                  >
+                    <option value="Dunedin">Dunedin</option>
+                    <option value="Auckland">Auckland</option>
+                    <option value="Wellington">Wellington</option>
+                    <option value="Christchurch">Christchurch</option>
+                  </select>
           </div> 
         </div>
           

@@ -27,7 +27,7 @@ function ViewListing(props) {
 	}, []);
 
 	const developmentMessage = (e) => {
-		alert("Sorry! Unfortunately this feature is currently in development")
+		alert("Unfortunately this feature is currently in development")
 	};
 	
 	return loading ? <div className="loading">            
