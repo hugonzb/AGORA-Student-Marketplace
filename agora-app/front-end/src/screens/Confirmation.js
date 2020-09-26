@@ -13,14 +13,14 @@ function Confirmation(props) {
     </div>
     <div class="check-mark-container">
       <div class="check-mark">
-        <img src="http://www.guerrillafitness.net/wp-content/themes/guerrilla/images/Free-Trial-Class/check-mark.png" alt="Image"/>
+        <img src="http://www.guerrillafitness.net/wp-content/themes/guerrilla/images/Free-Trial-Class/check-mark.png" alt="tick"/>
       </div>
     </div> 
     <div class="small-text">
       Your purchase was successful and you have been sent a confirmation email.
     </div> 
     <div class="small-text">
-      The buyer's contact details can be found in your purchase history tab.    </div> 
+      The buyer's contact details can be found in your purchase history tab. </div> 
     <div>
       <Link to={"/"}>
           <button class="button-confirmation">Home</button>   

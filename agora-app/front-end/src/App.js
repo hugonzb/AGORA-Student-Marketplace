@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { BrowserRouter, Route, Link, Router } from "react-router-dom";
+import { BrowserRouter, Route, Link } from "react-router-dom";
 import Home from "./screens/Home";
 import SignUp from "./screens/SignUp";
 import SignIn from "./screens/SignIn";
