@@ -1,58 +1,29 @@
 import React from "react";
-import profileicon from "../images/profileicon.png";
+import { Link } from "react-router-dom";
+
 
 
 function Confirmation(props) {
   return (
     
-    <div className="about-container">
-      <h1 className="heading">Agora Team</h1>
-
-      <div className="profiles">
-        <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile"/>
-          <h3 className="user-name">Name</h3>
-          <h5>Memeber Role</h5>
-          <p></p>
-        </div>
-
-        <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile"/>
-          <h3 className="user-name">Name</h3>
-          <h5>Memeber Role</h5>
-          <p></p>
-        </div>
-
-        <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile"/>
-          <h3 className="user-name">Name</h3>
-          <h5>Memeber Role</h5>
-          <p></p>
-        </div>
-
-        <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile"/>
-          <h3 className="user-name">Name</h3>
-          <h5>Memeber Role</h5>
-          <p></p>
-        </div>
-
-        <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile"/>
-          <h3 className="user-name">Name</h3>
-          <h5>Memeber Role</h5>
-          <p></p>
-        </div>
-
+    <div class="content">
+  <div class="page-content">
+    <div class="thank-you-big-text">
+      THANK YOU
+    </div>
+    <div class="check-mark-container">
+      <div class="check-mark">
+        <img src="http://www.guerrillafitness.net/wp-content/themes/guerrilla/images/Free-Trial-Class/check-mark.png" alt="Image"/>
       </div>
-      <form>
-       <div className="contact-comment"> <h2> Leave us a Comment </h2>	</div>
-        <input name="namess" type="text" className="feedback-input" placeholder="Name" />
-        <input name="emailss" type="text" className="feedback-input" placeholder="Email" />
-        <textarea name="texts" className="feedback-input" placeholder="Comment"></textarea>
-        <input type="submit" name="send it" value="Send" />
-      </form>
-    </div>  
+    </div> 
+    <div class="small-text">
+      Your Purchase with Agora was Succesful. A member of our Sales Department will contact you soon for Shipping Arrangment.
+    </div> 
+   <Link to={"/"}>
+  <button class="button-confirmation">Click here to go to Home Page</button>   
+   </Link>
+  </div> 
+</div> 
     
   
 

@@ -1411,4 +1411,83 @@ span.seller-contact {
   border-width: 1px 1px 0 1px;
 }
 
+/*Confirmation*/
+
+.content {
+  display: flex;
+  display: -webkit-flex;
+  background-color: border-white;
+  justify-content: center;
+  -webkit-justify-content: center;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.page-content {
+  background-color: white;
+  color: white;
+  flex-basis: 1200px;
+  -webkit-flex-basis: 1200px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.thank-you-big-text {
+  margin-top: 30px;
+  color: #000000; 
+  font-size: 80px;
+  text-align: center;
+}
+
+.check-mark-container {
+  display: flex;
+  display: -webkit-flex;
+}
+  .check-mark {
+    flex: auto; 
+    width: 100%;
+    position: relative;
+    padding: 20px 0 40px 0;
+  }
+ 
+ .check-mark img {
+      width: 100%; 
+      height: auto;
+      max-width: 100px;
+    }
+  
+
+
+.small-text {
+  color: #000000;
+  font-size: 16px;
+  padding: 0 10px 0 10px;
+  text-align: center;
+  font-weight: 900;
+}
+
+
+ .button-confirmation {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #3781a3;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-confirmation:hover {
+  background-color: #8dbdc9;
+}
 
