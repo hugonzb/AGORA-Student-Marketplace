@@ -355,7 +355,7 @@ ul li a {
 .view-listing-seller-message-text a{
   color: blue;
   text-decoration: none;
-}
+} 
 
 .buynow-button {
   background-color: #2cbd33;
@@ -414,9 +414,9 @@ ul li a {
 }
 
 .view-listing-user img {
-  max-width: 2.5rem;
+  max-width: 2.2rem;
+  max-height: 2rem;
   border-radius: 50%;
-  border: 1px solid black;
 }
 
 .view-listing-sellername {
