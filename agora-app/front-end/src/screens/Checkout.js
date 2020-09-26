@@ -174,9 +174,9 @@ import PropagateLoader from "react-spinners/PropagateLoader";
       <Link to={"/listing/"+ listing._id}>
         <input type="submit" value="Cancel" className="ch-btn"/>
       </Link>
-    
-		  <input type="submit" value="Proceed" className="ch-btn-c"/>
-     
+      <Link to={"/listingcomplete/confirmation"}>
+		    <input type="submit" value="Proceed" className="ch-btn-c"/>
+      </Link>
       
       </div>
     </div>

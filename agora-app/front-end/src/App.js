@@ -53,7 +53,7 @@ function App(props) {
           <Route path="/account/signup" component={SignUp} />
           <Route path="/account/signin" component={SignIn} />
           <Route path="/info/about" component={About} />
-          <Route path="/confirmation/" component={Confirmation} />
+          <Route path="/listingcomplete/confirmation" component={Confirmation} />
           <Route path="/checkout/:id" component={Checkout} />
           <Route path="/account/profile" component={Profile} />
           <Route path="/account/createlisting" component={CreateListing} />

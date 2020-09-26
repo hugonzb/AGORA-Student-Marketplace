@@ -1420,9 +1420,11 @@ span.seller-contact {
   -webkit-justify-content: center;
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
+  min-height: 43rem;
 }
 
 .page-content {
+  min-width: 100%;
   background-color: white;
   color: white;
   flex-basis: 1200px;
@@ -1473,8 +1475,8 @@ span.seller-contact {
 
 
  .button-confirmation {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 20px;
+  margin-top: 60px;
   background-color: #3781a3;
   border: none;
   color: white;
