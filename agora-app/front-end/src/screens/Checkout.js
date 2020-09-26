@@ -63,6 +63,7 @@ import PropagateLoader from "react-spinners/PropagateLoader";
             )
           );
         }
+        props.history.push("/listingcomplete/confirmation");
       };
         
         return loading ? <div className="loading">
@@ -174,10 +175,7 @@ import PropagateLoader from "react-spinners/PropagateLoader";
       <Link to={"/listing/"+ listing._id}>
         <input type="submit" value="Cancel" className="ch-btn"/>
       </Link>
-      <Link to={"/listingcomplete/confirmation"}>
-		    <input type="submit" value="Proceed" className="ch-btn-c"/>
-      </Link>
-      
+		  <input type="submit" value="Proceed" className="ch-btn-c"/>
       </div>
     </div>
       </form>

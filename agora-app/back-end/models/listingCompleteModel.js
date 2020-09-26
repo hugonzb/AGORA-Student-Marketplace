@@ -15,7 +15,9 @@ const listingCompleteSchema = new mongoose.Schema({
   buyerPostcode:  { type: String, required: false },
   sellerEmail:  { type: String, required: false },
   buyerEmail:  { type: String, required: false }
-});
+},{
+  timestamps: true,
+},{strict: true});
 
 const listingCompleteModel = mongoose.model("ListingComplete", listingCompleteSchema);
 
