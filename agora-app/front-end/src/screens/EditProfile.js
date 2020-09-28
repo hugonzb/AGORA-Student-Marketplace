@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { signUp } from "../actions/userActions";
-import { Link } from "react-router-dom";
 import "../signup.css";
 import agoralogo from "../images/agoralogo.png";
 import Axios from "axios";
 
 function EditProfile(props) {
+  const userSignin = useSelector((state) => state.userSignin);
+  const { userInfo, loading, error } = userSignin;
+
   const [fname, setFname] = useState("");
   const [studentid, setStudentid] = useState("");
   const [sname, setSname] = useState("");
@@ -23,8 +25,6 @@ function EditProfile(props) {
     "/profilePictures/defaultprofileicon.jpg"
   );
   const [upLoading, setUpLoading] = useState(false);
-  const userSignup = useSelector((state) => state.userSignup);
-  const { loading, userInfo, error } = userSignup;
   // This field will determine if the upload profile picture button is available
   // for the user to press or not.
   const [uploadButton, setUploadButton] = useState(true);
@@ -114,7 +114,9 @@ function EditProfile(props) {
 
           <span>
             <h4>Edit profile page:</h4>
-            <p> Student ID: </p>
+            <p> Student ID: {userInfo.studentid} </p>
+            <p> Username: {userInfo.username} </p>
+            {console.log(userInfo.studentid)}
           </span>
         </div>
         {loading}
@@ -137,7 +139,7 @@ function EditProfile(props) {
                 type="text"
                 id="sname"
                 name="sname"
-                placeholder="Enter Surname"
+                placeholder="sname"
                 required
                 onChange={(e) => setSname(e.target.value)}
               ></input>
