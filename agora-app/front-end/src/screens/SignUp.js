@@ -19,7 +19,7 @@ function SignUp(props) {
   const [gender, setGender] = useState("Male");
   const [university, setUniversity] = useState("University of Auckland");
   const [street_address, setStreet] = useState("");
-  const [city, setCity] = useState("");
+  const [city, setCity] = useState("Dunedin");
   const [postcode, setPostcode] = useState("");
   const [profilePicture, setProfilePicture] = useState("/profilePictures/defaultprofileicon.jpg");
   const [upLoading, setUpLoading] = useState(false);
@@ -108,7 +108,7 @@ function SignUp(props) {
                 
             </div>
             {loading}
-        {error && <div>Student ID or Email Address has been taken.</div>}
+        {error && <div>Student ID or Email has been taken</div>}
         {message}
         <form className="form_wrap" onSubmit={submitHandler}>
         <div className="profilepic_grp">
@@ -217,7 +217,7 @@ function SignUp(props) {
           </select>
               </div>
               </div>
-               <br></br>
+              <br></br>
  
           <div className="input_grp">
                <div className="input_wrap">
