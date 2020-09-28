@@ -16,6 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import UpdateListing from "./screens/UpdateListing";
 import History from "./screens/History";
+import EditProfile from "./screens/EditProfile";
 //import EditProfile from "./screens/EditProfile";
 
 function App(props) {
@@ -53,12 +54,16 @@ function App(props) {
           <Route path="/account/signup" component={SignUp} />
           <Route path="/account/signin" component={SignIn} />
           <Route path="/info/about" component={About} />
-          <Route path="/listingcomplete/confirmation" component={Confirmation} />
+          <Route
+            path="/listingcomplete/confirmation"
+            component={Confirmation}
+          />
           <Route path="/checkout/:id" component={Checkout} />
           <Route path="/account/profile" component={Profile} />
           <Route path="/account/createlisting" component={CreateListing} />
           <Route path="/account/updatelisting/:id" component={UpdateListing} />
           <Route path="/account/history" component={History} />
+          <Route path="/account/editprofile/:id" component={EditProfile} />
         </div>
       </div>
       <div className="footer">All Rights Reserved.</div>

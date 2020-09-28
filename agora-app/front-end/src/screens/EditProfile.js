@@ -127,7 +127,6 @@ function EditProfile(props) {
                 type="text"
                 id="fname"
                 name="fname"
-                //
                 required
                 onChange={(e) => setFname(e.target.value)}
               ></input>
@@ -319,7 +318,7 @@ function EditProfile(props) {
             <div class="input_wrap">
               <input
                 type="submit"
-                value="Register Now"
+                value="Update Profile"
                 class="submit_btn"
               ></input>
             </div>
