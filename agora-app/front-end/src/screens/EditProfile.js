@@ -97,6 +97,8 @@ function EditProfile(props) {
         profilePicture
       )
     );
+    alert("Successfully updated profile");
+    props.history.push("/account/profile");
   };
 
   return loading ? (
@@ -130,6 +132,7 @@ function EditProfile(props) {
                 id="fname"
                 name="fname"
                 required
+                defaultValue={userInfo.fname}
                 onChange={(e) => setFname(e.target.value)}
               ></input>
             </div>
@@ -140,6 +143,7 @@ function EditProfile(props) {
                 id="sname"
                 name="sname"
                 placeholder="sname"
+                defaultValue={userInfo.sname}
                 required
                 onChange={(e) => setSname(e.target.value)}
               ></input>
@@ -153,7 +157,7 @@ function EditProfile(props) {
                 type="text"
                 id="email"
                 name="email"
-                placeholder="Enter Email"
+                defaultValue={userInfo.email}
                 required
                 onChange={(e) => setEmail(e.target.value)}
               ></input>
@@ -165,7 +169,7 @@ function EditProfile(props) {
                 type="password"
                 id="password"
                 name="password"
-                placeholder="Enter Password"
+                placeholder="password not shown"
                 required
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
@@ -179,6 +183,7 @@ function EditProfile(props) {
                 className="select-css"
                 id="gender"
                 name="gender"
+                defaultValue={userInfo.gender}
                 onChange={(e) => setGender(e.target.value)}
               >
                 <option value="Male">Male</option>
@@ -193,7 +198,7 @@ function EditProfile(props) {
                 className="select-css"
                 id="school"
                 name="school"
-                placeholder="Select University"
+                defaultValue={userInfo.university}
                 onChange={(e) => setUniversity(e.target.value)}
               >
                 <option value="University of Auckland">
@@ -226,7 +231,7 @@ function EditProfile(props) {
                 type="text"
                 id="address"
                 name="address"
-                placeholder="Enter Address"
+                defaultValue={userInfo.street_address}
                 required
                 onChange={(e) => setStreet(e.target.value)}
               ></input>
@@ -238,7 +243,7 @@ function EditProfile(props) {
                 type="text"
                 id="city"
                 name="city"
-                placeholder="Enter city"
+                defaultValue={userInfo.city}
                 required
                 onChange={(e) => setCity(e.target.value)}
               ></input>
@@ -252,7 +257,7 @@ function EditProfile(props) {
                 type="text"
                 id="postcode"
                 name="postcode"
-                placeholder="Enter Postcode"
+                defaultValue={userInfo.postcode}
                 required
                 onChange={(e) => setPostcode(e.target.value)}
               ></input>
@@ -264,6 +269,7 @@ function EditProfile(props) {
                 type="date"
                 id="DOB"
                 name="DOB"
+                defaultValue={userInfo.dob}
                 required
                 onChange={(e) => setDOB(e.target.value)}
               ></input>

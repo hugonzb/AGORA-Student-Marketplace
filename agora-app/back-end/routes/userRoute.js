@@ -74,7 +74,7 @@ router.put("/:id", async (req, res) => {
         .send({ message: "User Updated", data: updateUser });
     }
   } else {
-    return res.status(500).send({ message: " Error in Updating User." });
+    return res.status(500).send({ message: "Error in Updating User." });
   }
 });
 
