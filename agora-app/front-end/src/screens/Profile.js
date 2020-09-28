@@ -50,7 +50,7 @@ function Profile(props) {
       setUniversity(userInfo.university);
       setCity(userInfo.city);
       setProfilePicture(userInfo.profilePicture);
-      setCreated(new Date(userInfo.created).toString().substring(15,0));
+      setCreated(new Date(userInfo.created).toString().substring(15, 0));
     }
     dispatch(listListings(searchWord, category, location, sellerId));
     return () => {};
@@ -64,15 +64,8 @@ function Profile(props) {
       {userInfo ? (
         <div className="mainContainer">
           <div className="profileContainer">
-            <div className="profile-heading">
-              PROFILE
-            </div>
-            <img
-              src={profilePicture}
-              alt="profile"
-              height="150"
-              length="100"
-            />
+            <div className="profile-heading">PROFILE</div>
+            <img src={profilePicture} alt="profile" height="150" length="100" />
             <h2>
               {" "}
               <label for="name" value={name}>
@@ -115,15 +108,11 @@ function Profile(props) {
             </div>
           </div>
           <div className="listingsContainer">
-            <div className="profile-heading">
-              ACTIVE LISTINGS
-            </div>
+            <div className="profile-heading">ACTIVE LISTINGS</div>
             {loading ? (
               <div className="loading">
-                <PropagateLoader
-                  size={20}
-                  color={"#123abc"}
-                /></div>
+                <PropagateLoader size={20} color={"#123abc"} />
+              </div>
             ) : error ? (
               <div className="error">
                 {" "}
@@ -155,16 +144,6 @@ function Profile(props) {
                           <div className="delete-listing"></div>
                         </Link>
                       </div>
-                      <div className="update-listing">
-                        <Link to={"/account/updatelisting/" + listing._id}>
-                          <button
-                            type="button"
-                            className="update-listing-button"
-                          >
-                            update
-                          </button>
-                        </Link>
-                      </div>
                       <button
                         type="button"
                         className="delete-button"
@@ -186,10 +165,8 @@ function Profile(props) {
             )}
           </div>
           <div className="watchlistContainer">
-              <div className="profile-heading">
-                WATCHLIST
-              </div>
-            </div>
+            <div className="profile-heading">WATCHLIST</div>
+          </div>
         </div>
       ) : (
         <div>
