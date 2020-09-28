@@ -118,7 +118,7 @@ const updateUser = (
     },
   });
   try {
-    const { data } = await axios.put("/api/users/" + studentid, {
+    const { data } = await Axios.put("/api/users/" + studentid, {
       studentid,
       fname,
       sname,
