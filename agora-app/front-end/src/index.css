@@ -1037,7 +1037,12 @@ textarea {
 }
 
 .error {
+  display: flex;
   min-height: 43.5rem;
+  text-align: center;
+  justify-content: center;
+  padding: 10rem;
+  font-weight: bold;
 }
 
 /* contact page */

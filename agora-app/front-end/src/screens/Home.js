@@ -92,8 +92,7 @@ function Home(props) {
           </div>
         ) : error ? (
           <div className="error">
-            {" "}
-            {error} - Make sure you are running the server to fetch data ;)
+            There have been some unexpected server issues while fetching your request. Try again soon.
           </div>
         ) : listings.length > 0 ? (
           <div className="listings">
