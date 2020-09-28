@@ -54,8 +54,8 @@ router.post("/signin", async (req, res) => {
 
 //update user information
 router.put("/:id", async (req, res) => {
-  const id = req.params.id;
-  const user = await Listing.findOne({ studentid: id });
+  const userID = req.params.id;
+  const user = await Listing.findOne({ studentid: userID });
   if (user) {
     user.fname = req.params.fname;
     user.sname = req.params.sname;

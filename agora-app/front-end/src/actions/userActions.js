@@ -132,7 +132,7 @@ const updateUser = (
       postcode,
       profilePicture,
     });
-    dispatch({ type: USER_UPDATE_REQUEST, payload: data });
+    dispatch({ type: USER_UPDATE_SUCCESS, payload: data });
     console.log("dispatch succesfull log");
   } catch (error) {
     dispatch({ type: USER_UPDATE_FAIL, payload: error.message });
