@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed&family=Varela+Round&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Saira+Condensed&family=Varela+Round&display=swap");
 
 body {
   background-color: rgb(250, 250, 250);
@@ -76,7 +75,7 @@ ul li a {
 }
 
 .search {
-  min-height:3rem;
+  min-height: 3rem;
   display: flex;
   height: 2rem;
   align-items: center;
@@ -157,7 +156,6 @@ ul li a {
   width: 100%;
   justify-content: center;
   align-items: center;
-  
 }
 
 .home-filter form {
@@ -172,7 +170,7 @@ ul li a {
   border-bottom: 1px solid rgb(151, 151, 151);
   border-top: 1px solid rgb(151, 151, 151);
   border-radius: 0.5rem;
-  font-family: 'Saira Condensed', sans-serif;
+  font-family: "Saira Condensed", sans-serif;
   box-shadow: 0px 0px 1px 1px rgba(189, 189, 189, 0.61);
 }
 
@@ -251,7 +249,7 @@ ul li a {
   background-color: rgb(255, 198, 107);
   padding: 3px;
   box-shadow: 0px 0px 4px 0px rgb(255, 123, 0);
-  font-family: 'Saira Condensed', sans-serif;
+  font-family: "Saira Condensed", sans-serif;
   border-radius: 0.6rem;
   font-weight: 600;
   width: 100%;
@@ -334,7 +332,7 @@ ul li a {
   background-color: rgb(255, 198, 107);
   box-shadow: 0px 0px 4px 0px rgb(255, 123, 0);
   font-weight: bold;
-  font-family: 'Saira Condensed', sans-serif;
+  font-family: "Saira Condensed", sans-serif;
   font-size: 18px;
   padding: 1.3rem;
   border-radius: 0.9rem;
@@ -359,10 +357,10 @@ ul li a {
   margin: 2rem;
 }
 
-.view-listing-seller-message-text a{
+.view-listing-seller-message-text a {
   color: blue;
   text-decoration: none;
-} 
+}
 
 .buynow-button {
   background-color: #2cbd33;
@@ -633,16 +631,16 @@ label:after {
 }
 
 .signin-button {
-	width: 220px;
-	background: #ff7b00;
-	padding: 10px;
-	border: 0;
-	border-radius: 3px;
-	text-transform: uppercase;
-	letter-spacing: 3px;
-	cursor: pointer;
-	font-weight: 700;
-	margin-top: 20px;
+  width: 220px;
+  background: #ff7b00;
+  padding: 10px;
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 20px;
 }
 
 .signin-button:hover {
@@ -707,7 +705,6 @@ span.psw {
 }
 
 body {
- 
   font-family: "Poppins", sans-serif;
 }
 
@@ -814,58 +811,56 @@ body {
   }
 }
 
-.contact-comment{
+.contact-comment {
   color: #000000;
   margin-bottom: 10px;
 }
 
-
-
 .feedback-input {
-  color:rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
   font-family: Helvetica, Arial, sans-serif;
-  font-weight:500;
+  font-weight: 500;
   font-size: 18px;
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border-bottom-style:2px solid #000000;
+  border-bottom-style: 2px solid #000000;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
-  width:100%;
+  width: 100%;
   box-sizing: border-box;
-  outline:0;
+  outline: 0;
 }
 
-.feedback-input:focus { 
-   
+.feedback-input:focus {
   border: 2px solid #000000;
 }
 
 textarea {
   height: 150px;
   line-height: 150%;
-  resize:vertical;
+  resize: vertical;
 }
 
 [value="Send"] {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   width: 100%;
-  background:#6681cc;
-  border-radius:5px;
-  border:0;
-  cursor:pointer;
-  color:white;
-  font-size:24px;
-  padding-top:10px;
-  padding-bottom:10px;
+  background: #6681cc;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   transition: all 0.3s;
-  margin-top:-4px;
-  font-weight:700;
+  margin-top: -4px;
+  font-weight: 700;
 }
-[value="Send"]:hover { background:#89bde7; }
-
+[value="Send"]:hover {
+  background: #89bde7;
+}
 
 /* Profile */
 
@@ -884,6 +879,17 @@ textarea {
   justify-content: flex-end;
   padding: 5px;
   background-color: rgb(214, 8, 8);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.edit-profile-button {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+  background-color: rgb(54, 138, 32);
   color: white;
   border-radius: 0.5rem;
   cursor: pointer;
@@ -933,7 +939,7 @@ textarea {
   -webkit-border-radius: 0px;
 }
 
-.profileContainer img{
+.profileContainer img {
   border-radius: 50%;
   border: 1px solid rgb(0, 0, 0);
   margin-bottom: 1rem;
@@ -1149,11 +1155,10 @@ padding-left: 1rem;
 }*/
 
 /*checkout*/
-*{
+* {
   box-sizing: border-box;
- 
 }
- 
+
 .listing-submit-buttons {
   display: flex;
   justify-content: center;
@@ -1161,64 +1166,64 @@ padding-left: 1rem;
   width: 100%;
   flex-direction: column;
 }
- 
-.checkout-container{
+
+.checkout-container {
   height: 100%;
 }
- 
-.checkout-heading{
+
+.checkout-heading {
   margin-top: 25px;
   margin-bottom: 25px;
   margin-left: 25px;
 }
- 
+
 .ch-row {
-  display: -ms-flexbox; 
+  display: -ms-flexbox;
   display: flex;
   flex-direction: row;
 }
- 
+
 .ch-row2 {
-  display: -ms-flexbox; 
+  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap; 
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
- 
+
 .col-25 {
-  -ms-flex: 25%; 
+  -ms-flex: 25%;
   flex: 25%;
 }
- 
+
 .col-50 {
-  -ms-flex: 50%; 
+  -ms-flex: 50%;
   flex: 50%;
   width: 100%;
 }
- 
+
 .col-60 {
-  -ms-flex: 50%; 
+  -ms-flex: 50%;
   flex: 50%;
   padding-left: 1rem;
 }
- 
+
 .col-70 {
-  -ms-flex: 50%; 
+  -ms-flex: 50%;
   flex: 50%;
   padding-right: 1rem;
 }
- 
+
 .col-75 {
-  -ms-flex: 75%; 
+  -ms-flex: 75%;
   flex: 75%;
 }
- 
+
 .col-25,
 .col-50,
 .col-75 {
   padding: 0 16px;
 }
- 
+
 .ch-container {
   background-color: #f2f2f2;
   padding: 5px 20px 15px 20px;
@@ -1228,7 +1233,7 @@ padding-left: 1rem;
   margin-bottom: 1rem;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
@@ -1261,7 +1266,7 @@ label {
   margin-top: 10px;
 }
 
-.ch-btn-c{
+.ch-btn-c {
   background-color: #4ec74a;
   color: white;
   padding: 12px;
@@ -1272,7 +1277,6 @@ label {
   border-radius: 3px;
   cursor: pointer;
   font-size: 17px;
-
 }
 .ch-btn:hover {
   background-color: #7e3f3f;
@@ -1282,7 +1286,7 @@ label {
 }
 
 a {
-  color: #2196F3;
+  color: #2196f3;
 }
 
 hr {
@@ -1321,7 +1325,7 @@ span.seller-contact {
   background-color: rgb(250, 250, 250);
 }
 
-.checkout-listing-image{
+.checkout-listing-image {
   width: 90%;
   max-width: 15rem;
   max-height: 15rem;
@@ -1356,7 +1360,6 @@ span.seller-contact {
   font-weight: bold;
 }
 
-
 /* Responsive layout */
 @media (max-width: 800px) {
   .col-25 {
@@ -1369,7 +1372,7 @@ span.seller-contact {
 
   .col-60 {
     padding-left: 0;
-  } 
+  }
 }
 
 @media (max-width: 1000px) {
@@ -1377,16 +1380,16 @@ span.seller-contact {
     flex-direction: column-reverse;
   }
 
-  .checkout-listing-info{
+  .checkout-listing-info {
     min-height: 12rem;
     padding-bottom: 3rem;
   }
 
-  .checkout-listing-image-container{
+  .checkout-listing-image-container {
     margin-top: 0rem;
     margin-bottom: 0rem;
   }
-  .checkout-listing-image{
+  .checkout-listing-image {
     margin-top: 0rem;
   }
 
@@ -1397,17 +1400,18 @@ span.seller-contact {
 
 /*History Page*/
 
-.history-wrapper{
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	justify-content: space-around; 
+.history-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  justify-content: space-around;
 }
 
-.tab-list {  border-bottom: 1px solid #ccc;
+.tab-list {
+  border-bottom: 1px solid #ccc;
   padding-left: 0;
 }
 
@@ -1455,7 +1459,7 @@ span.seller-contact {
 
 .thank-you-big-text {
   margin-top: 30px;
-  color: #000000; 
+  color: #000000;
   font-size: 80px;
   text-align: center;
 }
@@ -1464,20 +1468,18 @@ span.seller-contact {
   display: flex;
   display: -webkit-flex;
 }
-  .check-mark {
-    flex: auto; 
-    width: 100%;
-    position: relative;
-    padding: 20px 0 40px 0;
-  }
- 
- .check-mark img {
-      width: 100%; 
-      height: auto;
-      max-width: 100px;
-    }
-  
+.check-mark {
+  flex: auto;
+  width: 100%;
+  position: relative;
+  padding: 20px 0 40px 0;
+}
 
+.check-mark img {
+  width: 100%;
+  height: auto;
+  max-width: 100px;
+}
 
 .small-text {
   color: #000000;
@@ -1487,8 +1489,7 @@ span.seller-contact {
   font-weight: 900;
 }
 
-
- .button-confirmation {
+.button-confirmation {
   margin: 20px;
   margin-top: 60px;
   background-color: #3781a3;
@@ -1505,4 +1506,3 @@ span.seller-contact {
 .button-confirmation:hover {
   background-color: #8dbdc9;
 }
-
