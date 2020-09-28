@@ -35,9 +35,7 @@ function EditProfile(props) {
       setFname(userInfo.fname);
       setSname(userInfo.sname);
       setStudentid(userInfo.studentid);
-      setPassword(userInfo.password);
       setEmail(userInfo.email);
-      setDOB(userInfo.dob);
       setGender(userInfo.gender);
       setUniversity(userInfo.university);
       setStreet(userInfo.street_address);
@@ -83,9 +81,7 @@ function EditProfile(props) {
         studentid,
         fname,
         sname,
-        password,
         email,
-        dob,
         gender,
         university,
         street_address,
@@ -160,20 +156,6 @@ function EditProfile(props) {
             </div>
 
             <div className="input_wrap">
-              <label>Password:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                placeholder="password not shown"
-                required
-                onChange={(e) => setPassword(e.target.value)}
-              ></input>
-            </div>
-          </div>
-
-          <div className="input_grp">
-            <div className="input_wrap">
               <label for="gender">Choose a Gender: </label>
               <select
                 className="select-css"
@@ -187,7 +169,9 @@ function EditProfile(props) {
                 <option value="Other">Other</option>
               </select>
             </div>
+          </div>
 
+          <div className="input_grp">
             <div className="input_wrap">
               <label for="school">University: </label>
               <select
@@ -217,10 +201,6 @@ function EditProfile(props) {
                 <option value="University of Otago">University of Otago</option>
               </select>
             </div>
-          </div>
-          <br></br>
-
-          <div className="input_grp">
             <div className="input_wrap">
               <label>Address:</label>
               <input
@@ -232,7 +212,10 @@ function EditProfile(props) {
                 onChange={(e) => setStreet(e.target.value)}
               ></input>
             </div>
+          </div>
+          <br></br>
 
+          <div className="input_grp">
             <div className="input_wrap">
               <label>City:</label>
               <input
@@ -244,9 +227,7 @@ function EditProfile(props) {
                 onChange={(e) => setCity(e.target.value)}
               ></input>
             </div>
-          </div>
 
-          <div className="input_grp">
             <div className="input_wrap">
               <label>Post Code:</label>
               <input
@@ -256,18 +237,6 @@ function EditProfile(props) {
                 defaultValue={userInfo.postcode}
                 required
                 onChange={(e) => setPostcode(e.target.value)}
-              ></input>
-            </div>
-
-            <div className="input_wrap">
-              <label>Date of Birth:</label>
-              <input
-                type="date"
-                id="DOB"
-                name="DOB"
-                defaultValue={userInfo.dob}
-                required
-                onChange={(e) => setDOB(e.target.value)}
               ></input>
             </div>
           </div>
