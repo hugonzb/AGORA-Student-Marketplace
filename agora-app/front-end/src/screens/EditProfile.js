@@ -12,7 +12,6 @@ function EditProfile(props) {
   const [fname, setFname] = useState("");
   const [studentid, setStudentid] = useState("");
   const [sname, setSname] = useState("");
-  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [dob, setDOB] = useState("");
@@ -36,7 +35,6 @@ function EditProfile(props) {
       setFname(userInfo.fname);
       setSname(userInfo.sname);
       setStudentid(userInfo.studentid);
-      setUsername(userInfo.username);
       setPassword(userInfo.password);
       setEmail(userInfo.email);
       setDOB(userInfo.dob);
@@ -85,7 +83,6 @@ function EditProfile(props) {
         studentid,
         fname,
         sname,
-        username,
         password,
         email,
         dob,
@@ -117,7 +114,6 @@ function EditProfile(props) {
           <span>
             <h4>Edit profile page:</h4>
             <p> Student ID: {userInfo.studentid} </p>
-            <p> Username: {userInfo.username} </p>
             {console.log(userInfo.studentid)}
           </span>
         </div>
