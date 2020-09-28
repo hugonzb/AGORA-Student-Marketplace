@@ -146,18 +146,6 @@ function EditProfile(props) {
 
           <div className="input_grp">
             <div className="input_wrap">
-              <label>Student ID:</label>
-              <input
-                type="text"
-                id="studentid"
-                name="studentid"
-                placeholder="Enter Student-ID"
-                required
-                onChange={(e) => setStudentid(e.target.value)}
-              ></input>
-            </div>
-
-            <div className="input_wrap">
               <label>Email:</label>
               <input
                 type="text"
@@ -166,20 +154,6 @@ function EditProfile(props) {
                 placeholder="Enter Email"
                 required
                 onChange={(e) => setEmail(e.target.value)}
-              ></input>
-            </div>
-          </div>
-
-          <div className="input_grp">
-            <div className="input_wrap">
-              <label>Username:</label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                placeholder="Enter a Username"
-                required
-                onChange={(e) => setUsername(e.target.value)}
               ></input>
             </div>
 
