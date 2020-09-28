@@ -60,6 +60,12 @@ router.put("/:id", async (req, res) => {
     user.fname = req.params.fname;
     user.sname = req.params.sname;
     user.password = req.params.password;
+    user.email = req.params.email;
+    user.gender = req.params.gender;
+    user.university = req.params.university;
+    user.street_address = req.params.street_address;
+    user.city = req.params.city;
+    user.postcode = req.params.postcode;
 
     const updateUser = await user.save();
     if (updateUser) {
