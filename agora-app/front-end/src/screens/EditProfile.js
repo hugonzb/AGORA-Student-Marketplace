@@ -12,9 +12,7 @@ function EditProfile(props) {
   const [fname, setFname] = useState("");
   const [studentid, setStudentid] = useState("");
   const [sname, setSname] = useState("");
-  const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const [dob, setDOB] = useState("");
   const [gender, setGender] = useState("Male");
   const [university, setUniversity] = useState("University of Auckland");
   const [street_address, setStreet] = useState("");
@@ -156,7 +154,7 @@ function EditProfile(props) {
             </div>
 
             <div className="input_wrap">
-              <label for="gender">Choose a Gender: </label>
+              <label for="gender">Gender: </label>
               <select
                 className="select-css"
                 id="gender"
