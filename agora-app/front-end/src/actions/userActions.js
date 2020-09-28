@@ -8,6 +8,9 @@ import {
     USER_SIGNIN_REQUEST, 
     USER_SIGNIN_SUCCESS, 
     USER_LOGOUT
+    USER_UPDATE_REQUEST, 
+    USER_UPDATE_SUCCESS, 
+    USER_UPDATE_FAIL, 
 } from "../constants/userConstants";
 
 const signUp = (studentid, fname, sname, password, email,
