@@ -115,13 +115,8 @@ function CreateListing(props) {
   return (
     <div className="sign-up-container">
       <div className="createnewAccountContainer">
-        <h2>Hello {userInfo.fname}! Create a new Listing: </h2>
+        <h2>Hello {userInfo.fname}! Create a new Listing</h2>
         <br></br>
-        <label>Upload Image</label>
-          {uploading && <div>Uploading...</div>}
-          { uploadButton ?
-            <input type="file" onChange={uploadFileHandler}></input>
-          : <div className="uploaded"> Uploaded listing image successfully </div>}
         <form className="create-new-account-form" onSubmit={submitHandler}>
           <label>Listing Name: </label>
           <input
@@ -168,6 +163,11 @@ function CreateListing(props) {
           </select>
 
           <br></br>
+        <label>Upload Image</label>
+          {uploading && <div>Uploading...</div>}
+          { uploadButton ?
+            <input type="file" onChange={uploadFileHandler}></input>
+          : <div className="uploaded"> Uploaded listing image successfully </div>}
           <label>Price: </label>
           <input
             type="number"
