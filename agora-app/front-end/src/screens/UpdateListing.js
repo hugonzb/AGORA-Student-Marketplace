@@ -184,7 +184,8 @@ function UpdateListing(props) {
           <br></br>
           <label>Price: </label>
           <input
-            type="number"
+            type="number" 
+            step="0.01"
             id="price"
             name="price"
             defaultValue={listing.price}
