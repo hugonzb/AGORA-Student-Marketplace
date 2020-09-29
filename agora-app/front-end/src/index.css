@@ -285,6 +285,7 @@ ul li a {
 
 .view-listing-image img {
   max-height: 16rem;
+  max-width: 30rem;
   border: 0px;
 }
 
