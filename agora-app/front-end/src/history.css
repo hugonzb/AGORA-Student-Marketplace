@@ -138,16 +138,24 @@ table.table .avatar {
 	line-height: 10px;
 }
 .text-success {
-	color: #10c469;
+  color: #10c469;
+  font-size: 60px;
+  display: inline-table;
 }
 .text-info {
-	color: #62c9e8;
+  color: #62c9e8;
+  font-size: 60px;
+  display: inline-table;
 }
 .text-warning {
-	color: #FFC107;
+  color: #FFC107;
+  font-size: 60px;
+  display: inline-table;
 }
 .text-danger {
-	color: #ff5b5b;
+  color: #ff5b5b;
+  font-size: 60px;
+  display: inline-table;
 }
 .pagination {
 	float: right;
