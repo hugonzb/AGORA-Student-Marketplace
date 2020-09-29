@@ -528,7 +528,6 @@ ul li a {
   text-decoration: none;
   display: inline-block;
   margin-bottom: 50px;
-  border: 2px solid #2b72c4;
 }
 .createnewAccountContainer {
   width: 100%;
@@ -556,7 +555,6 @@ textarea {
   margin: auto;
   margin-top: 5px;
   margin-bottom: 20px;
-  border: 2px solid #2b72c4;
   box-sizing: border-box;
   border-radius: 5px;
 }
