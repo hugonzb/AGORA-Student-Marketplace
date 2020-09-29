@@ -60,7 +60,6 @@ router.put("/:id", async (req, res) => {
     user.fname = req.body.fname;
     user.sname = req.body.sname;
     user.email = req.body.email;
-    user.gender = req.body.gender;
     user.university = req.body.university;
     user.street_address = req.body.street_address;
     user.city = req.body.city;
