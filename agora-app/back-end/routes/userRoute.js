@@ -57,14 +57,15 @@ router.put("/:id", async (req, res) => {
   const userID = req.params.id;
   const user = await User.findOne({ studentid: userID });
   if (user) {
-    user.fname = req.params.fname;
-    user.sname = req.params.sname;
-    user.email = req.params.email;
-    user.gender = req.params.gender;
-    user.university = req.params.university;
-    user.street_address = req.params.street_address;
-    user.city = req.params.city;
-    user.postcode = req.params.postcode;
+    user.fname = req.body.fname;
+    user.sname = req.body.sname;
+    user.email = req.body.email;
+    user.gender = req.body.gender;
+    user.university = req.body.university;
+    user.street_address = req.body.street_address;
+    user.city = req.body.city;
+    user.postcode = req.body.postcode;
+    user.profilePicture = req.body.profilePicture;
 
     const updateUser = await user.save();
     if (updateUser) {
