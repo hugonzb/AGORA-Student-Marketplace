@@ -172,6 +172,7 @@ function CreateListing(props) {
           <label>Price: </label>
           <input
             type="number"
+            step="0.01"
             id="price"
             name="price"
             placeholder="$0.00"
