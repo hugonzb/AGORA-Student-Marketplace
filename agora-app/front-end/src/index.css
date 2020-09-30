@@ -40,7 +40,6 @@ ul li a {
   display: block;
 }
 
-
 /* App */
 
 .header {
@@ -501,6 +500,11 @@ ul li a {
 
 /* Sign up screen */
 
+.sign-up-logo {
+  max-width: 5rem;
+  max-height: 6rem;
+}
+
 .sign-up-container {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -559,7 +563,7 @@ textarea {
   border-radius: 5px;
 }
 
-input[type="file"]{
+input[type="file"] {
   border: none;
 }
 
