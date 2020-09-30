@@ -71,6 +71,11 @@ function EditProfile(props) {
       });
   };
 
+  const setNoProfile = (e) => {
+    setProfilePicture("/profilePictures/defaultprofileicon.jpg");
+    setUploadButton(false)
+  }
+
   /* This handler will run when the user clicks on the create account button */
   const submitHandler = (e) => {
     e.preventDefault();
@@ -116,6 +121,25 @@ function EditProfile(props) {
         </div>
         {loading}
         {error && <div>Student ID or Email Address has been taken.</div>}
+        <div className="input_grp">
+            <div className="input_wrap">
+              {uploadButton ? (
+                <div>
+                  <label>Upload a profile picture</label>
+                  <input type="file" onChange={uploadFileHandler}></input>
+                  <button onClick={(e) => setNoProfile()}>
+                    No profile picture
+                  </button>
+                </div>
+              ) : (
+                <div className="uploaded">
+                  {" "}
+                  Uploaded profile picture successfully{" "}
+                </div>
+              )}
+              {upLoading && <div>Uploading...</div>}
+            </div>
+          </div>
         <form className="form_wrap" onSubmit={submitHandler}>
           <div className="input_grp">
             <div className="input_wrap">
@@ -239,26 +263,6 @@ function EditProfile(props) {
                 required
                 onChange={(e) => setPostcode(e.target.value)}
               ></input>
-            </div>
-          </div>
-
-          <div className="input_grp">
-            <div className="input_wrap">
-              {uploadButton ? (
-                <div>
-                  <label>Upload a profile picture</label>
-                  <input type="file" onChange={uploadFileHandler}></input>
-                  <button onClick={(e) => setUploadButton(false)}>
-                    No profile picture
-                  </button>
-                </div>
-              ) : (
-                <div className="uploaded">
-                  {" "}
-                  Uploaded profile picture successfully{" "}
-                </div>
-              )}
-              {upLoading && <div>Uploading...</div>}
             </div>
           </div>
 
