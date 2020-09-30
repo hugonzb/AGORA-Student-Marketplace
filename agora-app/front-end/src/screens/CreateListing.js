@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { createListing } from "../actions/listingActions";
 import Axios from "axios";
+import "../signup.css"; 
+import agoralogo from "../images/agoralogo.png";
+
 
 function CreateListing(props) {
   /* 
@@ -112,63 +116,105 @@ function CreateListing(props) {
     props.history.push("/");
   };
 
-  
   return (
-    <div className="sign-up-container">
-      <div className="createnewAccountContainer">
-        <h2>Hello {userInfo.fname}! Create a new Listing</h2>
-        <br></br>
-        <form className="create-new-account-form" onSubmit={submitHandler}>
-          <label>Listing Name: </label>
-          <input
-            type="text"
-            id="listingName"
-            name="listingName"
-            placeholder="Listing Name"
-            required
-            onChange={(e) => setName(e.target.value)}
-          ></input>
-          <br></br>
-          <label>Listing Description: </label>
-          <textarea
-            type="text"
-            id="listingDescription"
-            name="listingDescription"
-            placeholder="Your Description Here."
-            rows="5"
-            cols="40"
-            required
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
-          <br></br>
-          <label>Category: </label>
-          <select id="categories" onChange={(e) => setCategory(e.target.value)}>
-            <option value="Antiques">Antiques</option>
-            <option value="University Textbooks">University Textbooks</option>
-            <option value="Books">Books</option>
-            <option value="Clothing">Clothing</option>
-            <option value="Sports Clothing">Sports Clothing</option>
-            <option value="Shoes">Shoes</option>
-            <option value="Jewellery and Watches">Jewellery and Watches</option>
-            <option value="Accessories">Accessories</option>
-            <option value="Computers">Computers</option>
-            <option value="Mobile Phones">Mobile Phones</option>
-            <option value="Electronics">Electronics</option>
-            <option value="Gaming consoles">Gaming consoles</option>
-            <option value="Console and PC games">Console and PC games</option>
-            <option value="Health and Beauty">Health and Beauty</option>
-            <option value="Furniture">Furniture</option>
-            <option value="Lamps and Lighting">Lamps and Lighting</option>
-            <option value="Toys">Toys</option>
-            <option value="Sports Equipments">Sports Equipments</option>
-          </select>
+   
+      
+      <div className="wrapper">
+      <div className="registration_form">
+        <div className="form-heading">
+                   <img src={agoralogo} 
+                   className="sign-up-logo" alt=""/>
+               
+                   <span> 
+			       <h2>Registration Form</h2> 
+                   Already have an account?  
+                   <h4><Link to="/account/signin">Sign in</Link></h4>
+                   </span>
 
-          <br></br>
+                   </div>
+                   
+        <form className="form_wrap" onSubmit={submitHandler}>
+
+        <div className= "input_grp">
+            <div className= "input_wrap">
+                <label>Listing Name: </label>
+                    
+                    
+                      <input
+                        type="text"
+                        id="listingName"
+                        name="listingName"
+                        placeholder="Listing Name"
+                        required
+                        onChange={(e) => setName(e.target.value)}
+                      ></input>
+                    </div>
+            </div>
+
+              <br></br>
+
+        <div className= "input_grp">
+            <div className= "input_wrap">
+                  <label>Listing Description: </label>
+                      <textarea
+                        type="text"
+                        id="listingDescription"
+                        name="listingDescription"
+                        placeholder="Your Description Here."
+                        rows="5"
+                        cols="40"
+                        required
+                        onChange={(e) => setDescription(e.target.value)}
+                      ></textarea>
+                  </div>
+            </div>
+
+            <br></br>
+
+        <div className= "rowListing">
+          <div className= "input_wrap">
+            <label>Category: </label>
+       
+                  <select id="categories" onChange={(e) => setCategory(e.target.value)}>
+                    <option value="Antiques">Antiques</option>
+                    <option value="University Textbooks">University Textbooks</option>
+                    <option value="Books">Books</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Sports Clothing">Sports Clothing</option>
+                    <option value="Shoes">Shoes</option>
+                    <option value="Jewellery and Watches">Jewellery and Watches</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Computers">Computers</option>
+                    <option value="Mobile Phones">Mobile Phones</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Gaming consoles">Gaming consoles</option>
+                    <option value="Console and PC games">Console and PC games</option>
+                    <option value="Health and Beauty">Health and Beauty</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Lamps and Lighting">Lamps and Lighting</option>
+                    <option value="Toys">Toys</option>
+                    <option value="Sports Equipments">Sports Equipments</option>
+                  </select>
+              </div>
+          </div>
+
+            <br></br>
+
+        <div className= "rowListing">
+            <div className= "input_wrap">
         <label>Upload Image</label>
+       
           {uploading && <div>Uploading...</div>}
           { uploadButton ?
             <input type="file" onChange={uploadFileHandler}></input>
           : <div className="uploaded"> Uploaded listing image successfully </div>}
+          </div>
+          </div>
+
+            <br></br>
+
+          <div className= "input_grp">
+            <div className= "input_wrap">
           <label>Price: </label>
           <input
             type="number"
@@ -179,8 +225,15 @@ function CreateListing(props) {
             required
             onChange={(e) => setPrice(e.target.value)}
           ></input>
-          <br></br>
+          </div>
+          </div>
+
+            <br></br>
+
+          <div className= "rowListing">
+            <div className= "input_wrap">
           <label>Product brand: </label>
+      
           <input
             type="text"
             id="brand"
@@ -188,17 +241,33 @@ function CreateListing(props) {
             placeholder="brand"
             onChange={(e) => setBrand(e.target.value)}
           ></input>
+          </div>
+          </div>
+
+            <br></br>
+
+          <div className= "rowListing">
+            <div className= "input_wrap">
           <label>Condition: </label>
+        
           <select id="condition" onChange={(e) => setCondition(e.target.value)}>
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
+          </div>
+        
+          <br></br>
+          
           <button type="submit" value="Submit">
             Create Listing
           </button>
+
+          </div>
+
         </form>
       </div>
-    </div>
+      </div>
+  
   );
 }
 
