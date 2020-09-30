@@ -26,6 +26,7 @@ function Profile(props) {
   // This runs when the logout button is pressed
   const handleLogout = () => {
     dispatch(logout());
+    alert("Successfully logged out");
     // This line redirects the user to the sign in screen
     // when they press logout
     props.history.push("/account/signin");

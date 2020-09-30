@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { updateUser } from "../actions/userActions";
+import { updateUser, logout } from "../actions/userActions";
 import "../signup.css";
 import agoralogo from "../images/agoralogo.png";
 import Axios from "axios";
@@ -88,8 +88,11 @@ function EditProfile(props) {
         profilePicture
       )
     );
-    alert("Successfully updated profile");
-    props.history.push("/account/profile");
+    dispatch(logout());
+    alert(
+      "Successfully updated profile. Please logging again to view changes."
+    );
+    props.history.push("/account/signin");
   };
 
   return loading ? (
