@@ -82,7 +82,7 @@ function UpdateListing(props) {
         console.log("Caught error while uploading: " + err);
         setUploading(false);
       });
-  }
+  };
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -115,46 +115,55 @@ function UpdateListing(props) {
       {error} - Make sure you are running the server to fetch data{" "}
     </div>
   ) : (
-    <div className="sign-up-container">
-      <div className="createnewAccountContainer">
-        <h2>Hello {userInfo.fname}! update your listing: </h2>
-        <br></br>
+    <div className="wrapper">
+      <div className="registration_form">
+        <div className="form_header">
+          <h2>Hello {userInfo.fname}! update your listing: </h2>
+          <br></br>
+        </div>
         <label>Upload Image</label>
-          {uploading && <div>Uploading...</div>}
-          { uploadButton ?
-                              <div>
-                              <div className="listing-image">
-                                <img
-                                  className="listing-image"
-                                  src={listing.image}
-                                  alt="listing"
-                                ></img>
-                              </div>
-            <input type="file" onChange={uploadFileHandler}></input></div>
-          : <div> Uploaded image successfully </div>}
-        <form className="create-new-account-form" onSubmit={submitHandler}>
-          <label>Listing Name: </label>
-          <input
-            type="text"
-            id="listingName"
-            name="listingName"
-            defaultValue={listing.name}
-            required
-            onChange={(e) => setName(e.target.value)}
-          ></input>
-          <br></br>
-          <label>Listing Description: </label>
-          <textarea
-            type="text"
-            id="listingDescription"
-            name="listingDescription"
-            defaultValue={listing.description}
-            rows="5"
-            cols="40"
-            required
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
-          <br></br>
+        {uploading && <div>Uploading...</div>}
+        {uploadButton ? (
+          <div>
+            <div className="listing-image">
+              <img
+                className="listing-image"
+                src={listing.image}
+                alt="listing"
+              ></img>
+            </div>
+            <input type="file" onChange={uploadFileHandler}></input>
+          </div>
+        ) : (
+          <div> Uploaded image successfully </div>
+        )}
+        <form className="form_wrap" onSubmit={submitHandler}>
+          <div className="input_grp">
+            <div className="input_wrap">
+              <label>Listing Name: </label>
+              <input
+                type="text"
+                id="listingName"
+                name="listingName"
+                defaultValue={listing.name}
+                required
+                onChange={(e) => setName(e.target.value)}
+              ></input>
+            </div>
+            <div className="input_wrap">
+              <label>Listing Description: </label>
+              <textarea
+                type="text"
+                id="listingDescription"
+                name="listingDescription"
+                defaultValue={listing.description}
+                rows="5"
+                cols="40"
+                required
+                onChange={(e) => setDescription(e.target.value)}
+              ></textarea>
+            </div>
+          </div>
           <label>Category: </label>
           <select
             id="categories"
@@ -184,7 +193,7 @@ function UpdateListing(props) {
           <br></br>
           <label>Price: </label>
           <input
-            type="number" 
+            type="number"
             step="0.01"
             id="price"
             name="price"
