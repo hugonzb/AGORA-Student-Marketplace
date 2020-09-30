@@ -50,7 +50,7 @@ function About(props) {
        <div className="contact-comment"> <h2> Leave us a Comment </h2>	</div>
         <input name="namess" type="text" className="feedback-input" placeholder="Name" />
         <input name="emailss" type="text" className="feedback-input" placeholder="Email" />
-        <textarea name="texts" className="feedback-input" placeholder="Comment"></textarea>
+        <textarea name="texts" className="feedback-input" placeholder="Comment" required></textarea>
         <input type="submit" name="send it" value="Send" />
       </form>
     </div>  
