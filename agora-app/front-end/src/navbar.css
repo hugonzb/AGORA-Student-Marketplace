@@ -119,6 +119,16 @@ transition:all 0.5s ease;
 padding-left: 18px;
 }
 
+select{
+    width: 150px; 
+    margin: 10px; 
+}
+
+select:focus{
+    min-width: 150px;
+    width: auto; 
+}
+
 /* responsive mode */
 
 @media screen and (min-width:930px){

@@ -300,7 +300,7 @@ function SignUp(props) {
 
  <div className="input_grp">
  
-          <div class="input_wrap">
+          <div className="input_wrap">
 					<input type="submit" value="Register Now" class="submit_btn"></input>
 		  </div>
  </div>

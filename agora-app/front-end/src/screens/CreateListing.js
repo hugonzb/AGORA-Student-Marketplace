@@ -118,157 +118,140 @@ function CreateListing(props) {
 
   return (
    
-      
       <div className="wrapper">
-      <div className="registration_form">
-        <div className="form-heading">
-                   <img src={agoralogo} 
-                   className="sign-up-logo" alt=""/>
+        <div className="registration_form">
+            <div className="form-heading">
+                       <img src={agoralogo} 
+                       className="sign-up-logo" alt=""/>
                
-                   <span> 
-			       <h2>Registration Form</h2> 
-                   Already have an account?  
-                   <h4><Link to="/account/signin">Sign in</Link></h4>
-                   </span>
-
-                   </div>
+                       <span> 
+			           <h2>Registration Form</h2> 
+                       Already have an account?  
+                       <h4><Link to="/account/signin">Sign in</Link></h4>
+                       </span>
+            </div>
                    
-        <form className="form_wrap" onSubmit={submitHandler}>
+                <form className="form_wrap" onSubmit={submitHandler}>
 
-        <div className= "input_grp">
-            <div className= "input_wrap">
-                <label>Listing Name: </label>
-                    
-                    
-                      <input
-                        type="text"
-                        id="listingName"
-                        name="listingName"
-                        placeholder="Listing Name"
-                        required
-                        onChange={(e) => setName(e.target.value)}
-                      ></input>
+                    <div className= "input_grp">
+                        <div className= "input_wrap">
+                            <label>Listing Name: </label>
+                                  <input
+                                    type="text"
+                                    id="listingName"
+                                    name="listingName"
+                                    placeholder="Listing Name"
+                                    required
+                                    onChange={(e) => setName(e.target.value)}
+                                  ></input>
+                        </div>
+
+                        <div className= "input_wrap">
+                            <label>Product brand: </label>
+                                <input
+                                   type="text"
+                                   id="brand"
+                                   name="brand"
+                                   placeholder="Product Brand"
+                                   onChange={(e) => setBrand(e.target.value)}
+                                 ></input>
+                        </div>
                     </div>
-            </div>
 
-              <br></br>
+                <div className= "input_grp">
+                    <div className= "input_wrap">
+                          <label>Listing Description: </label>
+                              <textarea
+                                type="text"
+                                id="listingDescription"
+                                name="listingDescription"
+                                placeholder="Your Description Here."
+                                rows="5"
+                                cols="50"
+                                required
+                                onChange={(e) => setDescription(e.target.value)}
+                              ></textarea>
+                    </div>
+                   
+                </div>
+                <div className="input_grp">
+                 <div className= "input_wrap">
+                      <label>Price: </label>
+                          <input
+                            type="number"
+                            step="0.01"
+                            id="price"
+                            name="price"
+                            placeholder="$0.00"
+                            required
+                            onChange={(e) => setPrice(e.target.value)}
+                          ></input>
+                    </div>
+                    </div>
+                                       
+                   <br></br> 
 
-        <div className= "input_grp">
-            <div className= "input_wrap">
-                  <label>Listing Description: </label>
-                      <textarea
-                        type="text"
-                        id="listingDescription"
-                        name="listingDescription"
-                        placeholder="Your Description Here."
-                        rows="5"
-                        cols="40"
-                        required
-                        onChange={(e) => setDescription(e.target.value)}
-                      ></textarea>
-                  </div>
-            </div>
-
-            <br></br>
-
-        <div className= "rowListing">
-          <div className= "input_wrap">
-            <label>Category: </label>
+                <div className= "input_grp">
+                    <div className= "input_wrap">
+                          <label>Category: </label>
        
-                  <select id="categories" onChange={(e) => setCategory(e.target.value)}>
-                    <option value="Antiques">Antiques</option>
-                    <option value="University Textbooks">University Textbooks</option>
-                    <option value="Books">Books</option>
-                    <option value="Clothing">Clothing</option>
-                    <option value="Sports Clothing">Sports Clothing</option>
-                    <option value="Shoes">Shoes</option>
-                    <option value="Jewellery and Watches">Jewellery and Watches</option>
-                    <option value="Accessories">Accessories</option>
-                    <option value="Computers">Computers</option>
-                    <option value="Mobile Phones">Mobile Phones</option>
-                    <option value="Electronics">Electronics</option>
-                    <option value="Gaming consoles">Gaming consoles</option>
-                    <option value="Console and PC games">Console and PC games</option>
-                    <option value="Health and Beauty">Health and Beauty</option>
-                    <option value="Furniture">Furniture</option>
-                    <option value="Lamps and Lighting">Lamps and Lighting</option>
-                    <option value="Toys">Toys</option>
-                    <option value="Sports Equipments">Sports Equipments</option>
-                  </select>
+                              <select id="categories" onChange={(e) => setCategory(e.target.value)}>
+                                <option value="Antiques">Antiques</option>
+                                <option value="University Textbooks">University Textbooks</option>
+                                <option value="Books">Books</option>
+                                <option value="Clothing">Clothing</option>
+                                <option value="Sports Clothing">Sports Clothing</option>
+                                <option value="Shoes">Shoes</option>
+                                <option value="Jewellery and Watches">Jewellery and Watches</option>
+                                <option value="Accessories">Accessories</option>
+                                <option value="Computers">Computers</option>
+                                <option value="Mobile Phones">Mobile Phones</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Gaming consoles">Gaming consoles</option>
+                                <option value="Console and PC games">Console and PC games</option>
+                                <option value="Health and Beauty">Health and Beauty</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Lamps and Lighting">Lamps and Lighting</option>
+                                <option value="Toys">Toys</option>
+                                <option value="Sports Equipments">Sports Equipments</option>
+                              </select>
+                    </div>
+
+                    <div className= "input_wrap">
+                    <div class="selectBox">
+                      <label>Condition: </label>
+        
+                          <select id="condition" onChange={(e) => setCondition(e.target.value)}>
+                           
+                            <option value="New">New</option>
+                            <option value="Used">Used</option>
+                          </select>
+                          </div> 
+                    </div>
+                </div>
+
+                <div className= "input grp">
+                    <div className= "input_wrap">
+                        <label>Upload Image</label>
+       
+                          {uploading && <div>Uploading...</div>}
+                          { uploadButton ?
+                            <input type="file" onChange={uploadFileHandler}></input>
+                          : <div className="uploaded"> Uploaded listing image successfully </div>}
+                    </div>
+                </div>        
+
+                <div className="input_grp">
+                    <div className="input_wrap">
+                       <input type ="submit" value="Create Listing" class="submit_btn"></input>
+                    </div>
+                </div>
+
+                </form>
               </div>
-          </div>
-
-            <br></br>
-
-        <div className= "rowListing">
-            <div className= "input_wrap">
-        <label>Upload Image</label>
-       
-          {uploading && <div>Uploading...</div>}
-          { uploadButton ?
-            <input type="file" onChange={uploadFileHandler}></input>
-          : <div className="uploaded"> Uploaded listing image successfully </div>}
-          </div>
-          </div>
-
-            <br></br>
-
-          <div className= "input_grp">
-            <div className= "input_wrap">
-          <label>Price: </label>
-          <input
-            type="number"
-            step="0.01"
-            id="price"
-            name="price"
-            placeholder="$0.00"
-            required
-            onChange={(e) => setPrice(e.target.value)}
-          ></input>
-          </div>
-          </div>
-
-            <br></br>
-
-          <div className= "rowListing">
-            <div className= "input_wrap">
-          <label>Product brand: </label>
-      
-          <input
-            type="text"
-            id="brand"
-            name="brand"
-            placeholder="brand"
-            onChange={(e) => setBrand(e.target.value)}
-          ></input>
-          </div>
-          </div>
-
-            <br></br>
-
-          <div className= "rowListing">
-            <div className= "input_wrap">
-          <label>Condition: </label>
-        
-          <select id="condition" onChange={(e) => setCondition(e.target.value)}>
-            <option value="New">New</option>
-            <option value="Used">Used</option>
-          </select>
-          </div>
-        
-          <br></br>
-          
-          <button type="submit" value="Submit">
-            Create Listing
-          </button>
-
-          </div>
-
-        </form>
-      </div>
-      </div>
+              </div>
   
-  );
+    );
 }
 
 export default CreateListing;
