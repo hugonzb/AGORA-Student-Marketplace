@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createListing } from "../actions/listingActions";
 import Axios from "axios";
+import "../createListing.css"; 
+
 
 function CreateListing(props) {
   /* 
@@ -112,64 +114,99 @@ function CreateListing(props) {
     props.history.push("/");
   };
 
-  
   return (
-    <div className="sign-up-container">
-      <div className="createnewAccountContainer">
+   
+
+      <div className="newListingContainer">
         <h2>Hello {userInfo.fname}! Create a new Listing</h2>
         <br></br>
+        
         <form className="create-new-account-form" onSubmit={submitHandler}>
-          <label>Listing Name: </label>
-          <input
-            type="text"
-            id="listingName"
-            name="listingName"
-            placeholder="Listing Name"
-            required
-            onChange={(e) => setName(e.target.value)}
-          ></input>
-          <br></br>
-          <label>Listing Description: </label>
-          <textarea
-            type="text"
-            id="listingDescription"
-            name="listingDescription"
-            placeholder="Your Description Here."
-            rows="5"
-            cols="40"
-            required
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
-          <br></br>
-          <label>Category: </label>
-          <select id="categories" onChange={(e) => setCategory(e.target.value)}>
-            <option value="Antiques">Antiques</option>
-            <option value="University Textbooks">University Textbooks</option>
-            <option value="Books">Books</option>
-            <option value="Clothing">Clothing</option>
-            <option value="Sports Clothing">Sports Clothing</option>
-            <option value="Shoes">Shoes</option>
-            <option value="Jewellery and Watches">Jewellery and Watches</option>
-            <option value="Accessories">Accessories</option>
-            <option value="Computers">Computers</option>
-            <option value="Mobile Phones">Mobile Phones</option>
-            <option value="Electronics">Electronics</option>
-            <option value="Gaming consoles">Gaming consoles</option>
-            <option value="Console and PC games">Console and PC games</option>
-            <option value="Health and Beauty">Health and Beauty</option>
-            <option value="Furniture">Furniture</option>
-            <option value="Lamps and Lighting">Lamps and Lighting</option>
-            <option value="Toys">Toys</option>
-            <option value="Sports Equipments">Sports Equipments</option>
-          </select>
 
-          <br></br>
+        <div className= "rowListing">
+            <div className= "col25">
+                <label>Listing Name: </label>
+                    <div className="col75">
+                    </div> 
+                      <input
+                        type="text"
+                        id="listingName"
+                        name="listingName"
+                        placeholder="Listing Name"
+                        required
+                        onChange={(e) => setName(e.target.value)}
+                      ></input>
+                    </div>
+            </div>
+
+              <br></br>
+
+        <div className= "rowListing">
+            <div className= "col25">
+                  <label>Listing Description: </label>
+                  </div>
+                  <div className= "col75"> 
+                      <textarea
+                        type="text"
+                        id="listingDescription"
+                        name="listingDescription"
+                        placeholder="Your Description Here."
+                        rows="5"
+                        cols="40"
+                        required
+                        onChange={(e) => setDescription(e.target.value)}
+                      ></textarea>
+                  </div>
+            </div>
+
+            <br></br>
+
+        <div className= "rowListing">
+          <div className= "col25">
+            <label>Category: </label>
+          </div>
+              <div className="col75">
+                  <select id="categories" onChange={(e) => setCategory(e.target.value)}>
+                    <option value="Antiques">Antiques</option>
+                    <option value="University Textbooks">University Textbooks</option>
+                    <option value="Books">Books</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Sports Clothing">Sports Clothing</option>
+                    <option value="Shoes">Shoes</option>
+                    <option value="Jewellery and Watches">Jewellery and Watches</option>
+                    <option value="Accessories">Accessories</option>
+                    <option value="Computers">Computers</option>
+                    <option value="Mobile Phones">Mobile Phones</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Gaming consoles">Gaming consoles</option>
+                    <option value="Console and PC games">Console and PC games</option>
+                    <option value="Health and Beauty">Health and Beauty</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Lamps and Lighting">Lamps and Lighting</option>
+                    <option value="Toys">Toys</option>
+                    <option value="Sports Equipments">Sports Equipments</option>
+                  </select>
+              </div>
+          </div>
+
+            <br></br>
+
+        <div className= "rowListing">
+            <div className= "col25">
         <label>Upload Image</label>
+        </div>
           {uploading && <div>Uploading...</div>}
           { uploadButton ?
             <input type="file" onChange={uploadFileHandler}></input>
           : <div className="uploaded"> Uploaded listing image successfully </div>}
+          </div>
+
+            <br></br>
+
+          <div className= "rowListing">
+            <div className= "col25">
           <label>Price: </label>
+            <div className= "col7">
           <input
             type="number"
             step="0.01"
@@ -179,8 +216,15 @@ function CreateListing(props) {
             required
             onChange={(e) => setPrice(e.target.value)}
           ></input>
-          <br></br>
+          </div>
+          </div>
+
+            <br></br>
+
+          <div className= "rowListing">
+            <div className= "col25">
           <label>Product brand: </label>
+          </div>
           <input
             type="text"
             id="brand"
@@ -188,17 +232,30 @@ function CreateListing(props) {
             placeholder="brand"
             onChange={(e) => setBrand(e.target.value)}
           ></input>
+          </div>
+          </div>
+
+            <br></br>
+
+          <div className= "rowListing">
+            <div className= "col25">
           <label>Condition: </label>
+          </div>
           <select id="condition" onChange={(e) => setCondition(e.target.value)}>
             <option value="New">New</option>
             <option value="Used">Used</option>
           </select>
+          </div>
+        
+          <br></br>
+          
           <button type="submit" value="Submit">
             Create Listing
           </button>
+
         </form>
       </div>
-    </div>
+  
   );
 }
 
