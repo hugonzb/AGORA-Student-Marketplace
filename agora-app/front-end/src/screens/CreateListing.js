@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { createListing } from "../actions/listingActions";
 import Axios from "axios";
-import "../createListing.css"; 
+import "../signup.css"; 
+import agoralogo from "../images/agoralogo.png";
 
 
 function CreateListing(props) {
@@ -116,18 +118,28 @@ function CreateListing(props) {
 
   return (
    
+      
+      <div className="wrapper">
+      <div className="registration_form">
+        <div className="form-heading">
+                   <img src={agoralogo} 
+                   className="sign-up-logo" alt=""/>
+               
+                   <span> 
+			       <h2>Registration Form</h2> 
+                   Already have an account?  
+                   <h4><Link to="/account/signin">Sign in</Link></h4>
+                   </span>
 
-      <div className="newListingContainer">
-        <h2>Hello {userInfo.fname}! Create a new Listing</h2>
-        <br></br>
-        
-        <form className="create-new-account-form" onSubmit={submitHandler}>
+                   </div>
+                   
+        <form className="form_wrap" onSubmit={submitHandler}>
 
-        <div className= "rowListing">
-            <div className= "col25">
+        <div className= "input_grp">
+            <div className= "input_wrap">
                 <label>Listing Name: </label>
-                    <div className="col75">
-                    </div> 
+                    
+                    
                       <input
                         type="text"
                         id="listingName"
@@ -141,11 +153,9 @@ function CreateListing(props) {
 
               <br></br>
 
-        <div className= "rowListing">
-            <div className= "col25">
+        <div className= "input_grp">
+            <div className= "input_wrap">
                   <label>Listing Description: </label>
-                  </div>
-                  <div className= "col75"> 
                       <textarea
                         type="text"
                         id="listingDescription"
@@ -162,10 +172,9 @@ function CreateListing(props) {
             <br></br>
 
         <div className= "rowListing">
-          <div className= "col25">
+          <div className= "input_wrap">
             <label>Category: </label>
-          </div>
-              <div className="col75">
+       
                   <select id="categories" onChange={(e) => setCategory(e.target.value)}>
                     <option value="Antiques">Antiques</option>
                     <option value="University Textbooks">University Textbooks</option>
@@ -192,21 +201,21 @@ function CreateListing(props) {
             <br></br>
 
         <div className= "rowListing">
-            <div className= "col25">
+            <div className= "input_wrap">
         <label>Upload Image</label>
-        </div>
+       
           {uploading && <div>Uploading...</div>}
           { uploadButton ?
             <input type="file" onChange={uploadFileHandler}></input>
           : <div className="uploaded"> Uploaded listing image successfully </div>}
           </div>
+          </div>
 
             <br></br>
 
-          <div className= "rowListing">
-            <div className= "col25">
+          <div className= "input_grp">
+            <div className= "input_wrap">
           <label>Price: </label>
-            <div className= "col7">
           <input
             type="number"
             step="0.01"
@@ -222,9 +231,9 @@ function CreateListing(props) {
             <br></br>
 
           <div className= "rowListing">
-            <div className= "col25">
+            <div className= "input_wrap">
           <label>Product brand: </label>
-          </div>
+      
           <input
             type="text"
             id="brand"
@@ -238,9 +247,9 @@ function CreateListing(props) {
             <br></br>
 
           <div className= "rowListing">
-            <div className= "col25">
+            <div className= "input_wrap">
           <label>Condition: </label>
-          </div>
+        
           <select id="condition" onChange={(e) => setCondition(e.target.value)}>
             <option value="New">New</option>
             <option value="Used">Used</option>
@@ -253,7 +262,10 @@ function CreateListing(props) {
             Create Listing
           </button>
 
+          </div>
+
         </form>
+      </div>
       </div>
   
   );
