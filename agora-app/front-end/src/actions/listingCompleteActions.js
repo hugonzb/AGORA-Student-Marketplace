@@ -67,13 +67,13 @@ const createListingComplete = (
   };
 
   const listListingCompletes = (
-    sellerId = ""
+    studentid = ""
   ) => async (dispatch) => {
     try {
       dispatch({ type: LISTINGCOMPLETE_REQUEST });
       const { data } = await axios.get(
-        "/api/listingsComplete?sellerIdListing=" +
-          sellerId
+        "/api/listingsComplete?sellerid=" +
+          studentid
       );
       dispatch({ type: LISTINGCOMPLETE_SUCCESS, payload: data });
     } catch (error) {

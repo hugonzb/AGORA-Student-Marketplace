@@ -4,17 +4,17 @@ import ListingComplete from "../models/listingCompleteModel";
 const router = express.Router();
 
 router.get("/", async (req, res) => {
-  const sellerIdListing = req.query.sellerIdListing
+  const sellerid = req.query.sellerid
     ? {
-        sellerId: {
-          $regex: req.query.sellerIdListing,
+        sellerStudentid: {
+          $regex: req.query.sellerid,
           $options: "i",
         },
       }
     : {};
 
   const listingCompletes = await ListingComplete.find({
-    ...sellerIdListing,
+    ...sellerid,
   });
   res.send(listingCompletes);
 });
