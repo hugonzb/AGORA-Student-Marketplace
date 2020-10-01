@@ -17,6 +17,7 @@ function EditProfile(props) {
   const [university, setUniversity] = useState("University of Auckland");
   const [street_address, setStreet] = useState("");
   const [city, setCity] = useState("");
+  const [region, setRegion] = useState("");
   const [postcode, setPostcode] = useState("");
   const [profilePicture, setProfilePicture] = useState(
     "/profilePictures/defaultprofileicon.jpg"
@@ -38,6 +39,7 @@ function EditProfile(props) {
       setUniversity(userInfo.university);
       setStreet(userInfo.street_address);
       setCity(userInfo.city);
+      setRegion(userInfo.region);
       setPostcode(userInfo.postcode);
       setProfilePicture(userInfo.profilePicture);
     }
@@ -198,6 +200,56 @@ function EditProfile(props) {
 
           <div className="input_grp">
             <div className="input_wrap">
+              <label>Address:</label>
+              <input
+                type="text"
+                id="address"
+                name="address"
+                defaultValue={userInfo.street_address}
+                required
+                onChange={(e) => setStreet(e.target.value)}
+              ></input>
+            </div>
+            <div className="input_wrap">
+              <label>City:</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                defaultValue={userInfo.city}
+                required
+                onChange={(e) => setCity(e.target.value)}
+              ></input>
+            </div>
+          </div>
+          <br></br>
+
+          <div className="input_grp">
+            <div className="input_wrap">
+              <label>Region:</label>
+              <input
+                type="text"
+                id="region"
+                name="region"
+                placeholder="Enter Region"
+                required
+                onChange={(e) => setRegion(e.target.value)}
+               ></input>
+              </div> 
+              <div className="input_wrap">
+              <label>Post Code:</label>
+              <input
+                type="text"
+                id="postcode"
+                name="postcode"
+                defaultValue={userInfo.postcode}
+                required
+                onChange={(e) => setPostcode(e.target.value)}
+              ></input>
+            </div>
+          </div>
+          <div className="input_grp">
+            <div className="input_wrap">
               <label for="school">University: </label>
               <select
                 className="select-css"
@@ -226,45 +278,7 @@ function EditProfile(props) {
                 <option value="University of Otago">University of Otago</option>
               </select>
             </div>
-            <div className="input_wrap">
-              <label>Address:</label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                defaultValue={userInfo.street_address}
-                required
-                onChange={(e) => setStreet(e.target.value)}
-              ></input>
             </div>
-          </div>
-          <br></br>
-
-          <div className="input_grp">
-            <div className="input_wrap">
-              <label>City:</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                defaultValue={userInfo.city}
-                required
-                onChange={(e) => setCity(e.target.value)}
-              ></input>
-            </div>
-
-            <div className="input_wrap">
-              <label>Post Code:</label>
-              <input
-                type="text"
-                id="postcode"
-                name="postcode"
-                defaultValue={userInfo.postcode}
-                required
-                onChange={(e) => setPostcode(e.target.value)}
-              ></input>
-            </div>
-          </div>
 
           <div className="input_grp">
             <div class="input_wrap">
