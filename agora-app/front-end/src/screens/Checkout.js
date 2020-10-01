@@ -165,7 +165,7 @@ import PropagateLoader from "react-spinners/PropagateLoader";
               <div className="col-60">
                 <label htmlFor="cvv">CVV</label>
                 <input type="text" id="cvv" name="cvv" placeholder="***"/>
-              </div>
+              </div> 
             </div>
           </div>
           

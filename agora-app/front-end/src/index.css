@@ -1124,13 +1124,13 @@ textarea {
 .col-60 {
   -ms-flex: 50%;
   flex: 50%;
-  padding-left: 1rem;
+  margin: 0.5rem;
 }
 
 .col-70 {
   -ms-flex: 50%;
   flex: 50%;
-  padding-right: 1rem;
+  margin: 0.5rem;
 }
 
 .col-75 {

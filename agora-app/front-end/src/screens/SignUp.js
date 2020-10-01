@@ -15,7 +15,7 @@ function SignUp(props) {
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
   const [email, setEmail] = useState("");
-  const [dob, setDOB] = useState("");
+  const [region, setRegion] = useState("");
   const [gender, setGender] = useState("Male");
   const [university, setUniversity] = useState("University of Auckland");
   const [street_address, setStreet] = useState("");
@@ -78,7 +78,7 @@ function SignUp(props) {
           sname,
           password,
           email,
-          dob,
+          region,
           gender,
           university,
           street_address,
@@ -259,19 +259,18 @@ function SignUp(props) {
                 onChange={(e) => setPostcode(e.target.value)}
                ></input>
               </div> 
-
-                  <div className="input_wrap">
-                  <label>Date of Birth:</label>
-                  <input className="select-css"
-                    type="date"
-                    id="DOB"
-                    name="DOB"
-                    required
-                    onChange={(e) => setDOB(e.target.value)}
-                  ></input>
-              </div>
+              <div className="input_wrap">
+              <label>Region:</label>
+              <input
+                type="text"
+                id="region"
+                name="region"
+                placeholder="Enter Region"
+                required
+                onChange={(e) => setRegion(e.target.value)}
+               ></input>
+              </div> 
           </div>
-
           <div className="input_grp"> 
               <div className="input_wrap">
                   <label>Password:</label>
