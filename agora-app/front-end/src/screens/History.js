@@ -113,16 +113,7 @@ function History(props) {
   </div>
   <div  className="borderBox">   
      <ul  className="options-history">
-     <li  className="hist-item"><a href="#">item 1</a></li>
-		<div  className="separator"></div>
-        <li  className="hist-item"><a href="#">item 1</a></li>
-		<div  className="separator"></div>
-        <li  className="hist-item"><a href="#">item 1</a></li>
-		<div  className="separator"></div>
-        <li  className="hist-item"><a href="#">item 1</a></li>
-		<div  className="separator"></div>
-        <li  className="hist-item"><a href="#">item 1</a></li>
-		<div  className="separator"></div>
+
 		</ul>        
       </div>
   </div>

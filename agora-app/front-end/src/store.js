@@ -10,7 +10,6 @@ import { userSignupReducer, userSignInReducer } from "./reducers/userReducers";
 import { listingDeleteReducer } from "./reducers/listingReducers";
 import thunk from "redux-thunk";
 import Cookie from "js-cookie";
-import { listListingCompletes } from "./actions/listingCompleteActions";
 
 const userInfo = Cookie.getJSON("userInfo") || null;
 const initialState = { userSignin: { userInfo } };
