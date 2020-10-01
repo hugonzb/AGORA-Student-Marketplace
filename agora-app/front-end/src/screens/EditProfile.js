@@ -92,6 +92,7 @@ function EditProfile(props) {
         street_address,
         city,
         postcode,
+        region,
         profilePicture
       )
     );
@@ -231,7 +232,7 @@ function EditProfile(props) {
                 type="text"
                 id="region"
                 name="region"
-                placeholder="Enter Region"
+                defaultValue={userInfo.region}
                 required
                 onChange={(e) => setRegion(e.target.value)}
                ></input>

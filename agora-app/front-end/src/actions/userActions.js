@@ -95,6 +95,7 @@ const updateUser = (
   street_address,
   city,
   postcode,
+  region,
   profilePicture
 ) => async (dispatch) => {
   dispatch({
@@ -109,6 +110,7 @@ const updateUser = (
       street_address,
       city,
       postcode,
+      region,
       profilePicture,
     },
   });
@@ -123,6 +125,7 @@ const updateUser = (
       street_address,
       city,
       postcode,
+      region,
       profilePicture,
     });
     dispatch({ type: USER_UPDATE_SUCCESS, payload: data });

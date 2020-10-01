@@ -68,6 +68,7 @@ router.put("/:id", async (req, res) => {
     user.street_address = req.body.street_address;
     user.city = req.body.city;
     user.postcode = req.body.postcode;
+    user.region = req.body.region;
     user.profilePicture = req.body.profilePicture;
 
     const updateUser = await user.save();
