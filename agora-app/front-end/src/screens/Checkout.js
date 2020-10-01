@@ -126,18 +126,18 @@ import PropagateLoader from "react-spinners/PropagateLoader";
             <label htmlFor="email"><i className="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" defaultValue={userInfo.email} onChange={(e) => setBuyerEmail(e.target.value)}/>
             <label htmlFor="adr"><i className="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="Delivery address" required onInput={setFields} onChange={(e) => setBuyerAddress(e.target.value)}/>
+            <input type="text" id="adr" name="address" defaultValue={userInfo.street_address} required onInput={setFields} onChange={(e) => setBuyerAddress(e.target.value)}/>
             <label htmlFor="city"><i className="fa fa-institution"></i> City</label>
-            <input type="text" id="city" name="city" placeholder="City" required onChange={(e) => setBuyerCity(e.target.value)}/>
+            <input type="text" id="city" name="city" defaultValue={userInfo.city} required onChange={(e) => setBuyerCity(e.target.value)}/>
 
             <div className="ch-row">
               <div className="col-70">
                 <label htmlFor="state">Region</label>
-                <input type="text" id="state" name="state" placeholder="Region" onChange={(e) => setBuyerRegion(e.target.value)}/>
+                <input type="text" id="state" name="state" defaultValue={userInfo.region} onChange={(e) => setBuyerRegion(e.target.value)}/>
               </div>
               <div className="col-60">
                 <label htmlFor="zip">Post Code</label>
-                <input type="text" id="zip" name="zip" placeholder="Postcode" onChange={(e) => setBuyerPostcode(e.target.value)}/>
+                <input type="text" id="zip" name="zip" defaultValue={userInfo.postcode} onChange={(e) => setBuyerPostcode(e.target.value)}/>
               </div>
             </div>
           </div>
