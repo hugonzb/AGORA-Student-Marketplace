@@ -129,6 +129,22 @@ select:focus{
     width: auto; 
 }
 
+textarea{
+    border-color: red; 
+    width: 100%;
+}
+
+input[type=number]{
+    width: 100%;
+    border-color: red;
+    justify-content: space-between;
+}
+
+.input-wrap{
+    display: flex;
+    justify-content: space-around;
+}
+
 /* responsive mode */
 
 @media screen and (min-width:930px){
