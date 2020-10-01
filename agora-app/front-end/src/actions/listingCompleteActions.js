@@ -3,7 +3,10 @@ import axios from "axios";
 import {
     CREATELISTINGCOMPLETE_REQUEST,
     CREATELISTINGCOMPLETE_FAIL,
-    CREATELISTINGCOMPLETE_SUCCESS
+    CREATELISTINGCOMPLETE_SUCCESS,
+    LISTINGCOMPLETE_REQUEST,
+    LISTINGCOMPLETE_FAIL,
+    LISTINGCOMPLETE_SUCCESS
 } from "../constants/listingCompleteConstants";
 
   
@@ -63,4 +66,20 @@ const createListingComplete = (
     }
   };
 
-  export { createListingComplete }
+  const listListingCompletes = (
+    studentid = ""
+  ) => async (dispatch) => {
+    try {
+      dispatch({ type: LISTINGCOMPLETE_REQUEST });
+      const { data } = await axios.get(
+        "/api/listingsComplete?sellerid=" +
+          studentid
+      );
+      dispatch({ type: LISTINGCOMPLETE_SUCCESS, payload: data });
+    } catch (error) {
+      dispatch({ type: LISTINGCOMPLETE_FAIL, payload: error.message });
+    }
+  };
+  
+
+  export { createListingComplete, listListingCompletes }

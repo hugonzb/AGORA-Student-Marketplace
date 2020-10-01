@@ -1,4 +1,18 @@
-const { CREATELISTINGCOMPLETE_REQUEST, CREATELISTINGCOMPLETE_SUCCESS, CREATELISTINGCOMPLETE_FAIL } = require("../constants/listingCompleteConstants");
+const { CREATELISTINGCOMPLETE_REQUEST, CREATELISTINGCOMPLETE_SUCCESS, CREATELISTINGCOMPLETE_FAIL, LISTINGCOMPLETE_REQUEST, LISTINGCOMPLETE_SUCCESS, LISTINGCOMPLETE_FAIL } = require("../constants/listingCompleteConstants");
+
+
+function listingCompleteReducer(state = { listingCompletes: [] }, action) {
+    switch (action.type) {
+      case LISTINGCOMPLETE_REQUEST:
+        return { loading: true };
+      case LISTINGCOMPLETE_SUCCESS:
+        return { loading: false, listingCompletes: action.payload };
+      case LISTINGCOMPLETE_FAIL:
+        return { loading: false, error: action.payload };
+      default:
+        return state;
+    }
+  }
 
 function createListingCompleteReducer(state = {}, action){
     switch(action.type){
@@ -13,4 +27,4 @@ function createListingCompleteReducer(state = {}, action){
     }
 }
 
-export { createListingCompleteReducer }
+export { createListingCompleteReducer, listingCompleteReducer }

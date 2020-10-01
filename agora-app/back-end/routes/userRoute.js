@@ -14,7 +14,7 @@ router.post("/signup", async (req, res) => {
       sname: req.body.sname,
       password: req.body.password,
       email: req.body.email,
-      dob: req.body.dob,
+      region: req.body.region,
       gender: req.body.gender,
       university: req.body.university,
       street_address: req.body.street_address,
@@ -47,6 +47,7 @@ router.post("/signin", async (req, res) => {
       street_address: signinUser.street_address,
       postcode: signinUser.postcode,
       city: signinUser.city,
+      region: signinUser.region,
       created: signinUser.createdAt,
       token: getToken(signinUser),
     });

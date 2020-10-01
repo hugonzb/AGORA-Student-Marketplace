@@ -41,7 +41,7 @@ function Home(props) {
           <form>
             <select
               name="categorySortOrder"
-              className="select-style"
+              className="select-category-style"
               onChange={(e) => {
                 setCategory(e.target.value);
               }}
@@ -70,7 +70,7 @@ function Home(props) {
             </select>
             <select
               name="locationSortOrder"
-              className="select-style"
+              className="select-location-style"
               onChange={(e) => {
                 setLocation(e.target.value);
               }}
