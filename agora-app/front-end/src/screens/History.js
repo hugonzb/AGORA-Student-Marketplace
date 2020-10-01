@@ -6,47 +6,49 @@ function History(props) {
  return (
 
 <div>
-   <div class="HistoryTab">
-    <h3>Trade History</h3>
+   <div  className="HistoryTab">
+   <h2>Account Trading History</h2>
   </div>
 
-<div class="hist-wrapper">
-  <div class="leftbar">
-    <div class="folderTab sub">
-      <h3>Sold Items</h3>
+<div  className="hist-wrapper">
+  <div  className="leftbar">
+    <div  className="folderTab sub">
+      <h3>Sold items </h3>
     </div>
-    <div class="borderBox">
-      <ul class="options-history">
-        <li class="hist-item"><a href="#">item 1</a></li>
-		<div class="separator"></div>
-        <li class="hist-item"><a href="#">item 1</a></li>
-		<div class="separator"></div>
-        <li class="hist-item"><a href="#">item 1</a></li>
-		<div class="separator"></div>
-        <li class="hist-item"><a href="#">item 1</a></li>
-		<div class="separator"></div>
+    <div  className="borderBox">
+      <ul  className="options-history">
+        <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
+        <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
+        <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
+        <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
+        <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
         
       </ul>      
     </div>
   </div>
   
  
- <div class="leftbar">
-  <div class="folderTab">
-    <h3>Purchased items</h3>
+ <div  className="leftbar">
+  <div  className="folderTab">
+    <h3>Purchased items </h3>
   </div>
-  <div class="borderBox">   
-     <ul class="options-history">
-     <li class="hist-item"><a href="#">item 1</a></li>
-		<div class="separator"></div>
-        <li class="hist-item"><a href="#">item 1</a></li>
-		<div class="separator"></div>
-        <li class="hist-item"><a href="#">item 1</a></li>
-		<div class="separator"></div>
-        <li class="hist-item"><a href="#">item 1</a></li>
-		<div class="separator"></div>
-        <li class="hist-item"><a href="#">item 1</a></li>
-		<div class="separator"></div>
+  <div  className="borderBox">   
+     <ul  className="options-history">
+     <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
+        <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
+        <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
+        <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
+        <li  className="hist-item"><a href="#">item 1</a></li>
+		<div  className="separator"></div>
 		</ul>        
       </div>
   </div>
