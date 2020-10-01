@@ -174,23 +174,7 @@ function CreateListing(props) {
                     </div>
                    
                 </div>
-                <div className="input_grp">
-                 <div className= "input_wrap">
-                      <label>Price: </label>
-                          <input
-                            type="number"
-                            step="0.01"
-                            id="price"
-                            name="price"
-                            placeholder="$0.00"
-                            required
-                            onChange={(e) => setPrice(e.target.value)}
-                          ></input>
-                    </div>
-                    </div>
-                                       
-                   <br></br> 
-
+            
                 <div className= "input_grp">
                     <div className= "input_wrap">
                           <label>Category: </label>
@@ -230,8 +214,22 @@ function CreateListing(props) {
                     </div>
                 </div>
 
-                <div className= "input grp">
-                    <div className= "input_wrap">
+                    <div className="input_grp">
+                 <div className= "input_wrap">
+                      <label>Price: </label>
+                          <input
+                            type="number"
+                            step="0.01"
+                            id="price"
+                            name="price"
+                            placeholder="$0.00"
+                            required
+                            onChange={(e) => setPrice(e.target.value)}
+                          ></input>
+                    </div>
+
+                    <br></br> 
+                     <div className= "input_wrap">
                         <label>Upload Image</label>
        
                           {uploading && <div>Uploading...</div>}
@@ -239,7 +237,8 @@ function CreateListing(props) {
                             <input type="file" onChange={uploadFileHandler}></input>
                           : <div className="uploaded"> Uploaded listing image successfully </div>}
                     </div>
-                </div>        
+
+                    </div>      
 
                 <div className="input_grp">
                     <div className="input_wrap">

@@ -4,13 +4,21 @@
 
 }
 
-input[type=text], select, textarea{
-  width: 100%;
+.form-heading{
+display: inline-block;
+}
+
+input[type=text], select{
+  width: 50px;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 2px;
   box-sizing: border-box;
   resize: vertical;
+}
+
+.input_wrap textarea{
+color: red;
 }
 
 label {
