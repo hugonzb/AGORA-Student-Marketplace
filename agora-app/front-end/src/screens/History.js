@@ -75,6 +75,19 @@ function History(props) {
                           <div>
                             Buyer Email: {listing.buyerEmail}
                           </div>
+                          ADDRESS:
+                          <div>
+                            Street: {listing.buyerAddress}
+                          </div>
+                          <div>
+                            City: {listing.buyerCity}
+                          </div>
+                          <div>
+                            Region: {listing.buyerRegion}
+                          </div>
+                          <div>
+                            Postcode: {listing.buyerPostcode}
+                          </div>
                       </div>
                     </div>
                   </li>
