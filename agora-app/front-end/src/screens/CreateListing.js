@@ -166,8 +166,8 @@ function CreateListing(props) {
                                 id="listingDescription"
                                 name="listingDescription"
                                 placeholder="Your Description Here."
-                                rows="5"
-                                cols="50"
+                                rows="3"
+                                cols="500"
                                 required
                                 onChange={(e) => setDescription(e.target.value)}
                               ></textarea>

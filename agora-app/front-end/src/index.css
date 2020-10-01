@@ -153,13 +153,20 @@ ul li a {
 .home-filter {
   display: flex;
   flex-direction: row;
-  width: 100%;
   justify-content: center;
   align-items: center;
 }
 
 .home-filter form {
   display: flex;
+}
+
+.select-location-style {
+  min-width: 9.3rem;
+}
+
+.select-category-style {
+  min-width: 11.5rem;
 }
 
 .home-filter select {
