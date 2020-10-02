@@ -12,7 +12,20 @@ function listingCompleteReducer(state = { listingCompletes: [] }, action) {
       default:
         return state;
     }
-  }
+}
+
+function listingPurchasedCompleteReducer(state = { listingPurchasedCompletes: [] }, action) {
+    switch (action.type) {
+      case LISTINGCOMPLETE_REQUEST:
+        return { loading: true };
+      case LISTINGCOMPLETE_SUCCESS:
+        return { loading: false, listingPurchasedCompletes: action.payload };
+      case LISTINGCOMPLETE_FAIL:
+        return { loading: false, error: action.payload };
+      default:
+        return state;
+    }
+}
 
 function createListingCompleteReducer(state = {}, action){
     switch(action.type){
@@ -27,4 +40,4 @@ function createListingCompleteReducer(state = {}, action){
     }
 }
 
-export { createListingCompleteReducer, listingCompleteReducer }
+export { createListingCompleteReducer, listingCompleteReducer, listingPurchasedCompleteReducer }

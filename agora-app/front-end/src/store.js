@@ -4,7 +4,8 @@ import {
   listingDetailsReducer,
 } from "./reducers/listingReducers";
 import {
-  listingCompleteReducer
+  listingCompleteReducer,
+  listingPurchasedCompleteReducer
 } from "./reducers/listingCompleteReducers";
 import { userSignupReducer, userSignInReducer } from "./reducers/userReducers";
 import { listingDeleteReducer } from "./reducers/listingReducers";
@@ -19,7 +20,8 @@ const reducer = combineReducers({
   userSignup: userSignupReducer,
   userSignin: userSignInReducer,
   listingDelete: listingDeleteReducer,
-  listingComplete: listingCompleteReducer
+  listingComplete: listingCompleteReducer,
+  listingPurchasedComplete: listingPurchasedCompleteReducer
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

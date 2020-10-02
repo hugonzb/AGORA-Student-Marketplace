@@ -80,6 +80,21 @@ const createListingComplete = (
       dispatch({ type: LISTINGCOMPLETE_FAIL, payload: error.message });
     }
   };
+
+  const listListingPurchasedCompletes = (
+    studentid = ""
+  ) => async (dispatch) => {
+    try {
+      dispatch({ type: LISTINGCOMPLETE_REQUEST });
+      const { data } = await axios.get(
+        "/api/listingsComplete/purchased?buyerid=" +
+          studentid
+      );
+      dispatch({ type: LISTINGCOMPLETE_SUCCESS, payload: data });
+    } catch (error) {
+      dispatch({ type: LISTINGCOMPLETE_FAIL, payload: error.message });
+    }
+  };
   
 
-  export { createListingComplete, listListingCompletes }
+  export { createListingComplete, listListingCompletes, listListingPurchasedCompletes }
