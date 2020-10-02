@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {Link} from "react-router-dom";
-import { detailListing } from '../actions/listingActions';
+import { detailListing, deleteListing  } from '../actions/listingActions';
 import { createListingComplete } from '../actions/listingCompleteActions';
 import PropagateLoader from "react-spinners/PropagateLoader";
 
@@ -63,6 +63,7 @@ import PropagateLoader from "react-spinners/PropagateLoader";
             )
           );
         }
+        dispatch(deleteListing(listing._id));
         props.history.push("/listingcomplete/confirmation");
       };
         

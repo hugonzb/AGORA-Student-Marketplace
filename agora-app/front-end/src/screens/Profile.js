@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
-import { listListings, deleteListing } from "../actions/listingActions";
+import { listListings, deleteListing } from "../actions/listingActions"; 
 import { Link } from "react-router-dom";
 import "../index.css";
 import PropagateLoader from "react-spinners/PropagateLoader";

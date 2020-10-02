@@ -100,10 +100,7 @@ function History(props) {
               </div>
             ) : (
               <div>
-                {" "}
-                You currently dont have any listings. Click "create listing" to
-                get started!{" "}
-                <Link to="/account/createlisting">Create listing</Link>
+                You have not sold any listings yet.
               </div>
             )}
         
@@ -168,10 +165,7 @@ function History(props) {
               </div>
             ) : (
               <div>
-                {" "}
-                You currently dont have any listings. Click "create listing" to
-                get started!{" "}
-                <Link to="/account/createlisting">Create listing</Link>
+                You have not purchased any listings yet.
               </div>
             )}
 		</ul>        
