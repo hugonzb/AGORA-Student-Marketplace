@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { createListing } from "../actions/listingActions";
 import Axios from "axios";
 import "../signup.css"; 
-import agoralogo from "../images/agoralogo.png";
-
 
 function CreateListing(props) {
   /* 
@@ -125,6 +122,15 @@ function CreateListing(props) {
 			           <h2>Create A Listing</h2> 
                        </span>
             </div>
+            <br></br>
+                <div className= "input_wrap">
+                        <label>Upload Image</label>
+       
+                          {uploading && <div>Uploading...</div>}
+                          { uploadButton ?
+                            <input type="file" onChange={uploadFileHandler}></input>
+                          : <div className="uploaded"> Uploaded listing image successfully </div>}
+                </div>
                    
                 <form className="form_wrap" onSubmit={submitHandler}>
 
@@ -222,18 +228,7 @@ function CreateListing(props) {
                             onChange={(e) => setPrice(e.target.value)}
                           ></input>
                     </div>
-
-                    <br></br> 
-                     <div className= "input_wrap">
-                        <label>Upload Image</label>
-       
-                          {uploading && <div>Uploading...</div>}
-                          { uploadButton ?
-                            <input type="file" onChange={uploadFileHandler}></input>
-                          : <div className="uploaded"> Uploaded listing image successfully </div>}
-                    </div>
-
-                    </div>      
+                </div>      
 
                 <div className="input_grp">
                     <div className="input_wrap">

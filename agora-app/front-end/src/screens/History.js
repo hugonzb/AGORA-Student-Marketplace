@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "../history.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
 import { listListingCompletes, listListingPurchasedCompletes } from "../actions/listingCompleteActions";
 import PropagateLoader from "react-spinners/PropagateLoader";
 

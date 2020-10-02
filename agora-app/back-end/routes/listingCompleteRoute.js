@@ -5,12 +5,7 @@ const router = express.Router();
 
 router.get("/sold", async (req, res) => {
   const sellerid = req.query.sellerid
-    ? {
-        sellerStudentid: {
-          $regex: req.query.sellerid,
-          $options: "i",
-        },
-      }
+    ? { sellerStudentid: req.query.sellerid }
     : {};
 
   const listingCompletes = await ListingComplete.find({
@@ -21,12 +16,7 @@ router.get("/sold", async (req, res) => {
 
 router.get("/purchased", async (req, res) => {
   const buyerid = req.query.buyerid
-    ? {
-        buyerStudentid: {
-          $regex: req.query.buyerid,
-          $options: "i",
-        },
-      }
+    ? { buyerStudentid: req.query.buyerid }
     : {};
 
   const listingPurchasedCompletes = await ListingComplete.find({
