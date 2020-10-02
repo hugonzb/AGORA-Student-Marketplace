@@ -80,8 +80,8 @@ function About(props) {
       <form onSubmit={submitHandler}>
         <div className="contact-comment"> <h2> Leave us a Comment </h2>	</div>
         <input name="namess" type="text" className="feedback-input" placeholder="Name" onChange={(e) => setName(e.target.value)}/>
-        <input name="emailss" type="text" className="feedback-input" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
-        <textarea name="texts" className="feedback-input" placeholder="Comment" required onChange={(e) => setFeedback(e.target.value)}></textarea>
+        <input name="emailss" type="email" className="feedback-input" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
+        <textarea type="text" name="texts" className="feedback-input" placeholder="Comment" required onChange={(e) => setFeedback(e.target.value)}></textarea>
         {uploading && <div>Submitting feedback</div>}
         <input type="submit" name="send it" value="Send" />
       </form>
