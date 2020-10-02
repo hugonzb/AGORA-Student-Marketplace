@@ -72,7 +72,7 @@ const createListingComplete = (
     try {
       dispatch({ type: LISTINGCOMPLETE_REQUEST });
       const { data } = await axios.get(
-        "/api/listingsComplete?sellerid=" +
+        "/api/listingsComplete/sold?sellerid=" +
           studentid
       );
       dispatch({ type: LISTINGCOMPLETE_SUCCESS, payload: data });

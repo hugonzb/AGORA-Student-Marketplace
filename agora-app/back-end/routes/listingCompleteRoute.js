@@ -3,7 +3,7 @@ import ListingComplete from "../models/listingCompleteModel";
 
 const router = express.Router();
 
-router.get("/", async (req, res) => {
+router.get("/sold", async (req, res) => {
   const sellerid = req.query.sellerid
     ? {
         sellerStudentid: {
@@ -15,6 +15,22 @@ router.get("/", async (req, res) => {
 
   const listingCompletes = await ListingComplete.find({
     ...sellerid,
+  });
+  res.send(listingCompletes);
+});
+
+router.get("/purchased", async (req, res) => {
+  const buyerid = req.query.buyerid
+    ? {
+        buyerStudentid: {
+          $regex: req.query.buyerid,
+          $options: "i",
+        },
+      }
+    : {};
+
+  const listingCompletes = await ListingComplete.find({
+    ...buyerid,
   });
   res.send(listingCompletes);
 });
