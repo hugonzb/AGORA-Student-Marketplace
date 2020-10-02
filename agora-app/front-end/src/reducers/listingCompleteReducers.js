@@ -1,4 +1,4 @@
-const { CREATELISTINGCOMPLETE_REQUEST, CREATELISTINGCOMPLETE_SUCCESS, CREATELISTINGCOMPLETE_FAIL, LISTINGCOMPLETE_REQUEST, LISTINGCOMPLETE_SUCCESS, LISTINGCOMPLETE_FAIL } = require("../constants/listingCompleteConstants");
+const { CREATELISTINGCOMPLETE_REQUEST, CREATELISTINGCOMPLETE_SUCCESS, CREATELISTINGCOMPLETE_FAIL, LISTINGCOMPLETE_REQUEST, LISTINGCOMPLETE_SUCCESS, LISTINGCOMPLETE_FAIL, LISTINGPURCHASEDCOMPLETE_REQUEST, LISTINGPURCHASEDCOMPLETE_SUCCESS, LISTINGPURCHASEDCOMPLETE_FAIL } = require("../constants/listingCompleteConstants");
 
 
 function listingCompleteReducer(state = { listingCompletes: [] }, action) {
@@ -16,12 +16,12 @@ function listingCompleteReducer(state = { listingCompletes: [] }, action) {
 
 function listingPurchasedCompleteReducer(state = { listingPurchasedCompletes: [] }, action) {
     switch (action.type) {
-      case LISTINGCOMPLETE_REQUEST:
-        return { loading: true };
-      case LISTINGCOMPLETE_SUCCESS:
-        return { loading: false, listingPurchasedCompletes: action.payload };
-      case LISTINGCOMPLETE_FAIL:
-        return { loading: false, error: action.payload };
+      case LISTINGPURCHASEDCOMPLETE_REQUEST:
+        return { loadingPurchased: true };
+      case LISTINGPURCHASEDCOMPLETE_SUCCESS:
+        return { loadingPurchased: false, listingPurchasedCompletes: action.payload };
+      case LISTINGPURCHASEDCOMPLETE_FAIL:
+        return { loadingPurchased: false, errorPurchased: action.payload };
       default:
         return state;
     }

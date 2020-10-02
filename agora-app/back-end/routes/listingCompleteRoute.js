@@ -29,10 +29,10 @@ router.get("/purchased", async (req, res) => {
       }
     : {};
 
-  const listingCompletes = await ListingComplete.find({
+  const listingPurchasedCompletes = await ListingComplete.find({
     ...buyerid,
   });
-  res.send(listingCompletes);
+  res.send(listingPurchasedCompletes);
 });
 
 router.post("/create", async (req, res) => {
