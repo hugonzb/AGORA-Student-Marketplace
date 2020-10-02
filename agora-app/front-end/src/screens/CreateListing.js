@@ -117,17 +117,12 @@ function CreateListing(props) {
   };
 
   return (
-   
+    <div className="home-container">
       <div className="wrapper">
         <div className="registration_form">
-            <div className="form-heading">
-                       <img src={agoralogo} 
-                       className="sign-up-logo" alt=""/>
-               
+            <div className="form-heading">          
                        <span> 
-			           <h2>Registration Form</h2> 
-                       Already have an account?  
-                       <h4><Link to="/account/signin">Sign in</Link></h4>
+			           <h2>Create A Listing</h2> 
                        </span>
             </div>
                    
@@ -248,7 +243,8 @@ function CreateListing(props) {
 
                 </form>
               </div>
-              </div>
+            </div>
+          </div>
   
     );
 }
