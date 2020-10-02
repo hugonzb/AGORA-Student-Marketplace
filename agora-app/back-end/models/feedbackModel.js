@@ -5,7 +5,7 @@ import mongoose, { Mongoose } from 'mongoose';
 const feedbackSchema = new mongoose.Schema({
     name: {type: String, required: false},
     email: { type: String, required: false},
-    feedback: { type: String, required: true}
+    feedback: { type: String, required: false}
 },{
     timestamps: true,
 },{strict: true});
