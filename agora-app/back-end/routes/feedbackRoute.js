@@ -5,9 +5,9 @@ const router = express.Router();
 
 router.post("/postfeedback", async (req, res) => {
     const feedbackObj = new feedback({
-        fbName = req.body.name,
-        fbEmail = req.body.email,
-        fbFeedback = req.body.feedback
+        fbName: req.body.name,
+        fbEmail: req.body.email,
+        fbFeedback: req.body.feedback
     });
     const feedbackComplete = await feedbackObj.save();
     if(feedbackComplete) {
