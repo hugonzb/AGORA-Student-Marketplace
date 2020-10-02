@@ -92,7 +92,6 @@ function CreateListing(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(image);
     dispatch(
       createListing(
         name,
