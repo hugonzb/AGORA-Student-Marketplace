@@ -90,6 +90,9 @@ function History(props) {
                           <div>
                             Postcode: {listing.buyerPostcode}
                           </div>
+                          <div>
+                            Date Sold: {new Date(listing.createdAt).toString().substring(15, 0)}
+                          </div>
                       </div>
                     </div>
                   </li>
@@ -153,20 +156,10 @@ function History(props) {
                             Seller: {listing.sellerName}
                           </div>
                           <div>
-                            Buyer Email: {listing.buyerEmail}
-                          </div>
-                          ADDRESS:
-                          <div>
-                            Street: {listing.buyerAddress}
+                            Seller Email: {listing.sellerEmail}
                           </div>
                           <div>
-                            City: {listing.buyerCity}
-                          </div>
-                          <div>
-                            Region: {listing.buyerRegion}
-                          </div>
-                          <div>
-                            Postcode: {listing.buyerPostcode}
+                            Date Purchased: {new Date(listing.createdAt).toString().substring(15, 0)}
                           </div>
                       </div>
                     </div>
