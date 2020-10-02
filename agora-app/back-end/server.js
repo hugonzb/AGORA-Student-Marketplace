@@ -5,6 +5,7 @@ import userRoute from "./routes/userRoute";
 import listingRoute from "./routes/listingRoute";
 import listingCompleteRoute from "./routes/listingCompleteRoute";
 import uploadFileRoute from "./routes/uploadFileRoute";
+import feedbackRoute from "./routes/feedbackRoute";
 import bodyParser from "body-parser";
 import path from "path";
 
@@ -29,6 +30,7 @@ app.use(bodyParser.json());
 app.use("/api/listings", listingRoute);
 app.use("/api/listingsComplete", listingCompleteRoute);
 app.use("/api/fileUpload", uploadFileRoute);
+app.use("/api/feedback", feedbackRoute);
 
 
 // Here we tell the server to serve images from the front-end/public/ image folders.
