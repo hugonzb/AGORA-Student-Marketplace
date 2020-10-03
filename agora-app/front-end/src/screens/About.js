@@ -17,22 +17,17 @@ function About(props) {
   const [uploading, setUploading] = useState(false);
 
   useEffect(() => {
-    return () => {
-    };
+    return () => {};
     // eslint-disable-next-line
   }, []);
 
   const submitHandler = (e) => {
     // Shows the loading div
-    setUploading(true);
+    //setUploading(true);
     e.preventDefault();
-    dispatch(submitFeedback(
-      name,
-      email,
-      feedback,
-    ));
+    dispatch(submitFeedback(name, email, feedback));
     // Hides the loading div
-    setUploading(false);
+    //setUploading(false);
   };
 
   return (
