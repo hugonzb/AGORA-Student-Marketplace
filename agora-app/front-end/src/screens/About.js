@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
-import Axios from "axios";
+import { useDispatch } from "react-redux";
 import "../signup.css";
 import {submitFeedback} from "../actions/feedbackActions";
 
@@ -14,7 +13,7 @@ function About(props) {
   const [feedback, setFeedback] = useState("");
   // Yeah should change this soon
   const profileicon = "/profilePictures/kachow_1601281716732.jpg"
-  const [uploading, setUploading] = useState(false);
+  const [uploading] = useState(false);
 
   useEffect(() => {
     return () => {};
@@ -22,8 +21,6 @@ function About(props) {
   }, []);
 
   const submitHandler = (e) => {
-    // Shows the loading div
-    //setUploading(true);
     e.preventDefault();
     dispatch(submitFeedback(name, email, feedback));
     // Hides the loading div
