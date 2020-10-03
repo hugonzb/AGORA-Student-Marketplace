@@ -846,7 +846,7 @@ body {
   border-radius: 5px;
   line-height: 22px;
   background-color: transparent;
-  border-bottom-style: 2px solid #000000;
+  border: 1px solid #000000;
   transition: all 0.3s;
   padding: 13px;
   margin-bottom: 15px;
@@ -856,13 +856,14 @@ body {
 }
 
 .feedback-input:focus {
-  border: 2px solid #000000;
+  border: 1px solid #18ff03;
 }
 
 textarea {
   height: 150px;
   line-height: 150%;
   resize: vertical;
+  border: 1px solid black;
 }
 
 [value="Send"] {
