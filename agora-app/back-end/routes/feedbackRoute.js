@@ -3,7 +3,7 @@ import feedback from '../models/feedbackModel';
 
 const router = express.Router();
 
-router.post("/postfeedback", async (req, res) => {
+router.post("/send", async (req, res) => {
     const feedbackObj = new feedback({
         fbName: req.body.name,
         fbEmail: req.body.email,

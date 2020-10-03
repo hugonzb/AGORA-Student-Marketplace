@@ -10,7 +10,7 @@ const submitFeedback = (name, email, feedback) => async (dispatch) => {
         type: FEEDBACK_POST_REQUEST, payload: { name, email, feedback }
     });
     try {
-        const { data } = await axios.post("/api/feedback/postfeedback", {
+        const { data } = await axios.post("/api/feedback/send", {
             name, email, feedback
         });
         dispatch({ type: FEEDBACK_POST_SUCCESS, payload: data });
