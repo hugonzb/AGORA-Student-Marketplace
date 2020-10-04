@@ -26,6 +26,14 @@ border-color: black;
 
 }
 
+.selectBox {
+    display: inline-block;
+    justify-content: space-between;
+    width: 180;
+    max-width: 100%; /* useful when width is set to anything other than 100% */
+    
+	}
+
 label {
   padding: 12px 12px 12px 0;
   display: inline-block;

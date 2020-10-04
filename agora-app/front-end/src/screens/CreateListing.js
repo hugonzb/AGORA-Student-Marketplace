@@ -177,6 +177,7 @@ function CreateListing(props) {
             
                 <div className= "input_grp">
                     <div className= "input_wrap">
+                      <div class="selectBox">
                           <label>Category: </label>
        
                               <select id="categories" onChange={(e) => setCategory(e.target.value)}>
@@ -199,6 +200,7 @@ function CreateListing(props) {
                                 <option value="Toys">Toys</option>
                                 <option value="Sports Equipments">Sports Equipments</option>
                               </select>
+                              </div>
                     </div>
 
                     <div className= "input_wrap">
