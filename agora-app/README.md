@@ -1,17 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory (/agora-app), you can run:
+In the project directory (INFO301/agora_student_marketplace/agora-app), you can run:
 
 ### `npm start`
 
-This will run the back-end of the 
+This will run the back-end server of the project, in the form of the file server.js
+The server accepts requests on port 5000.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To run the front-end of the project, open a seperate terminal, navigate
+to INFO/301/agora_student_marketplace/agora-app/front-end and run:
+### `npm start`
 
-The page will reload if you make edits.<br />
+Open http://localhost:3000 to view the application in the browser.
+
+
+The page will reload if you make edits and save in the front-end folder.
+The page won't reload if you make edits and save in the back-end folder, but the
+backend server will restart, during this time data won't be served, so the pages
+will more than likely have no actual content on them, just the standard markup.
+
 You will also see any lint errors in the console.
 
 ### `npm run build`
@@ -19,8 +24,4 @@ You will also see any lint errors in the console.
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
