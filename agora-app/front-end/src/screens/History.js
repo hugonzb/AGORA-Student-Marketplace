@@ -27,7 +27,7 @@ function History(props) {
 <div>
    <div  className="HistoryTab">
    <h2>Account Trading History</h2>
-   <h2>Signed in as {}
+   <h2>Signed in as {} </h2> 
   </div>
 
 <div  className="hist-wrapper">
