@@ -25,6 +25,7 @@ function About(props) {
     dispatch(submitFeedback(name, email, feedback));
     // Hides the loading div
     //setUploading(false);
+    window.alert("Feedback submitted successfully");
     window.location.reload();
   };
 
