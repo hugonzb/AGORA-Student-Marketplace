@@ -5,7 +5,9 @@
 }
 
 .form-heading{
-display: inline-block;
+display: flex;
+float: left;
+width: 100%;
 }
 
 input[type=text], select{

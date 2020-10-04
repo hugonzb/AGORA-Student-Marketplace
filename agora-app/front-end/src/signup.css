@@ -28,15 +28,11 @@
 	justify-content: space-around; 
 	 
 }
- 
 
-.form-heading {
-	display: flex;
-}
-
-.form-heading img {
-	min-width: 4rem;
-	padding-bottom: 0.5rem;
+.titleText{
+    display: flex;
+    width: 100%;
+	
 }
  
 .registration_form{
@@ -66,6 +62,7 @@
 
 h2{
 	color: #ff7b00;
+	float: right;
 }
  
 .form_wrap{

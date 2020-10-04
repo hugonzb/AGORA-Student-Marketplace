@@ -95,18 +95,15 @@ function SignUp(props) {
   return (
     <div className="wrapper">
         <div className="registration_form">
-            <div className="form-heading">
-                   <img src={agoralogo} 
-                   className="sign-up-logo" alt=""/>
-               
-                   <span> 
-			       <h2>Registration Form</h2> 
-                   Already have an account?  
-                   <h4><Link to="/account/signin">Sign in</Link></h4>
-                   </span>
+         
              
+                   <div className="titleText">
+			       <h2>Registration Form</h2> 
+                   </div>
+                  
+                   
                 
-            </div>
+            
             {loading}
         {error && <div>Student ID or Email has been taken</div>}
         {message}
