@@ -32,7 +32,7 @@
 .titleText{
     display: flex;
     width: 100%;
-	
+	float: left;
 }
  
 .registration_form{
@@ -58,9 +58,11 @@
 	letter-spacing: 5px;
 	font-weight: 700;
 	display: inline-block;
+	float: left;
 }
 
 h2{
+    display: flex;
 	color: #ff7b00;
 	float: right;
 }
@@ -92,6 +94,7 @@ h2{
 	display: flex;
 	justify-content: space-around;
 	align-items:flex-start;
+	border-color: black;
 	
 }
  
@@ -209,4 +212,14 @@ h2{
     border-color: #aaa;
 }
 
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col25, .col75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 
+  .registration_form{
+  	  margin: 15px;
+  }
+}

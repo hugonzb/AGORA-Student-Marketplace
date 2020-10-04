@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { createListing } from "../actions/listingActions";
 import Axios from "axios";
-import "../createListing.css"; 
+import "../signup.css"; 
 
 function CreateListing(props) {
   /* 
