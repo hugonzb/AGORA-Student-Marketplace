@@ -18,7 +18,12 @@ input[type=text], select{
 }
 
 .input_wrap textarea{
-color: red;
+border-color: black;
+}
+
+.input_wrap [type=number]{
+border-color: black;
+
 }
 
 label {
@@ -29,7 +34,7 @@ label {
 /* Style the submit button */
 input[type=submit] {
   background-color: #4CAF50;
-  color: white;
+  color: blacl;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
