@@ -68,44 +68,46 @@ function Profile(props) {
             <div className="profile-heading">PROFILE</div>
             <img src={profilePicture} alt="profile" height="150" length="100" />
             <h2>
+            
               {" "}
               <label for="name" value={name}>
                 {userInfo.fname} {userInfo.sname}
               </label>
+              
             </h2>
+            <span>
+             <Link to={"/account/editprofile/" + userInfo.studentid}> Edit Profile? </Link>
+            </span> 
+            <br></br> 
             <div className="profile-contents">
               <form className="profile-form">
                 <label for="username" value={sellerId}>
-                  Student ID: {sellerId}
+                  <h4>Student ID:</h4> {sellerId}
                 </label>
                 <br></br>
                 <label for="email" value={email}>
-                  Email: {userInfo.email}
+                  <h4>Email:</h4> {userInfo.email}
                 </label>
                 <br></br>
                 <label for="university" value={university}>
-                  University: {userInfo.university}
+                  <h4>University:</h4> {userInfo.university}
                 </label>
                 <br></br>
                 <label for="city" value={city}>
-                  City: {userInfo.city}
+                  <h4>City:</h4> {userInfo.city}
                 </label>
                 <br></br>
                 <label for="created" value={created}>
-                  Member since: {created}
+                  <h4>Member since:</h4> {created}
                 </label>
-                <br></br>
+            
               </form>
-              <div className="edit-profile">
-                <Link to={"/account/editprofile/" + userInfo.studentid}>
-                  <button type="button" className="edit-profile-button">
-                    Edit Profile
-                  </button>
-                </Link>
-              </div>
+           
+           <div className="profileButtons">
               <button type="button" className="logout" onClick={handleLogout}>
-                LOGOUT
+                Logout
               </button>
+            </div>
             </div>
           </div>
           <div className="listingsContainer">

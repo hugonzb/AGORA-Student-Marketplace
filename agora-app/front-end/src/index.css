@@ -887,6 +887,14 @@ textarea {
 
 /* Profile */
 
+.profile-heading{
+    
+    font-weight: bold; 
+    color: #ff7b00;
+    margin-bottom: -20px;
+    font-size: 18px;
+}
+
 .mainContainer {
   background: white;
   justify-content: space-between;
@@ -898,44 +906,46 @@ textarea {
 
 .logout {
   margin-top: 20px;
-  display: flex;
-  justify-content: flex-end;
+  width: 6rem;
   padding: 5px;
   background-color: rgb(214, 8, 8);
   color: white;
   border-radius: 0.5rem;
   cursor: pointer;
+  padding-left: 3px;
+  display: inline;
+  justify-content: flex-end;
 }
 
 .edit-profile-button {
   margin-top: 20px;
-  display: flex;
-  justify-content: flex-end;
+  width: 6rem;
   padding: 5px;
   background-color: rgb(54, 138, 32);
   color: white;
   border-radius: 0.5rem;
   cursor: pointer;
+  padding-right: 3px;
 }
 
 .profile-container {
   width: auto;
   display: flex;
-  padding: 2px;
-  padding-top: 10px;
+  padding: 0px;
+  
+  background: red;
 }
 
 .profile-contents {
   width: 100%;
-  margin-top: 10px;
-  padding: 1px;
+  margin-top: 4px;
   color: black;
   font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
+  display: inline-block;
   flex-direction: column;
-  text-align: center;
-  align-items: center;
+  text-align: left;
+  align-items: left;
   justify-content: center;
 }
 
@@ -943,10 +953,20 @@ textarea {
   color: rgb(0, 0, 0);
 }
 
+.profile-form h4{
+color: black;
+}
+
+.profileButtons{
+
+    float: right;
+
+}
+
 .profileContainer {
   display: flex;
   flex-direction: column;
-  background-color: rgb(250, 250, 250);
+  background-color: solid white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
   width: 30%;
   min-width: 21.5rem;
@@ -964,13 +984,13 @@ textarea {
 
 .profileContainer img {
   border-radius: 50%;
-  border: 1px solid rgb(0, 0, 0);
-  margin-bottom: 1rem;
+  border: 9px solid white; /*i want to change this but not sure to what*/
+  margin-bottom: 0.5rem;
   max-width: 10rem;
 }
 
 .watchlistContainer {
-  background-color: rgb(250, 250, 250);
+  background-color: white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
   width: 30%;
   min-width: 21.5rem;
@@ -988,7 +1008,7 @@ textarea {
 }
 
 .listingsContainer {
-  background-color: rgb(250, 250, 250);
+  background-color: white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
   width: 30%;
   min-width: 21.5rem;
