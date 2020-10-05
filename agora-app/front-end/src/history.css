@@ -119,7 +119,7 @@ li.hist-item a:hover{
   align-items: center;
   justify-content: center;
   width: 20rem;
-  border: 1px solid rgb(160, 160, 160);
+  border: 2px solid rgb(202, 202, 202);
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
   background-color: rgb(250, 250, 250);
@@ -128,6 +128,7 @@ li.hist-item a:hover{
 .history-listing-image img {
   max-height: 15rem;
   max-width: 15rem;
+  border: 0px;
 }
 
 .history-listing-price {
@@ -149,9 +150,8 @@ li.hist-item a:hover{
 .history-listing-name {
   text-align: center;
   padding: 0.5rem;
-  border-top: 1px solid rgb(160, 160, 160);
-  border-left: 1px solid rgb(160, 160, 160);
-  border-right: 1px solid rgb(160, 160, 160);
+  border-left: 2px solid rgb(202, 202, 202);
+  border-right: 2px solid rgb(202, 202, 202);
   font-weight: bold;
   background-color: rgb(250, 250, 250);
 }
