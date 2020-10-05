@@ -70,7 +70,7 @@ function ViewListing(props) {
               </div>
               <Link to={"/checkout/" + listing._id}>
                 <button className="buynow-button">
-                  <FontAwesomeIcon size="10x" icon={faShoppingCart} />{" "}
+                  <FontAwesomeIcon size="lg" icon={faShoppingCart} />{" "}
                   &nbsp;Purchase Item&nbsp;&nbsp;&nbsp;
                 </button>
               </Link>

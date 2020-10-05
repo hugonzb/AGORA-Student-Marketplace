@@ -4,7 +4,6 @@ import { signUp } from "../actions/userActions";
 import { Link } from "react-router-dom";
 import "../signup.css";
 import { removeUser } from "../actions/userActions";
-import agoralogo from "../images/agoralogo.png";
 import Axios from "axios";
 
 

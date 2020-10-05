@@ -119,8 +119,8 @@ function CreateListing(props) {
                    
                    <div className="titleText">
                    <span>
-			       <h2>Create A Listing</h2> 
-                   Describe your product to get selling! 
+			            <h2>Create A Listing</h2> 
+                   <b>Describe your item to go get selling!</b> 
                    </span> 
                    </div>
            
@@ -165,6 +165,7 @@ function CreateListing(props) {
                     <div className= "input_wrap">
                           <label>Listing Description: </label>
                               <textarea
+                                className="textarea"
                                 type="text"
                                 id="listingDescription"
                                 name="listingDescription"

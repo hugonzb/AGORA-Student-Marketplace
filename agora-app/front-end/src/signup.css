@@ -87,15 +87,29 @@
 	width: 180px;
 }
  
-.form_wrap  input[type="text"]{
+.form_wrap input[type="text"] {
 	width: 100%;
 	border-radius: 3px;
 	border: 1px solid #9597a6;
 	padding: 10px;
 	outline: none;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
+}
+
+.form_wrap input[type="number"] {
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
  
-.form_wrap  input[type="text"]:focus{
+.form_wrap input[type="text"]:focus{
+	border-color: #ebd0ce;
+}
+
+.form_wrap input[type="number"]:focus{
 	border-color: #ebd0ce;
 }
 
@@ -143,6 +157,15 @@
 	background: #ffa754;
 	opacity: 0.8;
 	transform: scale(0.96);
+}
+
+.textarea {
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
 
   /* class applies to select element itself, not a wrapper element */

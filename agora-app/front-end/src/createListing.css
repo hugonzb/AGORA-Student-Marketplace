@@ -20,7 +20,7 @@ input[type=text], select{
 }
 
 .input_wrap textarea{
-border-color: black;
+  border: 1px solid black;
 }
 
 .input_wrap [type=number]{

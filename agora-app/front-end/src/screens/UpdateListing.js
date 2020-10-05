@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Axios from "axios";
 import { detailListing, listingUpdate } from "../actions/listingActions";
+import "../signup.css";
 
 function UpdateListing(props) {
   //get user details
@@ -118,7 +119,7 @@ function UpdateListing(props) {
     <div className="wrapper">
       <div className="registration_form">
         <div className="form_header">
-          <h2>Hello {userInfo.fname}! update your listing: </h2>
+          <h2>Update Your Listing</h2>
           <br></br>
         </div>
         <label>Upload Image</label>
@@ -172,6 +173,7 @@ function UpdateListing(props) {
             <div className="input_wrap">
               <label>Listing Description: </label>
               <textarea
+                className="textarea"
                 type="text"
                 id="listingDescription"
                 name="listingDescription"
@@ -246,7 +248,7 @@ function UpdateListing(props) {
 
           <div className="input_grp"> 
           <div className="input_wrap">
-           <button type="submit" value="Submit">
+           <button className="updateButton" type="submit" value="Submit">
             Update Listing
           </button>
           </div>
