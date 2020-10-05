@@ -1009,6 +1009,7 @@ color: black;
 
 .watchlist-message {
   display: flex;
+  flex-direction: column;
   height: 100%;
   max-height: 23rem;
   align-items: center;

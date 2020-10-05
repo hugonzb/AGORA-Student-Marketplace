@@ -5,6 +5,8 @@ import { listListings, deleteListing } from "../actions/listingActions";
 import { Link } from "react-router-dom";
 import "../index.css";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 function Profile(props) {
   const [name, setName] = useState("");
@@ -168,8 +170,10 @@ function Profile(props) {
             )}
           </div>
           <div className="watchlistContainer">
-            <div className="profile-heading">WATCHLIST</div>
-            <div className="watchlist-message">You have not added any listings to your watchlist yet</div>
+            <div className="profile-heading">WATCHLIST <FontAwesomeIcon size="lg" icon={faEye} /></div>
+            <div className="watchlist-message">
+              You have not added any listings to your watchlist yet
+            </div>
           </div>
         </div>
       ) : (
