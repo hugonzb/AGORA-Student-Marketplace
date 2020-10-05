@@ -98,12 +98,12 @@ function SignUp(props) {
          
              
                    <div className="titleText">
+                   <span>
 			       <h2>Registration Form</h2> 
+                   Already have an account? Sign in <Link to= "/account/signin"> here. </Link> 
+                   </span> 
                    </div>
-                  
-                   
-                
-            
+
             {loading}
         {error && <div>Student ID or Email has been taken</div>}
         {message}

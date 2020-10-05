@@ -125,6 +125,7 @@ function UpdateListing(props) {
         {uploading && <div>Uploading...</div>}
         {uploadButton ? (
           <div>
+        
             <div className="listing-image">
               <img
                 className="listing-image"
@@ -137,8 +138,10 @@ function UpdateListing(props) {
         ) : (
           <div> Uploaded image successfully </div>
         )}
+
         <form className="form_wrap" onSubmit={submitHandler}>
-          <div className="input_grp">
+         
+         <div className="input_grp">
             <div className="input_wrap">
               <label>Listing Name: </label>
               <input
@@ -150,6 +153,22 @@ function UpdateListing(props) {
                 onChange={(e) => setName(e.target.value)}
               ></input>
             </div>
+
+            <div className="input_wrap"> 
+                <label>Product brand: </label>
+                <input
+                type="text"
+                id="brand"
+                name="brand"
+                defaultValue={listing.brand}
+                onChange={(e) => setBrand(e.target.value)}
+              ></input>
+          </div>
+          </div> 
+          
+          <div className="input_grp">
+
+
             <div className="input_wrap">
               <label>Listing Description: </label>
               <textarea
@@ -164,6 +183,9 @@ function UpdateListing(props) {
               ></textarea>
             </div>
           </div>
+
+          <div className="input_grp">
+          <div className="input_wrap">
           <label>Category: </label>
           <select
             id="categories"
@@ -189,7 +211,25 @@ function UpdateListing(props) {
             <option value="Toys">Toys</option>
             <option value="Sports Equipments">Sports Equipments</option>
           </select>
+          </div> 
 
+
+          <div className= "input_wrap">
+          <label>Condition: </label>
+          <select
+            id="condition"
+            defaultValue={listing.condition}
+            onChange={(e) => setCondition(e.target.value)}
+          >
+            <option value="New">New</option>
+            <option value="Used">Used</option>
+          </select>
+         
+          </div> 
+          </div> 
+
+          <div className= "input_grp"> 
+          <div className= "input_wrap"> 
           <br></br>
           <label>Price: </label>
           <input
@@ -201,27 +241,20 @@ function UpdateListing(props) {
             required
             onChange={(e) => setPrice(e.target.value)}
           ></input>
-          <br></br>
-          <label>Product brand: </label>
-          <input
-            type="text"
-            id="brand"
-            name="brand"
-            defaultValue={listing.brand}
-            onChange={(e) => setBrand(e.target.value)}
-          ></input>
-          <label>Condition: </label>
-          <select
-            id="condition"
-            defaultValue={listing.condition}
-            onChange={(e) => setCondition(e.target.value)}
-          >
-            <option value="New">New</option>
-            <option value="Used">Used</option>
-          </select>
-          <button type="submit" value="Submit">
+          </div> 
+          </div> 
+
+          <div className="input_grp"> 
+          <div className="input_wrap">
+           <button type="submit" value="Submit">
             Update Listing
           </button>
+          </div>
+          </div> 
+
+          <br></br>
+          
+          
         </form>
       </div>
     </div>
