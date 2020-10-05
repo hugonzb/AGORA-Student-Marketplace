@@ -51,8 +51,8 @@ function History(props) {
               <div className="listings">
                 {listingCompletes.map((listing) => (
                   <li key={listing._id}>
-                    <div className="profile-listing">
-                      <div className="profile-listing-image">
+                    <div className="history-listing">
+                      <div className="history-listing-image">
                           <img
                             className="listing-image"
                             src={listing.listingImage}
@@ -60,7 +60,7 @@ function History(props) {
                           ></img>
                       </div>
 
-                      <div className="listing-content">
+                      <div className="history-listing-content">
                           <div className="listing-name">{listing.name}</div>
                           <div className="listing-price">
                             Sold Price: ${listing.listingPrice}

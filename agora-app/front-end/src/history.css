@@ -110,3 +110,25 @@ li.hist-item a:hover{
   margin: 5px 0 10px 0;
 }
 
+.history-listing {
+  width: 20rem;
+}
+
+.history-listing-content {
+   width: 100%;
+   background-color: grey;
+}
+
+.history-listing-image {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  border: 1px solid rgb(160, 160, 160);
+}
+
+.history-listing-image img {
+  max-height: 15rem;
+  max-width: 15rem;
+}
