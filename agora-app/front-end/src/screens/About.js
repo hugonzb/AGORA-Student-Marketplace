@@ -43,7 +43,7 @@ function About(props) {
         </div>
 
         <div className="profile-card">
-          <img src={""} className="profile-img" alt="profile" />
+          <img src={leonicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Leon</h3>
           <h5>Backend Developer</h5>
           <p></p>
