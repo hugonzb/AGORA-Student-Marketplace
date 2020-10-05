@@ -15,7 +15,7 @@ function CreateListing(props) {
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
   const [category, setCategory] = useState("Antiques");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("default.png");
   const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
