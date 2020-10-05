@@ -25,9 +25,8 @@ function History(props) {
  return (
 
 <div>
-   <div  className="HistoryTab">
-   <h2>Account Trading History</h2>
-   <h2>Signed in as {} </h2> 
+  <div  className="HistoryTab">
+   <h2 className="history-checkout-heading">Account Trading History</h2>
   </div>
 
 <div  className="hist-wrapper">
@@ -142,18 +141,18 @@ function History(props) {
                     </div>
                     <div className="history-listing-content">
                         <div className="history-listing-price">
-                          Sold Price: ${listing.listingPrice}
+                          Purchase Price: ${listing.listingPrice}
                         </div>
                         <div className="history-listing-details">
-                          <div className="history-subheader">BUYER DETAILS</div>
+                          <div className="history-subheader">SELLER DETAILS</div>
                           <div>
-                            {listing.buyerName}
+                            {listing.sellerName}
                           </div>
                           <div>
-                            {listing.buyerEmail}
+                            {listing.sellerEmail}
                           </div>
                           <div className="history-buyer-address">
-                            <div className="history-subheader">POSTAL ADDRESS</div>
+                            <div className="history-subheader">YOUR POSTAL ADDRESS</div>
                             <div>
                               {listing.buyerAddress}
                             </div>

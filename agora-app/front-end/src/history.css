@@ -179,3 +179,8 @@ li.hist-item a:hover{
   justify-content: center;
   border: 0px;
 }
+
+.HistoryTab h2 {
+  font-weight: bold; 
+  color: #ff7b00;
+}

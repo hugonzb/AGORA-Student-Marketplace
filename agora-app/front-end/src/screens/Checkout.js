@@ -40,7 +40,7 @@ import PropagateLoader from "react-spinners/PropagateLoader";
         setListingPrice(listing.price);
         setListingName(listing.name);
         setSellerName(listing.seller);
-        setSellerEmail(listing.email);
+        setSellerEmail(listing.sellerEmail);
       }
       const submitHandler = (e) => {
         e.preventDefault();
