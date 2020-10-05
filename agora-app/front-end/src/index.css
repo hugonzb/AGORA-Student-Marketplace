@@ -1099,19 +1099,27 @@ color: black;
   font-size: 10px;
   width: 6rem;
   color: white;
-  margin-bottom: 0.5rem;
+  margin-bottom: 5px;
   border-radius: 0.5rem;
   cursor: pointer;
 }
 
+.view-listing-button:hover {
+  background-color: rgb(255, 195, 83);
+}
+
 .delete-button {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(219, 0, 0);
   padding: 5px;
   font-size: 10px;
   width: 6rem;
   color: white;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: rgb(255, 45, 45);
 }
 
 /*checkout*/
