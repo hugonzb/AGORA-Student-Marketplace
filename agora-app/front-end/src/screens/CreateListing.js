@@ -237,7 +237,7 @@ function CreateListing(props) {
 
                 <div className="input_grp">
                     <div className="input_wrap">
-                       <input type ="submit" value="Create Listing" class="submit_btn"></input>
+                       <input type ="submit" value="Create Listing" className="submit_btn"></input>
                     </div>
                 </div>
 

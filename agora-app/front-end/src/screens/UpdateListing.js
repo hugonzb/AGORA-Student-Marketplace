@@ -248,7 +248,7 @@ function UpdateListing(props) {
 
           <div className="input_grp"> 
           <div className="input_wrap">
-           <button className="updateButton" type="submit" value="Submit">
+           <button className="update-button" type="submit" value="Submit">
             Update Listing
           </button>
           </div>

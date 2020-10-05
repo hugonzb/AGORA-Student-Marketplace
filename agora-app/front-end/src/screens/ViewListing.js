@@ -54,14 +54,12 @@ function ViewListing(props) {
                 <div className="view-listing-seller-message-text">
                   You listed this item.
                 </div>
-                <div className="update-listing">
+              </div>
+              <div className="update-listing">
                   <Link to={"/account/updatelisting/" + listing._id}>
-                    <button type="button" className="seller-update-button">
-                      update
-                    </button>
+                    <button className="update-button">Update Listing</button>
                   </Link>
                 </div>
-              </div>
             </div>
           ) : userInfo ? (
             <div className="view-listing-buttons">

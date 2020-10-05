@@ -351,7 +351,7 @@ ul li a {
   display: flex;
   font-weight: bold;
   font-family: "Play";
-  height: 6rem;
+  height: 4rem;
   text-align: center;
   align-items: center;
   max-width: 23rem;
@@ -362,7 +362,6 @@ ul li a {
   border-radius: 0.5rem;
   background-color: rgb(245, 245, 245);
   padding: 1rem;
-  margin: 2rem;
 }
 
 .view-listing-seller-message-text a {
@@ -503,6 +502,25 @@ ul li a {
   background: rgb(250, 250, 250);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 14px;
+}
+
+/* Update Listing */
+.update-button {
+  width: 200px;
+  background: #ff7b00;
+  padding: 10px;
+  border: 0;
+  border-radius: 3px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+.update-button:hover {
+  opacity: 0.8;
+  transform: scale(0.96);
 }
 
 /* Sign up screen */
