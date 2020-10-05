@@ -75,14 +75,16 @@ function About(props) {
         <div className="about-help">Need help?</div> 
         <a href={checkmark} download="Agora_Help_Documentation">Download the end-user documentation here.</a>
       </div>
-      <form onSubmit={submitHandler}>
-        <div className="contact-comment"> <h2> Leave us a Comment </h2>	</div>
-        <input name="namess" type="text" className="feedback-input" placeholder="Name" onChange={(e) => setName(e.target.value)}/>
-        <input name="emailss" type="email" className="feedback-input" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
-        <textarea type="text" name="texts" className="feedback-input" placeholder="Comment" required onChange={(e) => setFeedback(e.target.value)}></textarea>
-        {uploading && <div>Submitting feedback</div>}
-        <input type="submit" name="send it" value="Send" />
-      </form>
+      <div className="about-feedback">
+        <form onSubmit={submitHandler}>
+          <div className="contact-comment"> <h2> Leave us a Comment </h2>	</div>
+          <input name="namess" type="text" className="feedback-input" placeholder="Name" onChange={(e) => setName(e.target.value)}/>
+          <input name="emailss" type="text" className="feedback-input" placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
+          <textarea type="text" name="texts" className="feedback-input" placeholder="Comment" required onChange={(e) => setFeedback(e.target.value)}></textarea>
+          {uploading && <div>Submitting feedback</div>}
+          <input type="submit" name="send it" value="Send" />
+        </form>
+      </div>
     </div>
 
 
