@@ -922,15 +922,18 @@ textarea {
 
 .logout {
   margin-top: 20px;
-  width: 6rem;
+  min-width: 6rem;
   padding: 5px;
   background-color: rgb(214, 8, 8);
   color: white;
   border-radius: 0.5rem;
   cursor: pointer;
   padding-left: 3px;
-  display: inline;
   justify-content: flex-end;
+}
+
+.logout:hover {
+  background-color: rgb(255, 45, 45);
 }
 
 .edit-profile-button {
