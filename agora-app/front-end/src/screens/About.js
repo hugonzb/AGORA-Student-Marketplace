@@ -23,8 +23,6 @@ function About(props) {
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(submitFeedback(name, email, feedback));
-    // Hides the loading div
-    //setUploading(false);
     window.alert("Feedback submitted successfully");
     window.location.reload();
   };
@@ -44,7 +42,7 @@ function About(props) {
         <div className="profile-card">
           <img src={leonicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Leon Hoogenraad</h3>
-          <h5>Backend Developer</h5>
+          <h5>Back-end Developer</h5>
           <p></p>
         </div>
 
@@ -65,21 +63,21 @@ function About(props) {
         <div className="profile-card">
           <img src={""} className="profile-img" alt="profile" />
           <h3 className="user-name">Name</h3>
-          <h5>Memeber Role</h5>
+          <h5>Member Role</h5>
           <p></p>
         </div>
       </div>
       <div className="about-help-box">
         <div className="about-help">Need help?</div>
         <a href={checkmark} download="Agora_Help_Documentation">
-          Download the end-user documentation here.
+          Download our end-user documentation here
         </a>
       </div>
       <div className="about-feedback">
         <form onSubmit={submitHandler}>
           <div className="contact-comment">
             {" "}
-            <h2> Leave us a Comment </h2>{" "}
+            <h2> Leave us feedback </h2>{" "}
           </div>
           <input
             name="namess"
