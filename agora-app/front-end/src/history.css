@@ -52,10 +52,8 @@
 
 
 .leftbar {
-width: 100%;
-margin-right: 10px;
-margin-bottom:10px;
-margin-left: 10px;
+  width: 100%;
+  min-width: 20rem;
 }
 
 .folderTab.sub {
