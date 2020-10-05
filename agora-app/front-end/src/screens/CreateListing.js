@@ -120,13 +120,13 @@ function CreateListing(props) {
                    <div className="titleText">
                    <span>
 			            <h2>Create A Listing</h2> 
-                   <b>Describe your item to go get selling!</b> 
+                   <b>Describe your item to get selling!</b> 
                    </span> 
                    </div>
            
             <br></br>
                 <div className= "input_wrap">
-                        <label>Upload Image</label>
+                        <label className="upload-image">Upload Image</label>
        
                           {uploading && <div>Uploading...</div>}
                           { uploadButton ?

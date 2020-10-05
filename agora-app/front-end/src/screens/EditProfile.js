@@ -130,7 +130,7 @@ function EditProfile(props) {
             <div className="input_wrap">
               {uploadButton ? (
                 <div>
-                  <label>Upload a profile picture</label>
+                  <label className="upload-image">Upload a profile picture</label>
                   <input type="file" onChange={uploadFileHandler}></input>
                   <button onClick={(e) => setNoProfile()}>
                     No profile picture

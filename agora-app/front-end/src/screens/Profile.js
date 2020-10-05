@@ -70,12 +70,9 @@ function Profile(props) {
             <div className="profile-heading">PROFILE</div>
             <img src={profilePicture} alt="profile" height="150" length="100" />
             <h2>
-            
-              {" "}
               <label for="name" value={name}>
                 {userInfo.fname} {userInfo.sname}
               </label>
-              
             </h2>
             <span>
              <Link to={"/account/editprofile/" + userInfo.studentid}> Edit Profile? </Link>

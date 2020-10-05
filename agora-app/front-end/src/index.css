@@ -981,7 +981,7 @@ color: black;
 .profileContainer {
   display: flex;
   flex-direction: column;
-  background-color: solid white;
+  background-color: solid rgb(0, 0, 0);
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 5.9);
   width: 30%;
   min-width: 21.5rem;
@@ -1137,6 +1137,11 @@ color: black;
 
 .delete-button:hover {
   background-color: rgb(255, 45, 45);
+}
+
+.upload-image {
+  display: block;
+  color: #9597a6;
 }
 
 /*checkout*/

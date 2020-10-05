@@ -122,7 +122,7 @@ function UpdateListing(props) {
           <h2>Update Your Listing</h2>
           <br></br>
         </div>
-        <label>Upload Image</label>
+        <label className="upload-image">Upload Image</label>
         {uploading && <div>Uploading...</div>}
         {uploadButton ? (
           <div>
