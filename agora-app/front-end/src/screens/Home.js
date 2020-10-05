@@ -75,11 +75,13 @@ function Home(props) {
                 setLocation(e.target.value);
               }}
             >
-              <option value=""> All Locations </option>
-              <option value="Auckland"> Auckland </option>
-              <option value="Christchurch"> Christchurch </option>
-              <option value="Dunedin"> Dunedin </option>
-              <option value="Wellington"> Wellington </option>
+            <option value="Dunedin">Dunedin</option>
+            <option value="Auckland">Auckland</option>
+            <option value="Wellington">Wellington</option>
+            <option value="Christchurch">Christchurch</option>
+            <option value="Lincoln">Lincoln</option>
+            <option value="Palmerston North">Palmerston North</option>
+            <option value="Hamilton">Hamilton</option>
             </select>
           </form>
         </div>
