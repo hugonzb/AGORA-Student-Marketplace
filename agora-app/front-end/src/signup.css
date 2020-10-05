@@ -89,10 +89,10 @@
 }
 
 .imageStyle{
-	display: inline-block; 
+	display: flex-start; 
 	justify-content: space-between; 
-	float: left;
 	width: 100%;
+	margin-right: 20rem;
 }
  
 .form_wrap .input_grp  input[type="text"]{
@@ -122,13 +122,7 @@ width: 100%;
 }
 
 .fileStyle{
-	float: right;
-	justify-content: space-between;
-	width:100%;
-	margin-left: 20rem;
-	display: inline-block;
-	margin-top: -2rem;
-
+	
 }
 
 .form_wrap input[type="select"] {

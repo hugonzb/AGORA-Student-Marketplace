@@ -51,8 +51,8 @@ function About(props) {
 
         <div className="profile-card">
           <img src={""} className="profile-img" alt="profile" />
-          <h3 className="user-name">Name</h3>
-          <h5>Memeber Role</h5>
+          <h3 className="user-name">Vainui Moresi</h3>
+          <h5>Front-end Developer</h5>
           <p></p>
         </div>
 
