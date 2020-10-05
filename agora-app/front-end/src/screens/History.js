@@ -59,20 +59,16 @@ function History(props) {
                             alt="listing"
                           ></img>
                       </div>
-
+                      <div className="history-listing-name">
+                            {listing.listingName}
+                      </div>
                       <div className="history-listing-content">
-                          <div className="listing-name">{listing.name}</div>
-                          <div className="listing-price">
+                          <div className="history-listing-price">
                             Sold Price: ${listing.listingPrice}
                           </div>
-                          <div>
-                            Name: {listing.listingName}
-                          </div>
+                          
                           <div>
                             Buyer: {listing.buyerName}
-                          </div>
-                          <div>
-                            Seller: {listing.sellerName}
                           </div>
                           <div>
                             Buyer Email: {listing.buyerEmail}
