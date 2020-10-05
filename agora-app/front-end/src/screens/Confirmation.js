@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import checkmark from "../images/check-mark.png";
 
 
 
@@ -13,7 +14,7 @@ function Confirmation(props) {
     </div>
     <div class="check-mark-container">
       <div class="check-mark">
-        <img src="http://www.guerrillafitness.net/wp-content/themes/guerrilla/images/Free-Trial-Class/check-mark.png" alt="tick"/>
+        <img src={checkmark} alt="tick"/>
       </div>
     </div> 
     <div class="small-text">
