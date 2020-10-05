@@ -67,25 +67,26 @@ function History(props) {
                             Sold Price: ${listing.listingPrice}
                           </div>
                           <div className="history-listing-details">
+                            <div className="history-subheader">BUYER DETAILS</div>
                             <div>
-                              Buyer: {listing.buyerName}
+                              {listing.buyerName}
                             </div>
                             <div>
-                              Buyer Email: {listing.buyerEmail}
+                              {listing.buyerEmail}
                             </div>
                             <div className="history-buyer-address">
-                              ADDRESS:
+                              <div className="history-subheader">POSTAL ADDRESS</div>
                               <div>
-                                Street: {listing.buyerAddress}
+                                {listing.buyerAddress}
                               </div>
                               <div>
-                                City: {listing.buyerCity}
+                                {listing.buyerCity}
                               </div>
                               <div>
-                                Region: {listing.buyerRegion}
+                                {listing.buyerRegion}
                               </div>
                               <div>
-                                Postcode: {listing.buyerPostcode}
+                                {listing.buyerPostcode}
                               </div>
                             </div>
                             <div className="history-date-sold">
