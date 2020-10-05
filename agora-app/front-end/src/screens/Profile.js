@@ -126,7 +126,7 @@ function Profile(props) {
               <div className="listings">
                 {listings.map((listing) => (
                   <li key={listing._id}>
-                    <div className="profile-listing">
+                    <div className="listing-container">
                       <div className="profile-listing-image">
                         <Link to={"/listing/" + listing._id}>
                           <img
@@ -143,17 +143,15 @@ function Profile(props) {
                           <div className="listing-price">
                             Asking Price: ${listing.price}
                           </div>
-
-                          <div className="delete-listing"></div>
                         </Link>
-                      </div>
-                      <button
+                        <button
                         type="button"
                         className="delete-button"
                         onClick={() => deleteHandler(listing)}
                       >
                         delete
                       </button>
+                      </div>
                     </div>
                   </li>
                 ))}
