@@ -113,15 +113,18 @@ function EditProfile(props) {
   ) : (
     <div className="wrapper">
       <div className="registration_form">
-        <div className="form-heading">
-          <img src={agoralogo} className="sign-up-logo" alt="" />
-
+        <div className="titleText">
+        
+          
           <span>
-            <h4>Edit profile page:</h4>
-            <p> Student ID: {userInfo.studentid} </p>
+            <h2>Edit profile page:</h2>
+            <p> Student ID: <strong> {userInfo.studentid} </strong> </p>
             {console.log(userInfo.studentid)}
           </span>
+
         </div>
+
+        <br></br> 
         {loading}
         {error && <div>Student ID or Email Address has been taken.</div>}
         <div className="input_grp">
