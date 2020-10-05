@@ -161,11 +161,10 @@ function Profile(props) {
                 ))}
               </div>
             ) : (
-              <div>
+              <div className="watchlist-message">
                 {" "}
-                You currently dont have any listings. Click "create listing" to
-                get started!{" "}
-                <Link to="/account/createlisting">Create listing</Link>
+                <div> You currently dont have any listings. </div>
+                <div> Click <Link to="/account/createlisting">Create listing</Link> to get started! </div>
               </div>
             )}
           </div>
