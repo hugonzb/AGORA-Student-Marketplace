@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Axios from "axios";
 import { detailListing, listingUpdate } from "../actions/listingActions";
+import "../signup.css";
 
 function UpdateListing(props) {
   //get user details
@@ -30,6 +31,7 @@ function UpdateListing(props) {
   const [uploading, setUploading] = useState(false);
   const [uploadButton, setUploadButton] = useState(true);
 
+  
   const dispatch = useDispatch();
 
   // gets the users details
@@ -117,28 +119,54 @@ function UpdateListing(props) {
   ) : (
     <div className="wrapper">
       <div className="registration_form">
-        <div className="form_header">
-          <h2>Hello {userInfo.fname}! update your listing: </h2>
-          <br></br>
-        </div>
-        <label>Upload Image</label>
+            <div className="titleText">
+                <span>
+                <h2>Update Your Listing:</h2>
+                </span>
+            </div>
+            <br></br> 
+
+            <div className= "styleUpload">
+            <div className="imageStyle">
+            <label>Upload Image:</label> 
+            
+            </div> 
+           
+            
+
+            <div className="fileStyle">
+        
         {uploading && <div>Uploading...</div>}
         {uploadButton ? (
+
           <div>
-            <div className="listing-image">
-              <img
-                className="listing-image"
-                src={listing.image}
-                alt="listing"
-              ></img>
-            </div>
-            <input type="file" onChange={uploadFileHandler}></input>
-          </div>
-        ) : (
-          <div> Uploaded image successfully </div>
-        )}
+        
+                <div className="listing-image">
+                  <img
+                    className="listing-image"
+                    src={listing.image}
+                    alt="listing"
+                  ></img>
+                </div>
+            
+
+            
+                  <input type="file" onChange={uploadFileHandler}></input>
+                  </div>
+                ) : (
+                  <div> Uploaded image successfully </div>
+                )}
+
+        </div> 
+        </div>
+        
+        
+        
+        
+
         <form className="form_wrap" onSubmit={submitHandler}>
-          <div className="input_grp">
+         
+         <div className="input_grp">
             <div className="input_wrap">
               <label>Listing Name: </label>
               <input
@@ -150,9 +178,26 @@ function UpdateListing(props) {
                 onChange={(e) => setName(e.target.value)}
               ></input>
             </div>
+
+            <div className="input_wrap"> 
+                <label>Product brand: </label>
+                <input
+                type="text"
+                id="brand"
+                name="brand"
+                defaultValue={listing.brand}
+                onChange={(e) => setBrand(e.target.value)}
+              ></input>
+          </div>
+          </div> 
+          
+          <div className="input_grp">
+
+
             <div className="input_wrap">
               <label>Listing Description: </label>
               <textarea
+                className="textarea"
                 type="text"
                 id="listingDescription"
                 name="listingDescription"
@@ -164,8 +209,12 @@ function UpdateListing(props) {
               ></textarea>
             </div>
           </div>
+
+          <div className="input_grp">
+          <div className="input_wrap">
           <label>Category: </label>
           <select
+            className="select-css"
             id="categories"
             defaultValue={listing.category}
             onChange={(e) => setCategory(e.target.value)}
@@ -189,7 +238,26 @@ function UpdateListing(props) {
             <option value="Toys">Toys</option>
             <option value="Sports Equipments">Sports Equipments</option>
           </select>
+          </div> 
 
+
+          <div className= "input_wrap">
+          <label>Condition: </label>
+          <select
+            className="select-css"
+            id="condition"
+            defaultValue={listing.condition}
+            onChange={(e) => setCondition(e.target.value)}
+          >
+            <option value="New">New</option>
+            <option value="Used">Used</option>
+          </select>
+         
+          </div> 
+          </div> 
+
+          <div className= "input_grp"> 
+          <div className= "input_wrap"> 
           <br></br>
           <label>Price: </label>
           <input
@@ -201,27 +269,20 @@ function UpdateListing(props) {
             required
             onChange={(e) => setPrice(e.target.value)}
           ></input>
-          <br></br>
-          <label>Product brand: </label>
-          <input
-            type="text"
-            id="brand"
-            name="brand"
-            defaultValue={listing.brand}
-            onChange={(e) => setBrand(e.target.value)}
-          ></input>
-          <label>Condition: </label>
-          <select
-            id="condition"
-            defaultValue={listing.condition}
-            onChange={(e) => setCondition(e.target.value)}
-          >
-            <option value="New">New</option>
-            <option value="Used">Used</option>
-          </select>
-          <button type="submit" value="Submit">
+          </div> 
+          </div> 
+
+          <div className="input_grp"> 
+          <div className="input_wrap">
+           <button className="update-button" type="submit" value="Submit">
             Update Listing
           </button>
+          </div>
+          </div> 
+
+          <br></br>
+          
+          
         </form>
       </div>
     </div>

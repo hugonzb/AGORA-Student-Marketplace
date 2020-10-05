@@ -1,4 +1,4 @@
-const { CREATELISTINGCOMPLETE_REQUEST, CREATELISTINGCOMPLETE_SUCCESS, CREATELISTINGCOMPLETE_FAIL, LISTINGCOMPLETE_REQUEST, LISTINGCOMPLETE_SUCCESS, LISTINGCOMPLETE_FAIL } = require("../constants/listingCompleteConstants");
+const { CREATELISTINGCOMPLETE_REQUEST, CREATELISTINGCOMPLETE_SUCCESS, CREATELISTINGCOMPLETE_FAIL, LISTINGCOMPLETE_REQUEST, LISTINGCOMPLETE_SUCCESS, LISTINGCOMPLETE_FAIL, LISTINGPURCHASEDCOMPLETE_REQUEST, LISTINGPURCHASEDCOMPLETE_SUCCESS, LISTINGPURCHASEDCOMPLETE_FAIL } = require("../constants/listingCompleteConstants");
 
 
 function listingCompleteReducer(state = { listingCompletes: [] }, action) {
@@ -12,7 +12,20 @@ function listingCompleteReducer(state = { listingCompletes: [] }, action) {
       default:
         return state;
     }
-  }
+}
+
+function listingPurchasedCompleteReducer(state = { listingPurchasedCompletes: [] }, action) {
+    switch (action.type) {
+      case LISTINGPURCHASEDCOMPLETE_REQUEST:
+        return { loadingPurchased: true };
+      case LISTINGPURCHASEDCOMPLETE_SUCCESS:
+        return { loadingPurchased: false, listingPurchasedCompletes: action.payload };
+      case LISTINGPURCHASEDCOMPLETE_FAIL:
+        return { loadingPurchased: false, errorPurchased: action.payload };
+      default:
+        return state;
+    }
+}
 
 function createListingCompleteReducer(state = {}, action){
     switch(action.type){
@@ -27,4 +40,4 @@ function createListingCompleteReducer(state = {}, action){
     }
 }
 
-export { createListingCompleteReducer, listingCompleteReducer }
+export { createListingCompleteReducer, listingCompleteReducer, listingPurchasedCompleteReducer }

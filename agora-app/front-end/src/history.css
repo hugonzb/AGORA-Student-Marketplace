@@ -1,5 +1,7 @@
-
-		
+*{
+    margin: 0; 
+    padding: 0;
+}		
 
 .HistoryTab{  
     padding-top: 5px;
@@ -22,7 +24,8 @@
   width:80%;
   margin: auto;  
   margin-top: 20px;
-  margin-bottom: 20px;
+  min-height: 100vh;
+  position: relative; 
 	}
 
 .folderTab h3{
@@ -47,22 +50,10 @@
   overflow:hidden;
 }
 
-.borderBox{
-  border:1px solid #B6B6AB;
-  border-top:none;
-  border-bottom-left-radius:4px;
-  border-bottom-right-radius:4px;
-  background:#fff;
-  overflow:hidden;
-  margin:0;
-  padding:10px;
-}
 
 .leftbar {
-width: 100%;
-margin-right: 10px;
-margin-bottom:10px;
-margin-left: 10px;
+  width: 100%;
+  min-width: 20rem;
 }
 
 .folderTab.sub {
@@ -93,7 +84,6 @@ ul.options-history li.hist-item{
 }
 
 li.hist-item a{
-  
   text-decoration: none
 }
 
@@ -107,3 +97,103 @@ li.hist-item a:hover{
   margin: 5px 0 10px 0;
 }
 
+.history-listing {
+  width: 20rem;
+  margin: 0.5rem;
+}
+
+.history-listing-content {
+   width: 100%;
+   background-color: rgb(245, 245, 245);
+   border-radius: 0.5rem;
+   font-size: 13px;
+}
+
+.history-listing-details {
+  text-align: center;
+}
+
+.history-listing-image {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  width: 20rem;
+  background-color: rgb(255, 255, 255);
+  border-left: 2px solid rgb(245, 245, 245);
+  border-right: 2px solid rgb(245, 245, 245);
+  border-top: 2px solid rgb(245, 245, 245);
+  border-radius: 0.5rem;
+}
+
+.history-listing-image img {
+  max-height: 15rem;
+  max-width: 15rem;
+  border: 0px;
+}
+
+.history-listing-price {
+  text-align: center;
+  text-decoration: none;
+  color: rgb(46, 46, 46);
+  font-size: 14px;
+  background-color: rgb(255, 198, 107);
+  padding: 3px;
+  box-shadow: 0px 0px 4px 0px rgb(255, 123, 0);
+  font-family: "Saira Condensed", sans-serif;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  width: 100%;
+  min-width: 9rem;
+  margin-bottom: 1rem;
+}
+
+.history-listing-name {
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: bold;
+  background-color: rgb(245, 245, 245);
+}
+
+.history-date-sold {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.history-buyer-address {
+  padding-top: 1rem;
+}
+
+.history-subheader {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.history-listings {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  border: 0px;
+}
+
+.HistoryTab h2 {
+  font-weight: bold; 
+  color: #ff7b00;
+}
+
+.borderBox {
+  background-color: white;
+  margin-bottom: 1rem;
+  min-height: 20rem;
+}
+
+.history-null-message {
+  display: flex;
+  width: 100%;
+  height: 20rem;
+  justify-content: center;
+  align-items: center;
+}

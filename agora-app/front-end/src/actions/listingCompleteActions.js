@@ -6,7 +6,7 @@ import {
     CREATELISTINGCOMPLETE_SUCCESS,
     LISTINGCOMPLETE_REQUEST,
     LISTINGCOMPLETE_FAIL,
-    LISTINGCOMPLETE_SUCCESS
+    LISTINGCOMPLETE_SUCCESS, LISTINGPURCHASEDCOMPLETE_REQUEST, LISTINGPURCHASEDCOMPLETE_SUCCESS, LISTINGPURCHASEDCOMPLETE_FAIL
 } from "../constants/listingCompleteConstants";
 
   
@@ -72,7 +72,7 @@ const createListingComplete = (
     try {
       dispatch({ type: LISTINGCOMPLETE_REQUEST });
       const { data } = await axios.get(
-        "/api/listingsComplete?sellerid=" +
+        "/api/listingsComplete/sold?sellerid=" +
           studentid
       );
       dispatch({ type: LISTINGCOMPLETE_SUCCESS, payload: data });
@@ -80,6 +80,21 @@ const createListingComplete = (
       dispatch({ type: LISTINGCOMPLETE_FAIL, payload: error.message });
     }
   };
+
+  const listListingPurchasedCompletes = (
+    studentid = ""
+  ) => async (dispatch) => {
+    try {
+      dispatch({ type: LISTINGPURCHASEDCOMPLETE_REQUEST });
+      const { data } = await axios.get(
+        "/api/listingsComplete/purchased?buyerid=" +
+          studentid
+      );
+      dispatch({ type: LISTINGPURCHASEDCOMPLETE_SUCCESS, payload: data });
+    } catch (error) {
+      dispatch({ type: LISTINGPURCHASEDCOMPLETE_FAIL, payload: error.message });
+    }
+  };
   
 
-  export { createListingComplete, listListingCompletes }
+  export { createListingComplete, listListingCompletes, listListingPurchasedCompletes }

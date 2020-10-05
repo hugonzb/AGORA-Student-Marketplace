@@ -4,7 +4,6 @@ import { signUp } from "../actions/userActions";
 import { Link } from "react-router-dom";
 import "../signup.css";
 import { removeUser } from "../actions/userActions";
-import agoralogo from "../images/agoralogo.png";
 import Axios from "axios";
 
 
@@ -95,18 +94,15 @@ function SignUp(props) {
   return (
     <div className="wrapper">
         <div className="registration_form">
-            <div className="form-heading">
-                   <img src={agoralogo} 
-                   className="sign-up-logo" alt=""/>
-               
-                   <span> 
-			       <h2>Registration Form</h2> 
-                   Already have an account?  
-                   <h4><Link to="/account/signin">Sign in</Link></h4>
-                   </span>
+         
              
-                
-            </div>
+                   <div className="titleText">
+                   <span>
+			       <h2>Registration Form</h2> 
+                   Already have an account? Sign in <Link to= "/account/signin"> here. </Link> 
+                   </span> 
+                   </div>
+
             {loading}
         {error && <div>Student ID or Email has been taken</div>}
         {message}
@@ -114,7 +110,7 @@ function SignUp(props) {
         <div className="profilepic_grp">
            <div className="input_wrap">
             {uploadButton ? <div>
-                <label>Upload a profile picture</label>
+                <label className="upload-image">Upload a profile picture</label>
                 <input type="file" onChange={uploadFileHandler}></input>
                 <button onClick={(e) => setUploadButton(false)}>No profile picture</button>
               </div> : <div className="uploaded"> Uploaded profile picture successfully </div>
@@ -243,6 +239,9 @@ function SignUp(props) {
                     <option value="Auckland">Auckland</option>
                     <option value="Wellington">Wellington</option>
                     <option value="Christchurch">Christchurch</option>
+                    <option value="Lincoln">Lincoln</option>
+                    <option value="Palmerston North">Palmerston North</option>
+                    <option value="Hamilton">Hamilton</option>
                   </select>
           </div> 
         </div>
@@ -299,7 +298,7 @@ function SignUp(props) {
 
  <div className="input_grp">
  
-          <div className="input_wrap">
+      <div className="input_wrap">
 					<input type="submit" value="Register Now" class="submit_btn"></input>
 		  </div>
  </div>

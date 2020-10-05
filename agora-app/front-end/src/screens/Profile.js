@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../actions/userActions";
-import { listListings, deleteListing } from "../actions/listingActions";
+import { listListings, deleteListing } from "../actions/listingActions"; 
 import { Link } from "react-router-dom";
 import "../index.css";
 import PropagateLoader from "react-spinners/PropagateLoader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 function Profile(props) {
   const [name, setName] = useState("");
@@ -68,44 +70,43 @@ function Profile(props) {
             <div className="profile-heading">PROFILE</div>
             <img src={profilePicture} alt="profile" height="150" length="100" />
             <h2>
-              {" "}
               <label for="name" value={name}>
                 {userInfo.fname} {userInfo.sname}
               </label>
             </h2>
+            <span>
+             <Link to={"/account/editprofile/" + userInfo.studentid}> Edit Profile? </Link>
+            </span> 
+            <br></br> 
             <div className="profile-contents">
               <form className="profile-form">
                 <label for="username" value={sellerId}>
-                  Student ID: {sellerId}
+                  <h4>Student ID:</h4> {sellerId}
                 </label>
                 <br></br>
                 <label for="email" value={email}>
-                  Email: {userInfo.email}
+                  <h4>Email:</h4> {userInfo.email}
                 </label>
                 <br></br>
                 <label for="university" value={university}>
-                  University: {userInfo.university}
+                  <h4>University:</h4> {userInfo.university}
                 </label>
                 <br></br>
                 <label for="city" value={city}>
-                  City: {userInfo.city}
+                  <h4>City:</h4> {userInfo.city}
                 </label>
                 <br></br>
                 <label for="created" value={created}>
-                  Member since: {created}
+                  <h4>Member since:</h4> {created}
                 </label>
-                <br></br>
+            
               </form>
-              <div className="edit-profile">
-                <Link to={"/account/editprofile/" + userInfo.studentid}>
-                  <button type="button" className="edit-profile-button">
-                    Edit Profile
-                  </button>
-                </Link>
-              </div>
+           
+           <div className="profileButtons">
               <button type="button" className="logout" onClick={handleLogout}>
-                LOGOUT
+                Logout
               </button>
+            </div>
             </div>
           </div>
           <div className="listingsContainer">
@@ -116,16 +117,14 @@ function Profile(props) {
               </div>
             ) : error ? (
               <div className="error">
-                {" "}
-                {error} - 404 Server error: Server does not currently seem to be
-                running.
+                Cannot fetch your listings at this time. Please try again soon.
               </div>
             ) : listings.length > 0 ? (
               <div className="listings">
                 {listings.map((listing) => (
                   <li key={listing._id}>
-                    <div className="profile-listing">
-                      <div className="profile-listing-image">
+                    <div className="listing-container">
+                      <div className="listing-image">
                         <Link to={"/listing/" + listing._id}>
                           <img
                             className="listing-image"
@@ -134,39 +133,41 @@ function Profile(props) {
                           ></img>
                         </Link>
                       </div>
-
                       <div className="listing-content">
-                        <Link to={"/listing/" + listing._id}>
                           <div className="listing-name">{listing.name}</div>
                           <div className="listing-price">
                             Asking Price: ${listing.price}
                           </div>
-
-                          <div className="delete-listing"></div>
-                        </Link>
-                      </div>
-                      <button
+                      <Link to={"/listing/" + listing._id}>
+                        <button className="view-listing-button">
+                          VIEW LISTING
+                        </button>
+                      </Link>
+                        <button
                         type="button"
                         className="delete-button"
                         onClick={() => deleteHandler(listing)}
                       >
-                        delete
+                        DELETE
                       </button>
+                      </div>
                     </div>
                   </li>
                 ))}
               </div>
             ) : (
-              <div>
+              <div className="watchlist-message">
                 {" "}
-                You currently dont have any listings. Click "create listing" to
-                get started!{" "}
-                <Link to="/account/createlisting">Create listing</Link>
+                <div> You currently dont have any listings. </div>
+                <div> Click <Link to="/account/createlisting">Create listing</Link> to get started! </div>
               </div>
             )}
           </div>
           <div className="watchlistContainer">
-            <div className="profile-heading">WATCHLIST</div>
+            <div className="profile-heading">WATCHLIST <FontAwesomeIcon size="lg" icon={faEye} /></div>
+            <div className="watchlist-message">
+              You have not added any listings to your watchlist yet
+            </div>
           </div>
         </div>
       ) : (

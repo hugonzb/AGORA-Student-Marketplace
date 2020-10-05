@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
 import { createListing } from "../actions/listingActions";
 import Axios from "axios";
 import "../signup.css"; 
-import agoralogo from "../images/agoralogo.png";
-
 
 function CreateListing(props) {
   /* 
@@ -18,7 +15,7 @@ function CreateListing(props) {
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
   const [category, setCategory] = useState("Antiques");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("/images/default.png");
   const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
@@ -95,7 +92,6 @@ function CreateListing(props) {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(image);
     dispatch(
       createListing(
         name,
@@ -117,19 +113,26 @@ function CreateListing(props) {
   };
 
   return (
-   
+    
       <div className="wrapper">
         <div className="registration_form">
-            <div className="form-heading">
-                       <img src={agoralogo} 
-                       className="sign-up-logo" alt=""/>
-               
-                       <span> 
-			           <h2>Registration Form</h2> 
-                       Already have an account?  
-                       <h4><Link to="/account/signin">Sign in</Link></h4>
-                       </span>
-            </div>
+                   
+                   <div className="titleText">
+                   <span>
+			            <h2>Create A Listing</h2> 
+                   <b>Describe your item to get selling!</b> 
+                   </span> 
+                   </div>
+           
+            <br></br>
+                <div className= "input_wrap">
+                        <label className="upload-image">Upload Image</label>
+       
+                          {uploading && <div>Uploading...</div>}
+                          { uploadButton ?
+                            <input type="file" onChange={uploadFileHandler}></input>
+                          : <div className="uploaded"> Uploaded listing image successfully </div>}
+                </div>
                    
                 <form className="form_wrap" onSubmit={submitHandler}>
 
@@ -162,6 +165,7 @@ function CreateListing(props) {
                     <div className= "input_wrap">
                           <label>Listing Description: </label>
                               <textarea
+                                className="textarea"
                                 type="text"
                                 id="listingDescription"
                                 name="listingDescription"
@@ -177,9 +181,9 @@ function CreateListing(props) {
             
                 <div className= "input_grp">
                     <div className= "input_wrap">
+                      <div class="selectBox">
                           <label>Category: </label>
-       
-                              <select id="categories" onChange={(e) => setCategory(e.target.value)}>
+                              <select className="select-css" id="categories" onChange={(e) => setCategory(e.target.value)}>
                                 <option value="Antiques">Antiques</option>
                                 <option value="University Textbooks">University Textbooks</option>
                                 <option value="Books">Books</option>
@@ -199,6 +203,7 @@ function CreateListing(props) {
                                 <option value="Toys">Toys</option>
                                 <option value="Sports Equipments">Sports Equipments</option>
                               </select>
+                              </div>
                     </div>
 
                     <div className= "input_wrap">
@@ -227,28 +232,18 @@ function CreateListing(props) {
                             onChange={(e) => setPrice(e.target.value)}
                           ></input>
                     </div>
-
-                    <br></br> 
-                     <div className= "input_wrap">
-                        <label>Upload Image</label>
-       
-                          {uploading && <div>Uploading...</div>}
-                          { uploadButton ?
-                            <input type="file" onChange={uploadFileHandler}></input>
-                          : <div className="uploaded"> Uploaded listing image successfully </div>}
-                    </div>
-
-                    </div>      
+                </div>      
 
                 <div className="input_grp">
                     <div className="input_wrap">
-                       <input type ="submit" value="Create Listing" class="submit_btn"></input>
+                       <input type ="submit" value="Create Listing" className="submit_btn"></input>
                     </div>
                 </div>
 
                 </form>
               </div>
-              </div>
+            </div>
+          
   
     );
 }

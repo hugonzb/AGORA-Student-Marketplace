@@ -11,14 +11,19 @@
 	list-style: none;
 	font-family: 'Montserrat', sans-serif;
 }
+
+.imageTitle{
+	
+	display: block;
+	
+	
+}
  
 .form_wrap{
  width: 100%;
 }
 
- 
 .wrapper{
-	
 	min-height: 35rem;
 	display: flex;
 	justify-content: center;
@@ -26,17 +31,12 @@
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	justify-content: space-around; 
-	 
-}
- 
-
-.form-heading {
-	display: flex;
 }
 
-.form-heading img {
-	min-width: 4rem;
-	padding-bottom: 0.5rem;
+.titleText{
+    display: flex;
+    width: 100%;
+	float: left;
 }
  
 .registration_form{
@@ -55,16 +55,7 @@
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
  
-.registration-form title{
-	
-	font-size: 20px;
-	color: #f1f1f1;
-	letter-spacing: 5px;
-	font-weight: 700;
-	display: inline-block;
-}
-
-h2{
+ h2{
 	color: #ff7b00;
 }
  
@@ -84,7 +75,6 @@ h2{
 	align-items:flex-start;
 }
 
- 
 .form_wrap .input_wrap label{
 	display: block;
 	margin-bottom: 5px;
@@ -95,24 +85,81 @@ h2{
 	display: flex;
 	justify-content: space-around;
 	align-items:flex-start;
-	
+	border-color: black;
+}
+
+.imageStyle{
+	display: flex-start; 
+	justify-content: space-between; 
+	width: 100%;
+	margin-right: 20rem;
 }
  
 .form_wrap .input_grp  input[type="text"]{
 	width: 180px;
 }
  
-.form_wrap  input[type="text"]{
+.form_wrap input[type="text"] {
 	width: 100%;
 	border-radius: 3px;
 	border: 1px solid #9597a6;
 	padding: 10px;
 	outline: none;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
+	min-height: 40px;
+}
+
+.uploadStyle{
+display: flex;
+justify-content: space-between; 
+width: 100%; 
+
+}
+.listingImage{
+	float: right; 
+	width: 100%;
+	display: flex-end;
+}
+
+.fileStyle{
+	
+}
+
+.form_wrap input[type="select"] {
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
+	min-height: 40px;
+	height: 100%;
+}
+
+.form_wrap input[type="number"] {
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
+	margin-bottom: 1rem;
+	min-height: 40px;
 }
  
-.form_wrap  input[type="text"]:focus{
+.form_wrap input[type="text"]:focus{
 	border-color: #ebd0ce;
 }
+
+.form_wrap input[type="number"]:focus{
+	border-color: #ebd0ce;
+}
+
+.form_wrap input[type="select"]:focus{
+	border-color: #ebd0ce;
+}
+
+
 
 .form_wrap .input_grp  input[type="password"]{
 	width: 180px;
@@ -160,17 +207,24 @@ h2{
 	transform: scale(0.96);
 }
 
+.textarea {
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
+}
+
   /* class applies to select element itself, not a wrapper element */
 .select-css {
     display: block;
-    width: 180px;
-    max-width: 100%; /* useful when width is set to anything other than 100% */
+	max-width: 9rem; 
     border: 1px solid #aaa;
    	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
-    border-radius: 3px;
-	}
-
- 
+	border-radius: 3px;
+	cursor: pointer;
+}
 
 /* Hide arrow icon in IE browsers */
 .select-css::-ms-expand {
@@ -187,7 +241,7 @@ h2{
     box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
     box-shadow: 0 0 0 3px -moz-mac-focusring;
     color: #222; 
-    outline: none;
+	outline: none;
 }
 
 /* Set options to normal weight */
@@ -212,4 +266,20 @@ h2{
     border-color: #aaa;
 }
 
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col25, .col75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 
+  .registration_form{
+  	  margin: 15px;
+	  margin-left: 5px;
+	  margin-right: 5px;
+  }
+
+  .form_wrap{
+  	  margin: 10px;
+  }
+}
