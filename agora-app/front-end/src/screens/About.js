@@ -32,7 +32,7 @@ function About(props) {
   return (
 
     <div className="about-container">
-      <h1 className="heading">Agora Team</h1>
+      <h1 className="heading">Meet The Agora Team</h1>
 
       <div className="profiles">
         <div className="profile-card">
@@ -44,7 +44,7 @@ function About(props) {
 
         <div className="profile-card">
           <img src={leonicon} className="profile-img" alt="profile" />
-          <h3 className="user-name">Leon</h3>
+          <h3 className="user-name">Leon Hoogenraad</h3>
           <h5>Backend Developer</h5>
           <p></p>
         </div>

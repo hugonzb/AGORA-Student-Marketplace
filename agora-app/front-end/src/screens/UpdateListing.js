@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import Axios from "axios";
 import { detailListing, listingUpdate } from "../actions/listingActions";
 import "../signup.css";
-import styled from 'styled-components';
 
 function UpdateListing(props) {
   //get user details
