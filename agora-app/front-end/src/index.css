@@ -1092,6 +1092,27 @@ color: black;
   font-weight: bold;
 }
 
+.view-listing-button {
+  background-color: orange;
+  padding: 5px;
+  font-size: 10px;
+  width: 6rem;
+  color: white;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.delete-button {
+  background-color: rgb(255, 0, 0);
+  padding: 5px;
+  font-size: 10px;
+  width: 6rem;
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
 /*checkout*/
 * {
   box-sizing: border-box;

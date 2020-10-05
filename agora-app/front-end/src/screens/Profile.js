@@ -143,7 +143,7 @@ function Profile(props) {
                           </div>
                       <Link to={"/listing/" + listing._id}>
                         <button className="view-listing-button">
-                          View Listing
+                          VIEW LISTING
                         </button>
                       </Link>
                         <button
@@ -151,7 +151,7 @@ function Profile(props) {
                         className="delete-button"
                         onClick={() => deleteHandler(listing)}
                       >
-                        Delete
+                        DELETE
                       </button>
                       </div>
                     </div>
