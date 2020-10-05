@@ -184,3 +184,8 @@ li.hist-item a:hover{
   font-weight: bold; 
   color: #ff7b00;
 }
+
+.borderBox {
+  background-color: white;
+  margin-bottom: 1rem;
+}
