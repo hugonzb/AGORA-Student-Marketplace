@@ -71,8 +71,10 @@ function About(props) {
         </div>
 
       </div>
-      <div className="about-help">Need help?</div> 
-      <a href={checkmark} download="Agora_Help_Documentation">Download the end-user documentation here.</a>
+      <div className="about-help-box">
+        <div className="about-help">Need help?</div> 
+        <a href={checkmark} download="Agora_Help_Documentation">Download the end-user documentation here.</a>
+      </div>
       <form onSubmit={submitHandler}>
         <div className="contact-comment"> <h2> Leave us a Comment </h2>	</div>
         <input name="namess" type="text" className="feedback-input" placeholder="Name" onChange={(e) => setName(e.target.value)}/>

@@ -1096,6 +1096,15 @@ color: black;
   font-weight: bold;
 }
 
+.about-help-box {
+  text-align: center;
+  padding: 1rem;
+  border: 1px solid red;
+  margin: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 5px 2px rgba(252, 42, 42, 0.61);
+}
+
 .view-listing-button {
   background-color: orange;
   padding: 5px;
