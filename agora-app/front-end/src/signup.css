@@ -172,12 +172,11 @@
   /* class applies to select element itself, not a wrapper element */
 .select-css {
     display: block;
-    width: 180px;
-    max-width: 100%; /* useful when width is set to anything other than 100% */
+	max-width: 9rem; 
     border: 1px solid #aaa;
    	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
     border-radius: 3px;
-	}
+}
 
 /* Hide arrow icon in IE browsers */
 .select-css::-ms-expand {
@@ -194,7 +193,7 @@
     box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
     box-shadow: 0 0 0 3px -moz-mac-focusring;
     color: #222; 
-    outline: none;
+	outline: none;
 }
 
 /* Set options to normal weight */

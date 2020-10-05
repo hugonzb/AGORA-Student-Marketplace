@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import "../signup.css";
 import {submitFeedback} from "../actions/feedbackActions";
-
+import checkmark from "../images/check-mark.png";
 
 function About(props) {
 
@@ -71,6 +71,8 @@ function About(props) {
         </div>
 
       </div>
+      <div className="about-help">Need help?</div> 
+      <a href={checkmark} download="Agora_Help_Documentation">Download the end-user documentation here.</a>
       <form onSubmit={submitHandler}>
         <div className="contact-comment"> <h2> Leave us a Comment </h2>	</div>
         <input name="namess" type="text" className="feedback-input" placeholder="Name" onChange={(e) => setName(e.target.value)}/>

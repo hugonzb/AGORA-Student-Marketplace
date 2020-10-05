@@ -1122,6 +1122,11 @@ color: black;
   font-weight: bold;
 }
 
+.about-help {
+  color: red;
+  font-weight: bold;
+}
+
 /*checkout*/
 * {
   box-sizing: border-box;
