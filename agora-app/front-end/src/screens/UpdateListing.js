@@ -215,6 +215,7 @@ function UpdateListing(props) {
           <div className="input_wrap">
           <label>Category: </label>
           <select
+            className="select-css"
             id="categories"
             defaultValue={listing.category}
             onChange={(e) => setCategory(e.target.value)}
@@ -244,6 +245,7 @@ function UpdateListing(props) {
           <div className= "input_wrap">
           <label>Condition: </label>
           <select
+            className="select-css"
             id="condition"
             defaultValue={listing.condition}
             onChange={(e) => setCondition(e.target.value)}

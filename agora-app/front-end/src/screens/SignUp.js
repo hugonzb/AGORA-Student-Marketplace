@@ -110,7 +110,7 @@ function SignUp(props) {
         <div className="profilepic_grp">
            <div className="input_wrap">
             {uploadButton ? <div>
-                <label>Upload a profile picture</label>
+                <label className="upload-image">Upload a profile picture</label>
                 <input type="file" onChange={uploadFileHandler}></input>
                 <button onClick={(e) => setUploadButton(false)}>No profile picture</button>
               </div> : <div className="uploaded"> Uploaded profile picture successfully </div>
@@ -239,6 +239,9 @@ function SignUp(props) {
                     <option value="Auckland">Auckland</option>
                     <option value="Wellington">Wellington</option>
                     <option value="Christchurch">Christchurch</option>
+                    <option value="Lincoln">Lincoln</option>
+                    <option value="Palmerston North">Palmerston North</option>
+                    <option value="Hamilton">Hamilton</option>
                   </select>
           </div> 
         </div>

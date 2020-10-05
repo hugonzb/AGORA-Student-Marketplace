@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateUser, logout } from "../actions/userActions";
 import "../signup.css";
-import agoralogo from "../images/agoralogo.png";
 import Axios from "axios";
 
 function EditProfile(props) {
@@ -131,7 +130,7 @@ function EditProfile(props) {
             <div className="input_wrap">
               {uploadButton ? (
                 <div>
-                  <label>Upload a profile picture</label>
+                  <label className="upload-image">Upload a profile picture</label>
                   <input type="file" onChange={uploadFileHandler}></input>
                   <button onClick={(e) => setNoProfile()}>
                     No profile picture
@@ -215,15 +214,20 @@ function EditProfile(props) {
               ></input>
             </div>
             <div className="input_wrap">
-              <label>City:</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                defaultValue={userInfo.city}
-                required
-                onChange={(e) => setCity(e.target.value)}
-              ></input>
+            <label>City:</label>
+                  <select className="select-css"
+                    id="city"
+                    name="city"
+                    onChange={(e) => setCity(e.target.value)}
+                  >
+                    <option value="Dunedin">Dunedin</option>
+                    <option value="Auckland">Auckland</option>
+                    <option value="Wellington">Wellington</option>
+                    <option value="Christchurch">Christchurch</option>
+                    <option value="Lincoln">Lincoln</option>
+                    <option value="Palmerston North">Palmerston North</option>
+                    <option value="Hamilton">Hamilton</option>
+                  </select>
             </div>
           </div>
           

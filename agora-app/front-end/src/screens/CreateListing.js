@@ -15,7 +15,7 @@ function CreateListing(props) {
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
   const [category, setCategory] = useState("Antiques");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("/images/default.png");
   const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
   const [university, setUniversity] = useState("");
@@ -120,13 +120,13 @@ function CreateListing(props) {
                    <div className="titleText">
                    <span>
 			            <h2>Create A Listing</h2> 
-                   <b>Describe your item to go get selling!</b> 
+                   <b>Describe your item to get selling!</b> 
                    </span> 
                    </div>
            
             <br></br>
                 <div className= "input_wrap">
-                        <label>Upload Image</label>
+                        <label className="upload-image">Upload Image</label>
        
                           {uploading && <div>Uploading...</div>}
                           { uploadButton ?
@@ -183,8 +183,7 @@ function CreateListing(props) {
                     <div className= "input_wrap">
                       <div class="selectBox">
                           <label>Category: </label>
-       
-                              <select id="categories" onChange={(e) => setCategory(e.target.value)}>
+                              <select className="select-css" id="categories" onChange={(e) => setCategory(e.target.value)}>
                                 <option value="Antiques">Antiques</option>
                                 <option value="University Textbooks">University Textbooks</option>
                                 <option value="Books">Books</option>

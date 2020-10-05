@@ -187,4 +187,13 @@ li.hist-item a:hover{
 .borderBox {
   background-color: white;
   margin-bottom: 1rem;
+  min-height: 20rem;
+}
+
+.history-null-message {
+  display: flex;
+  width: 100%;
+  height: 20rem;
+  justify-content: center;
+  align-items: center;
 }

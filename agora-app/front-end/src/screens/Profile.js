@@ -70,12 +70,9 @@ function Profile(props) {
             <div className="profile-heading">PROFILE</div>
             <img src={profilePicture} alt="profile" height="150" length="100" />
             <h2>
-            
-              {" "}
               <label for="name" value={name}>
                 {userInfo.fname} {userInfo.sname}
               </label>
-              
             </h2>
             <span>
              <Link to={"/account/editprofile/" + userInfo.studentid}> Edit Profile? </Link>
@@ -120,16 +117,14 @@ function Profile(props) {
               </div>
             ) : error ? (
               <div className="error">
-                {" "}
-                {error} - 404 Server error: Server does not currently seem to be
-                running.
+                Cannot fetch your listings at this time. Please try again soon.
               </div>
             ) : listings.length > 0 ? (
               <div className="listings">
                 {listings.map((listing) => (
                   <li key={listing._id}>
-                    <div className="profile-listing">
-                      <div className="profile-listing-image">
+                    <div className="listing-container">
+                      <div className="listing-image">
                         <Link to={"/listing/" + listing._id}>
                           <img
                             className="listing-image"
@@ -138,34 +133,33 @@ function Profile(props) {
                           ></img>
                         </Link>
                       </div>
-
                       <div className="listing-content">
-                        <Link to={"/listing/" + listing._id}>
                           <div className="listing-name">{listing.name}</div>
                           <div className="listing-price">
                             Asking Price: ${listing.price}
                           </div>
-
-                          <div className="delete-listing"></div>
-                        </Link>
-                      </div>
-                      <button
+                      <Link to={"/listing/" + listing._id}>
+                        <button className="view-listing-button">
+                          VIEW LISTING
+                        </button>
+                      </Link>
+                        <button
                         type="button"
                         className="delete-button"
                         onClick={() => deleteHandler(listing)}
                       >
-                        delete
+                        DELETE
                       </button>
+                      </div>
                     </div>
                   </li>
                 ))}
               </div>
             ) : (
-              <div>
+              <div className="watchlist-message">
                 {" "}
-                You currently dont have any listings. Click "create listing" to
-                get started!{" "}
-                <Link to="/account/createlisting">Create listing</Link>
+                <div> You currently dont have any listings. </div>
+                <div> Click <Link to="/account/createlisting">Create listing</Link> to get started! </div>
               </div>
             )}
           </div>

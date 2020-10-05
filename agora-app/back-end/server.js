@@ -23,10 +23,7 @@ mongoose
 const app = express();
 app.use(bodyParser.json());
 app.use("api/customers", userRoute);
-
-app.use(bodyParser.json());
 app.use("/api/users", userRoute);
-app.use(bodyParser.json());
 app.use("/api/listings", listingRoute);
 app.use("/api/listingsComplete", listingCompleteRoute);
 app.use("/api/fileUpload", uploadFileRoute);
