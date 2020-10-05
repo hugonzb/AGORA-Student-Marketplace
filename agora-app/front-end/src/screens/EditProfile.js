@@ -226,7 +226,7 @@ function EditProfile(props) {
               ></input>
             </div>
           </div>
-          <br></br>
+          
 
           <div className="input_grp">
             <div className="input_wrap">

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import Axios from "axios";
 import { detailListing, listingUpdate } from "../actions/listingActions";
 import "../signup.css";
+import styled from 'styled-components';
 
 function UpdateListing(props) {
   //get user details
@@ -31,6 +32,7 @@ function UpdateListing(props) {
   const [uploading, setUploading] = useState(false);
   const [uploadButton, setUploadButton] = useState(true);
 
+  
   const dispatch = useDispatch();
 
   // gets the users details
@@ -118,27 +120,50 @@ function UpdateListing(props) {
   ) : (
     <div className="wrapper">
       <div className="registration_form">
-        <div className="form_header">
-          <h2>Update Your Listing</h2>
-          <br></br>
-        </div>
-        <label>Upload Image</label>
+            <div className="titleText">
+                <span>
+                <h2>Update Your Listing:</h2>
+                </span>
+            </div>
+            <br></br> 
+
+            <div className= "styleUpload">
+            <div className="imageStyle">
+            <label>Upload Image:</label> 
+            
+            </div> 
+           
+            
+
+            <div className="fileStyle">
+        
         {uploading && <div>Uploading...</div>}
         {uploadButton ? (
+
           <div>
         
-            <div className="listing-image">
-              <img
-                className="listing-image"
-                src={listing.image}
-                alt="listing"
-              ></img>
-            </div>
-            <input type="file" onChange={uploadFileHandler}></input>
-          </div>
-        ) : (
-          <div> Uploaded image successfully </div>
-        )}
+                <div className="listing-image">
+                  <img
+                    className="listing-image"
+                    src={listing.image}
+                    alt="listing"
+                  ></img>
+                </div>
+            
+
+            
+                  <input type="file" onChange={uploadFileHandler}></input>
+                  </div>
+                ) : (
+                  <div> Uploaded image successfully </div>
+                )}
+
+        </div> 
+        </div>
+        
+        
+        
+        
 
         <form className="form_wrap" onSubmit={submitHandler}>
          

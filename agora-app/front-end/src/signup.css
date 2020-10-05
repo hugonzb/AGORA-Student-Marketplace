@@ -11,6 +11,13 @@
 	list-style: none;
 	font-family: 'Montserrat', sans-serif;
 }
+
+.imageTitle{
+	
+	display: block;
+	
+	
+}
  
 .form_wrap{
  width: 100%;
@@ -48,8 +55,6 @@
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 }
  
-
-
  h2{
 	color: #ff7b00;
 }
@@ -82,6 +87,13 @@
 	align-items:flex-start;
 	border-color: black;
 }
+
+.imageStyle{
+	display: inline-block; 
+	justify-content: space-between; 
+	float: left;
+	width: 100%;
+}
  
 .form_wrap .input_grp  input[type="text"]{
 	width: 180px;
@@ -94,6 +106,40 @@
 	padding: 10px;
 	outline: none;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
+	min-height: 40px;
+}
+
+.uploadStyle{
+display: flex;
+justify-content: space-between; 
+width: 100%; 
+
+}
+.listingImage{
+	float: right; 
+	width: 100%;
+	display: flex-end;
+}
+
+.fileStyle{
+	float: right;
+	justify-content: space-between;
+	width:100%;
+	margin-left: 20rem;
+	display: inline-block;
+	margin-top: -2rem;
+
+}
+
+.form_wrap input[type="select"] {
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #9597a6;
+	padding: 10px;
+	outline: none;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
+	min-height: 40px;
+	height: 100%;
 }
 
 .form_wrap input[type="number"] {
@@ -104,6 +150,7 @@
 	outline: none;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
 	margin-bottom: 1rem;
+	min-height: 40px;
 }
  
 .form_wrap input[type="text"]:focus{
@@ -113,6 +160,12 @@
 .form_wrap input[type="number"]:focus{
 	border-color: #ebd0ce;
 }
+
+.form_wrap input[type="select"]:focus{
+	border-color: #ebd0ce;
+}
+
+
 
 .form_wrap .input_grp  input[type="password"]{
 	width: 180px;
