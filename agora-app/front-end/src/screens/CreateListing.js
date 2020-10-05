@@ -183,8 +183,7 @@ function CreateListing(props) {
                     <div className= "input_wrap">
                       <div class="selectBox">
                           <label>Category: </label>
-       
-                              <select id="categories" onChange={(e) => setCategory(e.target.value)}>
+                              <select className="select-css" id="categories" onChange={(e) => setCategory(e.target.value)}>
                                 <option value="Antiques">Antiques</option>
                                 <option value="University Textbooks">University Textbooks</option>
                                 <option value="Books">Books</option>
