@@ -104,7 +104,7 @@ li.hist-item a:hover{
 
 .history-listing-content {
    width: 100%;
-   background-color: rgb(194, 194, 194);
+   background-color: rgb(245, 245, 245);
    border-radius: 0.5rem;
    font-size: 13px;
 }
@@ -119,10 +119,11 @@ li.hist-item a:hover{
   align-items: center;
   justify-content: center;
   width: 20rem;
-  border: 2px solid rgb(202, 202, 202);
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(255, 255, 255);
+  border-left: 2px solid rgb(245, 245, 245);
+  border-right: 2px solid rgb(245, 245, 245);
+  border-top: 2px solid rgb(245, 245, 245);
+  border-radius: 0.5rem;
 }
 
 .history-listing-image img {
@@ -150,10 +151,8 @@ li.hist-item a:hover{
 .history-listing-name {
   text-align: center;
   padding: 0.5rem;
-  border-left: 2px solid rgb(202, 202, 202);
-  border-right: 2px solid rgb(202, 202, 202);
   font-weight: bold;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(245, 245, 245);
 }
 
 .history-date-sold {

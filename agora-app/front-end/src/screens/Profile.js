@@ -169,6 +169,7 @@ function Profile(props) {
           </div>
           <div className="watchlistContainer">
             <div className="profile-heading">WATCHLIST</div>
+            <div className="watchlist-message">You have not added any listings to your watchlist yet</div>
           </div>
         </div>
       ) : (
