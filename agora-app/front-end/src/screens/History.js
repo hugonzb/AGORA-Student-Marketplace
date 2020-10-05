@@ -48,7 +48,7 @@ function History(props) {
                 running.
               </div>
             ) : listingCompletes.length > 0 ? (
-              <div className="listings">
+              <div className="history-listings">
                 {listingCompletes.map((listing) => (
                   <li key={listing._id}>
                     <div className="history-listing">
