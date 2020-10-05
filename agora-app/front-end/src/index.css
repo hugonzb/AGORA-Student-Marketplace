@@ -1025,7 +1025,7 @@ color: black;
   border-radius: 0px;
 }
 
-.watchlist-message {
+.watchlist-message { 
   flex-direction: column;
   display: flex;
   height: 100%;

@@ -98,7 +98,7 @@ function History(props) {
                 ))}
               </div>
             ) : (
-              <div>
+              <div className="history-null-message">
                 You have not sold any listings yet.
               </div>
             )}
@@ -176,7 +176,7 @@ function History(props) {
               ))}
             </div>
             ) : (
-              <div>
+              <div className="history-null-message">
                 You have not purchased any listings yet.
               </div>
             )}
