@@ -29,13 +29,9 @@ function CreateListing(props) {
   const [uploading, setUploading] = useState(false);
   // This field will be used to show the upload confirm button.
   const [uploadButton, setUploadButton] = useState(true);
-
-
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
-
-  //const [file, setFile] = useState(null);
 
   useEffect(() => {
     if (userInfo) {
@@ -80,16 +76,6 @@ function CreateListing(props) {
       });
   }
 
-
-  /* This method sets the file var to whatever file is currently marked for upload
-  in the upload file section of this page. It should be called whenever the filed upload
-  field is updated by the user
-  const uploadFileHandler = (e) => {
-    file_name = e.target.files[0];
-    setImage()
-  }*/
-
-
   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
@@ -113,10 +99,8 @@ function CreateListing(props) {
   };
 
   return (
-    
       <div className="wrapper">
-        <div className="registration_form">
-                   
+        <div className="registration_form">           
                    <div className="titleText">
                    <span>
 			            <h2>Create A Listing</h2> 
