@@ -48,7 +48,7 @@ function History(props) {
                 running.
               </div>
             ) : listingCompletes.length > 0 ? (
-              <div className="listings">
+              <div className="history-listings">
                 {listingCompletes.map((listing) => (
                   <li key={listing._id}>
                     <div className="history-listing">
@@ -66,28 +66,32 @@ function History(props) {
                           <div className="history-listing-price">
                             Sold Price: ${listing.listingPrice}
                           </div>
-                          
-                          <div>
-                            Buyer: {listing.buyerName}
-                          </div>
-                          <div>
-                            Buyer Email: {listing.buyerEmail}
-                          </div>
-                          ADDRESS:
-                          <div>
-                            Street: {listing.buyerAddress}
-                          </div>
-                          <div>
-                            City: {listing.buyerCity}
-                          </div>
-                          <div>
-                            Region: {listing.buyerRegion}
-                          </div>
-                          <div>
-                            Postcode: {listing.buyerPostcode}
-                          </div>
-                          <div>
-                            Date Sold: {new Date(listing.createdAt).toString().substring(15, 0)}
+                          <div className="history-listing-details">
+                            <div className="history-subheader">BUYER DETAILS</div>
+                            <div>
+                              {listing.buyerName}
+                            </div>
+                            <div>
+                              {listing.buyerEmail}
+                            </div>
+                            <div className="history-buyer-address">
+                              <div className="history-subheader">POSTAL ADDRESS</div>
+                              <div>
+                                {listing.buyerAddress}
+                              </div>
+                              <div>
+                                {listing.buyerCity}
+                              </div>
+                              <div>
+                                {listing.buyerRegion}
+                              </div>
+                              <div>
+                                {listing.buyerPostcode}
+                              </div>
+                            </div>
+                            <div className="history-date-sold">
+                              {new Date(listing.createdAt).toString().substring(15, 0)}
+                            </div>
                           </div>
                       </div>
                     </div>
@@ -122,43 +126,56 @@ function History(props) {
                 running.
               </div>
             ) : listingPurchasedCompletes.length > 0 ? (
-              <div className="listings">
-                {listingPurchasedCompletes.map((listing) => (
-                  <li key={listing._id}>
-                    <div className="profile-listing">
-                      <div className="profile-listing-image">
-                          <img
-                            className="listing-image"
-                            src={listing.listingImage}
-                            alt="listing"
-                          ></img>
-                      </div>
-
-                      <div className="listing-content">
-                          <div className="listing-name">{listing.name}</div>
-                          <div className="listing-price">
-                            Sold Price: ${listing.listingPrice}
-                          </div>
-                          <div>
-                            Name: {listing.listingName}
-                          </div>
-                          <div>
-                            Buyer: {listing.buyerName}
-                          </div>
-                          <div>
-                            Seller: {listing.sellerName}
-                          </div>
-                          <div>
-                            Seller Email: {listing.sellerEmail}
-                          </div>
-                          <div>
-                            Date Purchased: {new Date(listing.createdAt).toString().substring(15, 0)}
-                          </div>
-                      </div>
+              <div className="history-listings">
+              {listingPurchasedCompletes.map((listing) => (
+                <li key={listing._id}>
+                  <div className="history-listing">
+                    <div className="history-listing-image">
+                        <img
+                          className="listing-image"
+                          src={listing.listingImage}
+                          alt="listing"
+                        ></img>
                     </div>
-                  </li>
-                ))}
-              </div>
+                    <div className="history-listing-name">
+                          {listing.listingName}
+                    </div>
+                    <div className="history-listing-content">
+                        <div className="history-listing-price">
+                          Sold Price: ${listing.listingPrice}
+                        </div>
+                        <div className="history-listing-details">
+                          <div className="history-subheader">BUYER DETAILS</div>
+                          <div>
+                            {listing.buyerName}
+                          </div>
+                          <div>
+                            {listing.buyerEmail}
+                          </div>
+                          <div className="history-buyer-address">
+                            <div className="history-subheader">POSTAL ADDRESS</div>
+                            <div>
+                              {listing.buyerAddress}
+                            </div>
+                            <div>
+                              {listing.buyerCity}
+                            </div>
+                            <div>
+                              {listing.buyerRegion}
+                            </div>
+                            <div>
+                              {listing.buyerPostcode}
+                            </div>
+                          </div>
+                          <div className="history-date-sold">
+                            {new Date(listing.createdAt).toString().substring(15, 0)}
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </li>
+              ))}
+            </div>
             ) : (
               <div>
                 You have not purchased any listings yet.
