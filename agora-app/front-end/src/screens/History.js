@@ -66,28 +66,31 @@ function History(props) {
                           <div className="history-listing-price">
                             Sold Price: ${listing.listingPrice}
                           </div>
-                          
-                          <div>
-                            Buyer: {listing.buyerName}
-                          </div>
-                          <div>
-                            Buyer Email: {listing.buyerEmail}
-                          </div>
-                          ADDRESS:
-                          <div>
-                            Street: {listing.buyerAddress}
-                          </div>
-                          <div>
-                            City: {listing.buyerCity}
-                          </div>
-                          <div>
-                            Region: {listing.buyerRegion}
-                          </div>
-                          <div>
-                            Postcode: {listing.buyerPostcode}
-                          </div>
-                          <div>
-                            Date Sold: {new Date(listing.createdAt).toString().substring(15, 0)}
+                          <div className="history-listing-details">
+                            <div>
+                              Buyer: {listing.buyerName}
+                            </div>
+                            <div>
+                              Buyer Email: {listing.buyerEmail}
+                            </div>
+                            <div className="history-buyer-address">
+                              ADDRESS:
+                              <div>
+                                Street: {listing.buyerAddress}
+                              </div>
+                              <div>
+                                City: {listing.buyerCity}
+                              </div>
+                              <div>
+                                Region: {listing.buyerRegion}
+                              </div>
+                              <div>
+                                Postcode: {listing.buyerPostcode}
+                              </div>
+                            </div>
+                            <div className="history-date-sold">
+                              {new Date(listing.createdAt).toString().substring(15, 0)}
+                            </div>
                           </div>
                       </div>
                     </div>

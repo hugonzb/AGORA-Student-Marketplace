@@ -132,6 +132,8 @@ li.hist-item a:hover{
   justify-content: center;
   width: 20rem;
   border: 1px solid rgb(160, 160, 160);
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .history-listing-image img {
@@ -157,7 +159,13 @@ li.hist-item a:hover{
 .history-listing-name {
   text-align: center;
   padding: 0.5rem;
-  border-top: 1px solid black;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border-top: 1px solid rgb(160, 160, 160);
+  border-left: 1px solid rgb(160, 160, 160);
+  border-right: 1px solid rgb(160, 160, 160);
+  font-weight: bold;
+}
+
+.history-date-sold {
+  padding-top: 1rem;
+  font-weight: bold;
 }
