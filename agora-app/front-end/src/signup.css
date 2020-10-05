@@ -16,9 +16,7 @@
  width: 100%;
 }
 
- 
 .wrapper{
-	
 	min-height: 35rem;
 	display: flex;
 	justify-content: center;
@@ -26,7 +24,6 @@
 	padding-top: 1rem;
 	padding-bottom: 1rem;
 	justify-content: space-around; 
-	 
 }
 
 .titleText{
@@ -53,12 +50,6 @@
  
 
 
-.form-heading{
-    float: left;
-	color: #ff7b00;
-	display: flex;
-}
-
  h2{
 	color: #ff7b00;
 }
@@ -79,7 +70,6 @@
 	align-items:flex-start;
 }
 
- 
 .form_wrap .input_wrap label{
 	display: block;
 	margin-bottom: 5px;
@@ -91,7 +81,6 @@
 	justify-content: space-around;
 	align-items:flex-start;
 	border-color: black;
-	
 }
  
 .form_wrap .input_grp  input[type="text"]{
@@ -165,8 +154,6 @@
    	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 10.9);
     border-radius: 3px;
 	}
-
- 
 
 /* Hide arrow icon in IE browsers */
 .select-css::-ms-expand {

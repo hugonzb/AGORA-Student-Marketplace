@@ -113,14 +113,17 @@ function CreateListing(props) {
   };
 
   return (
-    <div className="home-container">
+    
       <div className="wrapper">
         <div className="registration_form">
-            <div className="form-heading">          
-                       <span> 
-			           <h2>Create A Listing</h2> 
-                       </span>
-            </div>
+                   
+                   <div className="titleText">
+                   <span>
+			       <h2>Create A Listing</h2> 
+                   Describe your product to get selling! 
+                   </span> 
+                   </div>
+           
             <br></br>
                 <div className= "input_wrap">
                         <label>Upload Image</label>
@@ -240,7 +243,7 @@ function CreateListing(props) {
                 </form>
               </div>
             </div>
-          </div>
+          
   
     );
 }
