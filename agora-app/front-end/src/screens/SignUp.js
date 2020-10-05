@@ -239,6 +239,9 @@ function SignUp(props) {
                     <option value="Auckland">Auckland</option>
                     <option value="Wellington">Wellington</option>
                     <option value="Christchurch">Christchurch</option>
+                    <option value="Lincoln">Lincoln</option>
+                    <option value="Palmerston North">Palmerston North</option>
+                    <option value="Hamilton">Hamilton</option>
                   </select>
           </div> 
         </div>

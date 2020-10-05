@@ -215,15 +215,20 @@ function EditProfile(props) {
               ></input>
             </div>
             <div className="input_wrap">
-              <label>City:</label>
-              <input
-                type="text"
-                id="city"
-                name="city"
-                defaultValue={userInfo.city}
-                required
-                onChange={(e) => setCity(e.target.value)}
-              ></input>
+            <label>City:</label>
+                  <select className="select-css"
+                    id="city"
+                    name="city"
+                    onChange={(e) => setCity(e.target.value)}
+                  >
+                    <option value="Dunedin">Dunedin</option>
+                    <option value="Auckland">Auckland</option>
+                    <option value="Wellington">Wellington</option>
+                    <option value="Christchurch">Christchurch</option>
+                    <option value="Lincoln">Lincoln</option>
+                    <option value="Palmerston North">Palmerston North</option>
+                    <option value="Hamilton">Hamilton</option>
+                  </select>
             </div>
           </div>
           <br></br>
