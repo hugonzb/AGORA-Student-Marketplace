@@ -120,9 +120,7 @@ function Profile(props) {
               </div>
             ) : error ? (
               <div className="error">
-                {" "}
-                {error} - 404 Server error: Server does not currently seem to be
-                running.
+                Cannot fetch your listings at this time. Please try again soon.
               </div>
             ) : listings.length > 0 ? (
               <div className="listings">

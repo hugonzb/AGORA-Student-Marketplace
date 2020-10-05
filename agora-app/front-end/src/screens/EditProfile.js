@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { updateUser, logout } from "../actions/userActions";
 import "../signup.css";
-import agoralogo from "../images/agoralogo.png";
 import Axios from "axios";
 
 function EditProfile(props) {
