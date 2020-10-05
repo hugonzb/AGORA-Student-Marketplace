@@ -11,8 +11,7 @@ function About(props) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [feedback, setFeedback] = useState("");
-  // Yeah should change this soon
-  const profileicon = "/profilePictures/kachow_1601281716732.jpg"
+  const hugoicon = "../profilePictures/hugo (2)_1601868657464.jpg"
   const [uploading] = useState(false);
 
   useEffect(() => {
@@ -36,35 +35,35 @@ function About(props) {
 
       <div className="profiles">
         <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile" />
+          <img src={hugoicon} className="profile-img" alt="profile" />
+          <h3 className="user-name">Hugo Baird</h3>
+          <h5>Technical Lead</h5>
+          <p></p>
+        </div>
+
+        <div className="profile-card">
+          <img src={""} className="profile-img" alt="profile" />
           <h3 className="user-name">Name</h3>
           <h5>Memeber Role</h5>
           <p></p>
         </div>
 
         <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile" />
+          <img src={""} className="profile-img" alt="profile" />
           <h3 className="user-name">Name</h3>
           <h5>Memeber Role</h5>
           <p></p>
         </div>
 
         <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile" />
+          <img src={""} className="profile-img" alt="profile" />
           <h3 className="user-name">Name</h3>
           <h5>Memeber Role</h5>
           <p></p>
         </div>
 
         <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile" />
-          <h3 className="user-name">Name</h3>
-          <h5>Memeber Role</h5>
-          <p></p>
-        </div>
-
-        <div className="profile-card">
-          <img src={profileicon} className="profile-img" alt="profile" />
+          <img src={""} className="profile-img" alt="profile" />
           <h3 className="user-name">Name</h3>
           <h5>Memeber Role</h5>
           <p></p>
