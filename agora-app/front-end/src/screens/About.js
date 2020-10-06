@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import "../signup.css";
 import { submitFeedback } from "../actions/feedbackActions";
-import checkmark from "../images/check-mark.png";
+import helpdocumentation from "../images/Agora_User_Documentation.pdf";
 
 function About(props) {
   const dispatch = useDispatch();
@@ -70,7 +70,7 @@ function About(props) {
       </div>
       <div className="about-help-box">
         <div className="about-help">Need help?</div>
-        <a href={checkmark} download="Agora_Help_Documentation">
+        <a href={helpdocumentation} download="Agora_Help_Documentation">
           Download our end-user documentation here
         </a>
       </div>
