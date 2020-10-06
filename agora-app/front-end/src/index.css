@@ -802,9 +802,12 @@ body {
 }
 
 .profile-card p {
-  font-size: 12px;
-  margin-top: 20px;
-  text-align: justify;
+    font-size: 12px;
+    margin-top: 2px;
+    text-align: justify;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: 1.5px;
 }
 
 @media only screen and (max-width: 1150px) {
@@ -820,8 +823,11 @@ body {
 
   .profile-card p {
     text-align: center;
-    margin: 20px 60px 80px 60px;
-    font-size: 20px;
+    margin: 2px 60px 80px 60px;
+    font-size: 14px;
+    text-align: justify;
+    font-style: italic;
+    
   }
 }
 
@@ -842,11 +848,18 @@ body {
 
   .profile-card p {
     margin: 20px 10px 80px 10px;
+    
   }
 }
 
+.profile-card{
+  margin-right: 20px;
+  margin-top: 20px;
+  color: #302e2e;  
+}
+
 .contact-comment {
-  color: #000000;
+  color: #302e2e;
   margin-bottom: 10px;
 }
 

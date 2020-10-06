@@ -37,35 +37,35 @@ function About(props) {
           <img src={hugoicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Hugo Baird</h3>
           <h5>Technical Lead</h5>
-          <p></p>
+          <p>Email: Hugo@Agora.com</p>
         </div>
 
         <div className="profile-card">
           <img src={leonicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Leon Hoogenraad</h3>
           <h5>Back-end Developer</h5>
-          <p></p>
+          <p>Email: Leon@Agora.com</p>
         </div>
 
         <div className="profile-card">
           <img src={vainuiicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Vainui Moresi</h3>
           <h5>Front-end Developer</h5>
-          <p></p>
+          <p>Email: Vainui@Agora.com</p>
         </div>
 
         <div className="profile-card">
           <img src={cedricicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Cedric</h3>
           <h5>Back-end Developer</h5>
-          <p></p>
+          <p>Email: Cedric@Agora.com</p>
         </div>
 
         <div className="profile-card">
           <img src={husamicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Husam</h3>
           <h5>Front-end Developer</h5>
-          <p></p>
+          <p>Email: Husam@Agora.com</p>
         </div>
       </div>
       <div className="about-help-box">
