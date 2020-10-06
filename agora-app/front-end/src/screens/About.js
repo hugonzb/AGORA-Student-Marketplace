@@ -6,14 +6,13 @@ import checkmark from "../images/check-mark.png";
 
 function About(props) {
   const dispatch = useDispatch();
-
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [feedback, setFeedback] = useState("");
   const hugoicon = "../profilePictures/hugo (2)_1601868657464.jpg";
   const leonicon = "../profilePictures/LeonAbout.png";
   const cedricicon = "../profilePictures/cedricabout.jpg";
-  const husamicon = "../profilePictures/HusamAbout.jpg";
+  const vainuiicon = "../profilePictures/2020_09_19_OSSABALL-77_1601933527426.jpg";
   const [uploading] = useState(false);
 
   useEffect(() => {
@@ -48,7 +47,7 @@ function About(props) {
         </div>
 
         <div className="profile-card">
-          <img src={""} className="profile-img" alt="profile" />
+          <img src={vainuiicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Vainui Moresi</h3>
           <h5>Front-end Developer</h5>
           <p></p>
