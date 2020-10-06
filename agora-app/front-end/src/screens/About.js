@@ -31,8 +31,8 @@ function About(props) {
   return (
     <div className="about-container">
       <h1 className="heading">Meet The Agora Team</h1>
-
       <div className="profiles">
+
         <div className="profile-card">
           <img src={hugoicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Hugo Baird</h3>
@@ -74,6 +74,7 @@ function About(props) {
           Download our end-user documentation here
         </a>
       </div>
+      
       <div className="about-feedback">
         <form onSubmit={submitHandler}>
           <div className="contact-comment">
