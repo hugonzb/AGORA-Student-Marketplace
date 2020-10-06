@@ -12,6 +12,7 @@ function About(props) {
   const hugoicon = "../profilePictures/hugo (2)_1601868657464.jpg";
   const leonicon = "../profilePictures/LeonAbout.png";
   const cedricicon = "../profilePictures/cedricabout.jpg";
+  const husamicon = "../profilePictures/HusamAbout.jpg";
   const vainuiicon = "../profilePictures/2020_09_19_OSSABALL-77_1601933527426.jpg";
   const [uploading] = useState(false);
 
