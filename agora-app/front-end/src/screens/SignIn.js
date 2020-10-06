@@ -18,6 +18,7 @@ function SignIn(props) {
       props.history.push("/");
     }
     return () => { };
+    // eslint-disable-next-line
   }, [userInfo])
 
   const submitHandler = (e) => {

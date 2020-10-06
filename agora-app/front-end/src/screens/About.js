@@ -37,7 +37,7 @@ function About(props) {
           <img src={hugoicon} className="profile-img" alt="profile" />
           <h3 className="user-name">Hugo Baird</h3>
           <h5>Technical Lead</h5>
-          <p>Email: Hugo@Agora.com</p>
+          <p>Email: hugonzb@gmail.com</p>
         </div>
 
         <div className="profile-card">
@@ -56,14 +56,14 @@ function About(props) {
 
         <div className="profile-card">
           <img src={cedricicon} className="profile-img" alt="profile" />
-          <h3 className="user-name">Cedric</h3>
+          <h3 className="user-name">Cedric Stephani</h3>
           <h5>Back-end Developer</h5>
-          <p>Email: Cedric@Agora.com</p>
+          <p>Email: cedric.wanaka@gmail.com</p>
         </div>
 
         <div className="profile-card">
           <img src={husamicon} className="profile-img" alt="profile" />
-          <h3 className="user-name">Husam</h3>
+          <h3 className="user-name">Husam Ali</h3>
           <h5>Front-end Developer</h5>
           <p>Email: Husam@Agora.com</p>
         </div>
