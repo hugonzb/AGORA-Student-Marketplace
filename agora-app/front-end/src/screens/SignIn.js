@@ -18,9 +18,7 @@ function SignIn(props) {
       props.history.push("/");
     }
     return () => { };
-    // eslint-disable-next-line
   }, [userInfo])
-
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -52,7 +50,6 @@ function SignIn(props) {
               onChange={(e) => setEmail(e.target.value)}
             ></input>
             <br></br>
-
             <input
               type="password"
               id="password"

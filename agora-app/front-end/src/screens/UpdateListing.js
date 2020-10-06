@@ -113,8 +113,7 @@ function UpdateListing(props) {
     <div className="loading">Loading listing ...</div>
   ) : error ? (
     <div className="error">
-      {" "}
-      {error} - Make sure you are running the server to fetch data{" "}
+      There have been some unexpected server issues while fetching your request. Try again soon.
     </div>
   ) : (
     <div className="wrapper">

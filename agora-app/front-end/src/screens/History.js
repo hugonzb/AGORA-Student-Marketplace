@@ -42,9 +42,7 @@ function History(props) {
               </div>
             ) : error ? (
               <div className="error">
-                {" "}
-                {error} - 404 Server error: Server does not currently seem to be
-                running.
+                There have been some unexpected server issues while fetching your request. Try again soon.
               </div>
             ) : listingCompletes.length > 0 ? (
               <div className="history-listings">

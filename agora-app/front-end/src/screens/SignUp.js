@@ -6,7 +6,6 @@ import "../signup.css";
 import { removeUser } from "../actions/userActions";
 import Axios from "axios";
 
-
 function SignUp(props) {
   const [fname, setFname] = useState("");
   const [studentid, setStudentid] = useState("");
@@ -40,7 +39,6 @@ function SignUp(props) {
     return () => { };
     // eslint-disable-next-line
   }, [userInfo]);
-
 
   const uploadFileHandler = (e) => {
     setUploadButton(false);
@@ -94,16 +92,13 @@ function SignUp(props) {
   return (
     <div className="wrapper">
         <div className="registration_form">
-         
-             
-                   <div className="titleText">
-                   <span>
-			       <h2>Registration Form</h2> 
+            <div className="titleText">
+                <span>
+			            <h2>Registration Form</h2> 
                    Already have an account? Sign in <Link to= "/account/signin"> here. </Link> 
-                   </span> 
-                   </div>
-
-            {loading}
+                </span> 
+            </div>
+        {loading}
         {error && <div>Student ID or Email has been taken</div>}
         {message}
         <form className="form_wrap" onSubmit={submitHandler}>
@@ -168,15 +163,14 @@ function SignUp(props) {
                     onChange={(e) => setEmail(e.target.value)}
                   ></input>
                </div>
-          </div>
-         
-          
+          </div> 
          <div className="input_grp">
               <div className="input_wrap">
                   <label for="gender">Choose a Gender: </label>
                   <select className="select-css"
                     id="gender"
                     name="gender"
+                    required
                     onChange={(e) => setGender(e.target.value)}
                   >
                     <option value="Male">Male</option>
@@ -184,13 +178,13 @@ function SignUp(props) {
                     <option value="Other">Other</option>
                   </select>
               </div>
-
               <div className="input_wrap">
               <label for="school">University: </label>
               <select className ="select-css"
                 id="school"
                 name="school"
                 placeholder="Select University"
+                required
                 onChange={(e) => setUniversity(e.target.value)}
               >
                 <option value="University of Auckland">
@@ -208,13 +202,11 @@ function SignUp(props) {
                   University of Canterbury
                 </option>
                 <option value="Lincoln University">Lincoln University</option>
-                <option value="University of Otago">University of Otago</option>
-                
+                <option value="University of Otago">University of Otago</option>     
           </select>
               </div>
               </div>
               <br></br>
- 
           <div className="input_grp">
                <div className="input_wrap">
               <label>Address:</label>
@@ -233,6 +225,7 @@ function SignUp(props) {
                   <select className="select-css"
                     id="city"
                     name="city"
+                    required
                     onChange={(e) => setCity(e.target.value)}
                   >
                     <option value="Dunedin">Dunedin</option>
@@ -245,7 +238,6 @@ function SignUp(props) {
                   </select>
           </div> 
         </div>
-          
           <div className="input_grp">
               <div className="input_wrap">
               <label>Post Code:</label>
@@ -294,23 +286,14 @@ function SignUp(props) {
                   ></input>
               </div>
           </div> 
-
-
- <div className="input_grp">
- 
-      <div className="input_wrap">
-					<input type="submit" value="Register Now" class="submit_btn"></input>
-		  </div>
- </div>
- 
-        </form>
-      
+          <div className="input_grp">
+                <div className="input_wrap">
+                    <input type="submit" value="Register Now" class="submit_btn"></input>
+                </div>
+          </div> 
+        </form>     
       </div>
       </div>
-   
- 
-      
-    
   );
 }
  
