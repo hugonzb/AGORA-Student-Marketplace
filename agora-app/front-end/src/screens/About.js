@@ -13,6 +13,7 @@ function About(props) {
   const hugoicon = "../profilePictures/hugo (2)_1601868657464.jpg";
   const leonicon = "../profilePictures/LeonAbout.png";
   const cedricicon = "../profilePictures/cedricabout.jpg";
+  const husamicon = "../profilePictures/HusamAbout.jpg";
   const [uploading] = useState(false);
 
   useEffect(() => {
@@ -61,9 +62,9 @@ function About(props) {
         </div>
 
         <div className="profile-card">
-          <img src={""} className="profile-img" alt="profile" />
-          <h3 className="user-name">Name</h3>
-          <h5>Member Role</h5>
+          <img src={husamicon} className="profile-img" alt="profile" />
+          <h3 className="user-name">Husam</h3>
+          <h5>Front-end Developer</h5>
           <p></p>
         </div>
       </div>
