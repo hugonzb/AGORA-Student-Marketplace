@@ -17,7 +17,6 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import UpdateListing from "./screens/UpdateListing";
 import History from "./screens/History";
 import EditProfile from "./screens/EditProfile";
-//import EditProfile from "./screens/EditProfile";
 
 function App(props) {
   const [search, setSearch] = useState("");
