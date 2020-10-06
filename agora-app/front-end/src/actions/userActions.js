@@ -96,6 +96,10 @@ const logout = () => (dispatch) => {
   dispatch({ type: USER_LOGOUT });
 };
 
+const removeUser = () => (dispatch) => {
+  dispatch({ type: USER_LOGOUT });
+};
+
 /*
  * UserAction updateUser const. This method will take all fields from the update profile form and create a
  * dispatch request to PUT the updated fields into the existing user object in the mongodb database.
