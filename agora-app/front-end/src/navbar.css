@@ -6,10 +6,12 @@
 
 }*/
 
+/*Navbar styling*/
 nav{
     padding-bottom: 0.5rem;
 }
 
+/*styling logo and text within the nav bar*/
 .logo {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -44,6 +46,7 @@ nav{
     font-size: 25px;
 }
 
+/*Styling the bars to make the button*/
 .bar{
     width:30px;
     margin: 5px;
@@ -53,6 +56,7 @@ nav{
     padding-right: 5px;
 }
 
+/*the button itself*/
 .btn {
     margin-top: 1rem;
     display: inline-block;
@@ -69,6 +73,7 @@ nav{
     border-bottom: 0px solid black; /* need to change this to something nicer*/ 
 }
 
+/*Styling the text on the drop down menu*/
 ul{
     list-style-type: none;               
     height: 0px;
@@ -76,13 +81,15 @@ ul{
     transition: all 0.5s ease;
 }
 
+
+/*styling the drop down menu*/
 .showNav{
     height: 140px;
     padding-top: 1rem;
     background-color: white;
 }
 
-
+/*When you are logged in*/
 .showNavLoggedIn{
 height: 170px;
 padding-top: 1rem;
@@ -96,7 +103,7 @@ background-color: white;
 }
 
 
-
+/*Further styling of the drop down text*/
 ul li a{
     background-color: white;
     display: flex;
