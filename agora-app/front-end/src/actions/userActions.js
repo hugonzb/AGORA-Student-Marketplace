@@ -155,4 +155,4 @@ const updateUser = (
   }
 };
 
-export { signUp, signIn, logout, updateUser };
+export { signUp, signIn, logout, removeUser, updateUser };
