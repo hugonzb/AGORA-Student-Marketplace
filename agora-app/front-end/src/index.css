@@ -779,7 +779,15 @@ body {
   flex-basis: 260px;
 }
 
-.profile-card .profile-img {
+.profile-card {
+  height: 380px;
+  width: 250px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.profile-img {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -789,8 +797,10 @@ body {
 
 
 .user-name {
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 32px;
+  max-width: 10.5rem;
+  text-align: center;
   color: #000000;
 }
 
@@ -1106,6 +1116,7 @@ color: black;
 }
 
 .about-help-box {
+  margin-top: 1rem;
   text-align: center;
   padding: 1rem;
   border: 1px solid red;
