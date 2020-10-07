@@ -3,6 +3,7 @@ import ListingComplete from "../models/listingCompleteModel";
 
 const router = express.Router();
 
+/* GET all sold listing data from the database based on the user's student ID */
 router.get("/sold", async (req, res) => {
   const sellerid = req.query.sellerid
     ? { sellerStudentid: req.query.sellerid }
@@ -14,6 +15,7 @@ router.get("/sold", async (req, res) => {
   res.send(listingCompletes);
 });
 
+/* GET all purchased listing data from the database based on the user's student ID */
 router.get("/purchased", async (req, res) => {
   const buyerid = req.query.buyerid
     ? { buyerStudentid: req.query.buyerid }
@@ -25,6 +27,7 @@ router.get("/purchased", async (req, res) => {
   res.send(listingPurchasedCompletes);
 });
 
+/* POST purchase data to the database once a user completes a purchase */
 router.post("/create", async (req, res) => {
     const listingComplete = new ListingComplete({
         buyerStudentid: req.body.buyerStudentid,

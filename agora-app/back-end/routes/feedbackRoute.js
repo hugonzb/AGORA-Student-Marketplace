@@ -3,6 +3,7 @@ import feedback from '../models/feedbackModel';
 
 const router = express.Router();
 
+/* POST feedback data to the database */
 router.post("/send", async (req, res) => {
     const feedbackObj = new feedback({
         name: req.body.name,

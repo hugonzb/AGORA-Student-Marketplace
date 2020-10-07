@@ -1,11 +1,9 @@
 import express from "express";
-import multer from "multer";
 import Listing from "../models/listingModel";
-import { createBrotliCompress } from "zlib";
 
 const router = express.Router();
 
-// Fetches listings from the database and posts to '/' (home page).
+/* GET all listing data from the database with search, category, location or student ID parameters */
 router.get("/", async (req, res) => {
   const searchWord = req.query.searchWord
     ? {
@@ -45,6 +43,7 @@ router.get("/", async (req, res) => {
   res.send(listings);
 });
 
+/* GET a particular listing from the database based on the listing ID requested */
 router.get("/:id", async (req, res) => {
   const listing = await Listing.findOne({ _id: req.params.id });
   if (listing) {
@@ -54,28 +53,7 @@ router.get("/:id", async (req, res) => {
   }
 });
 
-//get user listings on profile
-router.get("/account/profile"),
-  async (req, res) => {
-    const seller = req.query.seller
-      ? {
-          seller: {
-            $regex: "Hugo Baird",
-            $options: "i",
-          },
-        }
-      : {};
-    const listings = await Listing.find({
-      ...seller,
-    });
-    if (listings) {
-      res.send(listings);
-    } else {
-      res.status(404).send({ message: "User Listings not found." });
-    }
-  };
-
-// Hope it's ok to make the post uri to /listing/create
+/* POST new listing data to the database */
 router.post("/create", async (req, res) => {
   const listing = new Listing({
     name: req.body.name,
@@ -100,7 +78,7 @@ router.post("/create", async (req, res) => {
   }
 });
 
-//delete listing router
+/* DELETE a particular listing from the database based on the listing ID */
 router.delete("/:id", async (req, res) => {
   const listing = await Listing.findOne({ _id: req.params.id });
   if (listing) {
@@ -111,7 +89,7 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-//update listing
+/* Update a particular listing and PUT it the database based on the listing ID */
 router.put("/:id", async (req, res) => {
   const listingID = req.params.id;
   const listing = await Listing.findOne({ _id: listingID });
