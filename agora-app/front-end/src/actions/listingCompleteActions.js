@@ -94,7 +94,7 @@ const listListingCompletes = (
 };
 
 /*
- * ListingCompleteAction ListListingCompletes const. This method 
+ * ListingCompleteAction ListListingPurchasedCompletes const. This method 
  * will fetch listingCompletes purchased by a student ID through a dispatch request.
  * Params: Student ID
  */

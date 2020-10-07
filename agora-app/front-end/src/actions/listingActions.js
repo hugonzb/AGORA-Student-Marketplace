@@ -17,6 +17,13 @@ import {
   LISTING_DELETE_FAIL,
 } from "../constants/listingConstants";
 
+/*
+ * ListingAction ListListings const. This method 
+ * will fetch listings available filtered by
+ * several parameters chosen by the user through a dispatch request.
+ * Also used to fetch all user's active listings which gets displayed in their profile.
+ * Params: searchWord, category, location, sellerId
+ */
 const listListings = (
   searchWord = "",
   category = "",
@@ -41,6 +48,11 @@ const listListings = (
   }
 };
 
+/*
+ * ListingAction detailListing const. This method 
+ * will fetch a particular listing's details to get displayed on the view listing page.
+ * Params: listingId
+ */
 const detailListing = (listingId) => async (dispatch) => {
   try {
     dispatch({ type: LISTING_DETAILS_REQUEST, payload: listingId });
@@ -51,6 +63,11 @@ const detailListing = (listingId) => async (dispatch) => {
   }
 };
 
+/*
+ * ListingAction listingUpdate const. This method 
+ * will update a particular listing based on the listing ID in the parameters
+ * Params: listingId
+ */
 const listingUpdate = (
   _id,
   name,
@@ -107,7 +124,12 @@ const listingUpdate = (
   }
 };
 
-//create listing
+/*
+ * ListingAction createListing const. This method 
+ * will create a new listing by sending a dispatch request to the server
+ * with all attributes and data in the payload.
+ * Params: listing data
+ */
 const createListing = (
   name,
   description,
@@ -163,7 +185,11 @@ const createListing = (
   }
 };
 
-//delete listing action
+/*
+ * ListingAction deleteListing const. This method 
+ * will delete a particular listing based on the listingID provided.
+ * Params: listingId
+ */
 const deleteListing = (listingId) => async (dispatch) => {
   try {
     dispatch({ type: LISTING_DELETE_REQUEST, payload: listingId });

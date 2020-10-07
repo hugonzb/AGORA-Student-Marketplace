@@ -5,6 +5,11 @@ import {
     FEEDBACK_POST_FAIL
 } from '../constants/feedbackConstants';
 
+/*
+ * FeedbackAction submitFeedback const. This method 
+ * will send a dispatch to create a new feedback object based on details in the payload.
+ * Params: feedback attributes
+ */
 const submitFeedback = (name, email, feedback) => async (dispatch) => {
     dispatch({
         type: FEEDBACK_POST_REQUEST, payload: { name, email, feedback }

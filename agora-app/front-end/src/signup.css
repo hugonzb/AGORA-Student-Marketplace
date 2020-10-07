@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
- 
 @import url("https://fonts.googleapis.com/css2?family=Play&family=Quicksand:wght@400&display=swap");
  
 /*signup, registration, edit listing, create listing*/
@@ -130,9 +129,6 @@ width: 100%;
 	display: flex-end;
 }
 
-.fileStyle{
-	
-}
 /*styles the input text*/
 .form_wrap input[type="select"] {
 	width: 100%;
