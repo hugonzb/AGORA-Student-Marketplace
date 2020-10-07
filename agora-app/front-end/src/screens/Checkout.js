@@ -73,7 +73,7 @@ import PropagateLoader from "react-spinners/PropagateLoader";
               color={"#123abc"}
             />
         </div> :
-        error? <div className="error">  There have been some unexpected server issues while fetching your request. Try again soon. </div> :
+        error? <div className="error"> There have been some unexpected server issues while fetching your request. Try again soon. </div> :
          <div className="checkout-container">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
  <h2 className="checkout-heading">Checkout Form</h2>
@@ -184,7 +184,7 @@ import PropagateLoader from "react-spinners/PropagateLoader";
   </div>
 </div>
 </div>              
-    }
+}
 
-    export default Checkout;
+export default Checkout;
     

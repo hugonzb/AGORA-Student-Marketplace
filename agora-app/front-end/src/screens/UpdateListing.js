@@ -19,6 +19,7 @@ function UpdateListing(props) {
   // This sets the image file path to initially be the default image in /images/default.png
   // Will be updated if user chooses to select an image however.
   const [image, setImage] = useState("");
+
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [city, setCity] = useState("");
@@ -31,7 +32,6 @@ function UpdateListing(props) {
   const [uploading, setUploading] = useState(false);
   const [uploadButton, setUploadButton] = useState(true);
 
-  
   const dispatch = useDispatch();
 
   // gets the users details

@@ -7,7 +7,6 @@ import Axios from "axios";
 function EditProfile(props) {
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo, loading, error } = userSignin;
-
   const [fname, setFname] = useState("");
   const [studentid, setStudentid] = useState("");
   const [sname, setSname] = useState("");
@@ -111,17 +110,13 @@ function EditProfile(props) {
   ) : (
     <div className="wrapper">
       <div className="registration_form">
-        <div className="titleText">
-        
-          
+        <div className="titleText">      
           <span>
             <h2>Edit profile page:</h2>
             <p> Student ID: <strong> {userInfo.studentid} </strong> </p>
             {console.log(userInfo.studentid)}
           </span>
-
         </div>
-
         <br></br> 
         {loading}
         {error && <div>Student ID or Email Address has been taken.</div>}

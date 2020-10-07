@@ -45,9 +45,6 @@ function CreateListing(props) {
     return () => { };
   }, [userInfo]);
 
-
-  /*
-   */
   const uploadFileHandler = (e) => {
     // Make upload field disappear
     setUploadButton(false);
@@ -227,8 +224,6 @@ function CreateListing(props) {
                 </form>
               </div>
             </div>
-          
-  
     );
 }
 
