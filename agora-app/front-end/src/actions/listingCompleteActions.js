@@ -6,11 +6,18 @@ import {
     CREATELISTINGCOMPLETE_SUCCESS,
     LISTINGCOMPLETE_REQUEST,
     LISTINGCOMPLETE_FAIL,
-    LISTINGCOMPLETE_SUCCESS, LISTINGPURCHASEDCOMPLETE_REQUEST, LISTINGPURCHASEDCOMPLETE_SUCCESS, LISTINGPURCHASEDCOMPLETE_FAIL
+    LISTINGCOMPLETE_SUCCESS, 
+    LISTINGPURCHASEDCOMPLETE_REQUEST, 
+    LISTINGPURCHASEDCOMPLETE_SUCCESS, 
+    LISTINGPURCHASEDCOMPLETE_FAIL
 } from "../constants/listingCompleteConstants";
 
-  
-
+/*
+ * ListingCompleteAction createListingComplete const. This method 
+ * will take the listing purchase, buyer and seller information and create
+ * a dispatch request before posting it to the mongodb cloud database.
+ * Params: all listingComplete attributes which are required by the listingCompleteSchema.
+ */
 const createListingComplete = (
     buyerStudentid,
     sellerStudentid,
@@ -66,7 +73,12 @@ const createListingComplete = (
     }
   };
 
-  const listListingCompletes = (
+/*
+ * ListingCompleteAction ListListingCompletes const. This method 
+ * will fetch listingCompletes sold by a student ID through a dispatch request.
+ * Params: Student ID
+ */
+const listListingCompletes = (
     studentid = ""
   ) => async (dispatch) => {
     try {
@@ -79,9 +91,14 @@ const createListingComplete = (
     } catch (error) {
       dispatch({ type: LISTINGCOMPLETE_FAIL, payload: error.message });
     }
-  };
+};
 
-  const listListingPurchasedCompletes = (
+/*
+ * ListingCompleteAction ListListingCompletes const. This method 
+ * will fetch listingCompletes purchased by a student ID through a dispatch request.
+ * Params: Student ID
+ */
+const listListingPurchasedCompletes = (
     studentid = ""
   ) => async (dispatch) => {
     try {
@@ -96,5 +113,4 @@ const createListingComplete = (
     }
   };
   
-
   export { createListingComplete, listListingCompletes, listListingPurchasedCompletes }

@@ -5,11 +5,11 @@ import { detailListing, listingUpdate } from "../actions/listingActions";
 import "../signup.css";
 
 function UpdateListing(props) {
-  //get user details
+  // Get user details
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
 
-  //get the current listings details
+  // Get the current listings details
   const listingDetails = useSelector((state) => state.listingDetails);
   const { listing, loading, error } = listingDetails;
 
@@ -159,12 +159,7 @@ function UpdateListing(props) {
         </div> 
         </div>
         
-        
-        
-        
-
-        <form className="form_wrap" onSubmit={submitHandler}>
-         
+        <form className="form_wrap" onSubmit={submitHandler}>        
          <div className="input_grp">
             <div className="input_wrap">
               <label>Listing Name: </label>
@@ -191,8 +186,6 @@ function UpdateListing(props) {
           </div> 
           
           <div className="input_grp">
-
-
             <div className="input_wrap">
               <label>Listing Description: </label>
               <textarea

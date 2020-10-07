@@ -71,7 +71,7 @@ const signUp = (
 };
 
 /*
- * UserAction signIp const. This method will take the users entered email and password from the signin form
+ * UserAction signIn const. This method will take the users entered email and password from the signin form
  * in the front end and post it to the database for validation. If correct a cookie will be set with the users
  * profile data, else a return message will occur saying the information entered is false.
  * Params: email, password.

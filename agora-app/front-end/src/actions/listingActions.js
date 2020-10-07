@@ -41,16 +41,6 @@ const listListings = (
   }
 };
 
-/*const userListings = (seller = "") => async (dispatch) => {
-  try {
-    dispatch({ type: LISTING_LIST_REQUEST });
-    const { data } = await axios.get("/api/listings?seller=" + seller);
-    dispatch({ type: LISTING_LIST_SUCCESS, payload: data });
-  } catch (error) {
-    dispatch({ type: LISTING_LIST_FAIL, payload: error.message });
-  }
-};*/
-
 const detailListing = (listingId) => async (dispatch) => {
   try {
     dispatch({ type: LISTING_DETAILS_REQUEST, payload: listingId });
