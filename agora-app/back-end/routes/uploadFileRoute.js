@@ -3,7 +3,7 @@ import multer from "multer";
 
 const router = express.Router();
 
-// Method which will give us the filename and path of an uploaded image
+// Method which will give us the filename and path of an uploaded listing image
 const storage = multer.diskStorage({
     destination(req, file, cb) {
         cb(null, "front-end/public/images");
@@ -15,8 +15,6 @@ const storage = multer.diskStorage({
         cb(null, file.originalname.replace('.', '') + '_' +  Date.now() + ".jpg");
     },
 });
-
-
 
 const upload = multer({ storage });
 

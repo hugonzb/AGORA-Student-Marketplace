@@ -2,10 +2,10 @@ import express from "express";
 import User from "../models/userModel";
 import { getToken } from "../util";
 import multer from "multer";
-import { sign } from "jsonwebtoken";
 
 const router = express.Router();
 
+/* POST new user data to the database */
 router.post("/signup", async (req, res) => {
   try {
     const user = new User({
@@ -30,6 +30,7 @@ router.post("/signup", async (req, res) => {
   }
 });
 
+/* Retrieve a particular user based on the email and password POSTed to the database */
 router.post("/signin", async (req, res) => {
   const signinUser = await User.findOne({
     email: req.body.email,
@@ -56,7 +57,7 @@ router.post("/signin", async (req, res) => {
   }
 });
 
-//update user information
+/* Update a particular user and PUT it the database based on the student ID */
 router.put("/:id", async (req, res) => {
   const userID = req.params.id;
   const user = await User.findOne({ studentid: userID });
@@ -82,7 +83,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-// Method which will give us the filename and path of an uploaded image
+// Method which will give us the filename and path of an uploaded profile picture
 const storage = multer.diskStorage({
   destination(req, file, cb) {
     cb(null, "front-end/public/profilePictures");
