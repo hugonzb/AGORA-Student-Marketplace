@@ -1,6 +1,7 @@
 import jwt from "jsonwebtoken";
 import config from "./config";
 
+/* Generates JWT token for security */
 const getToken = (user) => {
   return jwt.sign(
     {
@@ -19,6 +20,7 @@ const getToken = (user) => {
   );
 };
 
+/* Checks if user is authorized */
 const isAuth = (req, res, next) => {
   const token = req.headers.authorization;
   if (token) {
@@ -35,6 +37,7 @@ const isAuth = (req, res, next) => {
   return res.status(401).send({ msg: "Token is not supplied" });
 };
 
+/* Checks if user is admin */
 const isAdmin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     return next();

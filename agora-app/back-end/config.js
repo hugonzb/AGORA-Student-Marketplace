@@ -2,6 +2,7 @@ import dotenv from 'dotenv';
 
 dotenv.config(); 
 
+/* Configuration declarations to host the server on either local or Heroku */
 export default {
   PORT: process.env.PORT || 5000, 
   MONGODB_URL:

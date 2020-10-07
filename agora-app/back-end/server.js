@@ -30,17 +30,17 @@ app.use("/api/fileUpload", uploadFileRoute);
 app.use("/api/feedback", feedbackRoute);
 
 
-// Here we tell the server to serve images from the front-end/public/ image folders.
+/* Here we tell the server to serve images from the front-end/public/ image folders. */
 app.use('/images', express.static(path.join(__dirname, '/../front-end/public/images')));
 app.use('/profilePictures', express.static(path.join(__dirname, '/../front-end/public/profilePictures')));
 
-
+/* Use the front-end build folder to host all index pages */
 app.use(express.static(path.join(__dirname, '/../front-end/build')));
 app.get('*', (req, res) => {
     res.sendFile(path.join(`${__dirname}/../front-end/build/index.html`));
 });
 
-/* run server on port 5000 */
+/* Run server using the configured port (Heroku port or localhost/port 5000) */
 app.listen(config.PORT, () => {
   console.log("Backend server started at http://localhost:5000\n");
 });
