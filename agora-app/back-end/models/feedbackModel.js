@@ -1,6 +1,6 @@
 import mongoose, { Mongoose } from 'mongoose';
 
-// DB schema for feedback submission from user:
+// Database schema for feedback submission from user
 
 const feedbackSchema = new mongoose.Schema({
     name: {type: String, required: true},
@@ -11,4 +11,5 @@ const feedbackSchema = new mongoose.Schema({
 },{strict: true});
 
 const feedback = mongoose.model("Feedback", feedbackSchema);
+
 export default feedback;

@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
-import { strict } from "assert";
 
 // Database schema for a user
+
 const userSchema = new mongoose.Schema(
   {
     studentid: { type: Number, required: true },

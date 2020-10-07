@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-// Database schema for a completed listing
+// Database schema for a completed purchase
+
 const listingCompleteSchema = new mongoose.Schema({
   buyerStudentid:  { type: String, required: false },
   sellerStudentid:  { type: String, required: false },

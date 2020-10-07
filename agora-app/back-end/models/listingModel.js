@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-// Database schema for a listing
+// Database schema for a created listing
+
 const listingSchema = new mongoose.Schema({
   name: { type: String, required: false },
   description: { type: String, required: false },
