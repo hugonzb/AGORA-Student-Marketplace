@@ -26,12 +26,7 @@ router.get("/", async (req, res) => {
     : {};
 
   const sellerIdListing = req.query.sellerIdListing
-    ? {
-        sellerId: {
-          $regex: req.query.sellerIdListing,
-          $options: "i",
-        },
-      }
+    ? { sellerId: req.query.sellerIdListing }
     : {};
 
   const listings = await Listing.find({
