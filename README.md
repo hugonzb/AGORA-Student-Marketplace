@@ -1,6 +1,8 @@
 Agora Student Marketplace
 ===============
 
+Access our application here: https://agora-student-marketplace.herokuapp.com/
+
 Agora is a web service platform solely for students/graduates to buy, sell and trade
 second-hand items. We find that current trading services are exploited due to poor 
 mechanics and restrictions - more specifically, it is spammed with retail businesses
