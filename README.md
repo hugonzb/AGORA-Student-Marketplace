@@ -1,5 +1,6 @@
 Agora Student Marketplace
 ===============
+[![HitCount](http://hits.dwyl.com/hugonzb/Agora-Student-Marketplace.svg)](http://hits.dwyl.com/hugonzb/Agora-Student-Marketplace)
 
 ## [LIVE Demo Here!](https://agora-student-marketplace.herokuapp.com/)
 
