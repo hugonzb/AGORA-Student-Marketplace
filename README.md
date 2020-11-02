@@ -4,8 +4,8 @@ Agora Student Marketplace
 
 ## [LIVE Demo Here!](https://agora-student-marketplace.herokuapp.com/)
 
-NOTE: Due to use of the free Heroku platform for image storage, they get 
-deleted after a period of time (profile pictures and listing images). 
+**NOTE: Due to use of the free Heroku platform for image storage, they get 
+deleted after a period of time (profile pictures and listing images).**
 
 Agora is a web service platform solely for students/graduates to buy, sell and trade
 second-hand items. We find that current trading services are exploited due to poor 
